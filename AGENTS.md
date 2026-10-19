@@ -13,6 +13,11 @@ Owner-provided details: Sebastian Szeliga is majoring in Electrical and
 Computer Engineering. Use "Electrical & Computer Engineering Student" as the
 Home page headline.
 
+Skills content should emphasize proficiency with Codex and visual design,
+plus clear prompts, feedback, and website planning. The owner does not claim
+coding proficiency; do not list programming languages or independent coding
+ability as skills unless the owner later confirms them.
+
 Work on one small, requested task at a time. Do not build the entire site when
 asked to change one page or feature. Follow the assignment requirements and
 these instructions throughout development.
@@ -26,8 +31,8 @@ Provide five separate pages, with links to all five in every page's navigation:
 - `projects.html`: At least three projects, each with a description, an image or
   screenshot, and a relevant link when available. Class projects are welcome.
 - `skills.html`: Technical skills and accurate descriptions of proficiency.
-- `contact.html`: Owner-approved public contact information, using an email
-  link and optional professional profile links.
+- `contact.html`: A visual-only contact form, as requested by the owner. Do not
+  add contact information until the owner provides it.
 
 Use real, owner-provided content. Do not invent credentials, experience,
 projects, contact details, or working links. Ask for missing information when
@@ -86,9 +91,10 @@ empty sections, or dummy links.
   and alt attributes on every image. Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
-- If a contact form is requested later, label its fields, validate input with
-  JavaScript, and direct visitors to email. Never claim a message was sent:
-  this static site cannot send or store form submissions.
+- The contact form is a visual demo only, as requested by the owner. Label its
+  fields, clearly explain that it cannot send messages, and disable the Send
+  button. Do not add validation, submission, storage, or email behavior unless
+  the owner requests it. Never claim a message was sent.
 - Aim for a Lighthouse Accessibility score of at least 90 on every page.
 
 ## Testing and documentation

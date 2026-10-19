@@ -12,9 +12,12 @@ installation, build step, or server is required.
 ## Current progress
 
 The Home page includes an introduction, a short studies section, and responsive
-navigation. About, Projects, Skills, and Contact pages will be added in later
-tasks using owner-provided content. Until then, Home navigation links only to
-existing content.
+navigation. The Contact page adds a visual-only form with labeled fields and a
+disabled Send button; it does not send or store messages. The Skills page
+covers Codex, visual design, creative feedback, and website planning with
+descriptive proficiency levels. It makes no claims of coding proficiency.
+About and Projects pages will be added in later tasks using owner-provided
+content. Navigation links only to existing content.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
 The Home page, stylesheet, and script were verified to load after deployment.
@@ -23,6 +26,8 @@ Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 ## Project files
 
 - `index.html`: Home page.
+- `skills.html`: Skills and proficiency levels.
+- `contact.html`: Visual-only contact form demo.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Keyboard-accessible responsive navigation menu.
 - `AGENTS.md`: Project requirements, design, and workflow.
