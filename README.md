@@ -20,7 +20,8 @@ About and Projects pages will be added in later tasks using owner-provided
 content. Navigation links only to existing content.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
-The Home page, stylesheet, and script were verified to load after deployment.
+Home, Skills, Contact, the stylesheet, and the script were verified to load
+after deployment.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files

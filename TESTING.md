@@ -52,6 +52,13 @@ four proficiency descriptions; the Contact button remains disabled with no
 native form submission. No connected browser was available for visual,
 keyboard, or Lighthouse checks.
 
+Skills and Contact deployment check on 2026-10-19: GitHub Pages deployment
+succeeded for commit `fa99158`. Home, Skills, Contact, the stylesheet, and the
+script all returned HTTP 200. Each page includes Skills and Contact navigation
+links; the live Skills page contains the proficiency content, and the live
+Contact page contains the visual-demo notice. HTTP checks passed; the browser
+interaction cases below remain Not run.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Existing-page navigation | On Home, Skills, and Contact, activate the brand and every navigation link. | Home, Skills, and Contact open; My studies reaches the Home studies section; the current page is identified. | Not run |
