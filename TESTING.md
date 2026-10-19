@@ -5,7 +5,7 @@ planned for later tasks. Run these cases on the live GitHub Pages site before
 submission, recording its URL, browser, viewport, and test date. For cases
 covering multiple pages, record a separate result for each page as it is added.
 
-No browser or live-site results have been recorded yet. "Not run" is a pending
+No browser interaction results have been recorded yet. "Not run" is a pending
 status, not a passing result. Keep failed results and add dated retest results
 after fixing issues.
 
@@ -20,8 +20,17 @@ after fixing issues.
 - Calculated contrast for the specified body-text combinations and primary
   button text: all exceed 4.5:1. This does not replace a full accessibility audit.
 - Browser preview was unavailable in this session. Visual layout, actual
-  keyboard behavior, console checks, direct-file behavior, live deployment,
+  keyboard behavior, console checks, direct-file behavior,
   and Lighthouse remain unverified.
+
+## Deployment check on 2026-10-19
+
+- GitHub Pages build and deployment succeeded for commit `54e66b2`.
+- `https://ss08-school.github.io/portfolio/` returned HTTP 200 with the expected
+  Sebastian Szeliga page title and engineering headline.
+- The published `css/styles.css` and `js/main.js` each returned HTTP 200.
+- These HTTP checks verify publication and asset availability. The browser
+  interaction and layout cases below remain pending.
 
 ## Browser and live-site cases
 

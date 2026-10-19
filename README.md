@@ -16,8 +16,9 @@ navigation. About, Projects, Skills, and Contact pages will be added in later
 tasks using owner-provided content. Until then, Home navigation links only to
 existing content.
 
-GitHub Pages is the deployment target. A live website URL has not yet been
-verified for this version.
+Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
+The Home page, stylesheet, and script were verified to load after deployment.
+Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files
 
