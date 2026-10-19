@@ -1,0 +1,109 @@
+:root {
+  color-scheme: light;
+  --background: #faf7ff;
+  --surface: #ffffff;
+  --lilac: #eee5ff;
+  --accent: #e2d2f7;
+  --text: #38254d;
+  --muted: #695675;
+  --purple: #755098;
+  --purple-hover: #60407e;
+  --border: #e7ddef;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: 0.25em; }
+button { font: inherit; }
+svg { display: block; max-width: 100%; }
+::selection { color: var(--text); background: var(--accent); }
+:focus-visible { outline: 3px solid var(--purple); outline-offset: 5px; }
+.page-width { width: min(100% - 2.5rem, 1180px); margin-inline: auto; }
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.8rem 1rem;
+  color: var(--surface);
+  background: var(--purple);
+  border-radius: 0.5rem;
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 100px;
+  padding-block: 1.3rem;
+  border-bottom: 1px solid var(--border);
+}
+.brand { display: flex; align-items: center; gap: 0.7rem; font-size: 0.95rem; font-weight: 650; text-decoration: none; }
+.brand-mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: var(--accent); font-size: 1.25rem; letter-spacing: -0.08em; }
+.brand-dot { color: var(--purple); }
+.site-navigation { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; width: 100%; }
+.nav-link { padding: 0.7rem 1rem; border-radius: 100px; text-decoration: none; font-size: 0.9rem; }
+.nav-link[aria-current="page"] { background: var(--lilac); }
+.nav-link:hover { background: var(--accent); }
+.nav-link span { margin-left: 0.5rem; }
+.menu-toggle { display: flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 100px; background: var(--surface); color: var(--text); cursor: pointer; }
+.menu-toggle svg { stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; fill: none; }
+
+.hero { display: grid; gap: 3rem; padding-block: 3rem 4rem; }
+.eyebrow { display: flex; align-items: center; gap: 0.55rem; margin: 0 0 2rem; color: var(--muted); font-size: 0.75rem; }
+.little-star { color: var(--purple); font-size: 1.3rem; }
+.greeting { font-size: 1.1rem; margin: 0 0 1rem; }
+h1 { margin: 0; font-size: clamp(2.5rem, 6.2vw, 4.9rem); line-height: 1.07; font-weight: 600; letter-spacing: -0.055em; }
+h1 span { color: var(--purple); }
+.hero-description { max-width: 29rem; margin: 1.5rem 0 1.8rem; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+.button { display: inline-flex; gap: 1.7rem; align-items: center; justify-content: center; min-height: 48px; padding: 0.9rem 1.4rem; color: var(--surface); background: var(--purple); border-radius: 100px; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.button:hover { background: var(--purple-hover); }
+.button span { font-size: 1.1rem; }
+
+.hero-art { position: relative; align-self: center; width: min(100% - 1rem, 420px); margin: 0 auto; padding-block: 1.5rem 2rem; }
+.circuit-card { overflow: hidden; padding: 1.2rem 1.2rem 0; border: 1px solid var(--border); border-radius: 28px; background: var(--surface); box-shadow: 0 18px 50px #7550980d; transform: rotate(3deg); }
+.card-topline { display: flex; align-items: center; gap: 0.45rem; color: var(--muted); font-size: 0.52rem; font-weight: 600; letter-spacing: 0.08em; }
+.card-topline > span:last-child { margin-left: auto; font-size: 1rem; }
+.card-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--purple); }
+.circuit-illustration { width: 100%; margin-top: 0.7rem; }
+.art-caption { margin: -0.2rem 0 1.7rem; text-align: center; font-size: 1.65rem; line-height: 1.2; letter-spacing: -0.04em; font-weight: 550; }
+.card-bottomline { display: flex; justify-content: space-between; gap: 0.5rem; padding-block: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.62rem; }
+.art-spark { position: absolute; z-index: 1; color: var(--purple); }
+.spark-one { top: 0; right: -0.1rem; font-size: 3.2rem; transform: rotate(12deg); }
+.spark-two { bottom: 2.6rem; left: -0.6rem; font-size: 3.6rem; }
+.art-note { display: block; margin-top: 1.6rem; color: var(--muted); font-size: 0.8rem; font-style: italic; text-align: center; transform: rotate(-4deg); }
+
+.studies { padding: 2rem 1.5rem; border-radius: 28px; background: var(--lilac); scroll-margin-top: 2rem; }
+.section-label { display: flex; align-items: center; gap: 0.6rem; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; }
+.section-label span { font-size: 1.5rem; }
+.studies-copy { display: grid; gap: 1.2rem; margin-top: 1.5rem; }
+h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 550; letter-spacing: -0.05em; line-height: 1.1; }
+.studies-copy p { margin: 0; max-width: 34rem; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+.studies-copy .closing-note { margin-top: 1rem; font-size: 0.9rem; }
+.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; margin-top: 2.5rem; padding-block: 1.3rem 2rem; color: var(--muted); font-size: 0.75rem; }
+.site-footer span { margin-left: 0.4rem; color: var(--purple); }
+
+@media (min-width: 48rem) {
+  .page-width { width: min(100% - 5rem, 1180px); }
+  .site-header { flex-wrap: nowrap; }
+  .brand { font-size: 1rem; }
+  .site-navigation { width: auto; }
+  .hero { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 3rem; padding-block: 4.5rem 5rem; }
+  .eyebrow { margin-bottom: 2.5rem; font-size: 0.78rem; }
+  .hero-art { width: 100%; }
+  .studies { padding: 2.3rem 2.8rem 2.8rem; }
+  .studies-copy { grid-template-columns: 1fr 1.2fr; align-items: center; gap: 2rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .button, .nav-link { transition: background-color 150ms ease; }
+}

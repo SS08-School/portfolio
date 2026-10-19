@@ -9,6 +9,10 @@ Build a personal portfolio that introduces the owner and showcases their
 background, projects, and skills. This is a school assignment and a learning
 project: keep the code readable enough for the owner to explain during a demo.
 
+Owner-provided details: Sebastian Szeliga is majoring in Electrical and
+Computer Engineering. Use "Electrical & Computer Engineering Student" as the
+Home page headline.
+
 Work on one small, requested task at a time. Do not build the entire site when
 asked to change one page or feature. Follow the assignment requirements and
 these instructions throughout development.
@@ -32,13 +36,19 @@ empty sections, or dummy links.
 
 ## Design
 
-- Overall style: clean, welcoming, and simple, with generous spacing and clear
-  project cards. Keep decoration subtle so the content stays easy to read.
-- Colors: off-white background (`#F8FAFC`), white surfaces (`#FFFFFF`), dark navy
-  text (`#0F172A`), slate secondary text (`#475569`), and teal accents (`#0F766E`).
-  Verify contrast for the actual combinations used, including interactive states.
-- Fonts: use a system font stack such as `system-ui, -apple-system, "Segoe UI",
-  sans-serif`. Avoid external font dependencies.
+- Overall style: friendly, light, and gently playful, with generous spacing,
+  rounded project cards, pill-shaped buttons, and subtle shadows. Use soft
+  lavender sections and small decorative touches without crowding the content.
+- Colors: pale lavender background (`#FAF7FF`), white surfaces (`#FFFFFF`),
+  pastel lilac sections (`#EEE5FF`), and soft purple accents (`#E2D2F7`). Use
+  dark plum text (`#38254D`), muted plum secondary text (`#695675`), and deeper
+  purple (`#755098`) for primary buttons, links, and focus indicators.
+- Keep pastel colors mainly on backgrounds and decoration. Use dark text on
+  pale surfaces and white text on deeper purple buttons. Verify contrast for
+  the actual combinations used, including hover, focus, and selected states.
+- Fonts: use a friendly system font stack such as `"Segoe UI", system-ui,
+  -apple-system, sans-serif`, with readable body text and softly weighted
+  headings. Avoid external font dependencies.
 - Use consistent headers, navigation, footers, buttons, spacing, and typography
   on every page. Clearly identify the current page in the navigation.
 - Start with a phone layout and expand to a laptop layout using CSS media
