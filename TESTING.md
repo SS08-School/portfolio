@@ -143,7 +143,13 @@ Background-detail local checks on 2026-10-22: calculated contrast for dark plum,
 muted plum, and purple text on the new peach and mint surfaces ranges from
 5.27:1 to 11.97:1, exceeding 4.5:1. The diff has no whitespace errors. No
 connected browser was available; visual layering, phone/laptop layout, and
-interaction checks remain Not run. This styling revision has not been deployed.
+interaction checks remain Not run. At the time of these checks, the styling
+revision had not been deployed.
+
+Background-detail deployment check on 2026-10-22: GitHub Pages deployment
+succeeded for commit `52951fa`. The live stylesheet returned HTTP 200 with
+the peach/mint accents, dot texture, and decorative halo. Deployment/source
+checks passed; actual visual layout and interaction checks remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
