@@ -47,3 +47,39 @@ if (menuButton && navigation) {
   phoneLayout.addEventListener("change", updateNavigation);
   updateNavigation();
 }
+
+if (navigation) {
+  const sectionLinks = Array.from(navigation.querySelectorAll('a[href^="#"]'));
+  const sections = sectionLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  function updateCurrentSection() {
+    if (!sections.length) return;
+
+    let currentSection = sections[0];
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= window.innerHeight * 0.35) {
+        currentSection = section;
+      }
+    }
+
+    // The final section may be too short to reach the usual scroll threshold.
+    if (window.scrollY > 0 && Math.ceil(window.scrollY + window.innerHeight) >= document.documentElement.scrollHeight) {
+      currentSection = sections[sections.length - 1];
+    }
+
+    for (const link of sectionLinks) {
+      if (link.getAttribute("href") === `#${currentSection.id}`) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", updateCurrentSection, { passive: true });
+  window.addEventListener("resize", updateCurrentSection);
+  window.addEventListener("load", updateCurrentSection);
+  updateCurrentSection();
+}

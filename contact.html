@@ -3,77 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A visual contact form demo for Sebastian Szeliga's personal portfolio.">
-    <meta name="theme-color" content="#FAF7FF">
+    <meta http-equiv="refresh" content="0; url=index.html#contact">
     <title>Contact | Sebastian Szeliga</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header page-width">
-      <a class="brand" href="index.html" aria-label="Sebastian Szeliga, Home">
-        <span class="brand-mark" aria-hidden="true">ss.</span>
-        <span>Sebastian Szeliga<span class="brand-dot" aria-hidden="true">.</span></span>
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>
-        <span>Menu</span>
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-          <path d="M4 8h16M4 16h16"/>
-        </svg>
-      </button>
-
-      <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="index.html#studies">My studies <span aria-hidden="true">↗</span></a>
-        <a class="nav-link" href="skills.html">Skills</a>
-        <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
-      </nav>
-    </header>
-
-    <main id="main" class="contact-layout page-width" tabindex="-1">
-      <section class="contact-intro" aria-labelledby="contact-heading">
-        <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A little hello.</p>
-        <h1 id="contact-heading">Let's make<br><span>a connection.</span></h1>
-        <p class="hero-description">Every conversation starts with a hello. Here's a little space for yours.</p>
-        <div class="contact-note">
-          <span class="contact-note-icon" aria-hidden="true">✉</span>
-          <div>
-            <p class="contact-note-heading">Just a preview</p>
-            <p id="demo-note">This form is a visual demo. Messages can't be sent from this page.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- A form landmark without a native form keeps Enter from submitting,
-           even when JavaScript is unavailable. These fields are visual only. -->
-      <div class="contact-form" role="form" aria-labelledby="form-heading" aria-describedby="demo-note">
-        <p class="demo-badge">Visual demo</p>
-        <h2 id="form-heading">Say hello<span aria-hidden="true">.</span></h2>
-        <div class="contact-fields">
-          <div class="form-field">
-            <label for="contact-name">Your name</label>
-            <input id="contact-name" type="text" autocomplete="off">
-          </div>
-          <div class="form-field">
-            <label for="contact-email">Email address</label>
-            <input id="contact-email" type="email" autocomplete="off" spellcheck="false">
-          </div>
-          <div class="form-field">
-            <label for="contact-message">Your message</label>
-            <textarea id="contact-message" rows="5" autocomplete="off"></textarea>
-          </div>
-        </div>
-        <button class="button demo-send" type="button" aria-describedby="demo-note" disabled>Send message (demo) <span aria-hidden="true">↗</span></button>
-        <p class="form-caption">Sending is disabled for this demo.</p>
-      </div>
+    <main class="redirect-page page-width">
+      <h1>Contact</h1>
+      <p><a href="index.html#contact">Continue to the Contact section of Sebastian's portfolio.</a></p>
     </main>
-
-    <footer class="site-footer page-width">
-      <p>Sebastian Szeliga</p>
-      <p>A personal portfolio <span aria-hidden="true">✳</span></p>
-    </footer>
   </body>
 </html>

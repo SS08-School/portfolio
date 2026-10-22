@@ -13,7 +13,7 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header page-width">
-      <a class="brand" href="index.html" aria-label="Sebastian Szeliga, Home">
+      <a class="brand" href="#home" aria-label="Sebastian Szeliga, Home">
         <span class="brand-mark" aria-hidden="true">ss.</span>
         <span>Sebastian Szeliga<span class="brand-dot" aria-hidden="true">.</span></span>
       </a>
@@ -26,15 +26,15 @@
       </button>
 
       <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="#home" aria-current="location">Home</a>
         <a class="nav-link" href="#studies">My studies <span aria-hidden="true">↗</span></a>
-        <a class="nav-link" href="skills.html">Skills</a>
-        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="main" tabindex="-1">
-      <section class="hero page-width" aria-labelledby="intro-heading">
+      <section id="home" class="hero page-width" aria-labelledby="intro-heading" tabindex="-1">
         <div class="hero-copy">
           <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A student. A personal portfolio.</p>
           <p class="greeting">Hi, I'm Sebastian Szeliga.</p>
@@ -76,7 +76,7 @@
         </div>
       </section>
 
-      <section id="studies" class="studies page-width" aria-labelledby="studies-heading">
+      <section id="studies" class="studies page-width" aria-labelledby="studies-heading" tabindex="-1">
         <div class="section-label"><span aria-hidden="true">↳</span> A LITTLE ABOUT ME</div>
         <div class="studies-copy">
           <h2 id="studies-heading">Two fields.<br>One major.</h2>
@@ -84,6 +84,63 @@
             <p>I'm Sebastian, an Electrical and Computer Engineering student. My studies bring together the electrical and computing sides of engineering.</p>
             <p class="closing-note">Thanks for stopping by. It's nice to have you here.</p>
           </div>
+        </div>
+      </section>
+      <section id="skills" class="skills-section page-width" aria-labelledby="skills-heading" tabindex="-1">
+        <div class="skills-intro">
+          <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> Skills &amp; proficiencies</p>
+          <h2 id="skills-heading">Skills with<br><span>a creative side.</span></h2>
+          <p class="hero-description">I use Codex to help bring ideas to life, with a focus on design, clear direction, and thoughtful feedback.</p>
+        </div>
+        <ul class="skills-grid">
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">01</span><span class="skill-level">Proficient</span></div>
+            <h3>Codex &amp; AI-assisted tools</h3>
+            <p>Turning ideas into clear prompts and using Codex to help create and refine a website, one task at a time.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">02</span><span class="skill-level">Proficient</span></div>
+            <h3>Visual design</h3>
+            <p>Choosing colors, typography, spacing, and layouts to give a website a friendly, consistent feel.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">03</span><span class="skill-level">Comfortable</span></div>
+            <h3>Creative feedback</h3>
+            <p>Reviewing drafts, explaining what I like, and giving specific feedback to shape the next version.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">04</span><span class="skill-level">Developing</span></div>
+            <h3>Website planning</h3>
+            <p>Organizing a portfolio into useful sections and deciding which content belongs in each one.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="contact-layout page-width" aria-labelledby="contact-heading" tabindex="-1">
+        <div class="contact-intro">
+          <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A little hello.</p>
+          <h2 id="contact-heading">Let's make<br><span>a connection.</span></h2>
+          <p class="hero-description">Every conversation starts with a hello. Here's a little space for yours.</p>
+        </div>
+
+        <!-- No native form: pressing Enter cannot submit, even without JavaScript. -->
+        <div class="contact-form" role="form" aria-labelledby="form-heading">
+          <h3 id="form-heading">Say hello<span aria-hidden="true">.</span></h3>
+          <div class="contact-fields">
+            <div class="form-field">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" type="text" autocomplete="off">
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Email address</label>
+              <input id="contact-email" type="email" autocomplete="off" spellcheck="false">
+            </div>
+            <div class="form-field">
+              <label for="contact-message">Your message</label>
+              <textarea id="contact-message" rows="5" autocomplete="off"></textarea>
+            </div>
+          </div>
+          <button class="button contact-send" type="button" disabled>Send message <span aria-hidden="true">↗</span></button>
         </div>
       </section>
     </main>

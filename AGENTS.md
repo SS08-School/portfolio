@@ -24,15 +24,21 @@ these instructions throughout development.
 
 ## Pages and content
 
-Provide five separate pages, with links to all five in every page's navigation:
+Use one continuous page in `index.html`, as requested by the owner. This
+replaces the earlier separate-page design. Navigation should scroll to sections
+in the same page and tab:
 
-- `index.html`: Home, with a brief introduction and links to the other pages.
-- `about.html`: About Me, covering background, education, and interests.
-- `projects.html`: At least three projects, each with a description, an image or
-  screenshot, and a relevant link when available. Class projects are welcome.
-- `skills.html`: Technical skills and accurate descriptions of proficiency.
-- `contact.html`: A visual-only contact form, as requested by the owner. Do not
-  add contact information until the owner provides it.
+- Home (`#home`): A brief introduction.
+- My studies (`#studies`): The owner's engineering major and introduction.
+- Skills (`#skills`): Skills and accurate descriptions of proficiency.
+- Contact (`#contact`): A visual-only contact form. Do not add contact
+  information until the owner provides it.
+- Add richer About and Projects sections only when requested and when real
+  content is available. Projects should include at least three projects, each
+  with a description, image, and relevant link when available.
+
+Keep the former `skills.html` and `contact.html` URLs as redirects to the
+matching sections in `index.html`, so existing links keep working.
 
 Use real, owner-provided content. Do not invent credentials, experience,
 projects, contact details, or working links. Ask for missing information when
@@ -55,7 +61,7 @@ empty sections, or dummy links.
   -apple-system, sans-serif`, with readable body text and softly weighted
   headings. Avoid external font dependencies.
 - Use consistent headers, navigation, footers, buttons, spacing, and typography
-  on every page. Clearly identify the current page in the navigation.
+  throughout the page. Clearly identify the current section in the navigation.
 - Start with a phone layout and expand to a laptop layout using CSS media
   queries. Avoid horizontal scrolling and keep images responsive.
 
@@ -63,7 +69,7 @@ empty sections, or dummy links.
 
 - Use plain HTML5, CSS, and JavaScript only. No backend, database, login system,
   frameworks, UI libraries, package managers, npm, or build tools.
-- Keep HTML pages in the repository root, shared styles in `css/styles.css`,
+- Keep `index.html` and redirect files in the repository root, styles in `css/styles.css`,
   shared JavaScript in `js/main.js`, and images in `images/`.
 - Use one external stylesheet. Avoid inline styles and inline event handlers.
 - Use relative paths for local assets and page links. Avoid leading `/` paths
@@ -91,10 +97,11 @@ empty sections, or dummy links.
   and alt attributes on every image. Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
-- The contact form is a visual demo only, as requested by the owner. Label its
-  fields, clearly explain that it cannot send messages, and disable the Send
-  button. Do not add validation, submission, storage, or email behavior unless
-  the owner requests it. Never claim a message was sent.
+- The contact form is visual only, as requested by the owner. Label its fields
+  and keep the Send button disabled. Do not display demo badges, disabled-send
+  notices, or explanatory text about its inactive behavior. Do not add
+  validation, submission, storage, or email behavior unless the owner requests
+  it. Never claim a message was sent.
 - Aim for a Lighthouse Accessibility score of at least 90 on every page.
 
 ## Testing and documentation

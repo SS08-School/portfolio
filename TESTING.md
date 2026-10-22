@@ -1,10 +1,13 @@
 # Website test plan
 
-The Home, Skills, and visual-only Contact pages are implemented. About,
-Projects, and project filtering are planned for later tasks.
+The current local revision uses one page with Home, My studies, Skills, and
+Contact sections. Former Skills and Contact URLs redirect to their sections.
+About content, Projects, and project filtering are planned for later tasks.
 Run these cases on the live GitHub Pages site before
 submission, recording its URL, browser, viewport, and test date. For cases
-covering multiple pages, record a separate result for each page as it is added.
+covering multiple sections, record a result for each section. Earlier check
+records below describe the previous separate-page versions; rerun the cases
+for this revision.
 
 No browser interaction results have been recorded yet. "Not run" is a pending
 status, not a passing result. Keep failed results and add dated retest results
@@ -59,10 +62,19 @@ links; the live Skills page contains the proficiency content, and the live
 Contact page contains the visual-demo notice. HTTP checks passed; the browser
 interaction cases below remain Not run.
 
+Single-page revision checks on 2026-10-19: static checks passed for one main
+`h1`, unique IDs, section anchors, local assets, former-URL redirect targets,
+field labels, and the disabled non-submit Send button. Confirmed that the
+page's visible text has no demo or disabled-send notices. JavaScript syntax
+and simulated current-section highlighting checks passed, including scrolling
+down/up, bottom-of-page detection, load, and resize. These simulations used
+mocked geometry; visual, keyboard, direct-file redirect, and Lighthouse checks
+remain Not run. This revision has not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T1 | Existing-page navigation | On Home, Skills, and Contact, activate the brand and every navigation link. | Home, Skills, and Contact open; My studies reaches the Home studies section; the current page is identified. | Not run |
-| T2 | All-page navigation | Once all five pages exist, activate every navigation link on every page. | Each destination loads with the correct current-page indicator. | Not run; remaining pages pending |
+| T1 | Section navigation | Activate the brand and every navigation link on the main page, including with Tab and Enter. | Each link reaches its section in the same page and tab; keyboard focus reaches the target section. | Not run |
+| T2 | Former page URLs | Open skills.html and contact.html directly and from a local file. Disable automatic redirects and test fallback links. | Each URL leads to the corresponding main-page section; fallback links work without JavaScript. | Not run |
 | T3 | Phone layouts | View every implemented page at widths of 320px and 390px; scroll top to bottom. | No sideways scrolling, clipped text, or overlapping content. | Not run |
 | T4 | Laptop layouts | View every implemented page at 1366px wide; scroll top to bottom. | Content and navigation are readable and aligned. | Not run |
 | T5 | Mobile menu toggle | At 390px wide, activate Menu twice. | Navigation opens and closes; aria-expanded matches its state. | Not run |
@@ -75,5 +87,6 @@ interaction cases below remain Not run.
 | T12 | Direct-file operation | Double-click index.html; use its links and mobile menu. Repeat for other pages as added. | Styles and scripts work without a server; relative links resolve. | Not run |
 | T13 | JavaScript fallback | Disable JavaScript, reload Home at 390px, and use navigation. | Navigation links remain visible and usable; no inactive menu button is shown. | Not run |
 | T14 | Project filtering | Once implemented, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; Projects page pending |
-| T15 | Visual contact form | On Contact, try empty fields, an invalid email, and valid sample values. Press Enter in each input and attempt to activate Send. Repeat with JavaScript disabled. Inspect the network panel. | Fields are labeled and editable; Send stays disabled; no validation, submission request, navigation, or sent-message confirmation occurs. Enter in the message field adds a line break. | Not run |
+| T15 | Visual contact form | Scroll to Contact. Inspect its text and try empty fields, an invalid email, and valid sample values. Press Enter in each input and attempt to activate Send. Repeat without JavaScript and inspect the network panel. | No visible demo or disabled-send notices; button reads Send message and stays disabled; no validation, submission, navigation, or sent-message confirmation occurs. Enter in the message field adds a line break. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
+| T17 | Current section | Scroll from Home through My studies, Skills, and Contact, then back up; resize and open direct hash links. | Exactly one navigation link identifies the current section using aria-current=location, and its highlight follows the viewed section. | Not run |

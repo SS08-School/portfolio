@@ -51,7 +51,7 @@ svg { display: block; max-width: 100%; }
 .brand-dot { color: var(--purple); }
 .site-navigation { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; width: 100%; }
 .nav-link { padding: 0.7rem 1rem; border-radius: 100px; text-decoration: none; font-size: 0.9rem; }
-.nav-link[aria-current="page"] { background: var(--lilac); }
+.nav-link[aria-current="location"] { background: var(--lilac); }
 .nav-link:hover { background: var(--accent); }
 .nav-link span { margin-left: 0.5rem; }
 .menu-toggle { display: flex; align-items: center; gap: 0.5rem; min-height: 44px; padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 100px; background: var(--surface); color: var(--text); cursor: pointer; }
@@ -93,30 +93,22 @@ h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 550; letter-
 
 .contact-layout { display: grid; gap: 2.5rem; padding-block: 3rem 2rem; }
 .contact-intro { min-width: 0; }
-.contact-intro h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
-.contact-note { display: flex; align-items: flex-start; gap: 1rem; max-width: 28rem; margin-top: 2rem; padding: 1.2rem; border-radius: 20px; background: var(--lilac); }
-.contact-note-icon { display: grid; flex-shrink: 0; place-items: center; width: 40px; height: 40px; border-radius: 14px; background: var(--surface); color: var(--purple); font-size: 1.4rem; }
-.contact-note p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
-.contact-note .contact-note-heading { margin-bottom: 0.25rem; color: var(--text); font-weight: 650; }
+.contact-intro h2 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
+.contact-intro h2 span, .skills-intro h2 span { color: var(--purple); }
 .contact-form { min-width: 0; padding: 1.5rem; border: 1px solid var(--border); border-radius: 28px; background: var(--surface); box-shadow: 0 18px 50px #7550980d; }
-.demo-badge { display: inline-block; margin: 0 0 1rem; padding: 0.4rem 0.7rem; border-radius: 100px; color: var(--purple); background: var(--lilac); font-size: 0.75rem; font-weight: 600; }
-.contact-form h2 { font-size: 2rem; }
-.contact-form h2 span { color: var(--purple); }
+.contact-form h3 { margin: 0; font-size: 2rem; font-weight: 550; letter-spacing: -0.05em; }
+.contact-form h3 span { color: var(--purple); }
 .contact-fields { display: grid; gap: 1.2rem; margin-block: 1.8rem; }
 .form-field { display: grid; gap: 0.5rem; }
 .form-field label { font-size: 0.9rem; font-weight: 600; }
 .form-field input, .form-field textarea { width: 100%; min-width: 0; padding: 0.85rem 1rem; border: 1px solid var(--purple); border-radius: 12px; color: var(--text); background: var(--background); font: inherit; line-height: 1.5; }
 .form-field textarea { min-height: 9rem; resize: vertical; }
-.demo-send { width: 100%; border: 0; }
-.demo-send:disabled { color: var(--muted); background: var(--lilac); cursor: not-allowed; }
-.form-caption { margin: 0.8rem 0 0; color: var(--muted); text-align: center; font-size: 0.8rem; line-height: 1.6; }
+.contact-send { width: 100%; border: 0; }
+.contact-send:disabled { color: var(--muted); background: var(--lilac); cursor: not-allowed; }
 
-.skills-page { padding-block: 3rem 1rem; }
-.skills-intro h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
+.skills-section { padding-block: 4rem 1rem; }
+.skills-intro h2 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
 .skills-intro .hero-description { max-width: 34rem; }
-.skills-section { margin-top: 3rem; }
-.skills-section-heading h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
-.skills-section-heading > p { margin: 0.7rem 0 0; color: var(--muted); line-height: 1.7; }
 .skills-grid { display: grid; gap: 1.2rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .skill-card { min-width: 0; padding: 1.5rem; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); box-shadow: 0 12px 36px #75509808; }
 .skill-card:nth-child(2), .skill-card:nth-child(3) { background: var(--lilac); }
@@ -125,6 +117,9 @@ h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 550; letter-
 .skill-level { padding: 0.4rem 0.7rem; border-radius: 100px; background: var(--background); color: var(--purple); font-size: 0.75rem; font-weight: 600; }
 .skill-card h3 { margin: 1.5rem 0 0.7rem; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
 .skill-card > p { margin: 0; color: var(--muted); line-height: 1.8; font-size: 0.95rem; }
+main > section { scroll-margin-top: 2rem; }
+.redirect-page { padding-block: 4rem; }
+.redirect-page p { color: var(--muted); line-height: 1.8; }
 
 @media (min-width: 48rem) {
   .page-width { width: min(100% - 5rem, 1180px); }
@@ -139,7 +134,7 @@ h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 550; letter-
   .contact-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 3rem; padding-block: 4.5rem 2rem; }
   .contact-intro { padding-top: 1rem; }
   .contact-form { padding: 2.2rem; }
-  .skills-page { padding-top: 4.5rem; }
+  .skills-section { padding-top: 5rem; }
   .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skill-card { padding: 2rem; }
 }
