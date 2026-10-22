@@ -101,7 +101,13 @@ checks passed for three reveal/reset cycles, keeping items above the viewport
 revealed, preserving focused content, clearing effects on reduced-motion
 changes, and reduced-motion/missing-observer fallbacks. These are simulated
 checks; visual phone/laptop scrolling and actual keyboard behavior remain
-Not run. This revision has not been deployed.
+Not run. At the time of these local checks, this revision had not been deployed.
+
+Repeating-effect deployment check on 2026-10-22: GitHub Pages deployment
+succeeded for commit `3fc6694`. The live script returned HTTP 200 and contains
+the reset logic, continued observation of revealed items, and focused-content
+guard. Deployment/source checks passed; visual and keyboard checks in a browser
+remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
