@@ -181,7 +181,15 @@ native navigation, while leaving modified clicks and section links untouched.
 The palette values are unchanged; color transitions now use 280ms with no
 stagger on card colors and remain inside the reduced-motion media query.
 Browser scrolling, actual transition appearance, and keyboard checks remain
-Not run. This revision has not been deployed.
+Not run. At the time of these local checks, this revision had not been deployed.
+
+Navigation/theme-refinement deployment checks on 2026-10-22: GitHub Pages
+deployment succeeded for commit `fdd0730`. Home, About, and Projects returned
+HTTP 200 with the document-top anchor, exactly one current-page indicator,
+no current-section indicator, and the expected asset versions. The versioned
+stylesheet and main script returned HTTP 200 with the 280ms palette transitions
+and page-top click logic. These publication/source checks passed; actual
+browser scrolling, keyboard behavior, and visual transitions remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

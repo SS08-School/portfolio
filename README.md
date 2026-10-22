@@ -49,7 +49,8 @@ shared script were verified to load successfully.
 The saved theme toggle and page-entry animations were deployed on October 22,
 2026; all three content pages and the versioned assets were verified to load.
 The page-only highlighting, page-top links, and gradual palette refinements
-are local and not yet deployed.
+were deployed on October 22, 2026; all three content pages and the updated
+versioned stylesheet and script were verified to load with the expected source.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files
