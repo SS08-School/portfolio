@@ -94,6 +94,10 @@ empty sections, or dummy links.
 - Keep HTML pages and redirect files in the repository root, styles in `css/styles.css`,
   shared JavaScript in `js/main.js`, and images in `images/`.
 - Use one external stylesheet. Avoid inline styles and inline event handlers.
+- All HTML files must reference the same versioned stylesheet URL, such as
+  `css/styles.css?v=<content-hash>`. Update the version when CSS changes so
+  browser caching does not retain outdated styling. Keep the actual file at
+  `css/styles.css`; no build step is needed.
 - Use relative paths for local assets and page links. Avoid leading `/` paths
   so the site works under the GitHub Pages `/portfolio/` project path.
 - The site must work by double-clicking `index.html`, as well as on GitHub
