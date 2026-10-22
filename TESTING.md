@@ -172,9 +172,20 @@ and page-entry markup. All three versioned assets (stylesheet, main script,
 and theme script) returned HTTP 200. Deployment/source checks passed; browser
 interaction and visual animation checks remain Not run.
 
+Navigation/theme-refinement local checks on 2026-10-22: syntax and static
+checks passed for exactly one current-page link on each content page, no
+current-section selection, each group's first link targeting `#top`, and all
+44 local references and asset versions resolving. Simulated click checks
+passed for scrolling a current-page top link to position 0 without preventing
+native navigation, while leaving modified clicks and section links untouched.
+The palette values are unchanged; color transitions now use 280ms with no
+stagger on card colors and remain inside the reduced-motion media query.
+Browser scrolling, actual transition appearance, and keyboard checks remain
+Not run. This revision has not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | Page links load the correct page; section links reach the correct page and section; the current page/section is labeled correctly. | Not run |
+| T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | First links load the correct page at the document top; section links reach their actual sections; only the current page is selected. | Not run |
 | T2 | Former page URLs | Open skills.html and contact.html directly and from a local file. Disable automatic redirects and test fallback links. | Each URL leads to the corresponding main-page section; fallback links work without JavaScript. | Not run |
 | T3 | Phone layouts | View every implemented page at widths of 320px and 390px; scroll top to bottom. | No sideways scrolling, clipped text, or overlapping content. | Not run |
 | T4 | Laptop layouts | View every implemented page at 1366px wide; scroll top to bottom. | Content and navigation are readable and aligned. | Not run |
@@ -190,7 +201,7 @@ interaction and visual animation checks remain Not run.
 | T14 | Project filtering | Once real projects and filtering are added, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; project details and filtering pending |
 | T15 | Email contact | Reach Home's Contact section from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
-| T17 | Current section | Scroll from Home through My studies, Skills, and Contact, then back up; resize and open direct hash links. | Exactly one navigation link identifies the current section using aria-current=location, and its highlight follows the viewed section. | Not run |
+| T17 | Current page only | On each page, scroll through its sections and inspect the dropdown repeatedly; also use direct section links. | Exactly one primary page link has aria-current=page; its highlight stays unchanged while scrolling; section links have no persistent selection. | Not run |
 | T18 | Repeating scroll reveals | At phone and laptop widths, scroll down through My studies, Skills, and Contact. Scroll up until each item leaves the bottom of the screen, then down again. Repeat three times and try a direct #contact link. | Items fade and rise into view each time; scrolling up resets items below view; items above the viewport stay revealed; direct-link content is readable. | Not run |
 | T19 | Animation fallbacks | Reload with reduced motion enabled, then with JavaScript disabled. Also enable reduced motion while unrevealed content remains below the viewport. | All content stays visible with no reveal motion; changing the preference reveals all remaining content. | Not run |
 | T20 | Keyboard during reveals | Reload Home at the top with motion enabled; use Tab to reach the email link before manually scrolling there. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |
@@ -202,5 +213,6 @@ interaction and visual animation checks remain Not run.
 | T26 | Default theme | Clear the site's stored theme, set the OS to dark mode, and open each page. | Pages default to light; sun icon is visible and the Dark mode toggle reports aria-pressed=false. | Not run |
 | T27 | Saved preference | Toggle dark with a click or Enter/Space, navigate through all pages, reload, and revisit in a new tab. Repeat after choosing light. | Choice and icon remain consistent across pages and visits; cards use a uniform solid surface in each theme; saved dark mode has no light flash. | Not run |
 | T28 | Theme fallbacks and sync | Block site storage and try toggling; then restore storage and change the theme in another tab. Clear the stored preference and return with Back. | Blocked storage causes no errors; the current page still switches. Same-site tabs and restored pages reflect the saved choice; clearing it returns light mode. | Not run |
-| T29 | Page and icon motion | Switch themes and navigate among Home, About, and Projects, including browser Back. Repeat with reduced motion. | Sun and moon rotate/fade between states; page content gently appears without blocking native navigation. Reduced motion disables these effects. Keyboard-focused controls are visible immediately. | Not run |
+| T29 | Page, icon, and theme motion | Switch themes and navigate among Home, About, and Projects, including browser Back. Repeat with reduced motion. | Palette changes ease over about 280ms with synchronized card colors; sun/moon rotate and fade; page content appears gently. Saved-theme loads have no palette fade or light flash. Reduced motion skips effects; focused controls stay visible. | Not run |
 | T30 | Dark theme and compact header | At 320px, 390px, and 1366px wide, inspect all pages in both modes and use both header buttons. | Text, diagram, cards, focus indicators, and dropdown are readable; both controls fit and work without overlap or sideways scrolling. | Not run |
+| T31 | Page overview starts at top | Visit each page, scroll down, navigate elsewhere, and select its first dropdown link again. Also select the current page's first link and use Ctrl/Cmd-click and browser Back. | First links reach scroll position 0 and show the header; section links still reach sections; modified clicks retain native behavior; Back is not globally forced to the top. | Not run |

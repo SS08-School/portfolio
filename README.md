@@ -15,7 +15,8 @@ installation, build step, or server is required.
 The Home page has Home, My studies, Skills, and Contact sections. Separate
 About me and Projects pages are available from the three-line dropdown on
 phone and laptop screens. Navigation groups each page's links together and
-marks the current page and section. Home section links stay on Home.
+highlights only the current page. Section links remain unselected. Each page's
+first link opens at the document top; Home section links stay on Home.
 
 About me includes enrollment at NJIT and the Electrical Engineering major.
 Personal background can be added later. Projects shows an honest empty
@@ -34,7 +35,9 @@ Light is the default; an explicit choice is stored in the browser and restored
 before styling loads on every page. The preference persists across visits in
 that browser until its site storage is cleared. Storage restrictions do not
 break the current-page toggle. Gentle page-entry effects soften navigation and
-browser Back, with reduced-motion preferences respected throughout.
+browser Back, with reduced-motion preferences respected throughout. Theme
+colors ease over 280ms while restoring a saved theme before page load remains
+immediate.
 
 The former Skills and Contact page URLs redirect to their matching Home
 sections.
@@ -45,6 +48,8 @@ were deployed on October 22, 2026. All three pages, the stylesheet, and the
 shared script were verified to load successfully.
 The saved theme toggle and page-entry animations were deployed on October 22,
 2026; all three content pages and the versioned assets were verified to load.
+The page-only highlighting, page-top links, and gradual palette refinements
+are local and not yet deployed.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files
@@ -55,7 +60,7 @@ Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 - `skills.html`: Redirect to `index.html#skills` for existing links.
 - `contact.html`: Redirect to `index.html#contact` for existing links.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
-- `js/main.js`: Grouped dropdown, current-section highlighting, and scroll reveals.
+- `js/main.js`: Grouped dropdown, page-top navigation, page entry, and scroll reveals.
 - `js/theme.js`: Early theme restoration, sun/moon toggle, and saved preference.
 - `AGENTS.md`: Project requirements, design, and workflow.
 - `TESTING.md`: Test plan and verification status.

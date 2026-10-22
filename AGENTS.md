@@ -48,7 +48,11 @@ Use a three-line navigation button at the top right on phone and laptop
 screens. Its dropdown groups links by the page they belong to. Keep Home,
 My studies, Skills, and Contact together under "Home page". Give About me and
 Projects their own groups on every page, with Education nested under About me.
-Mark the current page and section appropriately. When further pages are
+Highlight only the current page's primary link, using `aria-current="page"`.
+Do not highlight or track the currently viewed section. Each page's first link
+and the Home brand should target the document top (`#top`), keeping ordinary
+section links pointed at their actual sections. Preserve native link and
+browser-Back behavior. When further pages are
 requested, give each its own labeled group. Do not add links to pages that do
 not exist or list redirect aliases as separate pages.
 
@@ -84,7 +88,7 @@ empty sections, or dummy links.
   -apple-system, sans-serif`, with readable body text and softly weighted
   headings. Avoid external font dependencies.
 - Use consistent headers, navigation, footers, buttons, spacing, and typography
-  throughout the page. Clearly identify the current section in the navigation.
+  throughout the page. Clearly identify the current page in the navigation.
 - Start with a phone layout and expand to a laptop layout using CSS media
   queries. Avoid horizontal scrolling and keep images responsive.
 - Default to light mode until the visitor explicitly chooses dark mode. Use an
@@ -93,6 +97,9 @@ empty sections, or dummy links.
   across pages and visits, restore it before the stylesheet loads, and keep
   the toggle usable if storage is blocked. Use a dark plum background, uniform
   dark card surfaces, and readable lavender accents in dark mode.
+- Ease theme palette changes over about 280ms, while keeping the saved theme
+  restoration before first paint immediate. Keep card color transitions in
+  sync; stagger only scroll-reveal opacity and motion, not theme colors.
 - Use a short, gentle page-entry animation when opening a page or returning
   with browser Back. Keep links native and responsive; do not delay navigation
   or add modal popups. Skip page and icon animation for reduced motion.
