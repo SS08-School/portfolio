@@ -43,7 +43,8 @@ Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/port
 Home, About, Projects, the grouped navigation, and the email contact update
 were deployed on October 22, 2026. All three pages, the stylesheet, and the
 shared script were verified to load successfully.
-The theme toggle and page-entry animation revision is local and not yet deployed.
+The saved theme toggle and page-entry animations were deployed on October 22,
+2026; all three content pages and the versioned assets were verified to load.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files

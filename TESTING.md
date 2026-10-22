@@ -163,7 +163,14 @@ surfaces is at least 5.15:1 in light and 6.48:1 in dark; button contrast is
 6.26:1 and 7.91:1 respectively. These are not full Lighthouse audits.
 No connected browser was available; actual visual motion, compact header
 layout, keyboard interaction, and cross-page flash checks remain Not run.
-This revision has not been deployed.
+At the time of these local checks, this revision had not been deployed.
+
+Theme/page-motion deployment checks on 2026-10-22: GitHub Pages deployment
+succeeded for commit `ac3018c`. Home, About, and Projects returned HTTP 200
+and include the icon toggle, early theme restoration before the stylesheet,
+and page-entry markup. All three versioned assets (stylesheet, main script,
+and theme script) returned HTTP 200. Deployment/source checks passed; browser
+interaction and visual animation checks remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
