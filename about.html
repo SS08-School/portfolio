@@ -6,8 +6,9 @@
     <meta name="description" content="About Sebastian Szeliga, currently enrolled at NJIT and majoring in Electrical Engineering.">
     <meta name="theme-color" content="#FAF7FF">
     <title>About me | Sebastian Szeliga</title>
-    <link rel="stylesheet" href="css/styles.css?v=03c650b8eb34">
-    <script src="js/main.js" defer></script>
+    <script src="js/theme.js?v=6ee993810b0d"></script>
+    <link rel="stylesheet" href="css/styles.css?v=4ea812ccada6">
+    <script src="js/main.js?v=2e33c76f8b9e" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -17,6 +18,16 @@
         <span class="brand-mark" aria-hidden="true">ss.</span>
         <span>Sebastian Szeliga<span class="brand-dot" aria-hidden="true">.</span></span>
       </a>
+
+      <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <g class="theme-sun">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </g>
+          <path class="theme-moon" d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/>
+        </svg>
+      </button>
 
       <div class="navigation-menu">
         <button class="menu-toggle" type="button" aria-label="Pages and sections" aria-expanded="false" aria-controls="site-navigation" hidden>
@@ -52,7 +63,7 @@
       </div>
     </header>
 
-    <main id="main" class="content-page about-layout page-width" tabindex="-1">
+    <main id="main" class="content-page about-layout page-width page-enter" tabindex="-1">
       <section class="page-intro" aria-labelledby="about-heading">
         <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A little about me.</p>
         <h1 id="about-heading">Hi, I'm<br><span>Sebastian.</span></h1>

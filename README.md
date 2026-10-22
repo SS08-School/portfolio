@@ -29,6 +29,13 @@ cards, and contact content. Items reset when scrolling up moves them below view,
 then reveal again when scrolling back down. Reduced-motion preferences skip the
 effect. Content remains visible without JavaScript or animation support.
 
+A sun/moon button at the top right switches between light and dark mode.
+Light is the default; an explicit choice is stored in the browser and restored
+before styling loads on every page. The preference persists across visits in
+that browser until its site storage is cleared. Storage restrictions do not
+break the current-page toggle. Gentle page-entry effects soften navigation and
+browser Back, with reduced-motion preferences respected throughout.
+
 The former Skills and Contact page URLs redirect to their matching Home
 sections.
 
@@ -36,6 +43,7 @@ Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/port
 Home, About, Projects, the grouped navigation, and the email contact update
 were deployed on October 22, 2026. All three pages, the stylesheet, and the
 shared script were verified to load successfully.
+The theme toggle and page-entry animation revision is local and not yet deployed.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files
@@ -47,6 +55,7 @@ Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 - `contact.html`: Redirect to `index.html#contact` for existing links.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Grouped dropdown, current-section highlighting, and scroll reveals.
+- `js/theme.js`: Early theme restoration, sun/moon toggle, and saved preference.
 - `AGENTS.md`: Project requirements, design, and workflow.
 - `TESTING.md`: Test plan and verification status.
 

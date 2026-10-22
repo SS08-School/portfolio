@@ -73,8 +73,9 @@ empty sections, or dummy links.
 - Keep purple and white dominant, with pale peach (`#FBE8DE`) and mint
   (`#E7F3EC`) in the page background. Use a faint dot grid, soft color washes,
   and restrained background shapes to add detail without crowding the content.
-  Keep all main content cards solid white, with no alternating colors or
-  gradients on rectangular surfaces. Background decoration must not block
+  Keep all main content cards solid white in light mode and a consistent dark
+  plum in dark mode, with no alternating colors or gradients on rectangular
+  surfaces. Background decoration must not block
   clicks, affect layout, or move.
 - Keep pastel colors mainly on backgrounds and decoration. Use dark text on
   pale surfaces and white text on deeper purple buttons. Verify contrast for
@@ -86,6 +87,15 @@ empty sections, or dummy links.
   throughout the page. Clearly identify the current section in the navigation.
 - Start with a phone layout and expand to a laptop layout using CSS media
   queries. Avoid horizontal scrolling and keep images responsive.
+- Default to light mode until the visitor explicitly chooses dark mode. Use an
+  icon-only, animated sun/moon button at the top right beside navigation, with
+  an accessible name and pressed state. Save the choice in `localStorage`
+  across pages and visits, restore it before the stylesheet loads, and keep
+  the toggle usable if storage is blocked. Use a dark plum background, uniform
+  dark card surfaces, and readable lavender accents in dark mode.
+- Use a short, gentle page-entry animation when opening a page or returning
+  with browser Back. Keep links native and responsive; do not delay navigation
+  or add modal popups. Skip page and icon animation for reduced motion.
 
 ## Technical rules and file organization
 
@@ -98,6 +108,9 @@ empty sections, or dummy links.
   `css/styles.css?v=<content-hash>`. Update the version when CSS changes so
   browser caching does not retain outdated styling. Keep the actual file at
   `css/styles.css`; no build step is needed.
+- Version shared script URLs when their contents change, too. Load the small
+  `js/theme.js` script before the stylesheet to restore the saved theme; defer
+  the main interaction script.
 - Use relative paths for local assets and page links. Avoid leading `/` paths
   so the site works under the GitHub Pages `/portfolio/` project path.
 - The site must work by double-clicking `index.html`, as well as on GitHub
@@ -112,8 +125,9 @@ empty sections, or dummy links.
 
 ## Interactivity and accessibility
 
-- Implement at least two JavaScript interactions: a responsive navigation menu
-  and project filtering with an All option.
+- Keep the grouped navigation, saved theme toggle, and repeating scroll reveals
+  working together. Add project filtering with an All option when real project
+  content is supplied.
 - The grouped navigation dropdown must open and close on every screen size
   using a real button with an accessible name and accurate `aria-expanded`.
   Support keyboard operation, close on Escape, link selection, outside clicks,

@@ -151,6 +151,20 @@ succeeded for commit `52951fa`. The live stylesheet returned HTTP 200 with
 the peach/mint accents, dot texture, and decorative halo. Deployment/source
 checks passed; actual visual layout and interaction checks remain Not run.
 
+Theme/page-motion local checks on 2026-10-22: script syntax and simulated
+lifecycle checks passed for light by default, explicit preference persistence
+across pages, restoring saved light/dark, browser-Back restoration, cross-tab
+storage updates, invalid/cleared preferences, and blocked storage. Simulated
+checks also passed for replaying page entry on cached-page restoration,
+canceling entry for focused controls, and skipping replay for reduced motion.
+All page links, early-theme script ordering, and stylesheet/script version
+hashes passed static checks. Calculated text contrast on the selected primary
+surfaces is at least 5.15:1 in light and 6.48:1 in dark; button contrast is
+6.26:1 and 7.91:1 respectively. These are not full Lighthouse audits.
+No connected browser was available; actual visual motion, compact header
+layout, keyboard interaction, and cross-page flash checks remain Not run.
+This revision has not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | Page links load the correct page; section links reach the correct page and section; the current page/section is labeled correctly. | Not run |
@@ -165,7 +179,7 @@ checks passed; actual visual layout and interaction checks remain Not run.
 | T10 | Accessibility audit | Run Chrome DevTools Lighthouse Accessibility on every page. Record each score. | Each page scores at least 90; resolve reported issues. | Not run |
 | T11 | Assets and console | Load each page and inspect the console and network panel; inspect image descriptions. | No script errors or missing assets; images have appropriate alt attributes. | Not run |
 | T12 | Direct-file operation | Double-click index.html; use its links and mobile menu. Repeat for other pages as added. | Styles and scripts work without a server; relative links resolve. | Not run |
-| T13 | JavaScript fallback | Disable JavaScript, reload Home at 390px, and use navigation. | Navigation links remain visible and usable; no inactive menu button is shown. | Not run |
+| T13 | JavaScript fallback | Disable JavaScript, reload Home at 390px, and use navigation. | Navigation links remain visible and usable; inactive menu/theme buttons are hidden; the site uses light mode and content stays visible. | Not run |
 | T14 | Project filtering | Once real projects and filtering are added, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; project details and filtering pending |
 | T15 | Email contact | Reach Home's Contact section from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
@@ -176,5 +190,10 @@ checks passed; actual visual layout and interaction checks remain Not run.
 | T21 | Dropdown dismissal and links | On each content page, open the dropdown, click outside it, reopen, and activate each page and section link. | Outside click closes it; each link closes it and reaches the matching page or section; focus is not left in hidden content. | Not run |
 | T22 | About and project content | Open About and Projects at phone and laptop widths. | About shows NJIT enrollment and Electrical Engineering; no invented background; Projects truthfully has no published items and no dummy cards or broken links. | Not run |
 | T23 | Anchor destination outlines | From About and Projects, activate Home using the brand and dropdown. Also visit Home's section links and the skip link, then Tab to links and buttons. | No large outline appears around the main content or section containers; destinations still receive focus and scroll correctly; keyboard focus remains visible on interactive controls. | Not run |
-| T24 | Background decoration and solid cards | View Home, About, and Projects at 320px, 390px, and 1366px wide. Compare all content cards, scroll through each page, and use navigation and email links. | Main cards are uniformly solid white without alternating or gradient fills; faint dots and peach/mint/lavender washes appear in the page background; text is readable; no new sideways scrolling or blocked interactions. | Not run |
-| T25 | Stylesheet cache refresh | With an older version cached, open the updated site and visit all pages. Inspect each stylesheet request. | Every page requests the same new versioned stylesheet URL; all main cards are solid white; old peach/mint card rules are absent. | Not run |
+| T24 | Background decoration and solid cards | View all pages at 320px, 390px, and 1366px in both themes. Compare cards, scroll, and use navigation and email links. | Main cards are uniformly solid white in light mode and dark plum in dark mode; decorative color stays in the background; text is readable; no new sideways scrolling or blocked interactions. | Not run |
+| T25 | Stylesheet cache refresh | With an older version cached, open the updated site and visit all pages. Inspect each stylesheet and script request. | Every page requests the correct new versioned assets; main cards have a uniform solid surface for the selected theme; old alternating peach/mint card rules are absent. | Not run |
+| T26 | Default theme | Clear the site's stored theme, set the OS to dark mode, and open each page. | Pages default to light; sun icon is visible and the Dark mode toggle reports aria-pressed=false. | Not run |
+| T27 | Saved preference | Toggle dark with a click or Enter/Space, navigate through all pages, reload, and revisit in a new tab. Repeat after choosing light. | Choice and icon remain consistent across pages and visits; cards use a uniform solid surface in each theme; saved dark mode has no light flash. | Not run |
+| T28 | Theme fallbacks and sync | Block site storage and try toggling; then restore storage and change the theme in another tab. Clear the stored preference and return with Back. | Blocked storage causes no errors; the current page still switches. Same-site tabs and restored pages reflect the saved choice; clearing it returns light mode. | Not run |
+| T29 | Page and icon motion | Switch themes and navigate among Home, About, and Projects, including browser Back. Repeat with reduced motion. | Sun and moon rotate/fade between states; page content gently appears without blocking native navigation. Reduced motion disables these effects. Keyboard-focused controls are visible immediately. | Not run |
+| T30 | Dark theme and compact header | At 320px, 390px, and 1366px wide, inspect all pages in both modes and use both header buttons. | Text, diagram, cards, focus indicators, and dropdown are readable; both controls fit and work without overlap or sideways scrolling. | Not run |

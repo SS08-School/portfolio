@@ -84,6 +84,24 @@ if (navigation) {
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+document.addEventListener("focusin", (event) => {
+  if (event.target.matches("a, button, input, textarea, select")) {
+    // Keep a newly focused control immediately visible during page entry.
+    event.target.closest("main")?.classList.remove("page-enter");
+  }
+});
+
+window.addEventListener("pageshow", (event) => {
+  if (!event.persisted || reducedMotion.matches) return;
+  const main = document.querySelector("main");
+  if (main) {
+    main.classList.remove("page-enter");
+    // Restart the entrance effect when browser Back restores a cached page.
+    void main.offsetWidth;
+    main.classList.add("page-enter");
+  }
+});
+
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const revealTargets = document.querySelectorAll(
     ".studies, .skills-intro, .skill-card, .contact-intro, .contact-card, .education-card, .project-status"
