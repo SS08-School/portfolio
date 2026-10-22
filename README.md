@@ -2,7 +2,8 @@
 
 A personal portfolio for Sebastian Szeliga, an Electrical Engineering student
 enrolled at NJIT. Built with plain HTML, CSS, and JavaScript, using a
-friendly pastel-purple design.
+friendly pastel-purple design with soft peach and mint accents, a faint dot
+grid, and gentle background color washes.
 
 ## View locally
 

@@ -139,6 +139,12 @@ education on About, the truthful Projects empty state, and the approved
 actual browser presentation, keyboard operation, and email-app activation
 remain Not run.
 
+Background-detail local checks on 2026-10-22: calculated contrast for dark plum,
+muted plum, and purple text on the new peach and mint surfaces ranges from
+5.27:1 to 11.97:1, exceeding 4.5:1. The diff has no whitespace errors. No
+connected browser was available; visual layering, phone/laptop layout, and
+interaction checks remain Not run. This styling revision has not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | Page links load the correct page; section links reach the correct page and section; the current page/section is labeled correctly. | Not run |
@@ -164,3 +170,4 @@ remain Not run.
 | T21 | Dropdown dismissal and links | On each content page, open the dropdown, click outside it, reopen, and activate each page and section link. | Outside click closes it; each link closes it and reaches the matching page or section; focus is not left in hidden content. | Not run |
 | T22 | About and project content | Open About and Projects at phone and laptop widths. | About shows NJIT enrollment and Electrical Engineering; no invented background; Projects truthfully has no published items and no dummy cards or broken links. | Not run |
 | T23 | Anchor destination outlines | From About and Projects, activate Home using the brand and dropdown. Also visit Home's section links and the skip link, then Tab to links and buttons. | No large outline appears around the main content or section containers; destinations still receive focus and scroll correctly; keyboard focus remains visible on interactive controls. | Not run |
+| T24 | Background decoration | View Home, About, and Projects at 320px, 390px, and 1366px wide. Scroll through each and use dropdown links, buttons, and the email link. | Faint dots and peach/mint/lavender washes add detail while text stays readable; the decorative halo stays behind the illustration; no new horizontal scrolling or blocked interactions. | Not run |
