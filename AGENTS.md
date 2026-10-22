@@ -113,6 +113,8 @@ empty sections, or dummy links.
   Give each page exactly one `h1` and use a logical heading order.
 - Include a skip-to-content link, visible keyboard focus, descriptive link text,
   and alt attributes on every image. Use empty alt text for decorative images.
+- Keep keyboard focus visible on interactive controls. Do not draw focus boxes
+  around whole main/section containers when navigating to an anchor destination.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
 - Contact uses the owner's approved `mailto:ss5764@njit.edu` link. Display the
