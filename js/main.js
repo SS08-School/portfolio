@@ -1,28 +1,17 @@
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
+const menuContainer = document.querySelector(".navigation-menu");
 
-if (menuButton && navigation) {
-  const phoneLayout = window.matchMedia("(max-width: 47.999rem)");
-
+if (menuButton && navigation && menuContainer) {
   function setMenuOpen(isOpen) {
     menuButton.setAttribute("aria-expanded", String(isOpen));
-    navigation.hidden = phoneLayout.matches && !isOpen;
+    navigation.hidden = !isOpen;
   }
 
-  function updateNavigation() {
-    // Without JavaScript, the menu button stays hidden and all links are visible.
-    // Reset the menu when crossing between phone and laptop layouts.
-    if (phoneLayout.matches && navigation.contains(document.activeElement)) {
-      menuButton.hidden = false;
-      menuButton.focus();
-    } else if (!phoneLayout.matches && document.activeElement === menuButton) {
-      navigation.hidden = false;
-      navigation.querySelector("a").focus();
-    }
-
-    menuButton.hidden = !phoneLayout.matches;
-    setMenuOpen(false);
-  }
+  // Without JavaScript, the grouped links remain visible instead of a dropdown.
+  menuContainer.classList.add("is-enhanced");
+  menuButton.hidden = false;
+  setMenuOpen(false);
 
   menuButton.addEventListener("click", () => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
@@ -30,7 +19,7 @@ if (menuButton && navigation) {
   });
 
   navigation.addEventListener("click", (event) => {
-    if (phoneLayout.matches && event.target.closest("a")) {
+    if (event.target.closest("a")) {
       // Return focus before hiding the active navigation link.
       menuButton.focus();
       setMenuOpen(false);
@@ -38,14 +27,23 @@ if (menuButton && navigation) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && phoneLayout.matches && menuButton.getAttribute("aria-expanded") === "true") {
+    if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+      event.preventDefault();
       setMenuOpen(false);
       menuButton.focus();
     }
   });
 
-  phoneLayout.addEventListener("change", updateNavigation);
-  updateNavigation();
+  document.addEventListener("click", (event) => {
+    if (!menuContainer.contains(event.target)) {
+      if (navigation.contains(document.activeElement)) menuButton.focus();
+      setMenuOpen(false);
+    }
+  });
+
+  menuContainer.addEventListener("focusout", (event) => {
+    if (!menuContainer.contains(event.relatedTarget)) setMenuOpen(false);
+  });
 }
 
 if (navigation) {
@@ -88,7 +86,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const revealTargets = document.querySelectorAll(
-    ".studies, .skills-intro, .skill-card, .contact-intro, .contact-form"
+    ".studies, .skills-intro, .skill-card, .contact-intro, .contact-card, .education-card, .project-status"
   );
 
   function reveal(element) {

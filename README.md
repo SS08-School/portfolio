@@ -1,7 +1,7 @@
 # Sebastian Szeliga's Portfolio
 
-A personal portfolio for Sebastian Szeliga, an Electrical and Computer
-Engineering student. Built with plain HTML, CSS, and JavaScript, using a
+A personal portfolio for Sebastian Szeliga, an Electrical Engineering student
+enrolled at NJIT. Built with plain HTML, CSS, and JavaScript, using a
 friendly pastel-purple design.
 
 ## View locally
@@ -11,34 +11,42 @@ installation, build step, or server is required.
 
 ## Current progress
 
-The portfolio is one scrolling page: Home, My studies, Skills, and Contact.
-Navigation jumps to these sections in the same tab and highlights the current
-section while scrolling. Skills cover Codex, visual design, creative feedback,
-and website planning with descriptive proficiency levels. The Contact section
-has labeled fields and an inactive Send button, without visible demo notices;
-it does not send or store messages.
+The Home page has Home, My studies, Skills, and Contact sections. Separate
+About me and Projects pages are available from the three-line dropdown on
+phone and laptop screens. Navigation groups each page's links together and
+marks the current page and section. Home section links stay on Home.
+
+About me includes enrollment at NJIT and the Electrical Engineering major.
+Personal background can be added later. Projects shows an honest empty
+collection until real project descriptions, images, and links are supplied.
+Skills cover Codex, visual design, creative feedback, and website planning.
+Contact displays `ss5764@njit.edu` as a clickable email link that opens the
+visitor's email app; there is no form or automatic sending.
 
 The site includes gentle scroll reveals for the studies section, skill
 cards, and contact content. Items reset when scrolling up moves them below view,
 then reveal again when scrolling back down. Reduced-motion preferences skip the
 effect. Content remains visible without JavaScript or animation support.
 
-Richer About and Projects sections can be added in later tasks using
-owner-provided content. The former Skills and Contact page URLs redirect to
-their matching sections on the main page.
+The former Skills and Contact page URLs redirect to their matching Home
+sections.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
 The single-page revision was deployed and verified on October 22, 2026. The
 main page, stylesheet, script, and former-page redirect targets load successfully.
+The grouped dropdown, new pages, degree update, and email contact revision
+are local and have not yet been deployed.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files
 
 - `index.html`: Main page with Home, My studies, Skills, and Contact sections.
+- `about.html`: About me and education at NJIT.
+- `projects.html`: Project collection, ready for owner-provided details.
 - `skills.html`: Redirect to `index.html#skills` for existing links.
 - `contact.html`: Redirect to `index.html#contact` for existing links.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
-- `js/main.js`: Responsive menu, current-section highlighting, and scroll reveals.
+- `js/main.js`: Grouped dropdown, current-section highlighting, and scroll reveals.
 - `AGENTS.md`: Project requirements, design, and workflow.
 - `TESTING.md`: Test plan and verification status.
 

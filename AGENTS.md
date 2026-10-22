@@ -9,9 +9,10 @@ Build a personal portfolio that introduces the owner and showcases their
 background, projects, and skills. This is a school assignment and a learning
 project: keep the code readable enough for the owner to explain during a demo.
 
-Owner-provided details: Sebastian Szeliga is majoring in Electrical and
-Computer Engineering. Use "Electrical & Computer Engineering Student" as the
-Home page headline.
+Owner-provided details: Sebastian Szeliga is enrolled at New Jersey Institute
+of Technology (NJIT), majoring in Electrical Engineering. Use "Electrical
+Engineering Student" as the Home page headline. His approved public contact
+email is `ss5764@njit.edu`.
 
 Skills content should emphasize proficiency with Codex and visual design,
 plus clear prompts, feedback, and website planning. The owner does not claim
@@ -24,21 +25,32 @@ these instructions throughout development.
 
 ## Pages and content
 
-Use one continuous page in `index.html`, as requested by the owner. This
-replaces the earlier separate-page design. Navigation should scroll to sections
-in the same page and tab:
+Keep the current Home content in one continuous page in `index.html`, as
+requested by the owner. Additional pages may be added when requested. Home's
+section links should scroll within the same page and tab:
 
 - Home (`#home`): A brief introduction.
 - My studies (`#studies`): The owner's engineering major and introduction.
 - Skills (`#skills`): Skills and accurate descriptions of proficiency.
-- Contact (`#contact`): A visual-only contact form. Do not add contact
-  information until the owner provides it.
-- Add richer About and Projects sections only when requested and when real
-  content is available. Projects should include at least three projects, each
-  with a description, image, and relevant link when available.
+- Contact (`#contact`): The approved email address as a `mailto:` link; no form.
+
+Provide separate `about.html` and `projects.html` pages. About includes the
+owner's enrollment at NJIT and Electrical Engineering major. Omit personal
+background until the owner provides it. Projects is currently an honest empty
+collection, as requested, until project details are provided. Do not add dummy
+cards. Once supplied, include at least three real projects with descriptions,
+images, and relevant links when available.
 
 Keep the former `skills.html` and `contact.html` URLs as redirects to the
 matching sections in `index.html`, so existing links keep working.
+
+Use a three-line navigation button at the top right on phone and laptop
+screens. Its dropdown groups links by the page they belong to. Keep Home,
+My studies, Skills, and Contact together under "Home page". Give About me and
+Projects their own groups on every page, with Education nested under About me.
+Mark the current page and section appropriately. When further pages are
+requested, give each its own labeled group. Do not add links to pages that do
+not exist or list redirect aliases as separate pages.
 
 Use real, owner-provided content. Do not invent credentials, experience,
 projects, contact details, or working links. Ask for missing information when
@@ -73,7 +85,7 @@ empty sections, or dummy links.
 
 - Use plain HTML5, CSS, and JavaScript only. No backend, database, login system,
   frameworks, UI libraries, package managers, npm, or build tools.
-- Keep `index.html` and redirect files in the repository root, styles in `css/styles.css`,
+- Keep HTML pages and redirect files in the repository root, styles in `css/styles.css`,
   shared JavaScript in `js/main.js`, and images in `images/`.
 - Use one external stylesheet. Avoid inline styles and inline event handlers.
 - Use relative paths for local assets and page links. Avoid leading `/` paths
@@ -92,20 +104,20 @@ empty sections, or dummy links.
 
 - Implement at least two JavaScript interactions: a responsive navigation menu
   and project filtering with an All option.
-- The mobile menu must open and close using a real button with an accessible
-  name and accurate `aria-expanded` state. Support keyboard operation and keep
-  hidden menu links out of the tab order.
+- The grouped navigation dropdown must open and close on every screen size
+  using a real button with an accessible name and accurate `aria-expanded`.
+  Support keyboard operation, close on Escape, link selection, outside clicks,
+  or focus leaving the menu, and keep hidden links out of the tab order. Keep
+  grouped navigation visible when JavaScript is unavailable.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
 - Include a skip-to-content link, visible keyboard focus, descriptive link text,
   and alt attributes on every image. Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
-- The contact form is visual only, as requested by the owner. Label its fields
-  and keep the Send button disabled. Do not display demo badges, disabled-send
-  notices, or explanatory text about its inactive behavior. Do not add
-  validation, submission, storage, or email behavior unless the owner requests
-  it. Never claim a message was sent.
+- Contact uses the owner's approved `mailto:ss5764@njit.edu` link. Display the
+  address so visitors can also copy it. Do not restore the inactive form or
+  claim a message was sent; opening an email app does not send a message.
 - Aim for a Lighthouse Accessibility score of at least 90 on every page.
 
 ## Testing and documentation

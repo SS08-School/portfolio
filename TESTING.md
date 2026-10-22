@@ -1,8 +1,9 @@
 # Website test plan
 
-The current revision uses one page with Home, My studies, Skills, and
-Contact sections. Former Skills and Contact URLs redirect to their sections.
-About content, Projects, and project filtering are planned for later tasks.
+The current revision has Home with My studies, Skills, and email Contact
+sections, plus separate About me and Projects pages. Former Skills and Contact
+URLs redirect to their Home sections. Project details, filtering, and richer
+personal background are planned for later tasks.
 Run these cases on the live GitHub Pages site before
 submission, recording its URL, browser, viewport, and test date. For cases
 covering multiple sections, record a result for each section. Earlier check
@@ -109,25 +110,46 @@ the reset logic, continued observation of revealed items, and focused-content
 guard. Deployment/source checks passed; visual and keyboard checks in a browser
 remain Not run.
 
+Grouped-dropdown local checks on 2026-10-22: syntax and static checks passed
+for the three-line button, labeled Home page group, four valid section links,
+and JavaScript-disabled navigation markup. Simulated interaction checks passed
+for toggling, Escape with focus return, link selection, outside clicks, focus
+leaving the menu, focus staying within the menu, and current-section labeling.
+These used mocked elements; actual browser layout, native Tab/Enter/Space
+behavior, and phone/laptop presentation remain Not run. This revision has not
+been deployed.
+
+About/Projects/email local checks on 2026-10-22: static checks passed across
+Home, About, Projects, and both redirect files for 39 local references, one
+`h1` per file, unique IDs, valid ARIA references, and matching page/section
+targets. Verified three navigation groups and the correct current page on each
+content page, the supplied NJIT education, the exact email `mailto:` target,
+the truthful Projects empty state, and removal of the inactive form. JavaScript
+syntax and simulated startup with Education-only or no local section links
+passed. Actual browser layout, keyboard operation, email-app activation, and
+Lighthouse remain Not run. These changes have not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T1 | Section navigation | Activate the brand and every navigation link on the main page, including with Tab and Enter. | Each link reaches its section in the same page and tab; keyboard focus reaches the target section. | Not run |
+| T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | Page links load the correct page; section links reach the correct page and section; the current page/section is labeled correctly. | Not run |
 | T2 | Former page URLs | Open skills.html and contact.html directly and from a local file. Disable automatic redirects and test fallback links. | Each URL leads to the corresponding main-page section; fallback links work without JavaScript. | Not run |
 | T3 | Phone layouts | View every implemented page at widths of 320px and 390px; scroll top to bottom. | No sideways scrolling, clipped text, or overlapping content. | Not run |
 | T4 | Laptop layouts | View every implemented page at 1366px wide; scroll top to bottom. | Content and navigation are readable and aligned. | Not run |
-| T5 | Mobile menu toggle | At 390px wide, activate Menu twice. | Navigation opens and closes; aria-expanded matches its state. | Not run |
-| T6 | Mobile menu keyboard | Tab to Menu, press Enter, then Tab through links. Close with Escape. | All links are reachable while open; Escape closes the menu and returns focus to Menu; closed links are skipped. | Not run |
-| T7 | Navigation resize | Open the mobile menu, resize above 768px, then back below 768px. Repeat with a link focused. | Desktop links remain visible; mobile menu resets closed; focus is never left in hidden content. | Not run |
+| T5 | Grouped dropdown toggle | On all three pages at 390px and 1366px wide, activate the three-line button twice. | Dropdown opens/closes; aria-expanded matches; Home's four sections are grouped together; About and Projects have separate groups; Education belongs to About. | Not run |
+| T6 | Dropdown keyboard | Tab to the button, open with Enter or Space, then Tab through the links. Close with Escape, then reopen and Tab out. | Links are reachable while open; Escape closes and returns focus to the button; Tab can leave the menu without a trap; closed links are skipped. | Not run |
+| T7 | Dropdown resize | Open and close the dropdown at 320px, 390px, and 1366px wide; resize while a link has focus. | Three-line button appears at all widths; menu fits without sideways scrolling; focused links stay available while resizing. | Not run |
 | T8 | Keyboard on every page | On each page, use Tab, Shift+Tab, and Enter through every interactive element. | Logical focus order, visible focus, working controls, and no keyboard traps. | Not run |
 | T9 | Skip link | Reload each page, press Tab, then Enter. | Skip link appears and moves focus to main content. | Not run |
 | T10 | Accessibility audit | Run Chrome DevTools Lighthouse Accessibility on every page. Record each score. | Each page scores at least 90; resolve reported issues. | Not run |
 | T11 | Assets and console | Load each page and inspect the console and network panel; inspect image descriptions. | No script errors or missing assets; images have appropriate alt attributes. | Not run |
 | T12 | Direct-file operation | Double-click index.html; use its links and mobile menu. Repeat for other pages as added. | Styles and scripts work without a server; relative links resolve. | Not run |
 | T13 | JavaScript fallback | Disable JavaScript, reload Home at 390px, and use navigation. | Navigation links remain visible and usable; no inactive menu button is shown. | Not run |
-| T14 | Project filtering | Once implemented, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; Projects page pending |
-| T15 | Visual contact form | Scroll to Contact. Inspect its text and try empty fields, an invalid email, and valid sample values. Press Enter in each input and attempt to activate Send. Repeat without JavaScript and inspect the network panel. | No visible demo or disabled-send notices; button reads Send message and stays disabled; no validation, submission, navigation, or sent-message confirmation occurs. Enter in the message field adds a line break. | Not run |
+| T14 | Project filtering | Once real projects and filtering are added, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; project details and filtering pending |
+| T15 | Email contact | Reach Home's Contact section from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
 | T17 | Current section | Scroll from Home through My studies, Skills, and Contact, then back up; resize and open direct hash links. | Exactly one navigation link identifies the current section using aria-current=location, and its highlight follows the viewed section. | Not run |
 | T18 | Repeating scroll reveals | At phone and laptop widths, scroll down through My studies, Skills, and Contact. Scroll up until each item leaves the bottom of the screen, then down again. Repeat three times and try a direct #contact link. | Items fade and rise into view each time; scrolling up resets items below view; items above the viewport stay revealed; direct-link content is readable. | Not run |
 | T19 | Animation fallbacks | Reload with reduced motion enabled, then with JavaScript disabled. Also enable reduced motion while unrevealed content remains below the viewport. | All content stays visible with no reveal motion; changing the preference reveals all remaining content. | Not run |
-| T20 | Keyboard during reveals | Reload at the top with motion enabled; use Tab to reach the contact fields before manually scrolling there. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |
+| T20 | Keyboard during reveals | Reload Home at the top with motion enabled; use Tab to reach the email link before manually scrolling there. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |
+| T21 | Dropdown dismissal and links | On each content page, open the dropdown, click outside it, reopen, and activate each page and section link. | Outside click closes it; each link closes it and reaches the matching page or section; focus is not left in hidden content. | Not run |
+| T22 | About and project content | Open About and Projects at phone and laptop widths. | About shows NJIT enrollment and Electrical Engineering; no invented background; Projects truthfully has no published items and no dummy cards or broken links. | Not run |

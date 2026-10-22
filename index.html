@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Meet Sebastian Szeliga, an Electrical and Computer Engineering student. Welcome to my personal portfolio.">
+    <meta name="description" content="Meet Sebastian Szeliga, an Electrical Engineering student enrolled at NJIT. Welcome to my personal portfolio.">
     <meta name="theme-color" content="#FAF7FF">
-    <title>Sebastian Szeliga | Electrical &amp; Computer Engineering Student</title>
+    <title>Sebastian Szeliga | Electrical Engineering Student</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
   </head>
@@ -18,19 +18,38 @@
         <span>Sebastian Szeliga<span class="brand-dot" aria-hidden="true">.</span></span>
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>
-        <span>Menu</span>
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-          <path d="M4 8h16M4 16h16"/>
-        </svg>
-      </button>
+      <div class="navigation-menu">
+        <button class="menu-toggle" type="button" aria-label="Pages and sections" aria-expanded="false" aria-controls="site-navigation" hidden>
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
 
-      <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-        <a class="nav-link" href="#home" aria-current="location">Home</a>
-        <a class="nav-link" href="#studies">My studies <span aria-hidden="true">↗</span></a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
+        <nav id="site-navigation" class="site-navigation" aria-label="Pages and sections">
+          <div class="navigation-group" role="group" aria-labelledby="home-navigation-title">
+            <p id="home-navigation-title" class="nav-group-title">Home page <span class="nav-group-note">Current page</span></p>
+            <ul class="nav-section-links">
+              <li><a class="nav-link" href="#home" aria-current="location">Home</a></li>
+              <li><a class="nav-link" href="#studies">My studies</a></li>
+              <li><a class="nav-link" href="#skills">Skills</a></li>
+              <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="about-navigation-title">
+            <p id="about-navigation-title" class="nav-group-title">About me</p>
+            <ul class="nav-section-links">
+              <li><a class="nav-link" href="about.html">Overview</a></li>
+              <li><a class="nav-link" href="about.html#education">Education</a></li>
+            </ul>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="projects-navigation-title">
+            <p id="projects-navigation-title" class="nav-group-title">Projects</p>
+            <ul class="nav-section-links">
+              <li><a class="nav-link" href="projects.html">Project collection</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main id="main" tabindex="-1">
@@ -38,9 +57,9 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A student. A personal portfolio.</p>
           <p class="greeting">Hi, I'm Sebastian Szeliga.</p>
-          <h1 id="intro-heading">Electrical &amp;<br><span>Computer Engineering</span><br>Student.</h1>
-          <p class="hero-description">Welcome to my little corner of the web. I'm majoring in Electrical and Computer Engineering, and this is a place to get to know me.</p>
-          <a class="button" href="#studies">A little about me <span aria-hidden="true">↓</span></a>
+          <h1 id="intro-heading"><span>Electrical Engineering</span><br>Student.</h1>
+          <p class="hero-description">Welcome to my little corner of the web. I'm enrolled at NJIT, majoring in Electrical Engineering, and this is a place to get to know me.</p>
+          <a class="button" href="about.html">A little about me <span aria-hidden="true">↗</span></a>
         </div>
 
         <div class="hero-art" aria-hidden="true">
@@ -68,20 +87,20 @@
               <rect x="142" y="112" width="76" height="76" rx="16" stroke="#BFA4DA"/>
               <path d="m185 125-22 29h18l-6 22 23-31h-19l6-20Z" fill="#EEE5FF"/>
             </svg>
-            <p class="art-caption">A little electricity.<br>A little computing.</p>
-            <div class="card-bottomline"><span>Electrical + Computer</span><span>Engineering</span></div>
+            <p class="art-caption">A little electricity.<br>A lot of possibility.</p>
+            <div class="card-bottomline"><span>Electrical Engineering</span><span>NJIT</span></div>
           </div>
           <span class="art-spark spark-two">✧</span>
-          <span class="art-note">where two worlds connect</span>
+          <span class="art-note">a spark of possibility</span>
         </div>
       </section>
 
       <section id="studies" class="studies page-width" aria-labelledby="studies-heading" tabindex="-1">
-        <div class="section-label"><span aria-hidden="true">↳</span> A LITTLE ABOUT ME</div>
+        <div class="section-label"><span aria-hidden="true">↳</span> MY STUDIES</div>
         <div class="studies-copy">
-          <h2 id="studies-heading">Two fields.<br>One major.</h2>
+          <h2 id="studies-heading">Learning<br>at NJIT.</h2>
           <div>
-            <p>I'm Sebastian, an Electrical and Computer Engineering student. My studies bring together the electrical and computing sides of engineering.</p>
+            <p>I'm Sebastian Szeliga, an Electrical Engineering student enrolled at New Jersey Institute of Technology (NJIT).</p>
             <p class="closing-note">Thanks for stopping by. It's nice to have you here.</p>
           </div>
         </div>
@@ -120,27 +139,13 @@
         <div class="contact-intro">
           <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> A little hello.</p>
           <h2 id="contact-heading">Let's make<br><span>a connection.</span></h2>
-          <p class="hero-description">Every conversation starts with a hello. Here's a little space for yours.</p>
+          <p class="hero-description">Have a question or an idea to share? You can reach me by email.</p>
         </div>
 
-        <!-- No native form: pressing Enter cannot submit, even without JavaScript. -->
-        <div class="contact-form" role="form" aria-labelledby="form-heading">
-          <h3 id="form-heading">Let's connect<span aria-hidden="true">.</span></h3>
-          <div class="contact-fields">
-            <div class="form-field">
-              <label for="contact-name">Your name</label>
-              <input id="contact-name" type="text" autocomplete="off">
-            </div>
-            <div class="form-field">
-              <label for="contact-email">Email address</label>
-              <input id="contact-email" type="email" autocomplete="off" spellcheck="false">
-            </div>
-            <div class="form-field">
-              <label for="contact-message">Your message</label>
-              <textarea id="contact-message" rows="5" autocomplete="off"></textarea>
-            </div>
-          </div>
-          <button class="button contact-send" type="button" disabled>Send message <span aria-hidden="true">↗</span></button>
+        <div class="contact-card">
+          <p class="eyebrow">EMAIL</p>
+          <h3>Let's connect<span aria-hidden="true">.</span></h3>
+          <a class="contact-email" href="mailto:ss5764@njit.edu">ss5764@njit.edu <span aria-hidden="true">↗</span></a>
         </div>
       </section>
     </main>
