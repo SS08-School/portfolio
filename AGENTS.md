@@ -71,9 +71,11 @@ empty sections, or dummy links.
   dark plum text (`#38254D`), muted plum secondary text (`#695675`), and deeper
   purple (`#755098`) for primary buttons, links, and focus indicators.
 - Keep purple and white dominant, with pale peach (`#FBE8DE`) and mint
-  (`#E7F3EC`) as secondary accents. Use a faint dot-grid background, soft color
-  washes, and restrained decorative shapes to add detail without crowding the
-  content. Background decoration must not block clicks, affect layout, or move.
+  (`#E7F3EC`) in the page background. Use a faint dot grid, soft color washes,
+  and restrained background shapes to add detail without crowding the content.
+  Keep all main content cards solid white, with no alternating colors or
+  gradients on rectangular surfaces. Background decoration must not block
+  clicks, affect layout, or move.
 - Keep pastel colors mainly on backgrounds and decoration. Use dark text on
   pale surfaces and white text on deeper purple buttons. Verify contrast for
   the actual combinations used, including hover, focus, and selected states.
