@@ -127,7 +127,17 @@ content page, the supplied NJIT education, the exact email `mailto:` target,
 the truthful Projects empty state, and removal of the inactive form. JavaScript
 syntax and simulated startup with Education-only or no local section links
 passed. Actual browser layout, keyboard operation, email-app activation, and
-Lighthouse remain Not run. These changes have not been deployed.
+Lighthouse remain Not run. At the time of these local checks, the changes had
+not been deployed.
+
+About/Projects/email deployment checks on 2026-10-22: GitHub Pages deployment
+succeeded for commit `c89964d`. Home, About, Projects, the shared stylesheet,
+and the script returned HTTP 200. Published HTML contains all three navigation
+groups on every content page, the supplied NJIT/Electrical Engineering
+education on About, the truthful Projects empty state, and the approved
+`mailto:ss5764@njit.edu` contact link on Home. Deployment/source checks passed;
+actual browser presentation, keyboard operation, and email-app activation
+remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

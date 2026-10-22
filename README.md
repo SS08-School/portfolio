@@ -32,10 +32,9 @@ The former Skills and Contact page URLs redirect to their matching Home
 sections.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
-The single-page revision was deployed and verified on October 22, 2026. The
-main page, stylesheet, script, and former-page redirect targets load successfully.
-The grouped dropdown, new pages, degree update, and email contact revision
-are local and have not yet been deployed.
+Home, About, Projects, the grouped navigation, and the email contact update
+were deployed on October 22, 2026. All three pages, the stylesheet, and the
+shared script were verified to load successfully.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files
