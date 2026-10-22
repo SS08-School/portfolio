@@ -80,6 +80,15 @@ to `index.html#skills` and `index.html#contact`. These HTTP/source checks passed
 actual browser scrolling, keyboard behavior, redirect execution, visual layout,
 and Lighthouse remain Not run.
 
+Local scroll-reveal checks on 2026-10-22: JavaScript syntax and simulated
+interaction checks passed for leaving initially visible content alone,
+revealing off-screen items once, revealing focused content immediately, and
+clearing effects when reduced motion is enabled. Reduced-motion and missing
+IntersectionObserver fallbacks kept all content visible. Markup has no pending
+animation classes, so JavaScript-disabled content is visible by default. No
+connected browser was available; actual phone/laptop animation, keyboard, and
+visual checks remain Not run. These animation changes are not yet deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Section navigation | Activate the brand and every navigation link on the main page, including with Tab and Enter. | Each link reaches its section in the same page and tab; keyboard focus reaches the target section. | Not run |
@@ -99,3 +108,6 @@ and Lighthouse remain Not run.
 | T15 | Visual contact form | Scroll to Contact. Inspect its text and try empty fields, an invalid email, and valid sample values. Press Enter in each input and attempt to activate Send. Repeat without JavaScript and inspect the network panel. | No visible demo or disabled-send notices; button reads Send message and stays disabled; no validation, submission, navigation, or sent-message confirmation occurs. Enter in the message field adds a line break. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
 | T17 | Current section | Scroll from Home through My studies, Skills, and Contact, then back up; resize and open direct hash links. | Exactly one navigation link identifies the current section using aria-current=location, and its highlight follows the viewed section. | Not run |
+| T18 | Scroll reveals | At phone and laptop widths, reload at the top and slowly scroll through My studies, Skills, and Contact. Scroll back up and down. Also load a direct #contact link. | Off-screen content fades and rises gently as it enters view; cards have a subtle stagger; revealed content stays visible; direct-link content is readable. | Not run |
+| T19 | Animation fallbacks | Reload with reduced motion enabled, then with JavaScript disabled. Also enable reduced motion while unrevealed content remains below the viewport. | All content stays visible with no reveal motion; changing the preference reveals all remaining content. | Not run |
+| T20 | Keyboard during reveals | Reload at the top with motion enabled; use Tab to reach the contact fields before manually scrolling there. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |

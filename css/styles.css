@@ -142,4 +142,14 @@ main > section { scroll-margin-top: 2rem; }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
   .button, .nav-link { transition: background-color 150ms ease; }
+
+  .scroll-reveal {
+    transition: opacity 550ms ease, transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .scroll-reveal.reveal-pending:not(:focus-within) {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  .skill-card.scroll-reveal:nth-child(even) { transition-delay: 90ms; }
+  .scroll-reveal:focus-within { transition: none; }
 }

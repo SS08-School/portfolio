@@ -18,6 +18,10 @@ and website planning with descriptive proficiency levels. The Contact section
 has labeled fields and an inactive Send button, without visible demo notices;
 it does not send or store messages.
 
+The local revision adds gentle scroll reveals for the studies section, skill
+cards, and contact content. Each item animates once; reduced-motion preferences
+skip the effect. Content remains visible without JavaScript or animation support.
+
 Richer About and Projects sections can be added in later tasks using
 owner-provided content. The former Skills and Contact page URLs redirect to
 their matching sections on the main page.
@@ -33,7 +37,7 @@ Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 - `skills.html`: Redirect to `index.html#skills` for existing links.
 - `contact.html`: Redirect to `index.html#contact` for existing links.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
-- `js/main.js`: Responsive navigation menu and current-section highlighting.
+- `js/main.js`: Responsive menu, current-section highlighting, and scroll reveals.
 - `AGENTS.md`: Project requirements, design, and workflow.
 - `TESTING.md`: Test plan and verification status.
 

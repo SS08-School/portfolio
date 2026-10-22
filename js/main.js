@@ -83,3 +83,45 @@ if (navigation) {
   window.addEventListener("load", updateCurrentSection);
   updateCurrentSection();
 }
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if ("IntersectionObserver" in window && !reducedMotion.matches) {
+  const revealTargets = document.querySelectorAll(
+    ".studies, .skills-intro, .skill-card, .contact-intro, .contact-form"
+  );
+
+  function reveal(element) {
+    element.classList.remove("reveal-pending");
+    revealObserver.unobserve(element);
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) reveal(entry.target);
+    }
+  }, { rootMargin: "0px 0px -36px 0px", threshold: 0 });
+
+  for (const element of revealTargets) {
+    // Leave content already on screen visible, including on direct section links.
+    if (element.getBoundingClientRect().top >= window.innerHeight) {
+      element.classList.add("scroll-reveal", "reveal-pending");
+      revealObserver.observe(element);
+    }
+  }
+
+  // Keyboard users should never have to wait for a focused control to appear.
+  document.addEventListener("focusin", (event) => {
+    const pendingElement = event.target.closest(".reveal-pending");
+    if (pendingElement) reveal(pendingElement);
+  });
+
+  reducedMotion.addEventListener("change", (event) => {
+    if (event.matches) {
+      for (const element of revealTargets) {
+        element.classList.remove("scroll-reveal", "reveal-pending");
+      }
+      revealObserver.disconnect();
+    }
+  });
+}
