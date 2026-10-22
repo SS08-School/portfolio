@@ -23,8 +23,8 @@ owner-provided content. The former Skills and Contact page URLs redirect to
 their matching sections on the main page.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
-The previously published version was verified to load after deployment. The
-single-page revision is local and has not yet been deployed.
+The single-page revision was deployed and verified on October 22, 2026. The
+main page, stylesheet, script, and former-page redirect targets load successfully.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 
 ## Project files

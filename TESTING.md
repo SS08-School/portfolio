@@ -1,6 +1,6 @@
 # Website test plan
 
-The current local revision uses one page with Home, My studies, Skills, and
+The current revision uses one page with Home, My studies, Skills, and
 Contact sections. Former Skills and Contact URLs redirect to their sections.
 About content, Projects, and project filtering are planned for later tasks.
 Run these cases on the live GitHub Pages site before
@@ -69,7 +69,16 @@ page's visible text has no demo or disabled-send notices. JavaScript syntax
 and simulated current-section highlighting checks passed, including scrolling
 down/up, bottom-of-page detection, load, and resize. These simulations used
 mocked geometry; visual, keyboard, direct-file redirect, and Lighthouse checks
-remain Not run. This revision has not been deployed.
+remain Not run. At the time of these local checks, the revision had not been deployed.
+
+Single-page deployment checks on 2026-10-22: GitHub Pages deployment succeeded
+for commit `0d07e29`. The main page, stylesheet, script, and former Skills and
+Contact URLs returned HTTP 200. Verified the Skills and Contact sections and
+same-page navigation anchors in the published HTML, the inactive Send button,
+the absence of visible demo or disabled-send notices, and the redirect markup
+to `index.html#skills` and `index.html#contact`. These HTTP/source checks passed;
+actual browser scrolling, keyboard behavior, redirect execution, visual layout,
+and Lighthouse remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
