@@ -18,7 +18,7 @@ and website planning with descriptive proficiency levels. The Contact section
 has labeled fields and an inactive Send button, without visible demo notices;
 it does not send or store messages.
 
-The local revision adds gentle scroll reveals for the studies section, skill
+The site includes gentle scroll reveals for the studies section, skill
 cards, and contact content. Each item animates once; reduced-motion preferences
 skip the effect. Content remains visible without JavaScript or animation support.
 

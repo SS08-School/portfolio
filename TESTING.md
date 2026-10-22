@@ -87,7 +87,14 @@ clearing effects when reduced motion is enabled. Reduced-motion and missing
 IntersectionObserver fallbacks kept all content visible. Markup has no pending
 animation classes, so JavaScript-disabled content is visible by default. No
 connected browser was available; actual phone/laptop animation, keyboard, and
-visual checks remain Not run. These animation changes are not yet deployed.
+visual checks remain Not run. At the time of these local checks, the animation
+changes had not been deployed.
+
+Scroll-effect deployment check on 2026-10-22: GitHub Pages deployment succeeded
+for commit `52a75e4`. The live stylesheet and script returned HTTP 200 and
+contained the reveal styles, IntersectionObserver logic, and reduced-motion
+guard. Deployment/source checks passed; actual visual animation and keyboard
+checks in a browser remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
