@@ -51,8 +51,9 @@ empty sections, or dummy links.
   rounded project cards, pill-shaped buttons, and subtle shadows. Use soft
   lavender sections and small decorative touches without crowding the content.
 - Reveal the studies section, skills heading/cards, and contact content with a
-  gentle fade-and-rise effect as they enter view. Animate each item once, keep
-  keyboard-focused content visible, and skip effects for reduced motion.
+  gentle fade-and-rise effect as they enter view. Reset items when scrolling up
+  moves them below view, so they reveal again on the next downward scroll.
+  Keep keyboard-focused content visible and skip effects for reduced motion.
 - Colors: pale lavender background (`#FAF7FF`), white surfaces (`#FFFFFF`),
   pastel lilac sections (`#EEE5FF`), and soft purple accents (`#E2D2F7`). Use
   dark plum text (`#38254D`), muted plum secondary text (`#695675`), and deeper

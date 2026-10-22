@@ -19,8 +19,9 @@ has labeled fields and an inactive Send button, without visible demo notices;
 it does not send or store messages.
 
 The site includes gentle scroll reveals for the studies section, skill
-cards, and contact content. Each item animates once; reduced-motion preferences
-skip the effect. Content remains visible without JavaScript or animation support.
+cards, and contact content. Items reset when scrolling up moves them below view,
+then reveal again when scrolling back down. Reduced-motion preferences skip the
+effect. Content remains visible without JavaScript or animation support.
 
 Richer About and Projects sections can be added in later tasks using
 owner-provided content. The former Skills and Contact page URLs redirect to

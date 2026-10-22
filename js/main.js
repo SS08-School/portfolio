@@ -93,21 +93,29 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
 
   function reveal(element) {
     element.classList.remove("reveal-pending");
-    revealObserver.unobserve(element);
   }
 
   const revealObserver = new IntersectionObserver((entries) => {
     for (const entry of entries) {
-      if (entry.isIntersecting) reveal(entry.target);
+      if (entry.isIntersecting) {
+        reveal(entry.target);
+      } else if (
+        entry.boundingClientRect.top >= (entry.rootBounds?.bottom ?? window.innerHeight) &&
+        !entry.target.matches(":focus-within")
+      ) {
+        // Scrolling up moves the item below view; reset it for the next reveal.
+        entry.target.classList.add("reveal-pending");
+      }
     }
   }, { rootMargin: "0px 0px -36px 0px", threshold: 0 });
 
   for (const element of revealTargets) {
+    element.classList.add("scroll-reveal");
     // Leave content already on screen visible, including on direct section links.
     if (element.getBoundingClientRect().top >= window.innerHeight) {
-      element.classList.add("scroll-reveal", "reveal-pending");
-      revealObserver.observe(element);
+      element.classList.add("reveal-pending");
     }
+    revealObserver.observe(element);
   }
 
   // Keyboard users should never have to wait for a focused control to appear.
