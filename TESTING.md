@@ -193,7 +193,8 @@ browser scrolling, keyboard behavior, and visual transitions remain Not run.
 
 Greeting copy check on 2026-10-22: the local Home greeting now reads
 "Hi, I'm Sebastian." Source diff and whitespace checks passed. Browser layout
-checks remain Not run; this text change has not been deployed.
+checks remain Not run. At the time of this check, the text change had not
+been deployed.
 
 Header-name local checks on 2026-10-22: source checks passed for the same
 text-only full-name Home link on all three content pages, with no initials
@@ -201,6 +202,13 @@ badge or decorative period. Links retain accessible names and keyboard focus
 styles. The stylesheet version was refreshed on all five HTML files. No
 connected browser is available; phone/laptop appearance, keyboard interaction,
 and direct-file browser checks remain Not run.
+
+Greeting/header deployment checks on 2026-10-22: GitHub Pages deployment
+succeeded for commit `2ce6cf5`. All three content pages returned HTTP 200 with
+the text-only full-name header and new stylesheet version. Home contains
+"Hi, I'm Sebastian." The published stylesheet returned HTTP 200 with the
+updated name typography and no initials-badge styles. Publication/source checks
+passed; visual and keyboard browser checks remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
