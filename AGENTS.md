@@ -89,6 +89,8 @@ empty sections, or dummy links.
   headings. Avoid external font dependencies.
 - Use consistent headers, navigation, footers, buttons, spacing, and typography
   throughout the page. Clearly identify the current page in the navigation.
+- Show the full name as a simple, semibold text link at the top left, without
+  an initials badge or decorative period.
 - Start with a phone layout and expand to a laptop layout using CSS media
   queries. Avoid horizontal scrolling and keep images responsive.
 - Default to light mode until the visitor explicitly chooses dark mode. Use an

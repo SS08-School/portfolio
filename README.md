@@ -17,6 +17,8 @@ About me and Projects pages are available from the three-line dropdown on
 phone and laptop screens. Navigation groups each page's links together and
 highlights only the current page. Section links remain unselected. Each page's
 first link opens at the document top; Home section links stay on Home.
+The header uses a clean text-only name link, and Home greets visitors with
+"Hi, I'm Sebastian."
 
 About me includes enrollment at NJIT and the Electrical Engineering major.
 Personal background can be added later. Projects shows an honest empty
