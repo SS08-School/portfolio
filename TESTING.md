@@ -260,7 +260,15 @@ and last in its footer, with instructions revealed on focus. These are source
 and mocked checks; actual phone/laptop appearance, focus behavior, direct-file
 storage behavior, console checks, and Lighthouse remain Not run. Browser
 verification remains limited by the previously recorded Chrome URL access
-failure. This revision has not been deployed.
+failure. At the time of these checks, this revision had not been deployed.
+
+Saved keyboard-preference deployment checks on 2026-10-26: GitHub Pages
+deployment succeeded for commit `a7c7b70`. All three content pages returned
+HTTP 200 with the default-on button last in the footer and updated asset
+versions. The versioned script and stylesheet returned HTTP 200 with preference
+storage, the compact button styles, and focus-visible instructions. These
+publication/source checks passed; real browser storage, appearance, and keyboard
+interaction checks remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
