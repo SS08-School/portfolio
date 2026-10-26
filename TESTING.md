@@ -452,3 +452,13 @@ frame without scaling. Temporary test/renderer pages are not site content.
 The 45-assertion result above describes the earlier two-demo version. The
 80-assertion follow-up supersedes it for the current local revision and retains
 the earlier failures and corrections as historical evidence.
+
+## Project heading copy cleanup — 2026-10-26
+
+Removed the short promotional paragraphs beside all four project lab headings,
+including "Three choices. One little rivalry." Useful instructions inside the
+demos remain. No JavaScript or CSS changed.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T68 | Project taglines removed | Load Projects directly from a local file at 390px and 1366px; inspect lab-heading content and the game layout. | All four heading-side paragraphs are gone; four headings remain; demos initialize; no sideways scrolling or new page errors. | Pass — actual headless Chrome DOM/layout checks at both widths; screenshots visually inspected. Physical keyboard and live deployment checks Not run for this text-only revision. |
