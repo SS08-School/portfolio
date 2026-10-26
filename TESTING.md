@@ -210,6 +210,16 @@ the text-only full-name header and new stylesheet version. Home contains
 updated name typography and no initials-badge styles. Publication/source checks
 passed; visual and keyboard browser checks remain Not run.
 
+Keyboard-scrolling local checks on 2026-10-26: full-script syntax and 42
+simulated key cases passed for Up/Down direction, held-key repeats, native
+modified-key and composition behavior, editable/arrow-operated controls,
+nested scrolling regions, and leaving Tab/Enter/Escape/Space/PageUp/PageDown/
+Home/End untouched. These mocked checks do not verify actual browser input.
+Script references were refreshed on all three content pages. Computer Use
+ended during the previous attempt because it could not reliably determine
+Chrome's URL. Actual phone/laptop keyboard checks, direct-file operation,
+console checks, and Lighthouse remain Not run.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | First links load the correct page at the document top; section links reach their actual sections; only the current page is selected. | Not run |
@@ -243,3 +253,5 @@ passed; visual and keyboard browser checks remain Not run.
 | T29 | Page, icon, and theme motion | Switch themes and navigate among Home, About, and Projects, including browser Back. Repeat with reduced motion. | Palette changes ease over about 280ms with synchronized card colors; sun/moon rotate and fade; page content appears gently. Saved-theme loads have no palette fade or light flash. Reduced motion skips effects; focused controls stay visible. | Not run |
 | T30 | Dark theme and compact header | At 320px, 390px, and 1366px wide, inspect all pages in both modes and use both header buttons. | Text, diagram, cards, focus indicators, and dropdown are readable; both controls fit and work without overlap or sideways scrolling. | Not run |
 | T31 | Page overview starts at top | Visit each page, scroll down, navigate elsewhere, and select its first dropdown link again. Also select the current page's first link and use Ctrl/Cmd-click and browser Back. | First links reach scroll position 0 and show the header; section links still reach sections; modified clicks retain native behavior; Back is not globally forced to the top. | Not run |
+| T32 | Arrow scrolling on every page | At phone and laptop widths, focus the page, brand, theme button, menu button, and ordinary links. Press and hold Up/Down after following links and returning with Back. | Page scrolls in the requested direction while it has room; focus stays on the control; held keys repeat without animation buildup. | Not run |
+| T33 | Native keyboard behavior and focus exit | On every page, use Tab/Shift+Tab through all controls and out to browser controls. Open a tall dropdown and use arrows within it. Test Enter, Space, Escape, PageUp/PageDown, Home/End, and modified shortcuts. | Controls remain usable; nested regions scroll natively; focus can leave and return without a trap or automatic refocusing; browser shortcuts remain available. | Not run |

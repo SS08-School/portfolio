@@ -44,6 +44,12 @@ immediate.
 The former Skills and Contact page URLs redirect to their matching Home
 sections.
 
+With the page focused, Up/Down scrolls from ordinary links and buttons;
+holding a key repeats the movement. Tab/Shift+Tab reaches controls, Enter
+activates links and buttons, Space activates buttons, and Escape closes the
+dropdown. Editable controls and tall dropdowns keep native arrow behavior.
+Visitors can still move focus to browser controls or another application.
+
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
 Home, About, Projects, the grouped navigation, and the email contact update
 were deployed on October 22, 2026. All three pages, the stylesheet, and the

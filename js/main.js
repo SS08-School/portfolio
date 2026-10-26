@@ -2,6 +2,30 @@ const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 const menuContainer = document.querySelector(".navigation-menu");
 
+document.addEventListener("keydown", (event) => {
+  if (
+    !["ArrowUp", "ArrowDown"].includes(event.key) || event.defaultPrevented ||
+    event.isComposing || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey
+  ) return;
+
+  // Leave text editing and controls that use arrow keys to the browser.
+  if (event.target.closest(
+    'input, textarea, select, [contenteditable], [role="textbox"], [role="slider"], ' +
+    '[role="spinbutton"], [role="combobox"], [role="listbox"], [role="grid"], ' +
+    '[role="tree"], [role="menu"], [role="tablist"], [role="radiogroup"], audio, video'
+  )) return;
+
+  // A tall dropdown or another scrolling region keeps its native arrow scrolling.
+  for (let element = event.target; element && element !== document.body; element = element.parentElement) {
+    const overflow = window.getComputedStyle(element).overflowY;
+    if (/^(auto|scroll)$/.test(overflow) && element.scrollHeight > element.clientHeight) return;
+  }
+
+  event.preventDefault();
+  // Immediate steps also work when a key is held and respect reduced motion.
+  window.scrollBy({ top: event.key === "ArrowDown" ? 60 : -60, left: 0, behavior: "instant" });
+});
+
 if (menuButton && navigation && menuContainer) {
   function setMenuOpen(isOpen) {
     menuButton.setAttribute("aria-expanded", String(isOpen));

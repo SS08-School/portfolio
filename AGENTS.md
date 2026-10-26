@@ -150,6 +150,10 @@ empty sections, or dummy links.
   around whole main/section containers when navigating to an anchor destination.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
+- While the page has focus, support Up/Down scrolling from ordinary links and
+  buttons, including held keys. Preserve native arrows in editable controls and
+  nested scrolling regions. Keep Tab, Shift+Tab, and browser shortcuts native;
+  never trap focus or force it back after a visitor leaves the page.
 - Contact uses the owner's approved `mailto:ss5764@njit.edu` link. Display the
   address so visitors can also copy it. Do not restore the inactive form or
   claim a message was sent; opening an email app does not send a message.
