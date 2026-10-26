@@ -5,6 +5,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const keyboardControls = document.querySelector(".keyboard-controls");
 const keyboardToggle = document.querySelector(".keyboard-toggle");
 const keyboardHelp = document.querySelector(".keyboard-help");
+const keyboardStorageKey = "portfolio-keep-tab";
 let keepTabOnPage = true;
 let scrollTarget = null;
 let scrollFrame = null;
@@ -52,24 +53,49 @@ document.addEventListener("pointerdown", stopKeyboardScroll);
 document.addEventListener("focusin", stopKeyboardScroll);
 reducedMotion.addEventListener("change", stopKeyboardScroll);
 
-function setKeyboardNavigation(enabled) {
+function savedKeyboardNavigation() {
+  try {
+    return localStorage.getItem(keyboardStorageKey) !== "false";
+  } catch {
+    // If storage is blocked, keep the current page's choice (initially on).
+    return keepTabOnPage;
+  }
+}
+
+function setKeyboardNavigation(enabled, savePreference = false) {
   keepTabOnPage = enabled;
   keyboardToggle?.setAttribute("aria-pressed", String(enabled));
   if (keyboardHelp) keyboardHelp.textContent = enabled
-    ? "Tab cycles through page controls. Shift+Tab goes back. Esc releases Tab to the browser."
-    : "Standard Tab navigation is on. Turn on Keep Tab on this page to cycle through page controls again.";
+    ? "Tab cycles through page controls. Esc releases Tab to the browser."
+    : "Standard Tab navigation is on. Enable this button to cycle through page controls.";
+  if (savePreference) {
+    try {
+      localStorage.setItem(keyboardStorageKey, String(enabled));
+    } catch {
+      // The control still works for this page when storage is unavailable.
+    }
+  }
 }
+
+setKeyboardNavigation(savedKeyboardNavigation());
 
 if (keyboardControls && keyboardToggle) {
   keyboardControls.hidden = false;
-  keyboardToggle.addEventListener("click", () => setKeyboardNavigation(!keepTabOnPage));
+  keyboardToggle.addEventListener("click", () => setKeyboardNavigation(!keepTabOnPage, true));
 }
+
+window.addEventListener("storage", (event) => {
+  if (event.key === keyboardStorageKey || event.key === null) {
+    setKeyboardNavigation(savedKeyboardNavigation());
+  }
+});
+window.addEventListener("pageshow", () => setKeyboardNavigation(savedKeyboardNavigation()));
 
 document.addEventListener("keydown", (event) => {
   if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
   if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
     stopKeyboardScroll();
-    setKeyboardNavigation(false);
+    setKeyboardNavigation(false, true);
   }
   if (!["ArrowUp", "ArrowDown"].includes(event.key)) stopKeyboardScroll();
   if (event.key !== "Tab" || !keepTabOnPage) return;

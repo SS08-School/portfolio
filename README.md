@@ -50,7 +50,11 @@ Tab/Shift+Tab cycles through available controls in page order, skipping closed
 menu links and disabled controls. Enter activates links and buttons; Space
 activates buttons. Keyboard menu activation focuses its first link. Escape
 closes an open menu; with the menu closed it switches back to standard Tab
-navigation. The footer's "Keep Tab on this page" button turns cycling on or off.
+navigation. A compact "Keep Tab on this page" button sits at the bottom-right
+of the footer, with instructions shown on focus. Cycling defaults on; choosing
+on/off with the button or turning it off with Escape saves that choice across
+pages and visits in the same browser. Clearing site storage returns it to on.
+If storage is blocked, the choice still works for the current page.
 Editable controls and tall dropdowns keep native arrow behavior. Browser
 shortcuts remain available; the site only handles keys while the page has focus.
 

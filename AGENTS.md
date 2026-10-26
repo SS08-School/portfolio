@@ -160,6 +160,10 @@ empty sections, or dummy links.
   its first link. Escape closes an open menu; otherwise it releases Tab to the
   browser. Provide a footer toggle and instructions for this behavior. Preserve
   browser shortcuts and never force focus back after a visitor leaves the page.
+- Keep the Tab-cycling toggle compact at the very bottom of the footer, with
+  instructions visible on focus. Default it on and save explicit on/off choices
+  (including Escape) in localStorage across pages and visits. Restore its pressed
+  state on load/Back, sync tabs, and keep it usable when storage is blocked.
 - Contact uses the owner's approved `mailto:ss5764@njit.edu` link. Display the
   address so visitors can also copy it. Do not restore the inactive form or
   claim a message was sent; opening an email app does not send a message.

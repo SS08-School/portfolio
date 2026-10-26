@@ -251,6 +251,17 @@ Tab cycling, smooth arrow scrolling, Escape release, and keyboard-control
 styles. These publication/source checks passed; actual browser keyboard and
 visual checks remain Not run.
 
+Saved keyboard-preference local checks on 2026-10-26: full-script syntax and
+19 simulated preference/lifecycle assertions passed for on by default,
+restoring saved on/off, button and Escape persistence, cross-page restoration,
+cross-tab updates, browser-Back restoration, cleared/invalid values, unrelated
+storage events, and blocked-storage fallback. The footer button is now compact
+and last in its footer, with instructions revealed on focus. These are source
+and mocked checks; actual phone/laptop appearance, focus behavior, direct-file
+storage behavior, console checks, and Lighthouse remain Not run. Browser
+verification remains limited by the previously recorded Chrome URL access
+failure. This revision has not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | First links load the correct page at the document top; section links reach their actual sections; only the current page is selected. | Not run |
@@ -288,3 +299,5 @@ visual checks remain Not run.
 | T33 | Native keyboard behavior and focus exit | On every page, press Escape with the menu closed, then Tab/Shift+Tab out to browser controls. Open a tall dropdown and use arrows within it. Test Enter, Space, PageUp/PageDown, Home/End, and modified shortcuts. | Escape releases custom cycling; nested regions scroll natively; focus can leave and return without automatic refocusing; browser shortcuts remain available. | Not run |
 | T34 | Custom Tab order and toggle | At phone and laptop widths on each page, Tab beyond the final control, Shift+Tab before the first, use the skip link and section links, and toggle Keep Tab on this page off/on. | Cycling wraps in page order, follows section destinations, and skips hidden or disabled controls. The footer toggle reports its pressed state and restores native/cycling navigation. | Not run |
 | T35 | Smooth arrow scrolling | At phone and laptop widths, press and hold Down/Up, reverse direction, reach the top/bottom, and interrupt with Tab, mouse wheel, touch, or a click. Repeat with reduced motion. | Scrolling eases smoothly and responds promptly to direction changes; no animation remains at boundaries; other input takes over immediately; reduced motion scrolls without animation. | Not run |
+| T36 | Saved keyboard-navigation choice | Clear site storage and load each page. Toggle off, navigate/reload/revisit, then repeat after choosing on. Turn off with Escape. Test browser Back, another tab, and blocked storage; repeat using local files. | Defaults on; explicit on/off and Escape choices persist in the same browser wherever storage is shared; state syncs across tabs and Back. Clearing storage restores on. Blocked storage leaves the current-page toggle working. | Not run |
+| T37 | Compact bottom control | At phone and laptop widths in both themes, scroll to each page's bottom and Tab to the keyboard button. | Small button sits last at the footer's bottom-right; focus ring is visible; instructions appear above it on focus and are available to screen readers. No clipping or horizontal overflow. | Not run |
