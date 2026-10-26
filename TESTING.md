@@ -240,7 +240,16 @@ ARIA targets, the footer control on each page, and all 44 local references and
 asset versions. These mocked/static checks are not browser tests.
 Browser verification remains limited by the previously recorded Chrome URL
 access failure. Phone/laptop layout, real keyboard input, direct-file browser
-operation, console checks, and Lighthouse remain Not run. This revision is local.
+operation, console checks, and Lighthouse remain Not run. At the time of these
+checks, this revision was local.
+
+Custom keyboard-navigation deployment checks on 2026-10-26: GitHub Pages
+deployment succeeded for commit `cee3baf`. Home, About, and Projects returned
+HTTP 200 with the footer keyboard toggle, Escape instructions, and new asset
+versions. The versioned script and stylesheet returned HTTP 200 with custom
+Tab cycling, smooth arrow scrolling, Escape release, and keyboard-control
+styles. These publication/source checks passed; actual browser keyboard and
+visual checks remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
