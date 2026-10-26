@@ -220,6 +220,12 @@ ended during the previous attempt because it could not reliably determine
 Chrome's URL. Actual phone/laptop keyboard checks, direct-file operation,
 console checks, and Lighthouse remain Not run.
 
+Keyboard-scrolling deployment checks on 2026-10-26: GitHub Pages deployment
+succeeded for commit `7665019`. Home, About, and Projects returned HTTP 200
+with the updated main-script version. That script returned HTTP 200 and
+contains arrow scrolling and native-key guards. These publication/source
+checks passed; actual browser keyboard checks remain Not run.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | First links load the correct page at the document top; section links reach their actual sections; only the current page is selected. | Not run |
