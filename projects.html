@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sebastian Szeliga's project collection and past work.">
+    <meta name="description" content="Play Rock Paper Scissors and explore Fibonacci in Sebastian Szeliga's interactive Assignment 1 project collection.">
     <meta name="theme-color" content="#FAF7FF">
     <title>Projects | Sebastian Szeliga</title>
     <script src="js/theme.js?v=6ee993810b0d"></script>
-    <link rel="stylesheet" href="css/styles.css?v=ae3adbefbc4f">
-    <script src="js/main.js?v=c452ddf910a0" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=7288c03dda2c">
+    <script src="js/main.js?v=db80a43949f7" defer></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -61,22 +61,88 @@
       </div>
     </header>
 
-    <main id="main" class="content-page page-width page-enter" tabindex="-1">
-      <section class="page-intro" aria-labelledby="projects-heading">
-        <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> My project collection.</p>
-        <h1 id="projects-heading">A place for<br><span>my past work.</span></h1>
-        <p class="hero-description">Projects I've worked on, and the ideas, process, and lessons behind them.</p>
-      </section>
-      <section class="project-status" aria-labelledby="project-status-heading">
-        <div class="project-status-icon" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="32" height="32" fill="none" focusable="false">
-            <path d="M4 9a3 3 0 0 1 3-3h6l3 4h9a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-            <path d="M11 18h10M11 22h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          </svg>
+    <main id="main" class="content-page page-width page-enter projects-page" tabindex="-1">
+      <section class="page-intro projects-intro" aria-labelledby="projects-heading">
+        <div>
+          <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> THE PROJECT PLAYGROUND / ASSIGNMENT 01</p>
+          <h1 id="projects-heading">Small ideas.<br><span>Playful possibilities.</span></h1>
+          <p class="hero-description">Four mini projects from class. Two reimagined for the browser. Make a move, follow a pattern, and see the logic come to life.</p>
+          <a class="button" href="#rps-lab">Let's play <span aria-hidden="true">↘</span></a>
         </div>
-        <h2 id="project-status-heading">No projects published yet.</h2>
-        <p>This collection will feature my past work as I add project details.</p>
+        <div class="playground-art" aria-hidden="true">
+          <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+          <span class="playground-spark">✳</span>
+          <img class="floating-hand hand-rock" src="images/rock.svg" alt="" width="200" height="200">
+          <img class="floating-hand hand-paper" src="images/paper.svg" alt="" width="200" height="200">
+          <img class="floating-hand hand-scissors" src="images/scissors.svg" alt="" width="200" height="200">
+          <span class="art-sticker">a little logic. a lot of play.</span>
+        </div>
       </section>
+
+      <section class="project-collection" aria-labelledby="collection-heading">
+        <div class="collection-heading"><h2 id="collection-heading">From the notebook.</h2><span class="small-label">04 MINI PROJECTS</span></div>
+        <p class="collection-description">Originally written in Python for Assignment 1. The interactive versions below are browser adaptations built with Codex.</p>
+        <div class="project-filters" role="group" aria-label="Filter assignment projects" hidden>
+          <button type="button" data-project-filter="all" aria-pressed="true">All projects <span>04</span></button>
+          <button type="button" data-project-filter="interactive" aria-pressed="false">Interactive demos <span>02</span></button>
+          <button type="button" data-project-filter="notes" aria-pressed="false">Assignment notes <span>02</span></button>
+        </div>
+        <p id="filter-status" class="visually-hidden" role="status"></p>
+        <div class="project-grid">
+          <article class="project-card" data-project-category="interactive">
+            <div class="project-thumbnail rps-thumbnail" aria-hidden="true"><img src="images/rock.svg" alt="" width="200" height="200"><img src="images/paper.svg" alt="" width="200" height="200"><img src="images/scissors.svg" alt="" width="200" height="200"></div>
+            <div class="project-card-copy"><p class="project-tag">01 / GAME · INTERACTIVE</p><h3>Rock, Paper, Scissors</h3><p>A two-player terminal game with hidden choices, winner detection, and repeat rounds. Now with a computer opponent, too.</p><a href="#rps-lab">Enter the arena <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card" data-project-category="interactive">
+            <img class="project-thumbnail" src="images/fibonacci.svg" alt="A Fibonacci-inspired spiral over a grid of growing squares" width="480" height="240">
+            <div class="project-card-copy"><p class="project-tag">02 / MATH · INTERACTIVE</p><h3>Fibonacci Sequence</h3><p>Start at 0 and 1. Add the last two terms. A loop from the notebook becomes a sequence you can build and explore.</p><a href="#fib-lab">Follow the pattern <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="project-card" data-project-category="notes">
+            <img class="project-thumbnail" src="images/calculator.svg" alt="An illustrated calculator with the four arithmetic operations" width="480" height="240" loading="lazy">
+            <div class="project-card-copy"><p class="project-tag">03 / MATH · NOTEBOOK</p><h3>Calculator</h3><p>Two numbers, four operations, and a loop for another calculation. Includes checks for invalid numbers and division by zero.</p><details><summary>Inside the assignment</summary><p>The calculator function uses conditionals to select addition, subtraction, multiplication, or division. A try/except block handles nonnumeric operands, and the loop asks whether to calculate again.</p></details></div>
+          </article>
+          <article class="project-card" data-project-category="notes">
+            <img class="project-thumbnail" src="images/cart.svg" alt="An illustrated shopping cart with groceries" width="480" height="240" loading="lazy">
+            <div class="project-card-copy"><p class="project-tag">04 / SIMULATION · NOTEBOOK</p><h3>Shopping Cart</h3><p>Add groceries, remove quantities, and calculate a total. The notebook tracks a shelf and a cart with limited stock.</p><details><summary>Inside the assignment</summary><p>The shelf holds Frosted Flakes, eggs, and sourdough. Adding an item reduces its shelf stock; removing it returns that stock. The total multiplies each item's price by its quantity.</p></details></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="rps-lab" class="project-lab" aria-labelledby="rps-heading" tabindex="-1">
+        <div class="lab-heading"><div><p class="project-tag">PLAY / 01</p><h2 id="rps-heading">Your move.</h2></div><p>Three choices. One little rivalry.<br>First to five wins the match.</p></div>
+        <noscript><p class="fallback-note">Enable JavaScript to play the game. Rock beats scissors, scissors beat paper, and paper beats rock.</p></noscript>
+        <div id="rps-game" class="rps-game" hidden>
+          <div class="game-toolbar"><div class="mode-switch" role="group" aria-label="Game opponent"><button type="button" data-game-mode="computer" aria-pressed="true">Vs computer</button><button type="button" data-game-mode="friend" aria-pressed="false">2 players</button></div><button id="reset-game" class="quiet-button" type="button">Reset match ↺</button></div>
+          <div class="game-settings"><label id="computer-setting">Opponent <select id="computer-strategy"><option value="adaptive">Adaptive AI</option><option value="random">Random picks</option></select></label><p id="game-mode-note">The AI looks for patterns in earlier rounds. Your current move stays secret.</p></div>
+          <div class="scoreboard" aria-label="Match score"><div><span id="player-one-label">YOU</span><strong id="player-one-score">0</strong></div><div class="scoreboard-center"><span id="round-label">ROUND 01</span><span class="scoreboard-divider">FIRST TO 5</span><span>Ties <b id="tie-score">0</b></span></div><div><span id="player-two-label">COMPUTER</span><strong id="player-two-score">0</strong></div></div>
+          <div class="arena" id="game-arena">
+            <span class="arena-orbit" aria-hidden="true"></span>
+            <div class="arena-hand"><span id="left-hand-label">YOUR MOVE</span><img id="left-hand" src="images/rock.svg" alt="" width="200" height="200"><strong id="left-choice">Ready?</strong></div>
+            <span class="versus" aria-hidden="true">VS</span>
+            <div class="arena-hand"><span id="right-hand-label">THEIR MOVE</span><img id="right-hand" src="images/rock.svg" alt="" width="200" height="200"><strong id="right-choice">Ready.</strong></div>
+          </div>
+          <div id="handoff-screen" class="handoff-screen" hidden><span class="handoff-symbol" aria-hidden="true">✳</span><h3>A secret worth keeping.</h3><p>Player 1's move is locked in.<br>Pass the device to Player 2 without looking back.</p><button id="handoff-ready" class="button" type="button">I'm Player 2. Let's go.</button></div>
+          <div class="game-announcement" role="status" aria-live="polite" aria-atomic="true"><h3 id="game-result">A classic. With a little attitude.</h3><p id="game-instruction">Choose your move to start round 1.</p></div>
+          <div id="move-controls" class="move-controls" role="group" aria-label="Choose your move"><button type="button" data-move="rock"><img src="images/rock.svg" alt="" width="200" height="200"><span>Rock</span></button><button type="button" data-move="paper"><img src="images/paper.svg" alt="" width="200" height="200"><span>Paper</span></button><button type="button" data-move="scissors"><img src="images/scissors.svg" alt="" width="200" height="200"><span>Scissors</span></button></div>
+          <div class="round-actions"><p>Rock beats scissors. Scissors beat paper. Paper beats rock.</p><button id="next-round" class="button" type="button" hidden>Next round ↗</button></div>
+          <div class="round-history"><span class="small-label">RECENT ROUNDS</span><ol id="round-history"><li>Your story starts with a move.</li></ol></div>
+        </div>
+        <details class="logic-notes"><summary>From Python to the playground</summary><p>The original uses hidden Player 1 input, validates both choices, compares the three winning combinations, and asks to play again. This adaptation keeps that logic and adds a score, animation, and an optional computer opponent. Two-player mode is pass-and-play on one device; the handoff screen keeps the first choice off-screen.</p><p>The adaptive opponent samples your previous moves and counters the sampled move, with a small chance of a random pick. It commits before you choose. Resetting the match clears its memory.</p></details>
+      </section>
+
+      <section id="fib-lab" class="project-lab" aria-labelledby="fib-heading" tabindex="-1">
+        <div class="lab-heading"><div><p class="project-tag">EXPLORE / 02</p><h2 id="fib-heading">Let it grow.</h2></div><p>One simple rule.<br>A surprisingly beautiful pattern.</p></div>
+        <noscript><p class="fallback-note">Enable JavaScript to explore the sequence. It starts 0, 1, 1, 2, 3, 5, 8, 13. Each new term is the sum of the previous two.</p></noscript>
+        <div id="fib-explorer" class="fib-explorer" hidden>
+          <div class="fib-controls"><form id="fib-form" novalidate><label for="fib-count">How many terms?</label><div class="fib-input-row"><input id="fib-count" type="number" min="1" max="100" step="1" value="12" required aria-describedby="fib-help fib-error"><button class="button" type="submit">Generate ↗</button></div><p id="fib-help">Choose a whole number from 1 to 100. We count 0 as the first term.</p><p id="fib-error" class="input-error" role="alert"></p></form><label class="range-label" for="fib-range">Or slide to explore <span aria-hidden="true">↔</span><input id="fib-range" type="range" min="1" max="100" value="12"></label></div>
+          <div class="fib-workspace"><div class="fib-visual"><div class="visual-topline"><span class="small-label">THE FIBONACCI SPIRAL</span><span id="spiral-caption">12 terms</span></div><svg id="fib-spiral" viewBox="-10 -10 120 120" role="img" aria-labelledby="spiral-title spiral-description"><title id="spiral-title">Fibonacci square spiral</title><desc id="spiral-description">Squares sized by consecutive Fibonacci numbers, with a quarter-circle arc in each square.</desc><g id="fib-squares"></g><path id="fib-curve" d="M0 0"/></svg><p id="spiral-note">Each square grows from the two before it.</p></div><div class="fib-step-panel"><span class="small-label">ONE ADDITION AT A TIME</span><p id="fib-step-label">TERM 12 OF 12</p><div id="fib-equation" class="fib-equation"></div><p id="fib-explanation">Add the two previous terms to get the next.</p><div class="step-controls"><button id="fib-back" class="quiet-button" type="button" aria-label="Previous Fibonacci term">←</button><button id="fib-play" class="button" type="button">Replay sequence</button><button id="fib-next" class="quiet-button" type="button" aria-label="Next Fibonacci term">→</button></div><dl class="fib-stats"><div><dt>Selected term</dt><dd id="fib-selected">89</dd></div><div><dt>Ratio to previous</dt><dd id="fib-ratio">1.618182</dd></div></dl><p class="ratio-note">As the terms grow, the ratio approaches the golden ratio: about 1.618.</p></div></div>
+          <div class="sequence-heading"><h3>The sequence, unfolded.</h3><span class="small-label">SELECT A TERM TO INSPECT</span></div><div id="fib-sequence" class="fib-sequence" role="group" aria-label="Fibonacci terms"></div><p id="fib-status" class="visually-hidden" role="status" aria-atomic="true"></p>
+        </div>
+        <details class="logic-notes"><summary>The little loop behind the pattern</summary><p>The notebook starts with [0, 1], then appends the sum of the last two numbers until it reaches the requested length. Its special cases return 0 for one term and [0, 1] for two. Here, whole-number input is checked before generating; BigInt keeps even the 100th term exact.</p><pre><code>seq = [0, 1]
+for i in range(2, n):
+    seq.append(seq[i - 1] + seq[i - 2])</code></pre><p>The spiral uses quarter-circle arcs in Fibonacci-sized squares. For long sequences, the drawing shows the first 12 terms so the smaller squares remain readable; every generated value is still available below it.</p></details>
+      </section>
+      <p class="project-endnote">Classroom logic, a browser canvas, and room to keep learning. <a href="#top">Back to the top ↑</a></p>
     </main>
 
     <footer class="site-footer page-width">

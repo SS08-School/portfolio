@@ -1,0 +1,816 @@
+{
+  "date": "2026-10-26",
+  "method": "Local headless Chrome, scripted DOM interactions; phone checks use fixed-width frames. Not physical keyboard tests or Lighthouse.",
+  "initialFocusFailure": [
+    {
+      "name": "Keyboard focus moves to next round",
+      "result": "Fail"
+    }
+  ],
+  "initialNarrowLayoutFailures": [
+    {
+      "name": "No horizontal overflow",
+      "result": "Fail",
+      "overflow": [
+        {
+          "tag": "SPAN",
+          "id": "",
+          "cls": "orbit orbit-one",
+          "right": 323.39512634277344,
+          "width": 341.790283203125
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "cls": "arena-orbit",
+          "right": 347.888916015625,
+          "width": 390.80908203125
+        },
+        {
+          "tag": "CODE",
+          "id": "",
+          "cls": "",
+          "right": 330.65625,
+          "width": 274.46875
+        }
+      ]
+    },
+    {
+      "name": "Large values do not overflow phone",
+      "result": "Fail",
+      "overflow": [
+        {
+          "tag": "SPAN",
+          "id": "",
+          "cls": "orbit orbit-one",
+          "right": 323.39512634277344,
+          "width": 341.790283203125
+        },
+        {
+          "tag": "SPAN",
+          "id": "",
+          "cls": "arena-orbit",
+          "right": 347.888916015625,
+          "width": 390.80908203125
+        },
+        {
+          "tag": "CODE",
+          "id": "",
+          "cls": "",
+          "right": 330.65625,
+          "width": 274.46875
+        }
+      ]
+    }
+  ],
+  "final": {
+    "phone390": {
+      "width": 390,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "Both demos initialize on a direct file",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1 and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine winner combinations",
+          "result": "Pass"
+        },
+        {
+          "name": "Custom Tab reaches native assignment disclosure",
+          "result": "Pass"
+        },
+        {
+          "name": "Reverse Tab leaves disclosure in page order",
+          "result": "Pass"
+        },
+        {
+          "name": "Assignment notes disclosure expands",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter interactive",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter notes",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two has no disclosed first choice",
+          "result": "Pass"
+        },
+        {
+          "name": "Win resolves once despite extra click",
+          "result": "Pass"
+        },
+        {
+          "name": "Keyboard focus moves to next round",
+          "result": "Pass"
+        },
+        {
+          "name": "Tie does not increase player score",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two can win",
+          "result": "Pass"
+        },
+        {
+          "name": "First to five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "Play again resets score and round",
+          "result": "Pass"
+        },
+        {
+          "name": "Reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Default 12-term sequence",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 0",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms abc",
+          "result": "Pass"
+        },
+        {
+          "name": "One term and zero denominator",
+          "result": "Pass"
+        },
+        {
+          "name": "Two terms",
+          "result": "Pass"
+        },
+        {
+          "name": "100 exact terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Large values do not overflow phone",
+          "result": "Pass"
+        },
+        {
+          "name": "Inspect term and equation",
+          "result": "Pass"
+        },
+        {
+          "name": "Previous term",
+          "result": "Pass"
+        },
+        {
+          "name": "Next term",
+          "result": "Pass"
+        },
+        {
+          "name": "Slider regenerates and synchronizes",
+          "result": "Pass"
+        },
+        {
+          "name": "Replay starts at zero",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback advances and pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens with accurate ARIA",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes menu and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "All controls have accessible text",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme keeps both labs visible",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime browser errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "phone320": {
+      "width": 320,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "Both demos initialize on a direct file",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1 and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine winner combinations",
+          "result": "Pass"
+        },
+        {
+          "name": "Custom Tab reaches native assignment disclosure",
+          "result": "Pass"
+        },
+        {
+          "name": "Reverse Tab leaves disclosure in page order",
+          "result": "Pass"
+        },
+        {
+          "name": "Assignment notes disclosure expands",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter interactive",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter notes",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two has no disclosed first choice",
+          "result": "Pass"
+        },
+        {
+          "name": "Win resolves once despite extra click",
+          "result": "Pass"
+        },
+        {
+          "name": "Keyboard focus moves to next round",
+          "result": "Pass"
+        },
+        {
+          "name": "Tie does not increase player score",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two can win",
+          "result": "Pass"
+        },
+        {
+          "name": "First to five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "Play again resets score and round",
+          "result": "Pass"
+        },
+        {
+          "name": "Reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Default 12-term sequence",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 0",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms abc",
+          "result": "Pass"
+        },
+        {
+          "name": "One term and zero denominator",
+          "result": "Pass"
+        },
+        {
+          "name": "Two terms",
+          "result": "Pass"
+        },
+        {
+          "name": "100 exact terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Large values do not overflow phone",
+          "result": "Pass"
+        },
+        {
+          "name": "Inspect term and equation",
+          "result": "Pass"
+        },
+        {
+          "name": "Previous term",
+          "result": "Pass"
+        },
+        {
+          "name": "Next term",
+          "result": "Pass"
+        },
+        {
+          "name": "Slider regenerates and synchronizes",
+          "result": "Pass"
+        },
+        {
+          "name": "Replay starts at zero",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback advances and pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens with accurate ARIA",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes menu and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "All controls have accessible text",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme keeps both labs visible",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime browser errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "laptop": {
+      "width": 1348,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "Both demos initialize on a direct file",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1 and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine winner combinations",
+          "result": "Pass"
+        },
+        {
+          "name": "Custom Tab reaches native assignment disclosure",
+          "result": "Pass"
+        },
+        {
+          "name": "Reverse Tab leaves disclosure in page order",
+          "result": "Pass"
+        },
+        {
+          "name": "Assignment notes disclosure expands",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter interactive",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter notes",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two has no disclosed first choice",
+          "result": "Pass"
+        },
+        {
+          "name": "Win resolves once despite extra click",
+          "result": "Pass"
+        },
+        {
+          "name": "Keyboard focus moves to next round",
+          "result": "Pass"
+        },
+        {
+          "name": "Tie does not increase player score",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two can win",
+          "result": "Pass"
+        },
+        {
+          "name": "First to five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "Play again resets score and round",
+          "result": "Pass"
+        },
+        {
+          "name": "Reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Default 12-term sequence",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 0",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms abc",
+          "result": "Pass"
+        },
+        {
+          "name": "One term and zero denominator",
+          "result": "Pass"
+        },
+        {
+          "name": "Two terms",
+          "result": "Pass"
+        },
+        {
+          "name": "100 exact terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Large values do not overflow phone",
+          "result": "Pass"
+        },
+        {
+          "name": "Inspect term and equation",
+          "result": "Pass"
+        },
+        {
+          "name": "Previous term",
+          "result": "Pass"
+        },
+        {
+          "name": "Next term",
+          "result": "Pass"
+        },
+        {
+          "name": "Slider regenerates and synchronizes",
+          "result": "Pass"
+        },
+        {
+          "name": "Replay starts at zero",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback advances and pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens with accurate ARIA",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes menu and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "All controls have accessible text",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme keeps both labs visible",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime browser errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "reduced": {
+      "width": 320,
+      "reducedMotion": true,
+      "results": [
+        {
+          "name": "Both demos initialize on a direct file",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1 and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine winner combinations",
+          "result": "Pass"
+        },
+        {
+          "name": "Custom Tab reaches native assignment disclosure",
+          "result": "Pass"
+        },
+        {
+          "name": "Reverse Tab leaves disclosure in page order",
+          "result": "Pass"
+        },
+        {
+          "name": "Assignment notes disclosure expands",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter interactive",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter notes",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two has no disclosed first choice",
+          "result": "Pass"
+        },
+        {
+          "name": "Win resolves once despite extra click",
+          "result": "Pass"
+        },
+        {
+          "name": "Keyboard focus moves to next round",
+          "result": "Pass"
+        },
+        {
+          "name": "Tie does not increase player score",
+          "result": "Pass"
+        },
+        {
+          "name": "Player two can win",
+          "result": "Pass"
+        },
+        {
+          "name": "First to five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "Play again resets score and round",
+          "result": "Pass"
+        },
+        {
+          "name": "Reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves round",
+          "result": "Pass"
+        },
+        {
+          "name": "Default 12-term sequence",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 0",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject invalid terms abc",
+          "result": "Pass"
+        },
+        {
+          "name": "One term and zero denominator",
+          "result": "Pass"
+        },
+        {
+          "name": "Two terms",
+          "result": "Pass"
+        },
+        {
+          "name": "100 exact terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Large values do not overflow phone",
+          "result": "Pass"
+        },
+        {
+          "name": "Inspect term and equation",
+          "result": "Pass"
+        },
+        {
+          "name": "Previous term",
+          "result": "Pass"
+        },
+        {
+          "name": "Next term",
+          "result": "Pass"
+        },
+        {
+          "name": "Slider regenerates and synchronizes",
+          "result": "Pass"
+        },
+        {
+          "name": "Replay starts at zero",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback advances and pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Playback completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens with accurate ARIA",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes menu and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "All controls have accessible text",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme keeps both labs visible",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime browser errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    }
+  }
+}

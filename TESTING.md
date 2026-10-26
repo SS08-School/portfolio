@@ -308,7 +308,7 @@ passed; actual browser navigation, keyboard, and visual checks remain Not run.
 | T11 | Assets and console | Load each page and inspect the console and network panel; inspect image descriptions. | No script errors or missing assets; images have appropriate alt attributes. | Not run |
 | T12 | Direct-file operation | Double-click index.html; use its links and mobile menu. Repeat for other pages as added. | Styles and scripts work without a server; relative links resolve. | Not run |
 | T13 | JavaScript fallback | Disable JavaScript, reload each page at 390px, and use navigation. | Navigation links remain visible and usable; inactive menu/theme/keyboard buttons are hidden; the site uses light mode and content stays visible. | Not run |
-| T14 | Project filtering | Once real projects and filtering are added, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; project details and filtering pending |
+| T14 | Project filtering | Activate All projects, Interactive demos, and Assignment notes, then return to All; repeat with Tab/Enter. | Collection shows 4, 2, 2, and 4 cards respectively; exactly one filter reports pressed; labs remain below the collection. | Pass for local scripted browser clicks at 320px, 390px, laptop, and reduced motion on 2026-10-26; physical keyboard/live checks Not run |
 | T15 | Email contact | Reach the Contact page from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
 | T17 | Current page only | On each page, scroll through its sections and inspect the dropdown repeatedly; also use direct section links. | Exactly one primary page link has aria-current=page; its highlight stays unchanged while scrolling; section links have no persistent selection. | Not run |
@@ -316,7 +316,7 @@ passed; actual browser navigation, keyboard, and visual checks remain Not run.
 | T19 | Animation fallbacks | Reload with reduced motion enabled, then with JavaScript disabled. Also enable reduced motion while unrevealed content remains below the viewport. | All content stays visible with no reveal motion; changing the preference reveals all remaining content. | Not run |
 | T20 | Keyboard during reveals | Reload Contact at the top with motion enabled; use Tab to reach the email link before manually scrolling there, using a short viewport if necessary. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |
 | T21 | Dropdown dismissal and links | On each content page, open the dropdown, click outside it, reopen, and activate each page and section link. | Outside click closes it; each link closes it and reaches the matching page or section; focus is not left in hidden content. | Not run |
-| T22 | About and project content | Open About and Projects at phone and laptop widths. | About shows NJIT enrollment and Electrical Engineering; no invented background; Projects truthfully has no published items and no dummy cards or broken links. | Not run |
+| T22 | About and project content | Open About and Projects at phone and laptop widths. | About shows the existing owner content; Projects describes the four real Assignment 1 mini projects and distinguishes original Python work from browser adaptations. | Projects content and screenshots checked locally on 2026-10-26; About/live checks Not run |
 | T23 | Anchor destination outlines | From About, Projects, Skills, and Contact, activate Home using the brand and dropdown. Also visit My studies, Education, and each page's skip link, then Tab to links and buttons. | No large outline appears around the main content or section containers; destinations still receive focus and scroll correctly; keyboard focus remains visible on interactive controls. | Not run |
 | T24 | Background decoration and solid cards | View all pages at 320px, 390px, and 1366px in both themes. Compare cards, scroll, and use navigation and email links. | Main cards are uniformly solid white in light mode and dark plum in dark mode; decorative color stays in the background; text is readable; no new sideways scrolling or blocked interactions. | Not run |
 | T25 | Stylesheet cache refresh | With an older version cached, open the updated site and visit all pages. Inspect each stylesheet and script request. | Every page requests the correct new versioned assets; main cards have a uniform solid surface for the selected theme; old alternating peach/mint card rules are absent. | Not run |
@@ -333,3 +333,78 @@ passed; actual browser navigation, keyboard, and visual checks remain Not run.
 | T36 | Saved keyboard-navigation choice | Clear site storage and load each page. Toggle off, navigate/reload/revisit, then repeat after choosing on. Turn off with Escape. Test browser Back, another tab, and blocked storage; repeat using local files. | Defaults on; explicit on/off and Escape choices persist in the same browser wherever storage is shared; state syncs across tabs and Back. Clearing storage restores on. Blocked storage leaves the current-page toggle working. | Not run |
 | T37 | Compact bottom control | At phone and laptop widths in both themes, scroll to each page's bottom and Tab to the keyboard button. | Small button sits last at the footer's bottom-right; focus ring is visible; instructions appear above it on focus and are available to screen readers. No clipping or horizontal overflow. | Not run |
 | T38 | Five separate pages | Visit Home, About me, Projects, Skills, and Contact from each page's dropdown, then use browser Back. Inspect the address and content. | Five distinct HTML URLs; Skills has the four approved proficiency cards, Contact has the approved email, and neither appears as a Home section. Shared theme, keyboard preference, page entry, and current-page selection work on all five pages. | Not run |
+
+## Assignment 1 playground — local checks, 2026-10-26
+
+This task updates the existing Projects page only, apart from refreshing shared
+asset URLs on other pages. The single-page migration in the current project
+instructions remains separate work. Publication checks are recorded separately
+from the local checks below.
+
+The owner-supplied notebook was read as project source material. Its exercise
+prompts were not treated as instructions to build additional applications.
+Calculator and Shopping Cart are documented; only the requested game and
+Fibonacci project received browser adaptations.
+
+Actual local Chrome browser checks used scripted DOM clicks, input, focus,
+and keyboard events. Phone tests used 320px and 390px frames because this
+Chrome build enforces a minimum top-level headless window width. The laptop
+test used a 1366px window with a 1348px content viewport after the scrollbar.
+Final retesting passed all 45 assertions in each of the four configurations.
+These do not establish physical keyboard behavior or a Lighthouse score.
+
+Retained failures and corrections:
+
+- **Fail, initial run:** disabling the chosen game button caused focus to move
+  to the document body. The agent's original implementation checked for focus
+  inside the move controls after disabling them, so its focus transfer never
+  ran. The fix records focus before disabling and moves to Next round after
+  the reveal, provided the visitor has not moved to another control. **Pass on
+  retest** in all four configurations.
+- **Fail, phone layout runs:** the rotated decorative orbit extended beyond
+  the viewport, including after generating 100 Fibonacci terms. The fix leaves
+  extra space around the hero artwork. **Pass on retest:** no document overflow
+  at 320px or 390px, including 100-term values and reduced motion.
+- **Source review finding:** the existing custom Tab selector omitted native
+  `summary` elements. Adding them preserves access to the new assignment notes.
+  Scripted forward/reverse focus checks were added for this correction.
+- Initial top-level anchored screenshots were blank because of headless
+  rendering/scroll timing. The final section captures use fixed-size frames,
+  instant positioning, and no entry animation in a temporary screenshot
+  harness. No screenshot-only script is shipped with the site.
+
+Final detailed browser evidence is retained in
+`screenshots/projects-browser-checks.json`, including the original focus and
+overflow failures. The screenshots below were opened and visually inspected:
+
+- `screenshots/projects-laptop.png` — Projects introduction and collection.
+- `screenshots/projects-arena-laptop.png` — game arena at laptop width.
+- `screenshots/projects-fibonacci-laptop.png` — explorer at laptop width.
+- `screenshots/projects-phone.png` — game at an actual 390px frame width,
+  cropped to that frame without scaling.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T39 | Notebook accuracy | Compare all four cards and logic notes with the supplied notebook. | Descriptions match the actual Python work; browser additions are identified. | Pass — source review, 2026-10-26 |
+| T40 | Winner rules | Evaluate all nine combinations of Rock, Paper, and Scissors. | Three ties and the correct winner in each other combination. | Pass — local Chrome in all four configurations |
+| T41 | Private pass-and-play | Select 2 players; choose Player 1's move; inspect handoff; continue as Player 2. | Choice controls disappear, handoff receives focus, and the first choice stays concealed until Player 2 chooses. | Pass — local Chrome in all four configurations |
+| T42 | Scoring and match end | Play a win, a tie, and a loss; reset; win five rounds; select Play again. | Ties have their own count; first to five ends the match; replay clears scores and round history. | Pass — local Chrome in all four configurations |
+| T43 | Race and reset | Click a second move during a reveal; reset during a pending reveal; switch modes. | A round resolves only once; no old timer overwrites the fresh match. | Pass — local Chrome in all four configurations |
+| T44 | Computer strategies | Play a round with Adaptive AI and Random picks; review the move commitment. | Both resolve a valid move; the computer commits before the current choice and uses previous moves only. | Pass — Chrome rounds plus source review |
+| T45 | Exact Fibonacci values | Generate 1, 2, 12, and 100 terms. | Values begin 0, 1; term 12 is 89; term 100 is exactly 218922995834555169026; ratios with a zero denominator are undefined. | Pass — local Chrome in all four configurations |
+| T46 | Invalid Fibonacci input | Submit empty input, 0, -1, 1.5, 101, and nonnumeric text; then submit a valid count. | Error appears, focus returns to the field, the previous sequence remains; valid generation clears the error. | Pass — local Chrome in all four configurations |
+| T47 | Inspect and step | Select term 5; use previous and next; move the range control to 8. | Term 5 shows 1 + 2 = 3; stepping updates selection; the slider synchronizes the input and sequence. | Pass — local Chrome in all four configurations |
+| T48 | Playback | Replay, pause after advancement, wait, then generate three terms and replay to completion. | One term advances at a time; pause holds the term; playback stops at the end. | Pass — local Chrome in all four configurations |
+| T49 | Phone overflow and reduced motion | Load at 320px and 390px, generate 100 terms, and repeat at 320px with reduced motion. | No horizontal document overflow, exact long values wrap, and CSS motion is skipped for reduced motion. | Pass — browser geometry checks; light-mode 390px game screenshot inspected |
+| T50 | Local references and assets | Check every href/src on all five pages, including anchor IDs and file existence. | Local references resolve, images have alt attributes, shared versions match, and illustrations are below 500 KB. | Pass — 80 local references, static checks, browser image loading |
+| T51 | Text contrast | Calculate ratios for actual light/dark primary text, secondary text, buttons, links, and arena labels. | Normal text ratios are at least 4.5:1. | Pass — checked pairs range from 5.42:1 to 14.21:1; not a Lighthouse audit |
+| T52 | Focus and disclosures | Use scripted Tab/Shift+Tab from the Fibonacci card link; open assignment notes; play a round; dismiss navigation with Escape. | Native summaries participate in custom Tab order, notes expand, Next round receives focus, and Escape closes the menu. | Pass — local scripted Chrome checks; physical Tab/Enter testing Not run |
+| T53 | Other-page shared-script regression | Load local copies of Home, About, Skills, and Contact with error instrumentation. | Menu/theme initialize, each page retains one h1, and no browser runtime errors occur. | Pass — actual headless Chrome on all four pages |
+| T54 | Published playground verification | After owner review and approved deployment, run the full test plan on GitHub Pages, including links, phone/laptop layouts, keyboard, and Lighthouse. | Published demos match the local build; all pages score at least 90 for Accessibility. | Not run — this update has not been deployed |
+
+The earlier full-site Not run entries remain pending wherever this focused
+task did not exercise them. Visible-window Chrome access timed out; native
+physical keyboard checks and Lighthouse still need to be performed before
+submission. The headless checks recorded no page runtime errors. Chrome's
+first sandboxed launch failed to initialize its GPU; the same installed
+browser succeeded when run through the approved sandbox escalation.
