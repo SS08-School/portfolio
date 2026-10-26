@@ -151,9 +151,15 @@ empty sections, or dummy links.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
 - While the page has focus, support Up/Down scrolling from ordinary links and
-  buttons, including held keys. Preserve native arrows in editable controls and
-  nested scrolling regions. Keep Tab, Shift+Tab, and browser shortcuts native;
-  never trap focus or force it back after a visitor leaves the page.
+  buttons with smooth movement and responsive held-key repeats. Skip smoothing
+  for reduced motion. Preserve native arrows in editable controls and nested
+  scrolling regions. Cancel scrolling when another input takes over.
+- Use custom Tab/Shift+Tab navigation that cycles through available controls
+  in document order and excludes hidden, inert, and disabled controls. Continue
+  from section/skip-link destinations. Keyboard menu activation should focus
+  its first link. Escape closes an open menu; otherwise it releases Tab to the
+  browser. Provide a footer toggle and instructions for this behavior. Preserve
+  browser shortcuts and never force focus back after a visitor leaves the page.
 - Contact uses the owner's approved `mailto:ss5764@njit.edu` link. Display the
   address so visitors can also copy it. Do not restore the inactive form or
   claim a message was sent; opening an email app does not send a message.

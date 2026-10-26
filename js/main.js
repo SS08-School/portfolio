@@ -1,6 +1,100 @@
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 const menuContainer = document.querySelector(".navigation-menu");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const keyboardControls = document.querySelector(".keyboard-controls");
+const keyboardToggle = document.querySelector(".keyboard-toggle");
+const keyboardHelp = document.querySelector(".keyboard-help");
+let keepTabOnPage = true;
+let scrollTarget = null;
+let scrollFrame = null;
+let previousFrameTime = null;
+
+function stopKeyboardScroll() {
+  if (scrollFrame !== null) window.cancelAnimationFrame(scrollFrame);
+  scrollFrame = null;
+  scrollTarget = null;
+  previousFrameTime = null;
+}
+
+function animateKeyboardScroll(time) {
+  const elapsed = previousFrameTime === null ? 16 : Math.min(time - previousFrameTime, 64);
+  previousFrameTime = time;
+  const remaining = scrollTarget - window.scrollY;
+  if (Math.abs(remaining) <= 1) {
+    window.scrollTo({ top: scrollTarget, behavior: "instant" });
+    stopKeyboardScroll();
+    return;
+  }
+  // Blend toward the accumulated destination, so held keys do not restart an animation.
+  const step = Math.sign(remaining) * Math.max(1, Math.abs(remaining) * (1 - Math.exp(-elapsed / 65)));
+  window.scrollTo({ top: window.scrollY + step, behavior: "instant" });
+  scrollFrame = window.requestAnimationFrame(animateKeyboardScroll);
+}
+
+function scrollWithKeyboard(distance) {
+  const maximum = Math.max(0, document.scrollingElement.scrollHeight - window.innerHeight);
+  const reversing = scrollTarget !== null && Math.sign(distance) !== Math.sign(scrollTarget - window.scrollY);
+  scrollTarget = Math.max(0, Math.min(maximum, (reversing ? window.scrollY : scrollTarget ?? window.scrollY) + distance));
+  if (reducedMotion.matches) {
+    window.scrollTo({ top: scrollTarget, behavior: "instant" });
+    stopKeyboardScroll();
+  } else if (scrollFrame === null) {
+    scrollFrame = window.requestAnimationFrame(animateKeyboardScroll);
+  }
+}
+
+// Other input takes over immediately; never pull focus back from browser controls.
+window.addEventListener("blur", stopKeyboardScroll);
+document.addEventListener("wheel", stopKeyboardScroll, { passive: true });
+document.addEventListener("touchstart", stopKeyboardScroll, { passive: true });
+document.addEventListener("pointerdown", stopKeyboardScroll);
+document.addEventListener("focusin", stopKeyboardScroll);
+reducedMotion.addEventListener("change", stopKeyboardScroll);
+
+function setKeyboardNavigation(enabled) {
+  keepTabOnPage = enabled;
+  keyboardToggle?.setAttribute("aria-pressed", String(enabled));
+  if (keyboardHelp) keyboardHelp.textContent = enabled
+    ? "Tab cycles through page controls. Shift+Tab goes back. Esc releases Tab to the browser."
+    : "Standard Tab navigation is on. Turn on Keep Tab on this page to cycle through page controls again.";
+}
+
+if (keyboardControls && keyboardToggle) {
+  keyboardControls.hidden = false;
+  keyboardToggle.addEventListener("click", () => setKeyboardNavigation(!keepTabOnPage));
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
+  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
+    stopKeyboardScroll();
+    setKeyboardNavigation(false);
+  }
+  if (!["ArrowUp", "ArrowDown"].includes(event.key)) stopKeyboardScroll();
+  if (event.key !== "Tab" || !keepTabOnPage) return;
+
+  const controls = Array.from(document.querySelectorAll(
+    'a[href], button, input, select, textarea, [tabindex], [contenteditable="true"]'
+  )).filter((element) => (
+    element.tabIndex >= 0 && !element.matches(":disabled") &&
+    !element.closest("[hidden], [inert]") && element.getClientRects().length > 0 &&
+    window.getComputedStyle(element).visibility === "visible"
+  ));
+  if (!controls.length) return;
+  const current = controls.indexOf(document.activeElement);
+  let next = (current + (event.shiftKey ? -1 : 1) + controls.length) % controls.length;
+  if (current === -1) {
+    // Continue from a skip-link or section destination instead of restarting at the header.
+    const nearby = controls.filter((element) => document.activeElement.compareDocumentPosition(element) &
+      (event.shiftKey ? Node.DOCUMENT_POSITION_PRECEDING : Node.DOCUMENT_POSITION_FOLLOWING));
+    const destination = event.shiftKey ? nearby.at(-1) : nearby[0];
+    next = destination ? controls.indexOf(destination) : (event.shiftKey ? controls.length - 1 : 0);
+  }
+  event.preventDefault();
+  controls[next].focus({ preventScroll: true });
+  controls[next].scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "nearest", inline: "nearest" });
+});
 
 document.addEventListener("keydown", (event) => {
   if (
@@ -22,8 +116,7 @@ document.addEventListener("keydown", (event) => {
   }
 
   event.preventDefault();
-  // Immediate steps also work when a key is held and respect reduced motion.
-  window.scrollBy({ top: event.key === "ArrowDown" ? 60 : -60, left: 0, behavior: "instant" });
+  scrollWithKeyboard(event.key === "ArrowDown" ? 80 : -80);
 });
 
 if (menuButton && navigation && menuContainer) {
@@ -37,9 +130,11 @@ if (menuButton && navigation && menuContainer) {
   menuButton.hidden = false;
   setMenuOpen(false);
 
-  menuButton.addEventListener("click", () => {
+  menuButton.addEventListener("click", (event) => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
     setMenuOpen(!isOpen);
+    // Keyboard activation goes straight to the first page link.
+    if (!isOpen && event.detail === 0) navigation.querySelector("a")?.focus();
   });
 
   navigation.addEventListener("click", (event) => {
@@ -77,8 +172,6 @@ document.addEventListener("click", (event) => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }
 });
-
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 document.addEventListener("focusin", (event) => {
   if (event.target.matches("a, button, input, textarea, select")) {

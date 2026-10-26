@@ -44,11 +44,15 @@ immediate.
 The former Skills and Contact page URLs redirect to their matching Home
 sections.
 
-With the page focused, Up/Down scrolls from ordinary links and buttons;
-holding a key repeats the movement. Tab/Shift+Tab reaches controls, Enter
-activates links and buttons, Space activates buttons, and Escape closes the
-dropdown. Editable controls and tall dropdowns keep native arrow behavior.
-Visitors can still move focus to browser controls or another application.
+With the page focused, Up/Down scrolls smoothly from ordinary links and buttons;
+holding a key continues the movement. Reduced motion uses immediate scrolling.
+Tab/Shift+Tab cycles through available controls in page order, skipping closed
+menu links and disabled controls. Enter activates links and buttons; Space
+activates buttons. Keyboard menu activation focuses its first link. Escape
+closes an open menu; with the menu closed it switches back to standard Tab
+navigation. The footer's "Keep Tab on this page" button turns cycling on or off.
+Editable controls and tall dropdowns keep native arrow behavior. Browser
+shortcuts remain available; the site only handles keys while the page has focus.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
 Home, About, Projects, the grouped navigation, and the email contact update

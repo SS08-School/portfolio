@@ -163,6 +163,11 @@ h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 550; letter-
 .studies-copy .closing-note { margin-top: 1rem; font-size: 0.9rem; }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; margin-top: 2.5rem; padding-block: 1.3rem 2rem; border-top: 1px dashed var(--accent); color: var(--muted); font-size: 0.75rem; }
 .site-footer span { margin-left: 0.4rem; color: var(--purple); }
+.keyboard-controls { flex-basis: 100%; margin-top: 1rem; }
+.keyboard-toggle { min-height: 44px; padding: 0.6rem 1rem; border: 1px solid var(--border); border-radius: 12px; color: var(--text); background: var(--surface); cursor: pointer; }
+.keyboard-toggle[aria-pressed="true"] { border-color: var(--purple); background: var(--lilac); }
+.keyboard-toggle:hover { background: var(--accent); }
+.keyboard-help { max-width: 36rem; line-height: 1.7; }
 
 .contact-layout { display: grid; gap: 2.5rem; padding-block: 3rem 2rem; }
 .contact-intro { min-width: 0; }

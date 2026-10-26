@@ -226,6 +226,22 @@ with the updated main-script version. That script returned HTTP 200 and
 contains arrow scrolling and native-key guards. These publication/source
 checks passed; actual browser keyboard checks remain Not run.
 
+Custom keyboard-navigation checks on 2026-10-26: the first simulated smooth
+scroll test failed because rounding to whole pixels could leave an animation
+running two pixels short of its destination. A minimum one-pixel step fixed
+that issue; the corrected test reaches the destination and stops. Retesting
+passed 34 simulated assertions for forward/reverse Tab wrapping, excluding
+hidden/disabled/inert controls, continuing from section destinations, opening
+the menu at its first link, Escape focus return and cycle release, the footer
+toggle, modified-key passthrough, smooth first frames, held-key accumulation,
+direction changes, scroll limits, cancellation without refocusing, nested
+scroll regions, and reduced motion. Static checks also passed for unique IDs,
+ARIA targets, the footer control on each page, and all 44 local references and
+asset versions. These mocked/static checks are not browser tests.
+Browser verification remains limited by the previously recorded Chrome URL
+access failure. Phone/laptop layout, real keyboard input, direct-file browser
+operation, console checks, and Lighthouse remain Not run. This revision is local.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | First links load the correct page at the document top; section links reach their actual sections; only the current page is selected. | Not run |
@@ -233,9 +249,9 @@ checks passed; actual browser keyboard checks remain Not run.
 | T3 | Phone layouts | View every implemented page at widths of 320px and 390px; scroll top to bottom. | No sideways scrolling, clipped text, or overlapping content. | Not run |
 | T4 | Laptop layouts | View every implemented page at 1366px wide; scroll top to bottom. | Content and navigation are readable and aligned. | Not run |
 | T5 | Grouped dropdown toggle | On all three pages at 390px and 1366px wide, activate the three-line button twice. | Dropdown opens/closes; aria-expanded matches; Home's four sections are grouped together; About and Projects have separate groups; Education belongs to About. | Not run |
-| T6 | Dropdown keyboard | Tab to the button, open with Enter or Space, then Tab through the links. Close with Escape, then reopen and Tab out. | Links are reachable while open; Escape closes and returns focus to the button; Tab can leave the menu without a trap; closed links are skipped. | Not run |
+| T6 | Dropdown keyboard | Tab to the button, open with Enter or Space, then Tab through the links. Close with Escape, then reopen and Tab out. | Keyboard opening focuses the first link; Escape closes and returns focus to the button; Tab can leave the menu; closed links are skipped. | Not run |
 | T7 | Dropdown resize | Open and close the dropdown at 320px, 390px, and 1366px wide; resize while a link has focus. | Three-line button appears at all widths; menu fits without sideways scrolling; focused links stay available while resizing. | Not run |
-| T8 | Keyboard on every page | On each page, use Tab, Shift+Tab, and Enter through every interactive element. | Logical focus order, visible focus, working controls, and no keyboard traps. | Not run |
+| T8 | Keyboard on every page | On each page, use Tab, Shift+Tab, and Enter through every interactive element, then press Escape with the menu closed and Tab out. | Logical focus order, visible focus, working controls, wrapping within the page, and an Escape exit to native navigation. | Not run |
 | T9 | Skip link | Reload each page, press Tab, then Enter. | Skip link appears and moves focus to main content. | Not run |
 | T10 | Accessibility audit | Run Chrome DevTools Lighthouse Accessibility on every page. Record each score. | Each page scores at least 90; resolve reported issues. | Not run |
 | T11 | Assets and console | Load each page and inspect the console and network panel; inspect image descriptions. | No script errors or missing assets; images have appropriate alt attributes. | Not run |
@@ -260,4 +276,6 @@ checks passed; actual browser keyboard checks remain Not run.
 | T30 | Dark theme and compact header | At 320px, 390px, and 1366px wide, inspect all pages in both modes and use both header buttons. | Text, diagram, cards, focus indicators, and dropdown are readable; both controls fit and work without overlap or sideways scrolling. | Not run |
 | T31 | Page overview starts at top | Visit each page, scroll down, navigate elsewhere, and select its first dropdown link again. Also select the current page's first link and use Ctrl/Cmd-click and browser Back. | First links reach scroll position 0 and show the header; section links still reach sections; modified clicks retain native behavior; Back is not globally forced to the top. | Not run |
 | T32 | Arrow scrolling on every page | At phone and laptop widths, focus the page, brand, theme button, menu button, and ordinary links. Press and hold Up/Down after following links and returning with Back. | Page scrolls in the requested direction while it has room; focus stays on the control; held keys repeat without animation buildup. | Not run |
-| T33 | Native keyboard behavior and focus exit | On every page, use Tab/Shift+Tab through all controls and out to browser controls. Open a tall dropdown and use arrows within it. Test Enter, Space, Escape, PageUp/PageDown, Home/End, and modified shortcuts. | Controls remain usable; nested regions scroll natively; focus can leave and return without a trap or automatic refocusing; browser shortcuts remain available. | Not run |
+| T33 | Native keyboard behavior and focus exit | On every page, press Escape with the menu closed, then Tab/Shift+Tab out to browser controls. Open a tall dropdown and use arrows within it. Test Enter, Space, PageUp/PageDown, Home/End, and modified shortcuts. | Escape releases custom cycling; nested regions scroll natively; focus can leave and return without automatic refocusing; browser shortcuts remain available. | Not run |
+| T34 | Custom Tab order and toggle | At phone and laptop widths on each page, Tab beyond the final control, Shift+Tab before the first, use the skip link and section links, and toggle Keep Tab on this page off/on. | Cycling wraps in page order, follows section destinations, and skips hidden or disabled controls. The footer toggle reports its pressed state and restores native/cycling navigation. | Not run |
+| T35 | Smooth arrow scrolling | At phone and laptop widths, press and hold Down/Up, reverse direction, reach the top/bottom, and interrupt with Tab, mouse wheel, touch, or a click. Repeat with reduced motion. | Scrolling eases smoothly and responds promptly to direction changes; no animation remains at boundaries; other input takes over immediately; reduced motion scrolls without animation. | Not run |
