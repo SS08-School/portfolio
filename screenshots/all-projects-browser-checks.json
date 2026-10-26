@@ -1,0 +1,1314 @@
+{
+  "date": "2026-10-26",
+  "method": "Headless Chrome with scripted DOM clicks, native submit-button activation, focus and keyboard events. Phone viewport frames at actual 320px/390px; not physical keyboard or Lighthouse testing.",
+  "runs": {
+    "phone320": {
+      "width": 320,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "All four demos initialize directly from file",
+          "result": "Pass"
+        },
+        {
+          "name": "Phone/laptop has no horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "One heading and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Every project card reaches a live demo",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 + 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 - 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator -7 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0.1 + 0.2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0 - 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 1 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 100000000000000000000 * 10",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects negative zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty first",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty second",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonnumeric",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonfinite",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculation history capped at five",
+          "result": "Pass"
+        },
+        {
+          "name": "Valid calculation clears invalid state",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset restores example and clears history",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculate button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator operation reachable with custom Tab",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart starts empty with original stock",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 4",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1e309",
+          "result": "Pass"
+        },
+        {
+          "name": "Add item updates stock, count and total",
+          "result": "Pass"
+        },
+        {
+          "name": "Overstock request leaves basket unchanged",
+          "result": "Pass"
+        },
+        {
+          "name": "Depleted stock disables shelf and keeps focus live",
+          "result": "Pass"
+        },
+        {
+          "name": "Minus restores one to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Plus respects stock cap",
+          "result": "Pass"
+        },
+        {
+          "name": "Full original inventory totals exact cents",
+          "result": "Pass"
+        },
+        {
+          "name": "Sold-out plus cannot overfill basket",
+          "result": "Pass"
+        },
+        {
+          "name": "Remove line restores its full stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores all stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Removing last unit returns to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Repeated additions/removals have no stock or rounding drift",
+          "result": "Pass"
+        },
+        {
+          "name": "Shelf Add button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine RPS outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer adaptive resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer random resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS friend win",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS tie",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS first-to-five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS replay resets",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 1 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 2 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 12 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 100 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Long Fibonacci values fit viewport",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci term inspection",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci previous",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci next",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci playback pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation Escape returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme has no overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "All labels target valid controls",
+          "result": "Pass"
+        },
+        {
+          "name": "No browser runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "phone390": {
+      "width": 390,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "All four demos initialize directly from file",
+          "result": "Pass"
+        },
+        {
+          "name": "Phone/laptop has no horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "One heading and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Every project card reaches a live demo",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 + 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 - 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator -7 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0.1 + 0.2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0 - 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 1 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 100000000000000000000 * 10",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects negative zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty first",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty second",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonnumeric",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonfinite",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculation history capped at five",
+          "result": "Pass"
+        },
+        {
+          "name": "Valid calculation clears invalid state",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset restores example and clears history",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculate button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator operation reachable with custom Tab",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart starts empty with original stock",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 4",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1e309",
+          "result": "Pass"
+        },
+        {
+          "name": "Add item updates stock, count and total",
+          "result": "Pass"
+        },
+        {
+          "name": "Overstock request leaves basket unchanged",
+          "result": "Pass"
+        },
+        {
+          "name": "Depleted stock disables shelf and keeps focus live",
+          "result": "Pass"
+        },
+        {
+          "name": "Minus restores one to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Plus respects stock cap",
+          "result": "Pass"
+        },
+        {
+          "name": "Full original inventory totals exact cents",
+          "result": "Pass"
+        },
+        {
+          "name": "Sold-out plus cannot overfill basket",
+          "result": "Pass"
+        },
+        {
+          "name": "Remove line restores its full stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores all stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Removing last unit returns to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Repeated additions/removals have no stock or rounding drift",
+          "result": "Pass"
+        },
+        {
+          "name": "Shelf Add button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine RPS outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer adaptive resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer random resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS friend win",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS tie",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS first-to-five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS replay resets",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 1 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 2 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 12 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 100 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Long Fibonacci values fit viewport",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci term inspection",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci previous",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci next",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci playback pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation Escape returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme has no overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "All labels target valid controls",
+          "result": "Pass"
+        },
+        {
+          "name": "No browser runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "laptop": {
+      "width": 1348,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "All four demos initialize directly from file",
+          "result": "Pass"
+        },
+        {
+          "name": "Phone/laptop has no horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "One heading and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Every project card reaches a live demo",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 + 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 - 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator -7 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0.1 + 0.2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0 - 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 1 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 100000000000000000000 * 10",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects negative zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty first",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty second",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonnumeric",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonfinite",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculation history capped at five",
+          "result": "Pass"
+        },
+        {
+          "name": "Valid calculation clears invalid state",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset restores example and clears history",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculate button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator operation reachable with custom Tab",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart starts empty with original stock",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 4",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1e309",
+          "result": "Pass"
+        },
+        {
+          "name": "Add item updates stock, count and total",
+          "result": "Pass"
+        },
+        {
+          "name": "Overstock request leaves basket unchanged",
+          "result": "Pass"
+        },
+        {
+          "name": "Depleted stock disables shelf and keeps focus live",
+          "result": "Pass"
+        },
+        {
+          "name": "Minus restores one to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Plus respects stock cap",
+          "result": "Pass"
+        },
+        {
+          "name": "Full original inventory totals exact cents",
+          "result": "Pass"
+        },
+        {
+          "name": "Sold-out plus cannot overfill basket",
+          "result": "Pass"
+        },
+        {
+          "name": "Remove line restores its full stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores all stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Removing last unit returns to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Repeated additions/removals have no stock or rounding drift",
+          "result": "Pass"
+        },
+        {
+          "name": "Shelf Add button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine RPS outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer adaptive resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer random resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS friend win",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS tie",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS first-to-five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS replay resets",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 1 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 2 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 12 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 100 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Long Fibonacci values fit viewport",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci term inspection",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci previous",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci next",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci playback pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation Escape returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme has no overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "All labels target valid controls",
+          "result": "Pass"
+        },
+        {
+          "name": "No browser runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "reduced": {
+      "width": 320,
+      "reducedMotion": true,
+      "results": [
+        {
+          "name": "All four demos initialize directly from file",
+          "result": "Pass"
+        },
+        {
+          "name": "Phone/laptop has no horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Images loaded",
+          "result": "Pass"
+        },
+        {
+          "name": "One heading and unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "Every project card reaches a live demo",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 + 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 - 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 12 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator -7 * 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0.1 + 0.2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 0 - 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 1 / 3",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator 100000000000000000000 * 10",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects negative zero divisor",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty first",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects empty second",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonnumeric",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects nonfinite",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator rejects overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculation history capped at five",
+          "result": "Pass"
+        },
+        {
+          "name": "Valid calculation clears invalid state",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset restores example and clears history",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculate button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator operation reachable with custom Tab",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart starts empty with original stock",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 4",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart rejects invalid quantity 1e309",
+          "result": "Pass"
+        },
+        {
+          "name": "Add item updates stock, count and total",
+          "result": "Pass"
+        },
+        {
+          "name": "Overstock request leaves basket unchanged",
+          "result": "Pass"
+        },
+        {
+          "name": "Depleted stock disables shelf and keeps focus live",
+          "result": "Pass"
+        },
+        {
+          "name": "Minus restores one to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Plus respects stock cap",
+          "result": "Pass"
+        },
+        {
+          "name": "Full original inventory totals exact cents",
+          "result": "Pass"
+        },
+        {
+          "name": "Sold-out plus cannot overfill basket",
+          "result": "Pass"
+        },
+        {
+          "name": "Remove line restores its full stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores all stock and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Removing last unit returns to shelf",
+          "result": "Pass"
+        },
+        {
+          "name": "Repeated additions/removals have no stock or rounding drift",
+          "result": "Pass"
+        },
+        {
+          "name": "Shelf Add button submits through native form behavior",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine RPS outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer adaptive resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS computer random resolves and preserves focus",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS friend win",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS tie",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS first-to-five ends match",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS replay resets",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS reset cancels pending reveal",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 1 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 2 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 12 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci exact 100 terms",
+          "result": "Pass"
+        },
+        {
+          "name": "Long Fibonacci values fit viewport",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci invalid abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci term inspection",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci previous",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci next",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci playback pauses",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay completes",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation Escape returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Dark theme has no overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "All labels target valid controls",
+          "result": "Pass"
+        },
+        {
+          "name": "No browser runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    }
+  }
+}

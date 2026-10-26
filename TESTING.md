@@ -308,7 +308,7 @@ passed; actual browser navigation, keyboard, and visual checks remain Not run.
 | T11 | Assets and console | Load each page and inspect the console and network panel; inspect image descriptions. | No script errors or missing assets; images have appropriate alt attributes. | Not run |
 | T12 | Direct-file operation | Double-click index.html; use its links and mobile menu. Repeat for other pages as added. | Styles and scripts work without a server; relative links resolve. | Not run |
 | T13 | JavaScript fallback | Disable JavaScript, reload each page at 390px, and use navigation. | Navigation links remain visible and usable; inactive menu/theme/keyboard buttons are hidden; the site uses light mode and content stays visible. | Not run |
-| T14 | Project filtering | Activate All projects, Interactive demos, and Assignment notes, then return to All; repeat with Tab/Enter. | Collection shows 4, 2, 2, and 4 cards respectively; exactly one filter reports pressed; labs remain below the collection. | Pass for local scripted browser clicks at 320px, 390px, laptop, and reduced motion on 2026-10-26; physical keyboard/live checks Not run |
+| T14 | Project filtering | Activate All projects, Games, Math, and Simulations, then return to All; repeat with Tab/Enter. | Collection shows 4, 1, 2, 1, and 4 cards respectively; exactly one filter reports pressed; all four labs remain below the collection. | Pass for local scripted browser clicks at 320px, 390px, laptop, and reduced motion on 2026-10-26; physical keyboard/live checks Not run |
 | T15 | Email contact | Reach the Contact page from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
 | T17 | Current page only | On each page, scroll through its sections and inspect the dropdown repeatedly; also use direct section links. | Exactly one primary page link has aria-current=page; its highlight stays unchanged while scrolling; section links have no persistent selection. | Not run |
@@ -400,7 +400,7 @@ overflow failures. The screenshots below were opened and visually inspected:
 | T51 | Text contrast | Calculate ratios for actual light/dark primary text, secondary text, buttons, links, and arena labels. | Normal text ratios are at least 4.5:1. | Pass — checked pairs range from 5.42:1 to 14.21:1; not a Lighthouse audit |
 | T52 | Focus and disclosures | Use scripted Tab/Shift+Tab from the Fibonacci card link; open assignment notes; play a round; dismiss navigation with Escape. | Native summaries participate in custom Tab order, notes expand, Next round receives focus, and Escape closes the menu. | Pass — local scripted Chrome checks; physical Tab/Enter testing Not run |
 | T53 | Other-page shared-script regression | Load local copies of Home, About, Skills, and Contact with error instrumentation. | Menu/theme initialize, each page retains one h1, and no browser runtime errors occur. | Pass — actual headless Chrome on all four pages |
-| T54 | Published playground verification | After owner review and approved deployment, run the full test plan on GitHub Pages, including links, phone/laptop layouts, keyboard, and Lighthouse. | Published demos match the local build; all pages score at least 90 for Accessibility. | Not run — this update has not been deployed |
+| T54 | Published playground verification | After owner review and approved deployment, run the full test plan on GitHub Pages, including links, phone/laptop layouts, keyboard, and Lighthouse. | Published demos match the local build; all pages score at least 90 for Accessibility. | Full live plan Not run. Earlier two-demo commit aec96c0 deployed successfully on 2026-10-26; all five pages and 14 unique published references returned HTTP 200 with expected asset versions. Physical keyboard, visual interaction, and Lighthouse audits remain pending. |
 
 The earlier full-site Not run entries remain pending wherever this focused
 task did not exercise them. Visible-window Chrome access timed out; native
@@ -408,3 +408,47 @@ physical keyboard checks and Lighthouse still need to be performed before
 submission. The headless checks recorded no page runtime errors. Chrome's
 first sandboxed launch failed to initialize its GPU; the same installed
 browser succeeded when run through the approved sandbox escalation.
+
+## All four projects functional — local follow-up, 2026-10-26
+
+The owner requested that every project function on the website. Calculator
+and Shopping Cart were previously notes only; this revision adds working
+browser demos, direct links from all four cards, and category filters. The
+notebook is now named `Assignment_1_Sebastian_Szeliga.ipynb`; its calculator
+logic, grocery names, prices, and starting inventory were read again before
+implementation. The existing Rock Paper Scissors and Fibonacci code is
+unchanged and was included in regression checks.
+
+All **80 scripted assertions passed** in each configuration: actual 320px and
+390px viewport frames, a 1366px laptop window (1348px content area), and a 320px
+frame with reduced motion. These tests ran against local files in installed
+Chrome, using programmatic clicks, submissions, focus, and keyboard events.
+No page runtime errors were captured. They do not replace physical Tab/Enter
+testing or a Lighthouse Accessibility audit.
+
+Detailed results are in `screenshots/all-projects-browser-checks.json`.
+The new `calculator-laptop.png`, `calculator-phone.png`, `cart-laptop.png`, and
+`cart-phone.png` screenshots in `screenshots/` were opened and visually checked.
+The cart captures show an actual test basket with one of each grocery, totaling
+$12.97; they are not purchase records. Phone captures are cropped to the 390px
+frame without scaling. Temporary test/renderer pages are not site content.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T55 | Four working project destinations | Open Projects locally and activate each card link; inspect target IDs and initialized controls. | Every card reaches its own working lab; no project is notes-only. | Pass — all four configurations |
+| T56 | Calculator operations | Calculate 12 + 3, 12 − 3, 12 × 3, and 12 ÷ 3; also test -7 × 3, 0 − 2, and 0.1 + 0.2. | Results are 15, 9, 36, 4, -21, -2, and 0.3. | Pass — all four configurations |
+| T57 | Calculator precision and limits | Calculate 1 ÷ 3 and 1e20 × 10; try 1e308 × 1e308. | Display rounds to 12 significant digits; large finite values use scientific notation; overflowing results produce an error and retain the last result. | Pass — all four configurations |
+| T58 | Invalid calculator inputs | Submit empty first/second fields, nonnumeric/nonfinite input, and division by both 0 and -0; then calculate valid input. | Errors appear without adding history or replacing the prior answer; valid input clears errors. | Pass — all four configurations |
+| T59 | Calculator history and reset | Make more than five successful calculations; use Reset example. | Only five results remain; reset restores 12 + 3 = 15, Add selection, and the history empty state. | Pass — all four configurations |
+| T60 | Cart quantity validation | Submit empty, zero, negative, fractional, nonnumeric, nonfinite, and over-stock quantities. | A labeled field error appears and the basket, total, and inventory remain unchanged. | Pass — all four configurations |
+| T61 | Cart add and stock | Add Frosted Flakes one at a time until both boxes are in the basket. | Total progresses from $2.99 to $5.98; stock reduces from 2 to 0; the shelf input/Add button and basket plus button disable at the cap. | Pass — all four configurations |
+| T62 | Cart plus/minus and removal | Use minus, plus, Remove, and minus on a final unit. | Stock returns/removes correctly, a zero-quantity line disappears, and focus moves to a surviving control. | Pass — all four configurations |
+| T63 | Exact cart totals and clear | Add all 2 cereal boxes, 3 eggs, and 4 loaves; remove all eggs; then Empty basket. | Total is $39.91, then $21.94, then $0.00; count is correct, all stock returns, and the empty state appears. | Pass — all four configurations |
+| T64 | Repeated cart use | Add and remove one cereal box ten times. | Stock ends at 2 and total at exactly $0.00, without drift. | Pass — all four configurations |
+| T65 | All-project regression | Play both computer strategies, private two-player rounds, a tie, a first-to-five match, replay/reset; generate, inspect, validate, step, and play Fibonacci. | Existing demos retain their expected behavior, including exact term 100 and pause/completion behavior. | Pass — all four configurations |
+| T66 | New form focus, labels, layout | Focus a calculator input and dispatch Tab; exhaust shelf stock, remove a line, and empty the basket; inspect new phone/laptop screenshots. | Calculator operation is reachable, labels resolve, focus stays on live controls, and layouts have no horizontal overflow. | Pass — scripted focus/geometry and screenshot inspection; physical keyboard Not run |
+| T67 | Live all-project update | After review and approved deployment, verify all four demos and rerun the full live plan, including Lighthouse. | Live content matches these local tests; physical keyboard and accessibility audit pass. | Full live plan Not run — physical keyboard and Lighthouse checks remain pending; source and deployment checks are separate. |
+
+The 45-assertion result above describes the earlier two-demo version. The
+80-assertion follow-up supersedes it for the current local revision and retains
+the earlier failures and corrections as historical evidence.

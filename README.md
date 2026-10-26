@@ -23,8 +23,8 @@ The header uses a clean text-only name link, and Home greets visitors with
 About me includes enrollment at NJIT and the Electrical Engineering major.
 Personal background can be added later. Projects now showcases the four real
 mini projects in the owner's Assignment 1 notebook: Calculator, Shopping Cart,
-Rock Paper Scissors, and Fibonacci Sequence. The collection has All projects,
-Interactive demos, and Assignment notes filters.
+Rock Paper Scissors, and Fibonacci Sequence. All four now have browser demos,
+with All projects, Games, Math, and Simulations filters.
 
 Rock Paper Scissors runs on the page, with an adaptive computer opponent,
 random picks, or two-player pass-and-play on one device. Both players' choices
@@ -37,9 +37,21 @@ This is a small local strategy, with no external AI service or network play.
 The Fibonacci explorer generates 1–100 terms with exact BigInt values, starting
 at 0. Select any term to inspect its addition and ratio, step backward or
 forward, or replay the sequence. The square spiral shows up to the first 12
-terms to keep small squares readable. Calculator and Shopping Cart have
-descriptions and expandable notes based on the notebook; they are not playable
-browser demos. These browser adaptations were built with Codex and are
+terms to keep small squares readable.
+
+Calculator supports addition, subtraction, multiplication, and division,
+including negative and decimal inputs. It checks missing/invalid numbers,
+division by zero, and nonfinite results. Answers display to 12 significant
+digits, with the last five successful calculations retained until reset or
+reload. Reset example restores 12 + 3.
+
+Shopping Cart uses the original shelf: 2 Frosted Flakes at $2.99 each, 3 eggs
+at $5.99 each, and 4 sourdough loaves at $3.99 each. Add a whole-number quantity,
+adjust quantities in the basket, remove a line, or empty the basket. Shelf
+stock and totals update together; calculations use integer cents. All nine
+items total $39.91. There is no checkout or persistent storage.
+
+These browser adaptations were built with Codex and are
 distinguished from the original Python classroom work.
 
 Open `projects.html` directly, or follow Projects from `index.html`. Existing page
@@ -102,7 +114,7 @@ their versioned shared assets were verified to load with the expected source.
 - `contact.html`: The owner's public email link.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Shared navigation, keyboard controls, reveals, project filters,
-  Rock Paper Scissors, and Fibonacci explorer.
+  and all four interactive Assignment 1 demos.
 - `images/`: Original SVG hand illustrations and assignment thumbnails.
 - `screenshots/`: Actual local phone and laptop browser captures for the report.
 - `js/theme.js`: Early theme restoration, sun/moon toggle, and saved preference.
@@ -123,3 +135,10 @@ of four configurations: 320px, 390px, laptop (1348px content viewport), and
 These checks use actual browser DOM behavior but programmatic clicks/focus;
 physical Tab/Enter and Lighthouse checks remain pending. See `TESTING.md`
 for the first failures, corrections, and the remaining submission checks.
+
+The all-project follow-up passed 80 scripted assertions in each of the same
+four browser configurations on October 26, 2026. Results are retained in
+`screenshots/all-projects-browser-checks.json`. Actual phone and laptop captures
+of Calculator and Shopping Cart were visually inspected. These are local
+browser checks; physical keyboard, Lighthouse, and deployment retests remain
+pending.

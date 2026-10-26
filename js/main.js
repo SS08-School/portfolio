@@ -684,3 +684,205 @@ function initializeFibonacci() {
 
 initializeRockPaperScissors();
 initializeFibonacci();
+
+function initializeCalculator() {
+  const demo = document.querySelector("#calculator-demo");
+  if (!demo) return;
+  const form = demo.querySelector("#calculator-form");
+  const firstInput = demo.querySelector("#calculator-first");
+  const secondInput = demo.querySelector("#calculator-second");
+  const error = demo.querySelector("#calculator-error");
+  const symbols = { "+": "+", "-": "−", "*": "×", "/": "÷" };
+  let history = [];
+
+  function formatNumber(value) {
+    // Keep routine decimal results readable, including 0.1 + 0.2.
+    return String(Number(value.toPrecision(12)));
+  }
+
+  function clearErrors() {
+    error.textContent = "";
+    firstInput.removeAttribute("aria-invalid");
+    secondInput.removeAttribute("aria-invalid");
+  }
+
+  function reject(message, input) {
+    error.textContent = message;
+    if (input) {
+      input.setAttribute("aria-invalid", "true");
+      input.focus({ preventScroll: true });
+    }
+  }
+
+  function calculate(saveHistory = true) {
+    clearErrors();
+    for (const input of [firstInput, secondInput]) {
+      if (!input.value.trim() || !input.validity.valid || !Number.isFinite(Number(input.value))) {
+        reject("Enter a finite number in both fields.", input);
+        return;
+      }
+    }
+    const first = Number(firstInput.value);
+    const second = Number(secondInput.value);
+    const operation = form.querySelector('input[name="operation"]:checked')?.value;
+    if (!Object.hasOwn(symbols, operation)) {
+      reject("Choose one of the four operations.");
+      return;
+    }
+    if (operation === "/" && second === 0) {
+      reject("Cannot divide by zero. Choose a different second number.", secondInput);
+      return;
+    }
+    let result;
+    if (operation === "+") result = first + second;
+    if (operation === "-") result = first - second;
+    if (operation === "*") result = first * second;
+    if (operation === "/") result = first / second;
+    if (!Number.isFinite(result)) {
+      reject("That result is too large to display. Try smaller numbers.");
+      return;
+    }
+    const expression = `${formatNumber(first)} ${symbols[operation]} ${formatNumber(second)} =`;
+    const answer = formatNumber(result);
+    demo.querySelector("#calculator-expression").textContent = expression;
+    demo.querySelector("#calculator-result").textContent = answer;
+    if (saveHistory) {
+      history.unshift(`${expression} ${answer}`);
+      history = history.slice(0, 5);
+      demo.querySelector("#calculator-history").replaceChildren(...history.map((text) => {
+        const line = document.createElement("li");
+        line.textContent = text;
+        return line;
+      }));
+    }
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    calculate();
+  });
+  demo.querySelector("#calculator-reset").addEventListener("click", () => {
+    form.reset();
+    history = [];
+    const empty = document.createElement("li");
+    empty.textContent = "Try a calculation to start your history.";
+    demo.querySelector("#calculator-history").replaceChildren(empty);
+    calculate(false);
+  });
+  calculate(false);
+  demo.hidden = false;
+}
+
+function initializeShoppingCart() {
+  const demo = document.querySelector("#cart-demo");
+  if (!demo) return;
+  // The prices and starting quantities are the original Assignment 1 shelf.
+  const groceries = [
+    { id: "cereal", name: "Frosted Flakes", mark: "FF", cents: 299, stock: 2, inCart: 0 },
+    { id: "eggs", name: "Eggs", mark: "E", cents: 599, stock: 3, inCart: 0 },
+    { id: "bread", name: "Sourdough Loaf", mark: "S", cents: 399, stock: 4, inCart: 0 }
+  ];
+  const shelf = demo.querySelector("#shelf-items");
+  const lines = demo.querySelector("#cart-lines");
+  const clearButton = demo.querySelector("#cart-clear");
+  const status = demo.querySelector("#cart-status");
+  const money = (cents) => `$${(cents / 100).toFixed(2)}`;
+
+  // This template contains only fixed, local grocery data, never visitor input.
+  shelf.innerHTML = groceries.map((item) => `
+    <form class="shelf-item" data-product="${item.id}" novalidate>
+      <div class="grocery-mark grocery-${item.id}" aria-hidden="true">${item.mark}</div>
+      <div class="grocery-copy"><h4>${item.name}</h4><p>${money(item.cents)} each <span id="stock-${item.id}"></span></p></div>
+      <div class="shelf-controls"><label for="quantity-${item.id}">Quantity<span class="visually-hidden"> of ${item.name}</span></label>
+        <div><input id="quantity-${item.id}" type="number" min="1" step="1" value="1" required aria-describedby="stock-${item.id} error-${item.id}">
+        <button class="button" type="submit" aria-label="Add ${item.name} to basket">Add +</button></div>
+      </div><p id="error-${item.id}" class="input-error" role="alert"></p>
+    </form>`).join("");
+
+  function renderBasket() {
+    for (const item of groceries) {
+      const available = item.stock - item.inCart;
+      const form = shelf.querySelector(`[data-product="${item.id}"]`);
+      const input = form.querySelector("input");
+      demo.querySelector(`#stock-${item.id}`).textContent = `· ${available} on shelf`;
+      input.max = available;
+      input.disabled = available === 0;
+      form.querySelector("button").disabled = available === 0;
+      form.querySelector("button").textContent = available === 0 ? "All in basket" : "Add +";
+    }
+    lines.innerHTML = groceries.filter((item) => item.inCart > 0).map((item) => `
+      <li data-cart-product="${item.id}"><div class="basket-line-heading"><div><h4>${item.name}</h4><p>${item.inCart} × ${money(item.cents)}</p></div><strong>${money(item.inCart * item.cents)}</strong></div>
+        <div class="basket-line-controls"><div class="quantity-stepper"><button type="button" class="quiet-button" data-action="less" aria-label="Remove one ${item.name}">−</button><span aria-label="Quantity">${item.inCart}</span><button type="button" class="quiet-button" data-action="more" aria-label="Add one ${item.name}" ${item.inCart === item.stock ? "disabled" : ""}>+</button></div><button type="button" class="remove-item" data-action="remove" aria-label="Remove all ${item.name} from basket">Remove</button></div>
+      </li>`).join("");
+    const quantity = groceries.reduce((sum, item) => sum + item.inCart, 0);
+    const totalCents = groceries.reduce((sum, item) => sum + item.inCart * item.cents, 0);
+    demo.querySelector("#cart-item-count").textContent = `${quantity} ${quantity === 1 ? "item" : "items"}`;
+    demo.querySelector("#cart-total").textContent = money(totalCents);
+    demo.querySelector("#cart-empty").hidden = quantity > 0;
+    clearButton.disabled = quantity === 0;
+  }
+
+  function clearItemError(item) {
+    demo.querySelector(`#error-${item.id}`).textContent = "";
+    demo.querySelector(`#quantity-${item.id}`).removeAttribute("aria-invalid");
+  }
+
+  shelf.addEventListener("submit", (event) => {
+    const form = event.target.closest("[data-product]");
+    if (!form) return;
+    event.preventDefault();
+    const item = groceries.find((item) => item.id === form.dataset.product);
+    const input = form.querySelector("input");
+    const quantity = Number(input.value);
+    const available = item.stock - item.inCart;
+    clearItemError(item);
+    if (!input.value.trim() || !Number.isInteger(quantity) || quantity < 1 || quantity > available || !input.validity.valid) {
+      demo.querySelector(`#error-${item.id}`).textContent = available === 0
+        ? "All of this item is in your basket. Remove some to return it to the shelf."
+        : `Enter a whole-number quantity from 1 to ${available}.`;
+      input.setAttribute("aria-invalid", "true");
+      if (!input.disabled) input.focus({ preventScroll: true });
+      return;
+    }
+    const focusOnShelf = form.contains(document.activeElement);
+    item.inCart += quantity;
+    input.value = 1;
+    renderBasket();
+    status.textContent = `Added ${quantity} ${item.name}. Total ${demo.querySelector("#cart-total").textContent}.`;
+    if (focusOnShelf && input.disabled) {
+      lines.querySelector(`[data-cart-product="${item.id}"] [data-action="less"]`).focus({ preventScroll: true });
+    }
+  });
+
+  lines.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-action]");
+    if (!button || button.disabled) return;
+    const item = groceries.find((item) => item.id === button.closest("[data-cart-product]").dataset.cartProduct);
+    const action = button.dataset.action;
+    const hadFocus = button === document.activeElement;
+    if (action === "more" && item.inCart < item.stock) item.inCart++;
+    if (action === "less" && item.inCart > 0) item.inCart--;
+    if (action === "remove") item.inCart = 0;
+    clearItemError(item);
+    renderBasket();
+    status.textContent = `${item.name}: ${item.inCart} in basket. Total ${demo.querySelector("#cart-total").textContent}.`;
+    if (hadFocus) {
+      const preferred = lines.querySelector(`[data-cart-product="${item.id}"] [data-action="${action}"]`);
+      const fallback = lines.querySelector(`[data-cart-product="${item.id}"] [data-action="less"]`);
+      (preferred && !preferred.disabled ? preferred : fallback || shelf.querySelector(`[data-product="${item.id}"] button`)).focus({ preventScroll: true });
+    }
+  });
+
+  clearButton.addEventListener("click", () => {
+    groceries.forEach((item) => { item.inCart = 0; clearItemError(item); });
+    const hadFocus = document.activeElement === clearButton;
+    renderBasket();
+    status.textContent = "Basket emptied. All items are back on the shelf.";
+    if (hadFocus) shelf.querySelector("button").focus({ preventScroll: true });
+  });
+  renderBasket();
+  demo.hidden = false;
+}
+
+initializeCalculator();
+initializeShoppingCart();

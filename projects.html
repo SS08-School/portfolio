@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Play Rock Paper Scissors and explore Fibonacci in Sebastian Szeliga's interactive Assignment 1 project collection.">
+    <meta name="description" content="Try all four Assignment 1 projects: Rock Paper Scissors, Fibonacci, Calculator, and Shopping Cart, directly in Sebastian Szeliga's portfolio.">
     <meta name="theme-color" content="#FAF7FF">
     <title>Projects | Sebastian Szeliga</title>
     <script src="js/theme.js?v=6ee993810b0d"></script>
-    <link rel="stylesheet" href="css/styles.css?v=7288c03dda2c">
-    <script src="js/main.js?v=db80a43949f7" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=e50d84d4b14b">
+    <script src="js/main.js?v=f6288af6af2e" defer></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -66,7 +66,7 @@
         <div>
           <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> THE PROJECT PLAYGROUND / ASSIGNMENT 01</p>
           <h1 id="projects-heading">Small ideas.<br><span>Playful possibilities.</span></h1>
-          <p class="hero-description">Four mini projects from class. Two reimagined for the browser. Make a move, follow a pattern, and see the logic come to life.</p>
+          <p class="hero-description">Four mini projects from class. All four ready to try in your browser. Make a move, follow a pattern, crunch a number, or fill a basket.</p>
           <a class="button" href="#rps-lab">Let's play <span aria-hidden="true">↘</span></a>
         </div>
         <div class="playground-art" aria-hidden="true">
@@ -84,26 +84,27 @@
         <p class="collection-description">Originally written in Python for Assignment 1. The interactive versions below are browser adaptations built with Codex.</p>
         <div class="project-filters" role="group" aria-label="Filter assignment projects" hidden>
           <button type="button" data-project-filter="all" aria-pressed="true">All projects <span>04</span></button>
-          <button type="button" data-project-filter="interactive" aria-pressed="false">Interactive demos <span>02</span></button>
-          <button type="button" data-project-filter="notes" aria-pressed="false">Assignment notes <span>02</span></button>
+          <button type="button" data-project-filter="games" aria-pressed="false">Games <span>01</span></button>
+          <button type="button" data-project-filter="math" aria-pressed="false">Math <span>02</span></button>
+          <button type="button" data-project-filter="simulation" aria-pressed="false">Simulations <span>01</span></button>
         </div>
         <p id="filter-status" class="visually-hidden" role="status"></p>
         <div class="project-grid">
-          <article class="project-card" data-project-category="interactive">
+          <article class="project-card" data-project-category="games">
             <div class="project-thumbnail rps-thumbnail" aria-hidden="true"><img src="images/rock.svg" alt="" width="200" height="200"><img src="images/paper.svg" alt="" width="200" height="200"><img src="images/scissors.svg" alt="" width="200" height="200"></div>
             <div class="project-card-copy"><p class="project-tag">01 / GAME · INTERACTIVE</p><h3>Rock, Paper, Scissors</h3><p>A two-player terminal game with hidden choices, winner detection, and repeat rounds. Now with a computer opponent, too.</p><a href="#rps-lab">Enter the arena <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="project-card" data-project-category="interactive">
+          <article class="project-card" data-project-category="math">
             <img class="project-thumbnail" src="images/fibonacci.svg" alt="A Fibonacci-inspired spiral over a grid of growing squares" width="480" height="240">
             <div class="project-card-copy"><p class="project-tag">02 / MATH · INTERACTIVE</p><h3>Fibonacci Sequence</h3><p>Start at 0 and 1. Add the last two terms. A loop from the notebook becomes a sequence you can build and explore.</p><a href="#fib-lab">Follow the pattern <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="project-card" data-project-category="notes">
+          <article class="project-card" data-project-category="math">
             <img class="project-thumbnail" src="images/calculator.svg" alt="An illustrated calculator with the four arithmetic operations" width="480" height="240" loading="lazy">
-            <div class="project-card-copy"><p class="project-tag">03 / MATH · NOTEBOOK</p><h3>Calculator</h3><p>Two numbers, four operations, and a loop for another calculation. Includes checks for invalid numbers and division by zero.</p><details><summary>Inside the assignment</summary><p>The calculator function uses conditionals to select addition, subtraction, multiplication, or division. A try/except block handles nonnumeric operands, and the loop asks whether to calculate again.</p></details></div>
+            <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h3>Calculator</h3><p>Two numbers and four operations. Try decimals and negative numbers, inspect the result, and keep calculating.</p><a href="#calculator-lab">Do the math <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="project-card" data-project-category="notes">
+          <article class="project-card" data-project-category="simulation">
             <img class="project-thumbnail" src="images/cart.svg" alt="An illustrated shopping cart with groceries" width="480" height="240" loading="lazy">
-            <div class="project-card-copy"><p class="project-tag">04 / SIMULATION · NOTEBOOK</p><h3>Shopping Cart</h3><p>Add groceries, remove quantities, and calculate a total. The notebook tracks a shelf and a cart with limited stock.</p><details><summary>Inside the assignment</summary><p>The shelf holds Frosted Flakes, eggs, and sourdough. Adding an item reduces its shelf stock; removing it returns that stock. The total multiplies each item's price by its quantity.</p></details></div>
+            <div class="project-card-copy"><p class="project-tag">04 / SIMULATION · INTERACTIVE</p><h3>Shopping Cart</h3><p>A little grocery shelf with limited stock. Add items, adjust your basket, and watch the total update as you go.</p><a href="#cart-lab">Fill a basket <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
       </section>
@@ -141,6 +142,32 @@
         <details class="logic-notes"><summary>The little loop behind the pattern</summary><p>The notebook starts with [0, 1], then appends the sum of the last two numbers until it reaches the requested length. Its special cases return 0 for one term and [0, 1] for two. Here, whole-number input is checked before generating; BigInt keeps even the 100th term exact.</p><pre><code>seq = [0, 1]
 for i in range(2, n):
     seq.append(seq[i - 1] + seq[i - 2])</code></pre><p>The spiral uses quarter-circle arcs in Fibonacci-sized squares. For long sequences, the drawing shows the first 12 terms so the smaller squares remain readable; every generated value is still available below it.</p></details>
+      </section>
+      <section id="calculator-lab" class="project-lab" aria-labelledby="calculator-heading" tabindex="-1">
+        <div class="lab-heading"><div><p class="project-tag">CALCULATE / 03</p><h2 id="calculator-heading">Make it add up.</h2></div><p>Two numbers. Four operations.<br>A little clarity in every calculation.</p></div>
+        <noscript><p class="fallback-note">Enable JavaScript to use the calculator. It supports addition, subtraction, multiplication, and division.</p></noscript>
+        <div id="calculator-demo" class="utility-demo calculator-layout" hidden>
+          <form id="calculator-form" class="calculator-form" novalidate>
+            <div class="utility-toolbar"><h3>The inputs</h3><button id="calculator-reset" class="quiet-button" type="button">Reset example ↺</button></div>
+            <label for="calculator-first">First number</label><input id="calculator-first" type="number" step="any" value="12" required aria-describedby="calculator-help calculator-error">
+            <fieldset class="operation-options"><legend>Choose an operation</legend><label><input type="radio" name="operation" value="+" checked><span><b aria-hidden="true">+</b> Add</span></label><label><input type="radio" name="operation" value="-"><span><b aria-hidden="true">−</b> Subtract</span></label><label><input type="radio" name="operation" value="*"><span><b aria-hidden="true">×</b> Multiply</span></label><label><input type="radio" name="operation" value="/"><span><b aria-hidden="true">÷</b> Divide</span></label></fieldset>
+            <label for="calculator-second">Second number</label><input id="calculator-second" type="number" step="any" value="3" required aria-describedby="calculator-help calculator-error">
+            <p id="calculator-help" class="utility-help">Decimals and negative numbers welcome.</p><p id="calculator-error" class="input-error" role="alert"></p>
+            <button class="button" type="submit">Calculate <span aria-hidden="true">=</span></button>
+          </form>
+          <div class="calculator-results"><div class="calculator-display" role="status" aria-atomic="true"><span class="small-label">YOUR RESULT</span><p id="calculator-expression">12 + 3 =</p><strong id="calculator-result">15</strong></div><div class="calculation-history"><h3>Recent calculations</h3><ol id="calculator-history"><li>Try a calculation to start your history.</li></ol></div></div>
+        </div>
+        <details class="logic-notes"><summary>The four branches behind the answer</summary><p>The original calculator takes two numbers and selects addition, subtraction, multiplication, or division with conditionals. This version follows the same rule, checks for missing or invalid numbers, and stops division by zero. Submit again to keep calculating; the last five successful calculations stay visible until you reset or leave the page.</p><p>Results are displayed to 12 significant digits. Very large or very small values use scientific notation.</p></details>
+      </section>
+
+      <section id="cart-lab" class="project-lab" aria-labelledby="cart-heading" tabindex="-1">
+        <div class="lab-heading"><div><p class="project-tag">SIMULATE / 04</p><h2 id="cart-heading">A basket of possibilities.</h2></div><p>Shop the assignment's little shelf.<br>Every item has a limit.</p></div>
+        <noscript><p class="fallback-note">Enable JavaScript to try the shopping cart. The assignment's shelf has Frosted Flakes ($2.99, 2 available), eggs ($5.99, 3 available), and sourdough ($3.99, 4 available).</p></noscript>
+        <div id="cart-demo" class="utility-demo cart-layout" hidden>
+          <div class="store-shelf"><div class="utility-toolbar"><h3>On the shelf</h3><span class="small-label">03 GROCERIES</span></div><div id="shelf-items"></div><p class="utility-help">Adding to your basket reduces shelf stock. Removing an item puts it back.</p></div>
+          <div class="basket-panel"><div class="utility-toolbar"><h3>Your basket <span id="cart-item-count">0 items</span></h3><button id="cart-clear" class="quiet-button" type="button" disabled>Empty basket</button></div><p id="cart-empty" class="basket-empty">A fresh start. Pick something from the shelf.</p><ul id="cart-lines" class="cart-lines" aria-label="Items in your basket"></ul><div class="basket-total"><span>Total</span><strong id="cart-total">$0.00</strong></div><p id="cart-status" class="cart-status" role="status" aria-atomic="true">Your basket is empty.</p></div>
+        </div>
+        <details class="logic-notes"><summary>How the shelf and basket stay in sync</summary><p>The original notebook stores a shelf of three groceries and a cart of item quantities. This adaptation keeps the original prices and stock: 2 boxes of Frosted Flakes at $2.99, 3 cartons of eggs at $5.99, and 4 sourdough loaves at $3.99. Add a whole-number quantity, use the basket's plus and minus controls, or remove a line. Empty basket returns everything to the shelf.</p><p>Totals use whole cents to avoid rounding drift. The basket stays in this page's memory and starts empty when you reload.</p></details>
       </section>
       <p class="project-endnote">Classroom logic, a browser canvas, and room to keep learning. <a href="#top">Back to the top ↑</a></p>
     </main>
