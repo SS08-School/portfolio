@@ -1,9 +1,9 @@
 # Website test plan
 
-The current revision has Home with My studies, Skills, and email Contact
-sections, plus separate About me and Projects pages. Former Skills and Contact
-URLs redirect to their Home sections. Project details, filtering, and richer
-personal background are planned for later tasks.
+The current revision has five separate pages: Home (with My studies), About me
+(with Education), Projects, Skills, and Contact. Skills and Contact now contain
+their own content and no longer redirect to Home. Project details, filtering,
+and richer personal background are planned for later tasks.
 Run these cases on the live GitHub Pages site before
 submission, recording its URL, browser, viewport, and test date. For cases
 covering multiple sections, record a result for each section. Earlier check
@@ -270,13 +270,26 @@ storage, the compact button styles, and focus-visible instructions. These
 publication/source checks passed; real browser storage, appearance, and keyboard
 interaction checks remain Not run.
 
+Five-page revision local checks on 2026-10-26: static checks passed across
+Home, About me, Projects, Skills, and Contact for all 25 primary page-link
+destinations, two subordinate section links per page, exactly one current-page
+indicator, one h1 and logical heading order per page, unique IDs, ARIA targets,
+shared controls, theme-script ordering, and all 62 local references and asset
+versions. The Skills and Contact text matches the previous Home sections;
+Home no longer contains those sections. Neither new page redirects. Shared
+JavaScript syntax checks passed; the interaction scripts are unchanged.
+These are source checks, not browser interaction tests. Phone/laptop layout,
+keyboard navigation, direct-file browser behavior, console checks, and
+Lighthouse remain Not run; browser verification is limited by the previously
+recorded Chrome URL access failure. This revision has not been deployed.
+
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T1 | Page and section navigation | On Home, About, and Projects, activate the brand and every dropdown link using clicks and Tab/Enter. | First links load the correct page at the document top; section links reach their actual sections; only the current page is selected. | Not run |
-| T2 | Former page URLs | Open skills.html and contact.html directly and from a local file. Disable automatic redirects and test fallback links. | Each URL leads to the corresponding main-page section; fallback links work without JavaScript. | Not run |
+| T1 | Page and section navigation | On each of Home, About, Projects, Skills, and Contact, activate the brand and every dropdown link using clicks and Tab/Enter. | Primary links load the correct page at the document top; My studies belongs to Home and Education to About; only the current page is selected. | Not run |
+| T2 | Standalone Skills and Contact | Open skills.html and contact.html directly and from local files, with JavaScript enabled and disabled. | Each URL displays its own complete page and unique heading; neither redirects to Home. | Not run |
 | T3 | Phone layouts | View every implemented page at widths of 320px and 390px; scroll top to bottom. | No sideways scrolling, clipped text, or overlapping content. | Not run |
 | T4 | Laptop layouts | View every implemented page at 1366px wide; scroll top to bottom. | Content and navigation are readable and aligned. | Not run |
-| T5 | Grouped dropdown toggle | On all three pages at 390px and 1366px wide, activate the three-line button twice. | Dropdown opens/closes; aria-expanded matches; Home's four sections are grouped together; About and Projects have separate groups; Education belongs to About. | Not run |
+| T5 | Grouped dropdown toggle | On all five pages at 390px and 1366px wide, activate the three-line button twice. | Dropdown opens/closes; aria-expanded matches; all five pages have their own groups; My studies belongs to Home and Education to About. | Not run |
 | T6 | Dropdown keyboard | Tab to the button, open with Enter or Space, then Tab through the links. Close with Escape, then reopen and Tab out. | Keyboard opening focuses the first link; Escape closes and returns focus to the button; Tab can leave the menu; closed links are skipped. | Not run |
 | T7 | Dropdown resize | Open and close the dropdown at 320px, 390px, and 1366px wide; resize while a link has focus. | Three-line button appears at all widths; menu fits without sideways scrolling; focused links stay available while resizing. | Not run |
 | T8 | Keyboard on every page | On each page, use Tab, Shift+Tab, and Enter through every interactive element, then press Escape with the menu closed and Tab out. | Logical focus order, visible focus, working controls, wrapping within the page, and an Escape exit to native navigation. | Not run |
@@ -284,23 +297,23 @@ interaction checks remain Not run.
 | T10 | Accessibility audit | Run Chrome DevTools Lighthouse Accessibility on every page. Record each score. | Each page scores at least 90; resolve reported issues. | Not run |
 | T11 | Assets and console | Load each page and inspect the console and network panel; inspect image descriptions. | No script errors or missing assets; images have appropriate alt attributes. | Not run |
 | T12 | Direct-file operation | Double-click index.html; use its links and mobile menu. Repeat for other pages as added. | Styles and scripts work without a server; relative links resolve. | Not run |
-| T13 | JavaScript fallback | Disable JavaScript, reload Home at 390px, and use navigation. | Navigation links remain visible and usable; inactive menu/theme buttons are hidden; the site uses light mode and content stays visible. | Not run |
+| T13 | JavaScript fallback | Disable JavaScript, reload each page at 390px, and use navigation. | Navigation links remain visible and usable; inactive menu/theme/keyboard buttons are hidden; the site uses light mode and content stays visible. | Not run |
 | T14 | Project filtering | Once real projects and filtering are added, activate each filter and All using mouse and keyboard. | Only matching projects appear; All restores every project; selection is accessible. | Not run; project details and filtering pending |
-| T15 | Email contact | Reach Home's Contact section from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
+| T15 | Email contact | Reach the Contact page from each page, inspect and copy the address, and activate it by click and Enter. Repeat without JavaScript. | Displayed address is ss5764@njit.edu; mailto target matches; the configured email app opens without sending automatically; no form remains. | Not run |
 | T16 | Zoom and reduced motion | On each page, use 200% browser zoom and enable reduced motion in the OS. | Content stays readable and reachable; nonessential motion is disabled. | Not run |
 | T17 | Current page only | On each page, scroll through its sections and inspect the dropdown repeatedly; also use direct section links. | Exactly one primary page link has aria-current=page; its highlight stays unchanged while scrolling; section links have no persistent selection. | Not run |
-| T18 | Repeating scroll reveals | At phone and laptop widths, scroll down through My studies, Skills, and Contact. Scroll up until each item leaves the bottom of the screen, then down again. Repeat three times and try a direct #contact link. | Items fade and rise into view each time; scrolling up resets items below view; items above the viewport stay revealed; direct-link content is readable. | Not run |
+| T18 | Repeating scroll reveals | At phone and laptop widths, scroll through Home's My studies section, the Skills page, and the Contact page. Scroll up until each item leaves the bottom of the screen, then down again. Repeat three times and open contact.html#contact directly. | Off-screen items fade and rise into view each time; scrolling up resets items below view; items above the viewport stay revealed; direct-link content is readable. | Not run |
 | T19 | Animation fallbacks | Reload with reduced motion enabled, then with JavaScript disabled. Also enable reduced motion while unrevealed content remains below the viewport. | All content stays visible with no reveal motion; changing the preference reveals all remaining content. | Not run |
-| T20 | Keyboard during reveals | Reload Home at the top with motion enabled; use Tab to reach the email link before manually scrolling there. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |
+| T20 | Keyboard during reveals | Reload Contact at the top with motion enabled; use Tab to reach the email link before manually scrolling there, using a short viewport if necessary. | Focused content becomes visible immediately with a visible focus outline; no waiting for an animation. | Not run |
 | T21 | Dropdown dismissal and links | On each content page, open the dropdown, click outside it, reopen, and activate each page and section link. | Outside click closes it; each link closes it and reaches the matching page or section; focus is not left in hidden content. | Not run |
 | T22 | About and project content | Open About and Projects at phone and laptop widths. | About shows NJIT enrollment and Electrical Engineering; no invented background; Projects truthfully has no published items and no dummy cards or broken links. | Not run |
-| T23 | Anchor destination outlines | From About and Projects, activate Home using the brand and dropdown. Also visit Home's section links and the skip link, then Tab to links and buttons. | No large outline appears around the main content or section containers; destinations still receive focus and scroll correctly; keyboard focus remains visible on interactive controls. | Not run |
+| T23 | Anchor destination outlines | From About, Projects, Skills, and Contact, activate Home using the brand and dropdown. Also visit My studies, Education, and each page's skip link, then Tab to links and buttons. | No large outline appears around the main content or section containers; destinations still receive focus and scroll correctly; keyboard focus remains visible on interactive controls. | Not run |
 | T24 | Background decoration and solid cards | View all pages at 320px, 390px, and 1366px in both themes. Compare cards, scroll, and use navigation and email links. | Main cards are uniformly solid white in light mode and dark plum in dark mode; decorative color stays in the background; text is readable; no new sideways scrolling or blocked interactions. | Not run |
 | T25 | Stylesheet cache refresh | With an older version cached, open the updated site and visit all pages. Inspect each stylesheet and script request. | Every page requests the correct new versioned assets; main cards have a uniform solid surface for the selected theme; old alternating peach/mint card rules are absent. | Not run |
 | T26 | Default theme | Clear the site's stored theme, set the OS to dark mode, and open each page. | Pages default to light; sun icon is visible and the Dark mode toggle reports aria-pressed=false. | Not run |
 | T27 | Saved preference | Toggle dark with a click or Enter/Space, navigate through all pages, reload, and revisit in a new tab. Repeat after choosing light. | Choice and icon remain consistent across pages and visits; cards use a uniform solid surface in each theme; saved dark mode has no light flash. | Not run |
 | T28 | Theme fallbacks and sync | Block site storage and try toggling; then restore storage and change the theme in another tab. Clear the stored preference and return with Back. | Blocked storage causes no errors; the current page still switches. Same-site tabs and restored pages reflect the saved choice; clearing it returns light mode. | Not run |
-| T29 | Page, icon, and theme motion | Switch themes and navigate among Home, About, and Projects, including browser Back. Repeat with reduced motion. | Palette changes ease over about 280ms with synchronized card colors; sun/moon rotate and fade; page content appears gently. Saved-theme loads have no palette fade or light flash. Reduced motion skips effects; focused controls stay visible. | Not run |
+| T29 | Page, icon, and theme motion | Switch themes and navigate among all five pages, including browser Back. Repeat with reduced motion. | Palette changes ease over about 280ms with synchronized card colors; sun/moon rotate and fade; page content appears gently. Saved-theme loads have no palette fade or light flash. Reduced motion skips effects; focused controls stay visible. | Not run |
 | T30 | Dark theme and compact header | At 320px, 390px, and 1366px wide, inspect all pages in both modes and use both header buttons. | Text, diagram, cards, focus indicators, and dropdown are readable; both controls fit and work without overlap or sideways scrolling. | Not run |
 | T31 | Page overview starts at top | Visit each page, scroll down, navigate elsewhere, and select its first dropdown link again. Also select the current page's first link and use Ctrl/Cmd-click and browser Back. | First links reach scroll position 0 and show the header; section links still reach sections; modified clicks retain native behavior; Back is not globally forced to the top. | Not run |
 | T32 | Arrow scrolling on every page | At phone and laptop widths, focus the page, brand, theme button, menu button, and ordinary links. Press and hold Up/Down after following links and returning with Back. | Page scrolls in the requested direction while it has room; focus stays on the control; held keys repeat without animation buildup. | Not run |
@@ -309,3 +322,4 @@ interaction checks remain Not run.
 | T35 | Smooth arrow scrolling | At phone and laptop widths, press and hold Down/Up, reverse direction, reach the top/bottom, and interrupt with Tab, mouse wheel, touch, or a click. Repeat with reduced motion. | Scrolling eases smoothly and responds promptly to direction changes; no animation remains at boundaries; other input takes over immediately; reduced motion scrolls without animation. | Not run |
 | T36 | Saved keyboard-navigation choice | Clear site storage and load each page. Toggle off, navigate/reload/revisit, then repeat after choosing on. Turn off with Escape. Test browser Back, another tab, and blocked storage; repeat using local files. | Defaults on; explicit on/off and Escape choices persist in the same browser wherever storage is shared; state syncs across tabs and Back. Clearing storage restores on. Blocked storage leaves the current-page toggle working. | Not run |
 | T37 | Compact bottom control | At phone and laptop widths in both themes, scroll to each page's bottom and Tab to the keyboard button. | Small button sits last at the footer's bottom-right; focus ring is visible; instructions appear above it on focus and are available to screen readers. No clipping or horizontal overflow. | Not run |
+| T38 | Five separate pages | Visit Home, About me, Projects, Skills, and Contact from each page's dropdown, then use browser Back. Inspect the address and content. | Five distinct HTML URLs; Skills has the four approved proficiency cards, Contact has the approved email, and neither appears as a Home section. Shared theme, keyboard preference, page entry, and current-page selection work on all five pages. | Not run |

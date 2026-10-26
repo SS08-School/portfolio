@@ -101,10 +101,11 @@ body:focus, main[tabindex="-1"]:focus, section[tabindex="-1"]:focus { outline: n
   box-shadow: 0 18px 50px #38254d18;
 }
 .navigation-group + .navigation-group { padding-top: 1rem; border-top: 1px solid var(--border); }
-.nav-group-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0 0 0.8rem; font-size: 0.9rem; font-weight: 650; }
+.nav-group-title { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0; font-size: 0.9rem; font-weight: 650; }
 .nav-group-note { padding: 0.25rem 0.5rem; border-radius: 100px; background: var(--lilac); color: var(--muted); font-size: 0.65rem; font-weight: 500; }
-.nav-section-links { display: grid; gap: 0.2rem; margin: 0 0 0 0.25rem; padding: 0 0 0 0.6rem; border-left: 2px solid var(--accent); list-style: none; }
+.nav-section-links { display: grid; gap: 0.2rem; margin: 0.3rem 0 0 0.25rem; padding: 0 0 0 0.6rem; border-left: 2px solid var(--accent); list-style: none; }
 .nav-link { display: block; min-height: 44px; padding: 0.7rem 0.85rem; border-radius: 12px; text-decoration: none; font-size: 0.9rem; }
+.nav-page-link { flex: 1; font-weight: 600; }
 .nav-link[aria-current="page"] { background: var(--lilac); }
 .nav-link:hover { background: var(--accent); }
 .menu-toggle { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid var(--border); border-radius: 16px; background: var(--lilac); color: var(--purple); cursor: pointer; }
@@ -172,29 +173,28 @@ h2 { margin: 0; font-size: clamp(2.2rem, 4vw, 3.3rem); font-weight: 550; letter-
 
 .contact-layout { display: grid; gap: 2.5rem; padding-block: 3rem 2rem; }
 .contact-intro { min-width: 0; }
-.contact-intro h2 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
-.contact-intro h2 span, .skills-intro h2 span { color: var(--purple); }
+.contact-intro h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
+.contact-intro h1 span, .skills-intro h1 span { color: var(--purple); }
 .contact-card { min-width: 0; padding: 1.5rem; border: 1px solid var(--border); border-radius: 28px; background: var(--surface); box-shadow: 0 18px 50px #7550980d; }
-.contact-card h3 { margin: 0; font-size: 2rem; font-weight: 550; letter-spacing: -0.05em; }
-.contact-card h3 span { color: var(--purple); }
+.contact-card h2 { margin: 0; font-size: 2rem; font-weight: 550; letter-spacing: -0.05em; }
+.contact-card h2 span { color: var(--purple); }
 .contact-card .eyebrow { margin-bottom: 1rem; letter-spacing: 0.12em; }
 .contact-email { display: inline-block; max-width: 100%; margin-top: 1.5rem; padding-block: 0.5rem; color: var(--purple); font-size: clamp(1.1rem, 2.5vw, 1.5rem); overflow-wrap: anywhere; }
 .contact-email:hover { color: var(--purple-hover); }
 
 .skills-section { padding-block: 4rem 1rem; }
-.skills-intro h2 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
+.skills-intro h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
 .skills-intro .hero-description { max-width: 34rem; }
 .skills-grid { display: grid; gap: 1.2rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .skill-card { min-width: 0; padding: 1.5rem; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); box-shadow: 0 12px 36px #75509808; }
 .skill-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .skill-number { color: var(--purple); font-size: 0.8rem; font-weight: 600; }
 .skill-level { padding: 0.4rem 0.7rem; border-radius: 100px; background: var(--background); color: var(--purple); font-size: 0.75rem; font-weight: 600; }
-.skill-card h3 { margin: 1.5rem 0 0.7rem; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
+.skill-card h2 { margin: 1.5rem 0 0.7rem; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
 .skill-card > p { margin: 0; color: var(--muted); line-height: 1.8; font-size: 0.95rem; }
 main > section { scroll-margin-top: 2rem; }
-.redirect-page { padding-block: 4rem; }
-.redirect-page p { color: var(--muted); line-height: 1.8; }
 .content-page { min-height: 65vh; padding-block: 3rem 2rem; }
+.content-page > .skills-section, .content-page > .contact-layout { padding-block: 0; }
 .page-intro h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
 .page-intro .hero-description { max-width: 34rem; }
 .about-layout { display: grid; align-items: start; gap: 2.5rem; }

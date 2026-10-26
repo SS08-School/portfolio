@@ -25,29 +25,27 @@ these instructions throughout development.
 
 ## Pages and content
 
-Keep the current Home content in one continuous page in `index.html`, as
-requested by the owner. Additional pages may be added when requested. Home's
-section links should scroll within the same page and tab:
+Use five separate pages, as requested by the owner:
 
-- Home (`#home`): A brief introduction.
-- My studies (`#studies`): The owner's engineering major and introduction.
-- Skills (`#skills`): Skills and accurate descriptions of proficiency.
-- Contact (`#contact`): The approved email address as a `mailto:` link; no form.
+- `index.html`: Home introduction and My studies (`#studies`).
+- `about.html`: About me and Education (`#education`).
+- `projects.html`: The owner's project collection.
+- `skills.html`: Skills and accurate descriptions of proficiency.
+- `contact.html`: The approved email address as a `mailto:` link; no form.
 
-Provide separate `about.html` and `projects.html` pages. About includes the
+Skills and Contact are full pages, replacing their earlier redirect files and
+Home sections. Links to them must use their actual page URLs. About includes the
 owner's enrollment at NJIT and Electrical Engineering major. Omit personal
 background until the owner provides it. Projects is currently an honest empty
 collection, as requested, until project details are provided. Do not add dummy
 cards. Once supplied, include at least three real projects with descriptions,
 images, and relevant links when available.
 
-Keep the former `skills.html` and `contact.html` URLs as redirects to the
-matching sections in `index.html`, so existing links keep working.
-
 Use a three-line navigation button at the top right on phone and laptop
-screens. Its dropdown groups links by the page they belong to. Keep Home,
-My studies, Skills, and Contact together under "Home page". Give About me and
-Projects their own groups on every page, with Education nested under About me.
+screens. Its dropdown contains Home, About me, Projects, Skills, and Contact,
+each in its own group on every page. Nest My studies under Home and Education
+under About me. Use the page names for primary links and keep section links
+visually subordinate.
 Highlight only the current page's primary link, using `aria-current="page"`.
 Do not highlight or track the currently viewed section. Each page's first link
 and the Home brand should target the document top (`#top`), keeping ordinary

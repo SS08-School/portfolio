@@ -12,11 +12,11 @@ installation, build step, or server is required.
 
 ## Current progress
 
-The Home page has Home, My studies, Skills, and Contact sections. Separate
-About me and Projects pages are available from the three-line dropdown on
-phone and laptop screens. Navigation groups each page's links together and
-highlights only the current page. Section links remain unselected. Each page's
-first link opens at the document top; Home section links stay on Home.
+Home, About me, Projects, Skills, and Contact each have their own HTML page.
+The three-line dropdown links to all five on phone and laptop screens, with
+My studies nested under Home and Education under About me. Navigation highlights
+only the current page. Section links remain unselected. Each page's primary
+link opens at the document top.
 The header uses a clean text-only name link, and Home greets visitors with
 "Hi, I'm Sebastian."
 
@@ -41,8 +41,8 @@ browser Back, with reduced-motion preferences respected throughout. Theme
 colors ease over 280ms while restoring a saved theme before page load remains
 immediate.
 
-The former Skills and Contact page URLs redirect to their matching Home
-sections.
+Skills and Contact now open directly at `skills.html` and `contact.html`;
+their previous redirect markup has been removed.
 
 With the page focused, Up/Down scrolls smoothly from ordinary links and buttons;
 holding a key continues the movement. Reduced motion uses immediate scrolling.
@@ -68,14 +68,15 @@ The page-only highlighting, page-top links, and gradual palette refinements
 were deployed on October 22, 2026; all three content pages and the updated
 versioned stylesheet and script were verified to load with the expected source.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
+The five-page revision is local and has not yet been deployed.
 
 ## Project files
 
-- `index.html`: Main page with Home, My studies, Skills, and Contact sections.
+- `index.html`: Home introduction and My studies.
 - `about.html`: About me and education at NJIT.
 - `projects.html`: Project collection, ready for owner-provided details.
-- `skills.html`: Redirect to `index.html#skills` for existing links.
-- `contact.html`: Redirect to `index.html#contact` for existing links.
+- `skills.html`: Codex, visual design, creative feedback, and website planning.
+- `contact.html`: The owner's public email link.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Grouped dropdown, page-top navigation, page entry, and scroll reveals.
 - `js/theme.js`: Early theme restoration, sun/moon toggle, and saved preference.
