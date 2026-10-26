@@ -281,7 +281,17 @@ JavaScript syntax checks passed; the interaction scripts are unchanged.
 These are source checks, not browser interaction tests. Phone/laptop layout,
 keyboard navigation, direct-file browser behavior, console checks, and
 Lighthouse remain Not run; browser verification is limited by the previously
-recorded Chrome URL access failure. This revision has not been deployed.
+recorded Chrome URL access failure. At the time of these checks, this revision
+had not been deployed.
+
+Five-page deployment checks on 2026-10-26: GitHub Pages deployment succeeded
+for commit `a404b24`. Home, About me, Projects, Skills, and Contact each returned
+HTTP 200 with five primary navigation links, one current-page indicator, one
+h1, and the expected shared asset versions. Skills and Contact no longer
+redirect; Skills contains all four cards and Contact contains the approved
+email link. Home no longer contains Skills/Contact sections. All three
+versioned shared assets returned HTTP 200. These publication/source checks
+passed; actual browser navigation, keyboard, and visual checks remain Not run.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

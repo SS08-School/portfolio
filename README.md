@@ -68,7 +68,8 @@ The page-only highlighting, page-top links, and gradual palette refinements
 were deployed on October 22, 2026; all three content pages and the updated
 versioned stylesheet and script were verified to load with the expected source.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
-The five-page revision is local and has not yet been deployed.
+The five-page revision was deployed on October 26, 2026. All five pages and
+their versioned shared assets were verified to load with the expected source.
 
 ## Project files
 
