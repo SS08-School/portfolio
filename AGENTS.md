@@ -24,21 +24,17 @@ these instructions throughout development.
 
 ## Pages and content
 
-Use one continuous page in `index.html`, as requested by the owner. This
-replaces the earlier separate-page design. Navigation should scroll to sections
-in the same page and tab:
+Keep the existing separate Home, About/Education, Projects, Skills, and Contact
+pages. The owner has confirmed Education belongs on its own page/tab.
 
-- Home (`#home`): A brief introduction.
-- My studies (`#studies`): The owner's engineering major and introduction.
-- Skills (`#skills`): Skills and accurate descriptions of proficiency.
-- Contact (`#contact`): A visual-only contact form. Do not add contact
-  information until the owner provides it.
-- Add richer About and Projects sections only when requested and when real
-  content is available. Projects should include at least three projects, each
-  with a description, image, and relevant link when available.
-
-Keep the former `skills.html` and `contact.html` URLs as redirects to the
-matching sections in `index.html`, so existing links keep working.
+- Home (`index.html`): Show the personal introduction once. Do not repeat it
+  in an Education section, and do not add a decorative hero illustration.
+- About/Education (`about.html#education`): Keep the education facts here;
+  do not repeat "I'm Sebastian" or the Home introduction.
+- Projects (`projects.html`): Retain the four interactive Assignment 1 projects.
+- Skills and Contact retain their existing separate page URLs and content.
+- Navigation must use valid relative page/section links. Home no longer has
+  a My studies section or a duplicate Education link under its navigation group.
 
 Use real, owner-provided content. Do not invent credentials, experience,
 projects, contact details, or working links. Ask for missing information when
@@ -47,18 +43,20 @@ empty sections, or dummy links.
 
 ## Design
 
-- Overall style: professional and restrained, with white backgrounds, generous
-  spacing, thin rules, square-edged panels, and minimal decoration. Avoid
-  floating stickers, gradients, pill buttons, decorative shadows, and slogans.
-- Reveal the studies section, skills heading/cards, and contact content with a
+- Overall style: professional and restrained, with a soft sunset-like gradient
+  fading into white, thin rules, square-edged panels, and minimal decoration.
+  Use slightly narrower, more stacked layouts. Avoid floating stickers, pill
+  buttons, decorative shadows, and slogans.
+- Reveal the skills heading/cards and contact content with a
   gentle fade-and-rise effect as they enter view. Animate each item once, keep
   keyboard-focused content visible, and skip effects for reduced motion.
 - Colors: white (`#FFFFFF`), near-black text (`#171717`), dark-gray secondary
-  text (`#555555`), and neutral-gray rules and panels. Graphics should use
-  contrasting black-and-white line work. Keep the optional dark theme neutral.
+  text (`#555555`), and neutral-gray rules and panels. Use soft peach, rose, and
+  cream only in the background gradient; keep graphics black and white. Use a
+  subdued warm gradient in the optional dark theme.
 - Use dark text on white surfaces and white text on black buttons. Verify contrast for
   the actual combinations used, including hover, focus, and selected states.
-- Fonts: use formal, regular-weight Georgia or Times serif headings and light,
+- Fonts: use formal, light-looking Palatino serif headings and thinner,
   readable system sans-serif body text. Avoid heavy display type and external
   font dependencies; the site must still work offline.
 - Keep copy factual. Remove decorative greeting blurbs, promotional taglines,

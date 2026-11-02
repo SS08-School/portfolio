@@ -2,10 +2,11 @@
 
 A personal portfolio for Sebastian Szeliga, an Electrical & Computer
 Engineering student enrolled at NJIT. Built with plain HTML, CSS, and
-JavaScript. The design uses white backgrounds, near-black text, formal Georgia
-serif headings, regular-weight system sans-serif body text, fine gray rules,
-and square-edged panels. Illustrations are contrasting black-and-white SVGs.
-There are no external fonts, gradients, floating stickers, or decorative shadows.
+JavaScript. The design uses a soft peach, rose, and cream sunset gradient that
+fades into white, near-black text, formal Palatino headings, lightweight system
+sans-serif body text, fine gray rules, and square-edged panels. Project
+illustrations stay black and white. There are no external fonts, floating
+stickers, or decorative shadows.
 
 ## View locally
 
@@ -16,13 +17,18 @@ installation, build step, or server is required.
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
 The three-line dropdown links to all five on phone and laptop screens, with
-My studies nested under Home and Education under About me. Navigation highlights
+Education under About me. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
 The header uses a text-only name link. Home uses the approved headline
 "Electrical & Computer Engineering Student." Decorative greetings, slogans,
 and promotional blurbs have been removed throughout the site; factual
 descriptions, project explanations, and operating instructions remain.
+
+The "I'm Sebastian" introduction appears once, on Home. Its decorative circuit
+illustration and duplicated Education section have been removed. About retains
+the education facts without repeating the introduction. The layout is slightly
+narrower, with Home, About/Education, and Contact content stacked vertically.
 
 About me includes enrollment at NJIT and the Electrical & Computer Engineering major.
 Personal background can be added later. Projects now showcases the four real
@@ -58,22 +64,21 @@ items total $39.91. There is no checkout or persistent storage.
 These browser adaptations were built with Codex and are
 distinguished from the original Python classroom work.
 
-Open `projects.html` directly, or follow Projects from `index.html`. Existing page
-structure is retained for this focused task; the broader single-page migration
-described in `AGENTS.md` remains separate work.
+Open `projects.html` directly, or follow Projects from `index.html`. The existing
+five-page structure is retained; education belongs on the separate About page.
 Skills cover Codex, visual design, creative feedback, and website planning.
 Contact displays `ss5764@njit.edu` as a clickable email link that opens the
 visitor's email app; there is no form or automatic sending.
 
-The site includes gentle, once-only scroll reveals for the studies section,
-skill cards, and contact content. Revealed items remain visible when revisited.
+The site includes gentle, once-only scroll reveals for education, skill cards,
+and contact content. Revealed items remain visible when revisited.
 Reduced-motion preferences skip the effect. Content remains visible without
 JavaScript or animation support.
 
 A sun/moon button at the top right switches between light and dark mode.
 Light is the default; an explicit choice is stored in the browser and restored
-before styling loads on every page. Both themes use neutral black, white, and
-gray tones; default light mode uses white page backgrounds. The preference persists across visits in
+before styling loads on every page. Default light mode uses a subtle sunset
+background; dark mode uses a subdued warm gradient with light text. The preference persists across visits in
 that browser until its site storage is cleared. Storage restrictions do not
 break the current-page toggle. Gentle page-entry effects soften navigation and
 browser Back, with reduced-motion preferences respected throughout. Theme
@@ -115,7 +120,7 @@ the existing five-page structure and all four interactive projects.
 
 ## Project files
 
-- `index.html`: Home introduction and My studies.
+- `index.html`: The single personal introduction, without a hero illustration.
 - `about.html`: About me and education at NJIT.
 - `projects.html`: Assignment 1 collection and interactive game/sequence labs.
 - `skills.html`: Codex, visual design, creative feedback, and website planning.
@@ -131,8 +136,8 @@ the existing five-page structure and all four interactive projects.
 
 ## Acknowledgments
 
-Developed with Codex. The decorative circuit illustration and the six SVG
-project illustrations were created for this site with Codex. No external
+Developed with Codex. The six SVG project illustrations were created for this
+site with Codex. No external
 fonts, image assets, libraries, or AI APIs are used. Project descriptions and
 the Fibonacci loop excerpt are based on the owner-supplied
 `Assignment_1_Sebastian_Szeliga (1).ipynb`; the notebook itself is not published.
@@ -159,3 +164,10 @@ coverage for all four projects. Evidence is in
 `screenshots/monochrome-browser-checks.json`, with current phone/laptop captures
 named `screenshots/monochrome-*.png`. Physical keyboard, screen-reader, and
 Lighthouse testing remain pending; these local checks do not verify deployment.
+
+The sunset-background and introduction-cleanup follow-up passed 270 focused assertions
+across 17 local browser configurations: all five pages at 320px, 390px, and
+1366px, plus saved dark-mode checks for Home and Projects. Evidence is in
+`screenshots/sunset-browser-checks.json`, with current captures named
+`screenshots/sunset-*.png`. This is a focused layout and smoke-check pass, not
+a repeat of every earlier project edge case or the full live-site audit.

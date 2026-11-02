@@ -526,3 +526,51 @@ Accessibility score. Disabled controls are visually distinguished.
 The older pastel, repeating-reveal, and decorative-copy expectations above are
 historical. This section describes the current approved appearance and its
 verification. The full published-site submission plan remains pending.
+
+## Sunset background and single introduction — 2026-11-02
+
+The owner requested one personal introduction, no Home illustration, a soft
+sunset-like gradient, thinner typography, and slightly more stacked content.
+Home now retains the only "I'm Sebastian" paragraph. Its circuit graphic and
+duplicate Education section are removed, as is the repeated About introduction.
+Education facts remain at `about.html#education`. The retired My studies links
+were removed from all five navigation menus.
+
+The content width is now capped at 1060px. Home, About/Education, and Contact
+use stacked introductory layouts. Palatino headings replace Georgia, body
+text uses a lighter weight, and the peach/rose/cream background fades to white.
+White content panels and black-and-white project graphics remain; dark mode
+uses a subdued warm gradient.
+
+**270 focused assertions passed across 17 local Chrome configurations:**
+all five pages at 320px, 390px, and 1366px, plus saved dark-mode Home at 1366px
+and Projects at 320px. Checks use local files, programmatic clicks/focus, native
+form buttons, and synthetic keyboard events. Reduced motion was enabled for
+stable captures. They do not establish physical keyboard or Lighthouse results.
+All four projects were smoke-tested; their full earlier edge-case suites were
+not repeated for this styling/content change.
+
+Results are retained in `screenshots/sunset-browser-checks.json`; actual phone
+and laptop screenshots are named `screenshots/sunset-*.png`. Phone images use
+390px frames cropped without scaling. An initial static fragment-link checker
+omitted `.html` from its current-page fallback and falsely reported same-page
+anchors as missing; correcting that checker resolves all 75 local references.
+There was no corresponding website-link change needed.
+
+Using conservative component-wise bounds for the gradient gives at least
+14.21:1 for primary text, 5.91:1 for secondary text, and 3.60:1 for essential
+control outlines. Dark secondary text against the lightest warm background
+bound is 8.02:1. Actual gradient blends stay within these bounds.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T79 | One personal introduction | Inspect all five pages and count the personal introduction; inspect Home and Education. | Exactly one "I'm Sebastian" paragraph, on Home; no Home graphic or duplicate Education section; education facts retained separately. | Pass — source count and browser checks |
+| T80 | Sunset background and contrast | Inspect light and saved dark modes, CSS gradient stops, and conservative contrast bounds. | Soft warm gradient with readable dark/light text, white panels in light mode, and adequate contrast for controls. | Pass — source contrast calculations, browser checks, and visual review |
+| T81 | Thin fonts and stacked layout | View every page at 320px, 390px, and 1366px; inspect computed fonts, weights, and grid columns. | Palatino headings, light body text, narrower content, vertically stacked Home/About/Contact, and no horizontal overflow. | Pass — all 15 light-mode configurations |
+| T82 | Navigation after removing My studies | Open and close every menu, dispatch Tab, and check all local file/fragment targets. | Five page links remain, Education still resolves, no retired My studies links, accurate menu state, and reachable controls. | Pass — 75 static local references and scripted browser navigation/focus checks; physical keyboard Not run |
+| T83 | Projects remain usable | Filter to Math; play a computer round; generate term 100; calculate 2 + 3; add and clear cereal. | Correct filtering, resolved game round, exact Fibonacci value, result 5, and cart total $2.99 before clearing. | Pass — Projects smoke checks at phone/laptop/narrow sizes and saved dark mode |
+| T84 | Published follow-up and full audit | After review and approved push, verify the live pages and run physical keyboard, screen-reader, and Lighthouse checks. | Published design matches the local build; complete accessibility checks pass. | Full live audit Not run — physical keyboard, screen-reader, and Lighthouse checks remain pending; deployment/source verification is separate. |
+
+The previous no-gradient, Georgia, and Home/Education duplication expectations
+are superseded by this approved follow-up. Earlier results and screenshots
+remain historical evidence.

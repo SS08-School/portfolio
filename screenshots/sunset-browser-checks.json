@@ -1,0 +1,1205 @@
+{
+  "date": "2026-11-02",
+  "method": "Local Chrome with scripted clicks, native submit buttons, focus, and synthetic keyboard events. Fixed-width phone frames; reduced motion enabled for stable captures. Not physical keyboard or Lighthouse testing.",
+  "runs": {
+    "index-phone": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 390,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Home illustration removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home education duplicate removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home single-column layout",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "index-laptop": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 1366,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Home illustration removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home education duplicate removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home single-column layout",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-phone": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 390,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Education facts retained",
+          "result": "Pass"
+        },
+        {
+          "name": "Education layout stacked",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-laptop": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 1366,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Education facts retained",
+          "result": "Pass"
+        },
+        {
+          "name": "Education layout stacked",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-phone": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 390,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Four demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filtering works",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS round resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci remains exact",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values fit",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator button works",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart add and total work",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-laptop": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 1366,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Four demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filtering works",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS round resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci remains exact",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values fit",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator button works",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart add and total work",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-phone": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 390,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-laptop": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 1366,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-phone": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 390,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Contact layout stacked",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-laptop": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 1366,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Contact layout stacked",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "index-narrow": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 320,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Home illustration removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home education duplicate removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home single-column layout",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-narrow": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 320,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Education facts retained",
+          "result": "Pass"
+        },
+        {
+          "name": "Education layout stacked",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-narrow": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 320,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Four demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filtering works",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS round resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci remains exact",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values fit",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator button works",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart add and total work",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-narrow": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 320,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-narrow": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 320,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Contact layout stacked",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "index-dark": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 1366,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Home illustration removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home education duplicate removed",
+          "result": "Pass"
+        },
+        {
+          "name": "Home single-column layout",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-dark": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 320,
+      "results": [
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Sunset gradient present",
+          "result": "Pass"
+        },
+        {
+          "name": "Lighter body typography",
+          "result": "Pass"
+        },
+        {
+          "name": "Palatino heading",
+          "result": "Pass"
+        },
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "No retired studies links",
+          "result": "Pass"
+        },
+        {
+          "name": "Five page links",
+          "result": "Pass"
+        },
+        {
+          "name": "No repeated personal introduction",
+          "result": "Pass"
+        },
+        {
+          "name": "Images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Menu opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches live control",
+          "result": "Pass"
+        },
+        {
+          "name": "Four demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Project filtering works",
+          "result": "Pass"
+        },
+        {
+          "name": "RPS round resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci remains exact",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values fit",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator button works",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart add and total work",
+          "result": "Pass"
+        },
+        {
+          "name": "No runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    }
+  }
+}
