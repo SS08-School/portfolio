@@ -9,10 +9,9 @@ Build a personal portfolio that introduces the owner and showcases their
 background, projects, and skills. This is a school assignment and a learning
 project: keep the code readable enough for the owner to explain during a demo.
 
-Owner-provided details: Sebastian Szeliga is enrolled at New Jersey Institute
-of Technology (NJIT), majoring in Electrical Engineering. Use "Electrical
-Engineering Student" as the Home page headline. His approved public contact
-email is `ss5764@njit.edu`.
+Owner-provided details: Sebastian Szeliga is majoring in Electrical and
+Computer Engineering. Use "Electrical & Computer Engineering Student" as the
+Home page headline.
 
 Skills content should emphasize proficiency with Codex and visual design,
 plus clear prompts, feedback, and website planning. The owner does not claim
@@ -25,34 +24,21 @@ these instructions throughout development.
 
 ## Pages and content
 
-Use five separate pages, as requested by the owner:
+Use one continuous page in `index.html`, as requested by the owner. This
+replaces the earlier separate-page design. Navigation should scroll to sections
+in the same page and tab:
 
-- `index.html`: Home introduction and My studies (`#studies`).
-- `about.html`: About me and Education (`#education`).
-- `projects.html`: The owner's project collection.
-- `skills.html`: Skills and accurate descriptions of proficiency.
-- `contact.html`: The approved email address as a `mailto:` link; no form.
+- Home (`#home`): A brief introduction.
+- My studies (`#studies`): The owner's engineering major and introduction.
+- Skills (`#skills`): Skills and accurate descriptions of proficiency.
+- Contact (`#contact`): A visual-only contact form. Do not add contact
+  information until the owner provides it.
+- Add richer About and Projects sections only when requested and when real
+  content is available. Projects should include at least three projects, each
+  with a description, image, and relevant link when available.
 
-Skills and Contact are full pages, replacing their earlier redirect files and
-Home sections. Links to them must use their actual page URLs. About includes the
-owner's enrollment at NJIT and Electrical Engineering major. Omit personal
-background until the owner provides it. Projects is currently an honest empty
-collection, as requested, until project details are provided. Do not add dummy
-cards. Once supplied, include at least three real projects with descriptions,
-images, and relevant links when available.
-
-Use a three-line navigation button at the top right on phone and laptop
-screens. Its dropdown contains Home, About me, Projects, Skills, and Contact,
-each in its own group on every page. Nest My studies under Home and Education
-under About me. Use the page names for primary links and keep section links
-visually subordinate.
-Highlight only the current page's primary link, using `aria-current="page"`.
-Do not highlight or track the currently viewed section. Each page's first link
-and the Home brand should target the document top (`#top`), keeping ordinary
-section links pointed at their actual sections. Preserve native link and
-browser-Back behavior. When further pages are
-requested, give each its own labeled group. Do not add links to pages that do
-not exist or list redirect aliases as separate pages.
+Keep the former `skills.html` and `contact.html` URLs as redirects to the
+matching sections in `index.html`, so existing links keep working.
 
 Use real, owner-provided content. Do not invent credentials, experience,
 projects, contact details, or working links. Ask for missing information when
@@ -61,63 +47,34 @@ empty sections, or dummy links.
 
 ## Design
 
-- Overall style: friendly, light, and gently playful, with generous spacing,
-  rounded project cards, pill-shaped buttons, and subtle shadows. Use soft
-  lavender sections and small decorative touches without crowding the content.
+- Overall style: professional and restrained, with white backgrounds, generous
+  spacing, thin rules, square-edged panels, and minimal decoration. Avoid
+  floating stickers, gradients, pill buttons, decorative shadows, and slogans.
 - Reveal the studies section, skills heading/cards, and contact content with a
-  gentle fade-and-rise effect as they enter view. Reset items when scrolling up
-  moves them below view, so they reveal again on the next downward scroll.
-  Keep keyboard-focused content visible and skip effects for reduced motion.
-- Colors: pale lavender background (`#FAF7FF`), white surfaces (`#FFFFFF`),
-  pastel lilac sections (`#EEE5FF`), and soft purple accents (`#E2D2F7`). Use
-  dark plum text (`#38254D`), muted plum secondary text (`#695675`), and deeper
-  purple (`#755098`) for primary buttons, links, and focus indicators.
-- Keep purple and white dominant, with pale peach (`#FBE8DE`) and mint
-  (`#E7F3EC`) in the page background. Use a faint dot grid, soft color washes,
-  and restrained background shapes to add detail without crowding the content.
-  Keep all main content cards solid white in light mode and a consistent dark
-  plum in dark mode, with no alternating colors or gradients on rectangular
-  surfaces. Background decoration must not block
-  clicks, affect layout, or move.
-- Keep pastel colors mainly on backgrounds and decoration. Use dark text on
-  pale surfaces and white text on deeper purple buttons. Verify contrast for
+  gentle fade-and-rise effect as they enter view. Animate each item once, keep
+  keyboard-focused content visible, and skip effects for reduced motion.
+- Colors: white (`#FFFFFF`), near-black text (`#171717`), dark-gray secondary
+  text (`#555555`), and neutral-gray rules and panels. Graphics should use
+  contrasting black-and-white line work. Keep the optional dark theme neutral.
+- Use dark text on white surfaces and white text on black buttons. Verify contrast for
   the actual combinations used, including hover, focus, and selected states.
-- Fonts: use a friendly system font stack such as `"Segoe UI", system-ui,
-  -apple-system, sans-serif`, with readable body text and softly weighted
-  headings. Avoid external font dependencies.
+- Fonts: use formal, regular-weight Georgia or Times serif headings and light,
+  readable system sans-serif body text. Avoid heavy display type and external
+  font dependencies; the site must still work offline.
+- Keep copy factual. Remove decorative greeting blurbs, promotional taglines,
+  and slogans from every page; retain substantive descriptions and instructions.
 - Use consistent headers, navigation, footers, buttons, spacing, and typography
-  throughout the page. Clearly identify the current page in the navigation.
-- Show the full name as a simple, semibold text link at the top left, without
-  an initials badge or decorative period.
+  throughout the page. Clearly identify the current section in the navigation.
 - Start with a phone layout and expand to a laptop layout using CSS media
   queries. Avoid horizontal scrolling and keep images responsive.
-- Default to light mode until the visitor explicitly chooses dark mode. Use an
-  icon-only, animated sun/moon button at the top right beside navigation, with
-  an accessible name and pressed state. Save the choice in `localStorage`
-  across pages and visits, restore it before the stylesheet loads, and keep
-  the toggle usable if storage is blocked. Use a dark plum background, uniform
-  dark card surfaces, and readable lavender accents in dark mode.
-- Ease theme palette changes over about 280ms, while keeping the saved theme
-  restoration before first paint immediate. Keep card color transitions in
-  sync; stagger only scroll-reveal opacity and motion, not theme colors.
-- Use a short, gentle page-entry animation when opening a page or returning
-  with browser Back. Keep links native and responsive; do not delay navigation
-  or add modal popups. Skip page and icon animation for reduced motion.
 
 ## Technical rules and file organization
 
 - Use plain HTML5, CSS, and JavaScript only. No backend, database, login system,
   frameworks, UI libraries, package managers, npm, or build tools.
-- Keep HTML pages and redirect files in the repository root, styles in `css/styles.css`,
+- Keep `index.html` and redirect files in the repository root, styles in `css/styles.css`,
   shared JavaScript in `js/main.js`, and images in `images/`.
 - Use one external stylesheet. Avoid inline styles and inline event handlers.
-- All HTML files must reference the same versioned stylesheet URL, such as
-  `css/styles.css?v=<content-hash>`. Update the version when CSS changes so
-  browser caching does not retain outdated styling. Keep the actual file at
-  `css/styles.css`; no build step is needed.
-- Version shared script URLs when their contents change, too. Load the small
-  `js/theme.js` script before the stylesheet to restore the saved theme; defer
-  the main interaction script.
 - Use relative paths for local assets and page links. Avoid leading `/` paths
   so the site works under the GitHub Pages `/portfolio/` project path.
 - The site must work by double-clicking `index.html`, as well as on GitHub
@@ -132,39 +89,22 @@ empty sections, or dummy links.
 
 ## Interactivity and accessibility
 
-- Keep the grouped navigation, saved theme toggle, and repeating scroll reveals
-  working together. Add project filtering with an All option when real project
-  content is supplied.
-- The grouped navigation dropdown must open and close on every screen size
-  using a real button with an accessible name and accurate `aria-expanded`.
-  Support keyboard operation, close on Escape, link selection, outside clicks,
-  or focus leaving the menu, and keep hidden links out of the tab order. Keep
-  grouped navigation visible when JavaScript is unavailable.
+- Implement at least two JavaScript interactions: a responsive navigation menu
+  and project filtering with an All option.
+- The mobile menu must open and close using a real button with an accessible
+  name and accurate `aria-expanded` state. Support keyboard operation and keep
+  hidden menu links out of the tab order.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
 - Include a skip-to-content link, visible keyboard focus, descriptive link text,
   and alt attributes on every image. Use empty alt text for decorative images.
-- Keep keyboard focus visible on interactive controls. Do not draw focus boxes
-  around whole main/section containers when navigating to an anchor destination.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
-- While the page has focus, support Up/Down scrolling from ordinary links and
-  buttons with smooth movement and responsive held-key repeats. Skip smoothing
-  for reduced motion. Preserve native arrows in editable controls and nested
-  scrolling regions. Cancel scrolling when another input takes over.
-- Use custom Tab/Shift+Tab navigation that cycles through available controls
-  in document order and excludes hidden, inert, and disabled controls. Continue
-  from section/skip-link destinations. Keyboard menu activation should focus
-  its first link. Escape closes an open menu; otherwise it releases Tab to the
-  browser. Provide a footer toggle and instructions for this behavior. Preserve
-  browser shortcuts and never force focus back after a visitor leaves the page.
-- Keep the Tab-cycling toggle compact at the very bottom of the footer, with
-  instructions visible on focus. Default it on and save explicit on/off choices
-  (including Escape) in localStorage across pages and visits. Restore its pressed
-  state on load/Back, sync tabs, and keep it usable when storage is blocked.
-- Contact uses the owner's approved `mailto:ss5764@njit.edu` link. Display the
-  address so visitors can also copy it. Do not restore the inactive form or
-  claim a message was sent; opening an email app does not send a message.
+- The contact form is visual only, as requested by the owner. Label its fields
+  and keep the Send button disabled. Do not display demo badges, disabled-send
+  notices, or explanatory text about its inactive behavior. Do not add
+  validation, submission, storage, or email behavior unless the owner requests
+  it. Never claim a message was sent.
 - Aim for a Lighthouse Accessibility score of at least 90 on every page.
 
 ## Testing and documentation

@@ -19,7 +19,7 @@
       button.title = dark ? "Switch to light mode" : "Switch to dark mode";
     }
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.content = dark ? "#18131f" : "#FAF7FF";
+    if (themeColor) themeColor.content = dark ? "#111111" : "#ffffff";
   }
 
   // This file runs before the stylesheet to avoid a light flash on saved dark mode.

@@ -462,3 +462,67 @@ demos remain. No JavaScript or CSS changed.
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T68 | Project taglines removed | Load Projects directly from a local file at 390px and 1366px; inspect lab-heading content and the game layout. | All four heading-side paragraphs are gone; four headings remain; demos initialize; no sideways scrolling or new page errors. | Pass — actual headless Chrome DOM/layout checks at both widths; screenshots visually inspected. Physical keyboard and live deployment checks Not run for this text-only revision. |
+
+## Professional monochrome redesign — 2026-11-02
+
+The owner requested a professional white-and-black design with formal, lighter
+typography and higher-contrast graphics, followed by removal of decorative
+blurbs from every page. The shared stylesheet now uses Georgia headings,
+regular-weight sans-serif body text, flat white surfaces, thin neutral rules,
+and squared controls. All six SVG assets are monochrome. Home and About use
+the major already specified in the approved project instructions: Electrical
+& Computer Engineering. Existing five-page navigation and the four demos remain.
+
+The Design section of `AGENTS.md` records this approved direction. Its other
+pre-existing owner edits were preserved. The single-page migration described
+elsewhere in that file is separate from this visual/copy task.
+
+**603 scripted assertions passed in 21 configurations:** all five pages at
+320px, 390px, and 1366px in light mode; all five at 1366px in saved dark mode;
+and Projects at 320px with reduced motion. The browser checks exercised actual
+DOM behavior, native submit-button activation, programmatic focus, and synthetic
+keyboard events in installed Chrome using local files. Physical keyboard,
+screen-reader, Lighthouse, and live deployment checks were not performed.
+
+Results, including the initial dark-fixture failures, are in
+`screenshots/monochrome-browser-checks.json`. The dark fixture originally changed
+the root theme after load, which interacted with saved-theme restoration and
+Chrome's virtual-time color transitions. Its initial steady-state background
+assertion failed. The fixture was corrected to save its isolated test-profile
+preference before CSS loads, matching the site's real restoration path; all
+five dark-page retests passed. This was a test setup correction, not evidence
+of a live-site color failure. Final screenshots use reduced motion to avoid
+headless animation/compositing artifacts.
+
+Visual review also caught light letterboxing around inverted dark thumbnails.
+The image's pre-inversion backing was corrected; the final dark Projects
+capture was inspected again. Input borders were strengthened separately from
+decorative rules to keep essential controls identifiable.
+
+Actual captures in `screenshots/monochrome-*.png` cover all five pages at phone
+and laptop widths, saved dark versions, and the four project panels. Phone
+captures use an actual 390px frame cropped without scaling. Older screenshot
+files remain historical evidence of previous revisions.
+
+Measured color pairs include light primary text 17.93:1, light secondary text
+6.84:1, hovered primary-button text 11.73:1, and input outlines 4.54:1 against
+white. Dark primary text is 17.32:1, dark secondary text 8.47:1, and dark control
+outlines 5.47:1. These checks cover the actual palette values, not a Lighthouse
+Accessibility score. Disabled controls are visually distinguished.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T69 | All-page responsive redesign | Open every page at 320px, 390px, and 1366px; inspect the layouts and current screenshots. | White backgrounds, serif headings, square panels, no horizontal overflow, and usable controls. | Pass — local Chrome geometry/font checks and visual review |
+| T70 | Navigation and focus regression | On each page open navigation, dismiss with Escape, activate the skip link, and dispatch Tab from the brand. | Correct expanded state, focus return, working skip destination, and reachable theme control; one current-page indicator. | Pass — all tested configurations; physical keyboard testing Not run |
+| T71 | Typography and contrast | Read computed heading font/weight and palette values; calculate normal, secondary, primary-button, hover, and control-outline contrast. | Georgia at regular weight; text at least 4.5:1 and essential outlines at least 3:1. | Pass — all tested configurations |
+| T72 | Monochrome graphics and assets | Load all six SVGs, inspect Home/Projects graphics in light and dark modes, and check alt attributes. | No pastel colors, missing images, decorative stickers, or inappropriate alt text; contrasting line work. | Pass — browser loading/alt checks plus source and visual review |
+| T73 | Four-project regression | Exercise both computer strategies and pass-and-play; generate valid/invalid Fibonacci values; submit calculator operations/errors; fill, remove from, and clear the basket. | Projects initialize and retain their established rules, exact sequence values, totals, stock constraints, and focus handling. | Pass — 59 checks on Projects in five configurations |
+| T74 | Site-wide blurb cleanup | Inspect Home, About, Projects, Skills, Contact, graphics, empty states, and game initialization copy. | Decorative greetings/slogans removed; factual descriptions and required instructions retained. | Pass — source, browser text checks, and visual review |
+| T75 | Neutral saved dark theme | Restore dark preference before CSS loads on every page, then inspect colors and graphics. | Neutral dark surfaces, readable text, visible controls, and white line work; no pastel palette. | Pass — all five desktop pages after correcting the test fixture |
+| T76 | Motion behavior | Inspect reveal logic and load Projects at 320px with reduced motion. | Observed reveal items are unobserved after first entry; reduced-motion CSS skips nonessential animation. | Pass — source review and reduced-motion browser run; physical scrolling/reentry checks Not run |
+| T77 | Local references and cache refresh | Resolve every local href/src and fragment; compare stylesheet, script, and illustration versions with file hashes; open local index.html. | All 80 references resolve; assets load from relative paths and old cached colors/scripts are bypassed. | Pass — source/hash checks, direct-file browser capture, and browser image loading |
+| T78 | Published redesign and accessibility audit | After owner review and approved push, run the full plan on GitHub Pages, with physical Tab/Enter, a screen reader, and Lighthouse. | Live design matches the local revision; every page scores at least 90 for Accessibility. | Full live audit Not run — physical keyboard, screen-reader, and Lighthouse checks remain pending; deployment/source verification is separate. |
+
+The older pastel, repeating-reveal, and decorative-copy expectations above are
+historical. This section describes the current approved appearance and its
+verification. The full published-site submission plan remains pending.

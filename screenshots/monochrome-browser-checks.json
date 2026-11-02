@@ -1,0 +1,2622 @@
+{
+  "date": "2026-11-02",
+  "method": "Local Chrome with scripted DOM, native button activation, focus and synthetic keyboard checks; fixed-width frames; not physical keyboard or Lighthouse.",
+  "initialDarkFixtureFailures": {
+    "index-dark": [
+      {
+        "name": "Neutral background",
+        "result": "Fail"
+      }
+    ],
+    "projects-dark": [
+      {
+        "name": "Neutral background",
+        "result": "Fail"
+      }
+    ]
+  },
+  "fixtureCorrection": "Set the saved test-profile theme before CSS loads; do not judge theme transitions from virtual-time screenshots.",
+  "runs": {
+    "index-phone": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 390,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Approved headline",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "index-laptop": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 1366,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Approved headline",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "index-narrow": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 320,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Approved headline",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "index-dark": {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 1366,
+      "dark": true,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Approved headline",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-phone": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 390,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-laptop": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 1366,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-narrow": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 320,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "about-dark": {
+      "page": "About me | Sebastian Szeliga",
+      "width": 1366,
+      "dark": true,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-phone": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 390,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "All four project demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "All four card links reach labs",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine game outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "Friend scoring",
+          "result": "Pass"
+        },
+        {
+          "name": "Ties keep scores",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 1",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 100",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values wrap",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci inspect term",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci stepping",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator - 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator / 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * -7",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 0.1",
+          "result": "Pass"
+        },
+        {
+          "name": "Division by zero rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Missing calculator input rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart exact total",
+          "result": "Pass"
+        },
+        {
+          "name": "Stock caps enforced",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart removal and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart overstock rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores inventory",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-laptop": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 1366,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "All four project demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "All four card links reach labs",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine game outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "Friend scoring",
+          "result": "Pass"
+        },
+        {
+          "name": "Ties keep scores",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 1",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 100",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values wrap",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci inspect term",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci stepping",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator - 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator / 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * -7",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 0.1",
+          "result": "Pass"
+        },
+        {
+          "name": "Division by zero rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Missing calculator input rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart exact total",
+          "result": "Pass"
+        },
+        {
+          "name": "Stock caps enforced",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart removal and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart overstock rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores inventory",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-narrow": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 320,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "All four project demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "All four card links reach labs",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine game outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "Friend scoring",
+          "result": "Pass"
+        },
+        {
+          "name": "Ties keep scores",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 1",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 100",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values wrap",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci inspect term",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci stepping",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator - 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator / 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * -7",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 0.1",
+          "result": "Pass"
+        },
+        {
+          "name": "Division by zero rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Missing calculator input rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart exact total",
+          "result": "Pass"
+        },
+        {
+          "name": "Stock caps enforced",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart removal and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart overstock rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores inventory",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-dark": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 1366,
+      "dark": true,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "All four project demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "All four card links reach labs",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine game outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "Friend scoring",
+          "result": "Pass"
+        },
+        {
+          "name": "Ties keep scores",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 1",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 100",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values wrap",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci inspect term",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci stepping",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator - 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator / 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * -7",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 0.1",
+          "result": "Pass"
+        },
+        {
+          "name": "Division by zero rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Missing calculator input rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart exact total",
+          "result": "Pass"
+        },
+        {
+          "name": "Stock caps enforced",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart removal and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart overstock rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores inventory",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-phone": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 390,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-laptop": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 1366,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-narrow": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 320,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "skills-dark": {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 1366,
+      "dark": true,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-phone": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 390,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-laptop": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 1366,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-narrow": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 320,
+      "dark": false,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "contact-dark": {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 1366,
+      "dark": true,
+      "reducedMotion": false,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    },
+    "projects-reduced": {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 320,
+      "dark": false,
+      "reducedMotion": true,
+      "results": [
+        {
+          "name": "One h1",
+          "result": "Pass"
+        },
+        {
+          "name": "Unique IDs",
+          "result": "Pass"
+        },
+        {
+          "name": "No horizontal overflow",
+          "result": "Pass"
+        },
+        {
+          "name": "Formal heading font",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral background",
+          "result": "Pass"
+        },
+        {
+          "name": "No gradients",
+          "result": "Pass"
+        },
+        {
+          "name": "Images have alt attributes",
+          "result": "Pass"
+        },
+        {
+          "name": "All images load",
+          "result": "Pass"
+        },
+        {
+          "name": "Text and button contrast meets AA",
+          "result": "Pass"
+        },
+        {
+          "name": "Control border contrast at least 3 to 1",
+          "result": "Pass"
+        },
+        {
+          "name": "No old decorative blurbs",
+          "result": "Pass"
+        },
+        {
+          "name": "Exactly one current page",
+          "result": "Pass"
+        },
+        {
+          "name": "All five navigation links remain",
+          "result": "Pass"
+        },
+        {
+          "name": "Navigation opens",
+          "result": "Pass"
+        },
+        {
+          "name": "Escape closes navigation and returns focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Skip link focuses main",
+          "result": "Pass"
+        },
+        {
+          "name": "Tab reaches theme control",
+          "result": "Pass"
+        },
+        {
+          "name": "All four project demos initialize",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter games",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter math",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter simulation",
+          "result": "Pass"
+        },
+        {
+          "name": "Filter all",
+          "result": "Pass"
+        },
+        {
+          "name": "All four card links reach labs",
+          "result": "Pass"
+        },
+        {
+          "name": "All nine game outcomes",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer adaptive resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Computer random resolves",
+          "result": "Pass"
+        },
+        {
+          "name": "Private handoff",
+          "result": "Pass"
+        },
+        {
+          "name": "Friend scoring",
+          "result": "Pass"
+        },
+        {
+          "name": "Ties keep scores",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 1",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 2",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Exact Fibonacci 100",
+          "result": "Pass"
+        },
+        {
+          "name": "Long values wrap",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci empty",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci -1",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 1.5",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci 101",
+          "result": "Pass"
+        },
+        {
+          "name": "Reject Fibonacci abc",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci inspect term",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci stepping",
+          "result": "Pass"
+        },
+        {
+          "name": "Fibonacci replay",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator - 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator / 12",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator * -7",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator + 0.1",
+          "result": "Pass"
+        },
+        {
+          "name": "Division by zero rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Missing calculator input rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Calculator reset",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart exact total",
+          "result": "Pass"
+        },
+        {
+          "name": "Stock caps enforced",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart removal and focus",
+          "result": "Pass"
+        },
+        {
+          "name": "Cart overstock rejected",
+          "result": "Pass"
+        },
+        {
+          "name": "Empty basket restores inventory",
+          "result": "Pass"
+        },
+        {
+          "name": "Neutral panel",
+          "result": "Pass"
+        },
+        {
+          "name": "No page runtime errors",
+          "result": "Pass"
+        }
+      ],
+      "errors": []
+    }
+  }
+}

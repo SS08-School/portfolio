@@ -230,12 +230,7 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
     for (const entry of entries) {
       if (entry.isIntersecting) {
         reveal(entry.target);
-      } else if (
-        entry.boundingClientRect.top >= (entry.rootBounds?.bottom ?? window.innerHeight) &&
-        !entry.target.matches(":focus-within")
-      ) {
-        // Scrolling up moves the item below view; reset it for the next reveal.
-        entry.target.classList.add("reveal-pending");
+        revealObserver.unobserve(entry.target);
       }
     }
   }, { rootMargin: "0px 0px -36px 0px", threshold: 0 });
@@ -343,7 +338,8 @@ function initializeRockPaperScissors() {
   function setHands(left, right) {
     for (const [side, move] of [["left", left], ["right", right]]) {
       const image = find(`#${side}-hand`);
-      image.src = `images/${move || "rock"}.svg`;
+      // Reuse the versioned image on the choice button so cached artwork stays current.
+      image.src = moveControls.querySelector(`[data-move="${move || "rock"}"] img`).getAttribute("src");
       // Choice text beside the images supplies the accessible description.
       find(`#${side}-choice`).textContent = move ? names[move] : "Ready?";
     }
@@ -367,7 +363,7 @@ function initializeRockPaperScissors() {
     find("#round-label").textContent = `ROUND ${String(round).padStart(2, "0")}`;
     find("#left-hand-label").textContent = mode === "friend" ? "PLAYER 1" : "YOUR MOVE";
     find("#right-hand-label").textContent = mode === "friend" ? "PLAYER 2" : "THEIR MOVE";
-    announce(mode === "friend" ? "Player 1, make your move." : "A classic. With a little attitude.",
+    announce(mode === "friend" ? "Player 1, make your move." : "Choose a move.",
       mode === "friend" ? "Player 2, look away while Player 1 chooses." : `Choose your move to start round ${round}.`);
     if (focusMove) moveButtons[0].focus({ preventScroll: true });
   }
@@ -386,7 +382,7 @@ function initializeRockPaperScissors() {
     updateScores();
     find("#round-history").replaceChildren();
     const empty = document.createElement("li");
-    empty.textContent = "Your story starts with a move.";
+    empty.textContent = "No rounds played.";
     find("#round-history").append(empty);
     find("#player-one-label").textContent = mode === "friend" ? "PLAYER 1" : "YOU";
     find("#player-two-label").textContent = mode === "friend" ? "PLAYER 2" : "COMPUTER";
@@ -765,7 +761,7 @@ function initializeCalculator() {
     form.reset();
     history = [];
     const empty = document.createElement("li");
-    empty.textContent = "Try a calculation to start your history.";
+    empty.textContent = "No calculations yet.";
     demo.querySelector("#calculator-history").replaceChildren(empty);
     calculate(false);
   });

@@ -1,9 +1,11 @@
 # Sebastian Szeliga's Portfolio
 
-A personal portfolio for Sebastian Szeliga, an Electrical Engineering student
-enrolled at NJIT. Built with plain HTML, CSS, and JavaScript, using a
-friendly pastel-purple design with solid white content cards, a faint dot
-grid, and gentle peach, mint, and lavender washes in the page background.
+A personal portfolio for Sebastian Szeliga, an Electrical & Computer
+Engineering student enrolled at NJIT. Built with plain HTML, CSS, and
+JavaScript. The design uses white backgrounds, near-black text, formal Georgia
+serif headings, regular-weight system sans-serif body text, fine gray rules,
+and square-edged panels. Illustrations are contrasting black-and-white SVGs.
+There are no external fonts, gradients, floating stickers, or decorative shadows.
 
 ## View locally
 
@@ -17,10 +19,12 @@ The three-line dropdown links to all five on phone and laptop screens, with
 My studies nested under Home and Education under About me. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
-The header uses a clean text-only name link, and Home greets visitors with
-"Hi, I'm Sebastian."
+The header uses a text-only name link. Home uses the approved headline
+"Electrical & Computer Engineering Student." Decorative greetings, slogans,
+and promotional blurbs have been removed throughout the site; factual
+descriptions, project explanations, and operating instructions remain.
 
-About me includes enrollment at NJIT and the Electrical Engineering major.
+About me includes enrollment at NJIT and the Electrical & Computer Engineering major.
 Personal background can be added later. Projects now showcases the four real
 mini projects in the owner's Assignment 1 notebook: Calculator, Shopping Cart,
 Rock Paper Scissors, and Fibonacci Sequence. All four now have browser demos,
@@ -61,14 +65,15 @@ Skills cover Codex, visual design, creative feedback, and website planning.
 Contact displays `ss5764@njit.edu` as a clickable email link that opens the
 visitor's email app; there is no form or automatic sending.
 
-The site includes gentle scroll reveals for the studies section, skill
-cards, and contact content. Items reset when scrolling up moves them below view,
-then reveal again when scrolling back down. Reduced-motion preferences skip the
-effect. Content remains visible without JavaScript or animation support.
+The site includes gentle, once-only scroll reveals for the studies section,
+skill cards, and contact content. Revealed items remain visible when revisited.
+Reduced-motion preferences skip the effect. Content remains visible without
+JavaScript or animation support.
 
 A sun/moon button at the top right switches between light and dark mode.
 Light is the default; an explicit choice is stored in the browser and restored
-before styling loads on every page. The preference persists across visits in
+before styling loads on every page. Both themes use neutral black, white, and
+gray tones; default light mode uses white page backgrounds. The preference persists across visits in
 that browser until its site storage is cleared. Storage restrictions do not
 break the current-page toggle. Gentle page-entry effects soften navigation and
 browser Back, with reduced-motion preferences respected throughout. Theme
@@ -104,6 +109,9 @@ versioned stylesheet and script were verified to load with the expected source.
 Visual, keyboard, and Lighthouse checks are still pending; see `TESTING.md`.
 The five-page revision was deployed on October 26, 2026. All five pages and
 their versioned shared assets were verified to load with the expected source.
+
+The monochrome redesign and site-wide copy cleanup of November 2, 2026 retain
+the existing five-page structure and all four interactive projects.
 
 ## Project files
 
@@ -142,3 +150,12 @@ four browser configurations on October 26, 2026. Results are retained in
 of Calculator and Shopping Cart were visually inspected. These are local
 browser checks; physical keyboard, Lighthouse, and deployment retests remain
 pending.
+
+Redesign checks on November 2, 2026 passed 603 scripted browser assertions
+across 21 configurations: every page at 320px, 390px, and 1366px; every page
+in saved dark mode at 1366px; and Projects at 320px with reduced motion.
+Checks include navigation, focus, contrast, image loading, and regression
+coverage for all four projects. Evidence is in
+`screenshots/monochrome-browser-checks.json`, with current phone/laptop captures
+named `screenshots/monochrome-*.png`. Physical keyboard, screen-reader, and
+Lighthouse testing remain pending; these local checks do not verify deployment.
