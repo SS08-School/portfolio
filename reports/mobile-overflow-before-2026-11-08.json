@@ -1,0 +1,1129 @@
+﻿{
+    "date":  "2026-11-08",
+    "method":  "Local Chrome mobile viewport with touch emulation; checks root width, negative/right element bounds, and overflowing content containers",
+    "results":  [
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  320,
+                        "page":  "index",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -26.390625,
+                                                                "right":  253.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#home-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#about-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#projects-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#skills-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#contact-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "index",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  320,
+                        "page":  "about",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -26.390625,
+                                                                "right":  253.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#home-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#about-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#projects-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#skills-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#contact-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "about",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  320,
+                        "page":  "projects",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -26.390625,
+                                                                "right":  253.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#home-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#about-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#projects-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#skills-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#contact-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "projects",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "code",
+                                                                "left":  56.1875,
+                                                                "right":  330.65625
+                                                            }
+                                                        ],
+                                            "containers":  [
+                                                               {
+                                                                   "element":  "pre",
+                                                                   "clientWidth":  240,
+                                                                   "scrollWidth":  306
+                                                               }
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "projects",
+                        "state":  "all logic notes open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "code",
+                                                                "left":  56.1875,
+                                                                "right":  330.65625
+                                                            }
+                                                        ],
+                                            "containers":  [
+                                                               {
+                                                                   "element":  "pre",
+                                                                   "clientWidth":  240,
+                                                                   "scrollWidth":  306
+                                                               }
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "projects",
+                        "state":  "100 Fibonacci terms"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  320,
+                        "page":  "skills",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -26.390625,
+                                                                "right":  253.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#home-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#about-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#projects-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#skills-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#contact-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "skills",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  320,
+                        "page":  "contact",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  320,
+                                            "documentWidth":  320,
+                                            "bodyWidth":  320,
+                                            "scrollX":  0,
+                                            "visualWidth":  320,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -26.390625,
+                                                                "right":  253.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#home-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#about-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#projects-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#skills-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "div.navigation-group",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "p.nav-group-title",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            },
+                                                            {
+                                                                "element":  "a#contact-navigation-title.nav-link.nav-page-link",
+                                                                "left":  -9.390625,
+                                                                "right":  236.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  320,
+                        "page":  "contact",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  375,
+                        "page":  "index",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -11.390625,
+                                                                "right":  308.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "index",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  375,
+                        "page":  "about",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -11.390625,
+                                                                "right":  308.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "about",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  375,
+                        "page":  "projects",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -11.390625,
+                                                                "right":  308.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "projects",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+                                                               {
+                                                                   "element":  "pre",
+                                                                   "clientWidth":  295,
+                                                                   "scrollWidth":  306
+                                                               }
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "projects",
+                        "state":  "all logic notes open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+                                                               {
+                                                                   "element":  "pre",
+                                                                   "clientWidth":  295,
+                                                                   "scrollWidth":  306
+                                                               }
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "projects",
+                        "state":  "100 Fibonacci terms"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  375,
+                        "page":  "skills",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -11.390625,
+                                                                "right":  308.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "skills",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  375,
+                        "page":  "contact",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  375,
+                                            "documentWidth":  375,
+                                            "bodyWidth":  375,
+                                            "scrollX":  0,
+                                            "visualWidth":  375,
+                                            "outside":  [
+                                                            {
+                                                                "element":  "nav#site-navigation.site-navigation",
+                                                                "left":  -11.390625,
+                                                                "right":  308.609375
+                                                            }
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  false
+                                        },
+                        "width":  375,
+                        "page":  "contact",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "index",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "index",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "about",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "about",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "projects",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "projects",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "projects",
+                        "state":  "all logic notes open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "projects",
+                        "state":  "100 Fibonacci terms"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "skills",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "skills",
+                        "state":  "menu open"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "contact",
+                        "state":  "initial"
+                    },
+                    {
+                        "measurement":  {
+                                            "viewport":  390,
+                                            "documentWidth":  390,
+                                            "bodyWidth":  390,
+                                            "scrollX":  0,
+                                            "visualWidth":  390,
+                                            "outside":  [
+
+                                                        ],
+                                            "containers":  [
+
+                                                           ],
+                                            "pass":  true
+                                        },
+                        "width":  390,
+                        "page":  "contact",
+                        "state":  "menu open"
+                    }
+                ]
+}

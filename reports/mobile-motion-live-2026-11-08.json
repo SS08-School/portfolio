@@ -1,0 +1,408 @@
+﻿{
+    "date":  "2026-11-08",
+    "method":  "Live Chrome mobile emulation with normal motion enabled; open menu and game shake/reveal/final states",
+    "url":  "https://ss08-school.github.io/portfolio/projects.html",
+    "states":  [
+                   {
+                       "measurement":  {
+                                           "viewport":  280,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  280,
+                                           "bodyWidth":  280,
+                                           "scrollX":  0,
+                                           "visualWidth":  280,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  280,
+                       "state":  "normal-motion menu open"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  280,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  280,
+                                           "bodyWidth":  280,
+                                           "scrollX":  0,
+                                           "visualWidth":  280,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  280,
+                       "state":  "game animation sample after 100 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  280,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  280,
+                                           "bodyWidth":  280,
+                                           "scrollX":  0,
+                                           "visualWidth":  280,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  280,
+                       "state":  "game animation sample after 300 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  280,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  280,
+                                           "bodyWidth":  280,
+                                           "scrollX":  0,
+                                           "visualWidth":  280,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  280,
+                       "state":  "game animation sample after 350 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  280,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  280,
+                                           "bodyWidth":  280,
+                                           "scrollX":  0,
+                                           "visualWidth":  280,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  280,
+                       "state":  "game animation sample after 400 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  320,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  320,
+                                           "bodyWidth":  320,
+                                           "scrollX":  0,
+                                           "visualWidth":  320,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  320,
+                       "state":  "normal-motion menu open"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  320,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  320,
+                                           "bodyWidth":  320,
+                                           "scrollX":  0,
+                                           "visualWidth":  320,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  320,
+                       "state":  "game animation sample after 100 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  320,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  320,
+                                           "bodyWidth":  320,
+                                           "scrollX":  0,
+                                           "visualWidth":  320,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  320,
+                       "state":  "game animation sample after 300 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  320,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  320,
+                                           "bodyWidth":  320,
+                                           "scrollX":  0,
+                                           "visualWidth":  320,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  320,
+                       "state":  "game animation sample after 350 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  320,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  320,
+                                           "bodyWidth":  320,
+                                           "scrollX":  0,
+                                           "visualWidth":  320,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  320,
+                       "state":  "game animation sample after 400 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  390,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  390,
+                                           "bodyWidth":  390,
+                                           "scrollX":  0,
+                                           "visualWidth":  390,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  390,
+                       "state":  "normal-motion menu open"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  390,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  390,
+                                           "bodyWidth":  390,
+                                           "scrollX":  0,
+                                           "visualWidth":  390,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  390,
+                       "state":  "game animation sample after 100 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  390,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  390,
+                                           "bodyWidth":  390,
+                                           "scrollX":  0,
+                                           "visualWidth":  390,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  390,
+                       "state":  "game animation sample after 300 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  390,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  390,
+                                           "bodyWidth":  390,
+                                           "scrollX":  0,
+                                           "visualWidth":  390,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  390,
+                       "state":  "game animation sample after 350 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  390,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  390,
+                                           "bodyWidth":  390,
+                                           "scrollX":  0,
+                                           "visualWidth":  390,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  390,
+                       "state":  "game animation sample after 400 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  568,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  568,
+                                           "bodyWidth":  568,
+                                           "scrollX":  0,
+                                           "visualWidth":  568,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  568,
+                       "state":  "normal-motion menu open"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  568,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  568,
+                                           "bodyWidth":  568,
+                                           "scrollX":  0,
+                                           "visualWidth":  568,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  568,
+                       "state":  "game animation sample after 100 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  568,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  568,
+                                           "bodyWidth":  568,
+                                           "scrollX":  0,
+                                           "visualWidth":  568,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  568,
+                       "state":  "game animation sample after 300 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  568,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  568,
+                                           "bodyWidth":  568,
+                                           "scrollX":  0,
+                                           "visualWidth":  568,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  568,
+                       "state":  "game animation sample after 350 ms"
+                   },
+                   {
+                       "measurement":  {
+                                           "viewport":  568,
+                                           "viewportHeight":  740,
+                                           "visualHeight":  740,
+                                           "documentWidth":  568,
+                                           "bodyWidth":  568,
+                                           "scrollX":  0,
+                                           "visualWidth":  568,
+                                           "outside":  [
+
+                                                       ],
+                                           "containers":  [
+
+                                                          ],
+                                           "pass":  true
+                                       },
+                       "width":  568,
+                       "state":  "game animation sample after 400 ms"
+                   }
+               ],
+    "commit":  "99200af"
+}

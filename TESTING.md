@@ -1,6 +1,6 @@
 # Website test plan
 
-## Current submission plan — November 7, 2026
+## Current submission plan — November 8, 2026
 
 Use this section for the current site. Older results are preserved under
 [Historical test record](#historical-test-record); their retired features are
@@ -11,6 +11,8 @@ not current requirements.
 - Accessibility readiness correction: `123049d` (Menu uses its visible text as
   its accessible name; open/closed state remains in aria-expanded). Record the
   actually audited deployment/commit with your Lighthouse reports.
+- Mobile layout correction: `99200af`, verified live on November 8 at narrow
+  portrait/landscape widths. See T139–T144 and the mobile follow-up below.
 - Automated live preflight: **Pass — 444 checks** on November 7, 2026.
   This comprises 302 page/feature checks, 50 primary navigation activations,
   66 additional project/input checks, and 26 brand/content-link activations.
@@ -76,6 +78,12 @@ The contact form prepares a draft; sending email is not part of automated testin
 | T136 | Screen-reader check | With a screen reader, visit every page; inspect page/heading names, navigation/current-page state, field labels/errors, carousel status, and game announcements. | Labels and dynamic results make sense and hidden content is not announced as available controls. | Not run — manual check; a Lighthouse score does not replace it. |
 | T137 | Menu visible/accessibility label match | At phone width inspect the Menu name in the accessibility tree, open it with Enter, then close with Escape on every page. | Accessible name includes the visible word Menu; expanded state and focus return work. | Initial live result: Fail on all five pages (name was Open navigation). Corrected in 123049d; 20 local and 20 live retest assertions passed on all five pages. |
 | T138 | Additional direct-file check | Separately double-click local index.html, follow its page links, and inspect styles/scripts. Use the live HTTPS URLs above for submission/Lighthouse tests. | Local files remain usable without a server; submission audits use the published site. | Not run in this live preflight; earlier local checks remain in the history below. |
+| T139 | Mobile reflow and horizontal panning | On every page test widths 280, 320, 360, 375, 390, 414, and 430px, then 568/667/844px landscape and a laptop regression. Open menus and both themes; attempt horizontal page scrolling. | Content stays within both viewport edges and the page cannot scroll sideways at normal scale. | Pass — local and live emulation: 65 page/viewport/theme configurations, 470 layout states and 505 interaction assertions per run; no final overflow failures. |
+| T140 | Narrow mobile menu and touch navigation | Open Menu on every page at narrow widths; inspect its left/right edges, tap the current-page link, then reopen using Enter and close with Escape. Repeat with short landscape heights. | Popup stays inside the screen, links remain reachable, touch selection closes it, and keyboard focus returns correctly. | Initial result: Fail — menu extended about 26px left at 320px and 11px at 375px. Fixed in 99200af; all local and live retests passed. |
+| T141 | Long project content | Open all logic notes; generate 100 Fibonacci terms and an input error; inspect long calculator results/history, quantity errors, a full basket, carousel slides, and pass-and-play states. | Code wraps rather than requiring a horizontal scrollbar; values, explanations, and controls stay inside their containers. | Initial result: Fail — Fibonacci code overflowed its preformatted box at 320px/375px. Fixed in 99200af; all local and live state checks passed. |
+| T142 | Contact errors, long fields, and short viewport | Submit blanks, then fill 70-character name, valid long email, and a 3,000-character unbroken message; prepare a draft. Focus Message with available viewport height reduced to 360px. | Errors and draft controls remain usable; long content does not widen the page; the focused textarea remains scrollable into view. | Pass — local and live touch-enabled emulation at all configured widths. Short-height emulation approximates available space; it does not reproduce a real on-screen keyboard. |
+| T143 | Normal-motion mobile bounds | Enable normal motion; open Menu and sample game shake, reveal, and completed-round states at 280px, 320px, 390px, and 568px. | Animations do not push visible elements outside the horizontal viewport. | Pass — 20 additional live normal-motion layout samples; no overflow. |
+| T144 | Physical phone/browser check | On an actual iPhone/Safari and Android/Chrome, open every page in portrait/landscape, use Menu and the project/form controls, open the keyboard, and try sideways dragging. | No unintended horizontal page scrolling or clipped controls; zoom and native text editing still work. | Not run — emulation does not establish results for physical devices or Safari. Record your device/browser and actual outcome here. |
 
 ### Navigation coverage matrix
 
@@ -155,10 +163,66 @@ For every failure, append a row rather than replacing the first attempt:
 | Date / test ID / URL / viewport | Initial result and issue | Fix / commit | Retest result | Evidence filename |
 | --- | --- | --- | --- | --- |
 | 2026-11-07 / T137 / all five live pages / 390px | Fail — visible Menu had accessible name Open navigation | 123049d: use native visible label; retain aria-expanded | Pass — 20 local and 20 live retest checks on all five pages | reports/menu-label-before-2026-11-07.json; reports/menu-label-local-retest-2026-11-07.json; reports/menu-label-live-retest-2026-11-07.json |
+| 2026-11-08 / T140 / all pages / 320px and 375px | Fail — open popup left edge was outside the viewport | 99200af: anchor popup to full header | Pass — local and live mobile regressions | reports/mobile-overflow-before-2026-11-08.json; reports/mobile-overflow-live-2026-11-08.json |
+| 2026-11-08 / T141 / Projects / 320px and 375px | Fail — code example required horizontal scrolling | 99200af: wrap preformatted content | Pass — local and live code states | reports/mobile-overflow-before-2026-11-08.json; reports/mobile-overflow-live-2026-11-08.json |
 
 Before submission, complete all pending rows, preserve the initial and retest
 reports, and rerun affected checks after any website change. Record a final
 pass/fail for each case and a Lighthouse score for every page.
+
+
+## Mobile viewport follow-up — November 8, 2026
+
+The owner requested reliable mobile layouts without sideways scrolling.
+The menu was anchored to its small button wrapper, allowing its left edge to
+leave narrow viewports even when the document's scrollWidth did not grow.
+The dropdown now anchors to the full header. Its height also fits short landscape
+viewports. The Fibonacci notebook excerpt now soft-wraps long lines instead of
+using its own horizontal scrollbar. No page-wide overflow hiding was added.
+
+The baseline diagnostics recorded **14 failed states out of 36**: menu position
+at 320px/375px across all five pages, plus open code-content states on Projects.
+The diagnostic was refined to exclude unpainted content inside closed details;
+the retained baseline uses that corrected visibility check. This corrects the
+limitation of earlier tests that checked only positive document width and could
+miss content hanging off the left edge.
+
+Both local and published-site retests passed **65 configurations**, each with
+**470 layout states and 505 behavior assertions**. They cover all five pages
+in light mode at 280×653, 320×568, 360×640, 375×667, 390×844, 414×896, 430×932,
+568×320, 667×375, 844×390, and 1366×900; all five pages also run in dark mode at
+320×740 and 390×740. Mobile configurations use Chrome touch emulation at device
+pixel ratio 2. Laptop uses desktop emulation at pixel ratio 1.
+
+Geometry checks inspect document width, actual element bounds on both edges,
+horizontal page-panning range, and component scroll widths. They run with open
+menus, all carousel slides, open notes, 100 exact Fibonacci terms, long
+calculator results, errors, a full cart, hidden-choice handoff/result states,
+long contact fields, and shortened textarea viewports. Real emulated touch taps
+exercise Menu, links, carousel controls, and form actions. Native Enter/Escape
+checks retain keyboard support. No mail app is opened or message sent.
+
+These broad functional/layout runs use reduced motion for stable capture.
+Another **20 live normal-motion samples** check the menu and game shake/reveal
+states at four narrow widths. All passed. This is a browser-emulation result,
+not proof of every physical device/browser combination. Physical iPhone/Safari,
+Android hardware, actual on-screen-keyboard, and Lighthouse runs remain manual.
+
+The website fix is deployed in `99200af`. Evidence:
+
+- [Baseline failures](reports/mobile-overflow-before-2026-11-08.json).
+- [Local regression](reports/mobile-overflow-local-2026-11-08.json).
+- [Live regression](reports/mobile-overflow-live-2026-11-08.json).
+- [Live normal-motion checks](reports/mobile-motion-live-2026-11-08.json).
+- [Relative links, asset versions, and image-size checks](reports/mobile-source-2026-11-08.json).
+- Before/after menu: `screenshots/mobile-overflow-menu-before.png`,
+  `mobile-overflow-menu-after.png`, and `mobile-overflow-menu-live-after.png`.
+- Current live phone captures: `screenshots/mobile-fit-live-{index,about,projects,skills,contact}-390.png`
+  and `screenshots/mobile-fit-live-code-320.png`.
+
+Use the current deployed revision when running Lighthouse and retain any
+initial failed report alongside its retest. No Lighthouse score is inferred
+from these layout checks.
 
 ## Historical test record
 

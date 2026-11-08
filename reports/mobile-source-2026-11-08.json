@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-08",
+  "websiteCommit": "99200af21fc79f50ba4b6b7cc5cc4ebf73644d2f",
+  "references": 79,
+  "issues": [],
+  "assets": {
+    "images/monogram.svg": "5215a69064c3",
+    "js/theme.js": "cae71dd46cd4",
+    "css/styles.css": "cb3288bb0ef1",
+    "js/main.js": "81b44b358305",
+    "images/rock.svg": "6d24a1eafac3",
+    "images/paper.svg": "ec9f4b4f1c23",
+    "images/scissors.svg": "fd5c474994df",
+    "images/fibonacci.svg": "1f8a6fda425f",
+    "images/calculator.svg": "dee3575b29df",
+    "images/cart.svg": "f8fdaa151dd0"
+  },
+  "imageSizes": [
+    {
+      "path": "images/calculator.svg",
+      "bytes": 623,
+      "under500KB": true
+    },
+    {
+      "path": "images/cart.svg",
+      "bytes": 512,
+      "under500KB": true
+    },
+    {
+      "path": "images/fibonacci.svg",
+      "bytes": 2300,
+      "under500KB": true
+    },
+    {
+      "path": "images/monogram.svg",
+      "bytes": 337,
+      "under500KB": true
+    },
+    {
+      "path": "images/paper.svg",
+      "bytes": 435,
+      "under500KB": true
+    },
+    {
+      "path": "images/rock.svg",
+      "bytes": 366,
+      "under500KB": true
+    },
+    {
+      "path": "images/scissors.svg",
+      "bytes": 418,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-about-390.png",
+      "bytes": 190240,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-code-320.png",
+      "bytes": 69183,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-contact-390.png",
+      "bytes": 188924,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-index-390.png",
+      "bytes": 227324,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-live-about-390.png",
+      "bytes": 190240,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-live-code-320.png",
+      "bytes": 69183,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-live-contact-390.png",
+      "bytes": 188924,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-live-index-390.png",
+      "bytes": 227324,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-live-projects-390.png",
+      "bytes": 260532,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-live-skills-390.png",
+      "bytes": 243881,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-projects-390.png",
+      "bytes": 260532,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-fit-skills-390.png",
+      "bytes": 243881,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-overflow-menu-after.png",
+      "bytes": 88341,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-overflow-menu-before.png",
+      "bytes": 90971,
+      "under500KB": true
+    },
+    {
+      "path": "screenshots/mobile-overflow-menu-live-after.png",
+      "bytes": 88362,
+      "under500KB": true
+    }
+  ]
+}

@@ -26,6 +26,19 @@ its initial failure and retests are retained. These checks do not establish a
 Lighthouse score. Actual Lighthouse, physical-keyboard, screen-reader, and other
 pending manual results must be entered from real tests before submission.
 
+## Mobile layout verification — November 8, 2026
+
+The open Menu now anchors to the full header so it stays inside narrow phone
+screens. Project code examples wrap long lines. No page-wide overflow hiding
+is used. The patch is deployed in 99200af.
+
+Local and live Chrome mobile/touch regression runs each passed 65 configurations,
+470 layout-state checks, and 505 interaction assertions, including narrow phones,
+landscape, dark mode, open menus, long values, and form errors. Another 20 live
+normal-motion samples passed. Before/after failures, fixes, and evidence are in
+TESTING.md (T139–T144). Physical iPhone/Safari, Android hardware, and Lighthouse
+checks remain manual; emulator results are not a claim that every device was tested.
+
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
