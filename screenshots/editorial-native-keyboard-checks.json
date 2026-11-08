@@ -1,0 +1,320 @@
+{
+  "date": "2026-11-07",
+  "method": "Chrome DevTools native Input.dispatchKeyEvent and Emulation.setDeviceMetricsOverride on original file URLs. Native Enter includes carriage-return text; Shift modifier is bit 8. This is automated browser input, not physical keyboard or screen-reader testing.",
+  "results": [
+    {
+      "width": 390,
+      "page": "index",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens mobile menu and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "page": "about",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens mobile menu and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "page": "projects",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens mobile menu and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "page": "skills",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens mobile menu and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "page": "contact",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens mobile menu and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "page": "index",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "page": "about",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "page": "projects",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "page": "skills",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "page": "contact",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Native Tab follows visible navigation"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab returns to brand"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens keyboard options"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab reaches keyboard preference"
+        }
+      ]
+    },
+    {
+      "width": "1366 to 800 to 1100",
+      "page": "index",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Shrinking hides desktop links and focuses menu"
+        },
+        {
+          "pass": true,
+          "name": "Expanding reveals desktop links and restores link focus"
+        }
+      ]
+    }
+  ]
+}

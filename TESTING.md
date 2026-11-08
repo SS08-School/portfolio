@@ -574,3 +574,79 @@ bound is 8.02:1. Actual gradient blends stay within these bounds.
 The previous no-gradient, Georgia, and Home/Education duplication expectations
 are superseded by this approved follow-up. Earlier results and screenshots
 remain historical evidence.
+
+## Editorial portfolio refinement — 2026-11-07
+
+The owner requested a more professional, credible portfolio. The revision keeps
+all five pages and the existing factual content. Home now links directly to the
+four real demonstrations. Laptop navigation is visible; smaller layouts use a
+labeled Menu button. Projects and Skills use ruled rows instead of repeated
+boxed cards. Education and Contact use flat sections, with a quieter warm wash,
+Palatino headings, and regular-weight sans-serif body text. Keyboard preferences
+are retained in a native disclosure in the footer. No credentials, client work,
+testimonials, or claims of independent coding ability were added.
+
+Final local checks passed **446 scripted assertions in 20 configurations**:
+every page at 320px, 390px, and 1366px in light mode, and every page at 1366px in
+saved dark mode. These use actual Chrome layout, programmatic clicks/focus,
+synthetic keyboard events, native form-button activation, and reduced motion.
+Evidence: `screenshots/editorial-browser-checks.json`.
+
+A further **62 native browser input/resize assertions passed** on the original
+local HTML files. Chrome DevTools delivered Tab, Shift+Tab, Enter, and Escape
+at 390px and 1366px on every page. Checks cover focus order, menu activation,
+Escape/focus return, skip-link activation, and opening/accessing Keyboard options.
+Actual browser metrics changed from 1366px to 800px to 1100px to verify focus
+across the menu breakpoint. Evidence: `screenshots/editorial-native-keyboard-checks.json`.
+This is automated native browser input, not a physical keyboard or screen reader.
+
+Four focused style checks passed for About button spacing at phone/laptop sizes
+and selected-filter hover contrast in light/dark modes. All **73 relative file
+and fragment references resolve**. Conservative light-gradient contrast bounds:
+primary text 16.09:1, secondary text 6.69:1, control outlines 4.08:1. White text
+on primary buttons is 17.93:1 and on hover is 11.73:1. Dark secondary text remains
+at least 8.02:1. Source/style evidence is retained in the corresponding
+`editorial-source-checks.json` and `editorial-style-checks.json` files.
+
+Actual final screenshots cover every page at 390px and 1366px, plus saved-dark
+Home and Projects: `screenshots/editorial-*.png`. They were captured directly
+from the original local files using browser viewport emulation. Screenshots
+were visually reviewed; reduced motion was used to stabilize captures.
+
+Failures and corrections retained:
+
+- A broad CSS replacement accidentally overwrote the About button's top margin.
+  Screenshot review caught the missing gap. The selector was corrected; both
+  phone/laptop spacing checks now pass. The original capture is retained as
+  `editorial-about-phone-spacing-before.png`. This is a real agent mistake and
+  correction, not a fabricated example.
+- The first virtual-time iframe resize fixture raced its cross-frame messages.
+  Its failed result is retained inside `editorial-browser-checks.json`. It was
+  replaced with direct browser metric changes for reliable verification.
+- Initial native-keyboard fixtures omitted Enter's carriage-return text and
+  used the Alt modifier bit for Shift. Those test setup errors are preserved in
+  `editorial-native-keyboard-initial.json` and
+  `editorial-native-keyboard-modifier-before.json`; the corrected fixture uses
+  Enter text, the Shift bit 8, and short event-processing delays.
+- Native resizing then exposed an intermittent real focus failure: desktop CSS
+  hid the focused Menu button before JavaScript could capture its focus. The
+  redundant desktop display rule was removed; the hidden attribute now controls
+  visibility after focus is captured. The failed result is retained in
+  `editorial-native-keyboard-resize-before.json`; the final retest passed.
+- Source review caught a selected-filter hover rule that could put white text
+  on a light background. The hover fill now applies only to unselected filters;
+  actual pointer-hover checks pass in both themes.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T85 | All-page editorial layout | Open all five pages locally at 320px, 390px, and 1366px; review phone/laptop captures. | Readable typography, quiet background, flat sections, no horizontal overflow, one h1 per page. | Pass — all 15 light configurations and visual review; About spacing error corrected and retested. |
+| T86 | Responsive navigation and focus | Use native Tab/Shift+Tab/Enter/Escape on every page at 390px and 1366px; resize Home from laptop to mobile and back. | Visible desktop links, hidden closed mobile links, accurate expanded state, preserved focus. | Pass — 62 native input/resize assertions after fixture corrections and the responsive focus fix. |
+| T87 | Home project index and references | Follow each project target in source; resolve every href/src/fragment across all pages; open index.html directly. | Four real demo targets, one personal introduction, no decorative Home graphic, all local references valid. | Pass — browser Home checks, 73 source references, direct-file captures. |
+| T88 | Four project interactions | Filter Math/All; play computer and two-player rounds; generate 100 and invalid 0 Fibonacci terms; calculate 2+3 and divide by zero; add/clear groceries. | Correct filtering, hidden handoff, winner score, exact term 100, input errors, result 5, and $2.99 cart total before clearing. | Pass — focused regression in all four Projects configurations; earlier full edge-case suite not repeated. |
+| T89 | Native footer disclosure | On every page focus Keyboard options; press Enter, then Tab. | Disclosure opens and the existing keyboard preference is reachable. | Pass — native input at phone and laptop widths; closed content excluded by the browser. |
+| T90 | Dark theme and contrast | Restore saved dark mode on all pages; calculate palette contrast; move actual pointer over selected project filters in light/dark themes. | Readable text, visible controls, contrasting graphics, selected filters retain contrasting text/fill. | Pass — five saved-dark configurations, source bounds, and four focused style assertions including About spacing. |
+| T91 | Local errors and assets | Capture uncaught errors/rejections in all 20 configurations; inspect image loading and relative asset versions. | No uncaught errors, missing images, or broken references; current stylesheet/script versions. | Pass — 20 browser configurations and source/hash verification. |
+| T92 | Publication and submission audit | After owner review and approved push, run the full live plan, physical keyboard, screen reader, and Lighthouse. | Published revision matches local files and complete accessibility audit passes. | Full live audit Not run — physical keyboard, screen-reader, and Lighthouse checks remain pending; deployment/source verification is separate. |
+
+Earlier screenshots/results remain historical. The latest checks do not replace
+the full live-site submission plan or establish a Lighthouse Accessibility score.

@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#ffffff">
     <title>Projects | Sebastian Szeliga</title>
     <script src="js/theme.js?v=cae71dd46cd4"></script>
-    <link rel="stylesheet" href="css/styles.css?v=f9f0c901f118">
-    <script src="js/main.js?v=f45a87317c20" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=1440197c192e">
+    <script src="js/main.js?v=dca47c9b380b" defer></script>
   </head>
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -17,6 +17,30 @@
       <a class="brand" href="index.html#top" aria-label="Sebastian Szeliga, Home">
         <span>Sebastian Szeliga</span>
       </a>
+
+      <div class="navigation-menu">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation" hidden>
+          <span>Menu</span>
+        </button>
+
+        <nav id="site-navigation" class="site-navigation" aria-label="Pages and sections">
+          <div class="navigation-group" role="group" aria-labelledby="home-navigation-title">
+            <p class="nav-group-title"><a id="home-navigation-title" class="nav-link nav-page-link" href="index.html#top">Home</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="about-navigation-title">
+            <p class="nav-group-title"><a id="about-navigation-title" class="nav-link nav-page-link" href="about.html#top">About me</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="projects-navigation-title">
+            <p class="nav-group-title"><a id="projects-navigation-title" class="nav-link nav-page-link" href="#top" aria-current="page">Projects</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="skills-navigation-title">
+            <p class="nav-group-title"><a id="skills-navigation-title" class="nav-link nav-page-link" href="skills.html#top">Skills</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="contact-navigation-title">
+            <p class="nav-group-title"><a id="contact-navigation-title" class="nav-link nav-page-link" href="contact.html#top">Contact</a></p>
+          </div>
+        </nav>
+      </div>
 
       <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
         <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
@@ -27,46 +51,15 @@
           <path class="theme-moon" d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/>
         </svg>
       </button>
-
-      <div class="navigation-menu">
-        <button class="menu-toggle" type="button" aria-label="Pages and sections" aria-expanded="false" aria-controls="site-navigation" hidden>
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
-            <path d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-
-        <nav id="site-navigation" class="site-navigation" aria-label="Pages and sections">
-          <div class="navigation-group" role="group" aria-labelledby="home-navigation-title">
-            <p class="nav-group-title"><a id="home-navigation-title" class="nav-link nav-page-link" href="index.html#top">Home</a></p>
-          </div>
-          <div class="navigation-group" role="group" aria-labelledby="about-navigation-title">
-            <p class="nav-group-title"><a id="about-navigation-title" class="nav-link nav-page-link" href="about.html#top">About me</a></p>
-            <ul class="nav-section-links">
-              <li><a class="nav-link" href="about.html#education">Education</a></li>
-            </ul>
-          </div>
-          <div class="navigation-group" role="group" aria-labelledby="projects-navigation-title">
-            <p class="nav-group-title"><a id="projects-navigation-title" class="nav-link nav-page-link" href="#top" aria-current="page">Projects</a> <span class="nav-group-note">Current page</span></p>
-          </div>
-          <div class="navigation-group" role="group" aria-labelledby="skills-navigation-title">
-            <p class="nav-group-title"><a id="skills-navigation-title" class="nav-link nav-page-link" href="skills.html#top">Skills</a></p>
-          </div>
-          <div class="navigation-group" role="group" aria-labelledby="contact-navigation-title">
-            <p class="nav-group-title"><a id="contact-navigation-title" class="nav-link nav-page-link" href="contact.html#top">Contact</a></p>
-          </div>
-        </nav>
-      </div>
     </header>
 
     <main id="main" class="content-page page-width page-enter projects-page" tabindex="-1">
       <section class="page-intro projects-intro" aria-labelledby="projects-heading">
         <div>
-          <p class="eyebrow">ASSIGNMENT 01</p>
+          <p class="eyebrow">Coursework / Interactive demonstrations</p>
           <h1 id="projects-heading">Projects</h1>
           <p class="hero-description">Four classroom exercises with working browser demonstrations.</p>
-          <a class="button" href="#rps-lab">View demonstrations <span aria-hidden="true">↘</span></a>
         </div>
-        <figure class="project-figure"><img src="images/fibonacci.svg?v=1f8a6fda425f" alt="Fibonacci square spiral drawn in black and white" width="480" height="240"><figcaption>FIBONACCI SEQUENCE / ASSIGNMENT 01</figcaption></figure>
       </section>
 
       <section class="project-collection" aria-labelledby="collection-heading">
@@ -82,15 +75,15 @@
         <div class="project-grid">
           <article class="project-card" data-project-category="games">
             <div class="project-thumbnail rps-thumbnail" aria-hidden="true"><img src="images/rock.svg?v=6d24a1eafac3" alt="" width="200" height="200"><img src="images/paper.svg?v=ec9f4b4f1c23" alt="" width="200" height="200"><img src="images/scissors.svg?v=fd5c474994df" alt="" width="200" height="200"></div>
-            <div class="project-card-copy"><p class="project-tag">01 / GAME · INTERACTIVE</p><h3>Rock, Paper, Scissors</h3><p>A two-player terminal game with hidden choices, winner detection, and repeat rounds. Now with a computer opponent, too.</p><a href="#rps-lab">Play Rock Paper Scissors <span aria-hidden="true">↗</span></a></div>
+            <div class="project-card-copy"><p class="project-tag">01 / GAME · INTERACTIVE</p><h3>Rock, Paper, Scissors</h3><p>A hidden-choice game with an adaptive computer opponent and same-device two-player mode.</p><a href="#rps-lab">Play Rock Paper Scissors <span aria-hidden="true">↗</span></a></div>
           </article>
           <article class="project-card" data-project-category="math">
             <img class="project-thumbnail" src="images/fibonacci.svg?v=1f8a6fda425f" alt="A Fibonacci-inspired spiral over a grid of growing squares" width="480" height="240">
-            <div class="project-card-copy"><p class="project-tag">02 / MATH · INTERACTIVE</p><h3>Fibonacci Sequence</h3><p>Start at 0 and 1. Add the last two terms. A loop from the notebook becomes a sequence you can build and explore.</p><a href="#fib-lab">Explore Fibonacci <span aria-hidden="true">↗</span></a></div>
+            <div class="project-card-copy"><p class="project-tag">02 / MATH · INTERACTIVE</p><h3>Fibonacci Sequence</h3><p>Generate up to 100 exact terms, inspect each calculation, and explore the square spiral.</p><a href="#fib-lab">Explore Fibonacci <span aria-hidden="true">↗</span></a></div>
           </article>
           <article class="project-card" data-project-category="math">
             <img class="project-thumbnail" src="images/calculator.svg?v=dee3575b29df" alt="An illustrated calculator with the four arithmetic operations" width="480" height="240" loading="lazy">
-            <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h3>Calculator</h3><p>Two numbers and four operations. Try decimals and negative numbers, inspect the result, and keep calculating.</p><a href="#calculator-lab">Use calculator <span aria-hidden="true">↗</span></a></div>
+            <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h3>Calculator</h3><p>Four arithmetic operations with input checks and a history of recent calculations.</p><a href="#calculator-lab">Use calculator <span aria-hidden="true">↗</span></a></div>
           </article>
           <article class="project-card" data-project-category="simulation">
             <img class="project-thumbnail" src="images/cart.svg?v=f8fdaa151dd0" alt="An illustrated shopping cart with groceries" width="480" height="240" loading="lazy">
@@ -165,10 +158,13 @@ for i in range(2, n):
     <footer class="site-footer page-width">
       <p>Sebastian Szeliga</p>
       <p>Portfolio</p>
-      <div class="keyboard-controls" hidden>
-        <p id="keyboard-help" class="keyboard-help" role="status">Tab cycles through page controls. Shift+Tab goes back. Esc releases Tab to the browser.</p>
-        <button class="keyboard-toggle" type="button" aria-pressed="true" aria-describedby="keyboard-help" title="Keep Tab on this page. Esc switches to standard Tab navigation.">Keep Tab on this page</button>
-      </div>
+      <details class="keyboard-options">
+        <summary>Keyboard options</summary>
+        <div class="keyboard-controls" hidden>
+          <p id="keyboard-help" class="keyboard-help" role="status">Tab cycles through page controls. Shift+Tab goes back. Esc releases Tab to the browser.</p>
+          <button class="keyboard-toggle" type="button" aria-pressed="true" aria-describedby="keyboard-help" title="Keep Tab on this page. Esc switches to standard Tab navigation.">Keep Tab on this page</button>
+        </div>
+      </details>
     </footer>
   </body>
 </html>

@@ -2,9 +2,9 @@
 
 A personal portfolio for Sebastian Szeliga, an Electrical & Computer
 Engineering student enrolled at NJIT. Built with plain HTML, CSS, and
-JavaScript. The design uses a soft peach, rose, and cream sunset gradient that
-fades into white, near-black text, formal Palatino headings, lightweight system
-sans-serif body text, fine gray rules, and square-edged panels. Project
+JavaScript. The design uses a very subtle peach, rose, and cream wash that
+fades into white, near-black text, formal Palatino headings, readable system
+sans-serif body text, fine gray rules, and stacked project and skill rows. Project
 illustrations stay black and white. There are no external fonts, floating
 stickers, or decorative shadows.
 
@@ -16,11 +16,12 @@ installation, build step, or server is required.
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
-The three-line dropdown links to all five on phone and laptop screens, with
-Education under About me. Navigation highlights
+All five navigation links are visible on laptop screens. A labeled Menu button
+opens navigation on smaller screens. Education remains on About. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
-The header uses a text-only name link. Home uses the approved headline
+The header uses a text-only name link. Home includes an index linking directly
+to the four working demonstrations and a direct route to Contact. It uses the approved headline
 "Electrical & Computer Engineering Student." Decorative greetings, slogans,
 and promotional blurbs have been removed throughout the site; factual
 descriptions, project explanations, and operating instructions remain.
@@ -94,8 +95,8 @@ Tab/Shift+Tab cycles through available controls in page order, skipping closed
 menu links and disabled controls. Enter activates links and buttons; Space
 activates buttons. Keyboard menu activation focuses its first link. Escape
 closes an open menu; with the menu closed it switches back to standard Tab
-navigation. A compact "Keep Tab on this page" button sits at the bottom-right
-of the footer, with instructions shown on focus. Cycling defaults on; choosing
+navigation. A compact "Keep Tab on this page" button is available under Keyboard
+options in the footer, with instructions shown on focus. Cycling defaults on; choosing
 on/off with the button or turning it off with Escape saves that choice across
 pages and visits in the same browser. Clearing site storage returns it to on.
 If storage is blocked, the choice still works for the current page.
@@ -171,3 +172,25 @@ across 17 local browser configurations: all five pages at 320px, 390px, and
 `screenshots/sunset-browser-checks.json`, with current captures named
 `screenshots/sunset-*.png`. This is a focused layout and smoke-check pass, not
 a repeat of every earlier project edge case or the full live-site audit.
+
+## Editorial portfolio refinement — November 7, 2026
+
+The local revision uses visible laptop navigation, a compact mobile menu,
+a Home project index, and flat ruled sections for Projects, Skills, Education,
+and Contact. The warm background is quieter and body text uses a readable
+regular weight. Existing content and all four interactive demonstrations remain.
+
+Validation passed 446 scripted assertions across 20 local configurations:
+every page at 320px, 390px, and 1366px in light mode, plus every page at 1366px
+in saved dark mode. Another 62 native browser input/resize assertions passed,
+covering Tab, Shift+Tab, Enter, Escape, the keyboard-options disclosure, and
+focus across layout changes. Four focused style checks passed for About button
+spacing and selected-filter hover contrast. All 73 local references resolve.
+
+Evidence is in `screenshots/editorial-*-checks.json`. Current actual phone and
+laptop captures are `screenshots/editorial-*.png`; the spacing-before capture
+records an error corrected during review. Initial failed test records are
+retained and explained in TESTING.md. These checks use local files and automated
+browser input; physical keyboard, screen-reader, Lighthouse, and the full
+published-site audit remain pending. Deployment/source verification is separate
+from the full submission audit.

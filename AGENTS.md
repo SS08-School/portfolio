@@ -29,6 +29,7 @@ pages. The owner has confirmed Education belongs on its own page/tab.
 
 - Home (`index.html`): Show the personal introduction once. Do not repeat it
   in an Education section, and do not add a decorative hero illustration.
+  Include a compact index linking to the four real project demonstrations.
 - About/Education (`about.html#education`): Keep the education facts here;
   do not repeat "I'm Sebastian" or the Home introduction.
 - Projects (`projects.html`): Retain the four interactive Assignment 1 projects.
@@ -43,10 +44,12 @@ empty sections, or dummy links.
 
 ## Design
 
-- Overall style: professional and restrained, with a soft sunset-like gradient
-  fading into white, thin rules, square-edged panels, and minimal decoration.
-  Use slightly narrower, more stacked layouts. Avoid floating stickers, pill
-  buttons, decorative shadows, and slogans.
+- Overall style: professional and editorial, with a very subtle sunset-like
+  wash fading into white, thin rules, and minimal decoration. Use stacked
+  project and skill rows rather than repeated boxed cards. Keep narrower
+  content layouts and square controls. Avoid floating stickers, pill buttons,
+  decorative shadows, and slogans. Show page navigation directly on laptops;
+  use a button-controlled menu on smaller screens.
 - Reveal the skills heading/cards and contact content with a
   gentle fade-and-rise effect as they enter view. Animate each item once, keep
   keyboard-focused content visible, and skip effects for reduced motion.
@@ -56,8 +59,8 @@ empty sections, or dummy links.
   subdued warm gradient in the optional dark theme.
 - Use dark text on white surfaces and white text on black buttons. Verify contrast for
   the actual combinations used, including hover, focus, and selected states.
-- Fonts: use formal, light-looking Palatino serif headings and thinner,
-  readable system sans-serif body text. Avoid heavy display type and external
+- Fonts: use formal, light-looking Palatino serif headings and readable,
+  regular-weight system sans-serif body text. Avoid heavy display type and external
   font dependencies; the site must still work offline.
 - Keep copy factual. Remove decorative greeting blurbs, promotional taglines,
   and slogans from every page; retain substantive descriptions and instructions.

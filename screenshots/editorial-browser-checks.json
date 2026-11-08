@@ -1,0 +1,2076 @@
+{
+  "date": "2026-11-07",
+  "method": "Local headless Chrome; direct file fixtures in 320px, 390px and 1366px frames. Programmatic focus/click and synthetic keyboard events; reduced motion enabled.",
+  "results": [
+    {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 320,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four Home project links",
+          "pass": true
+        },
+        {
+          "name": "No Home illustration",
+          "pass": true
+        },
+        {
+          "name": "One Home introduction",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "index-320-light"
+    },
+    {
+      "page": "About me | Sebastian Szeliga",
+      "width": 320,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Education retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "about-320-light"
+    },
+    {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 320,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four demos initialize",
+          "pass": true
+        },
+        {
+          "name": "Math filter",
+          "pass": true
+        },
+        {
+          "name": "All filter",
+          "pass": true
+        },
+        {
+          "name": "Computer round resolves",
+          "pass": true
+        },
+        {
+          "name": "Two player handoff",
+          "pass": true
+        },
+        {
+          "name": "Two player winner",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci exact term 100",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci invalid input",
+          "pass": true
+        },
+        {
+          "name": "Calculator addition",
+          "pass": true
+        },
+        {
+          "name": "Division by zero error",
+          "pass": true
+        },
+        {
+          "name": "Cart adds grocery",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "Layout after interactions",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "projects-320-light"
+    },
+    {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 320,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four skill rows",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "skills-320-light"
+    },
+    {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 320,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Existing contact retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "contact-320-light"
+    },
+    {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 390,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four Home project links",
+          "pass": true
+        },
+        {
+          "name": "No Home illustration",
+          "pass": true
+        },
+        {
+          "name": "One Home introduction",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "index-390-light"
+    },
+    {
+      "page": "About me | Sebastian Szeliga",
+      "width": 390,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Education retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "about-390-light"
+    },
+    {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 390,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four demos initialize",
+          "pass": true
+        },
+        {
+          "name": "Math filter",
+          "pass": true
+        },
+        {
+          "name": "All filter",
+          "pass": true
+        },
+        {
+          "name": "Computer round resolves",
+          "pass": true
+        },
+        {
+          "name": "Two player handoff",
+          "pass": true
+        },
+        {
+          "name": "Two player winner",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci exact term 100",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci invalid input",
+          "pass": true
+        },
+        {
+          "name": "Calculator addition",
+          "pass": true
+        },
+        {
+          "name": "Division by zero error",
+          "pass": true
+        },
+        {
+          "name": "Cart adds grocery",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "Layout after interactions",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "projects-390-light"
+    },
+    {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 390,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four skill rows",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "skills-390-light"
+    },
+    {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 390,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Mobile menu opens",
+          "pass": true
+        },
+        {
+          "name": "Keyboard activation focuses first link",
+          "pass": true
+        },
+        {
+          "name": "Escape closes and returns focus",
+          "pass": true
+        },
+        {
+          "name": "Outside click closes menu",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Existing contact retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "contact-390-light"
+    },
+    {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 1366,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four Home project links",
+          "pass": true
+        },
+        {
+          "name": "No Home illustration",
+          "pass": true
+        },
+        {
+          "name": "One Home introduction",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "index-1366-light"
+    },
+    {
+      "page": "About me | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Education retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "about-1366-light"
+    },
+    {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four demos initialize",
+          "pass": true
+        },
+        {
+          "name": "Math filter",
+          "pass": true
+        },
+        {
+          "name": "All filter",
+          "pass": true
+        },
+        {
+          "name": "Computer round resolves",
+          "pass": true
+        },
+        {
+          "name": "Two player handoff",
+          "pass": true
+        },
+        {
+          "name": "Two player winner",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci exact term 100",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci invalid input",
+          "pass": true
+        },
+        {
+          "name": "Calculator addition",
+          "pass": true
+        },
+        {
+          "name": "Division by zero error",
+          "pass": true
+        },
+        {
+          "name": "Cart adds grocery",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "Layout after interactions",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "projects-1366-light"
+    },
+    {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four skill rows",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "skills-1366-light"
+    },
+    {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "light",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Existing contact retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "contact-1366-light"
+    },
+    {
+      "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+      "width": 1366,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four Home project links",
+          "pass": true
+        },
+        {
+          "name": "No Home illustration",
+          "pass": true
+        },
+        {
+          "name": "One Home introduction",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "index-1366-dark"
+    },
+    {
+      "page": "About me | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Education retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "about-1366-dark"
+    },
+    {
+      "page": "Projects | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four demos initialize",
+          "pass": true
+        },
+        {
+          "name": "Math filter",
+          "pass": true
+        },
+        {
+          "name": "All filter",
+          "pass": true
+        },
+        {
+          "name": "Computer round resolves",
+          "pass": true
+        },
+        {
+          "name": "Two player handoff",
+          "pass": true
+        },
+        {
+          "name": "Two player winner",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci exact term 100",
+          "pass": true
+        },
+        {
+          "name": "Fibonacci invalid input",
+          "pass": true
+        },
+        {
+          "name": "Calculator addition",
+          "pass": true
+        },
+        {
+          "name": "Division by zero error",
+          "pass": true
+        },
+        {
+          "name": "Cart adds grocery",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "Layout after interactions",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "projects-1366-dark"
+    },
+    {
+      "page": "Skills | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Four skill rows",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "skills-1366-dark"
+    },
+    {
+      "page": "Contact | Sebastian Szeliga",
+      "width": 1366,
+      "theme": "dark",
+      "checks": [
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Formal heading font",
+          "pass": true
+        },
+        {
+          "name": "Readable body weight",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "All images loaded",
+          "pass": true
+        },
+        {
+          "name": "Responsive menu visibility",
+          "pass": true
+        },
+        {
+          "name": "Initial navigation visibility",
+          "pass": true
+        },
+        {
+          "name": "Desktop navigation stays visible",
+          "pass": true
+        },
+        {
+          "name": "Tab follows visible layout",
+          "pass": true
+        },
+        {
+          "name": "Shift Tab returns to brand",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options initially collapsed",
+          "pass": true
+        },
+        {
+          "name": "Keyboard options accessible when open",
+          "pass": true
+        },
+        {
+          "name": "Skip link targets main",
+          "pass": true
+        },
+        {
+          "name": "Theme toggles",
+          "pass": true
+        },
+        {
+          "name": "Existing contact retained",
+          "pass": true
+        },
+        {
+          "name": "No browser errors",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "name": "contact-1366-dark"
+    }
+  ],
+  "initialResizeFixture": {
+    "page": "Sebastian Szeliga | Electrical & Computer Engineering Student",
+    "width": 1100,
+    "theme": "light",
+    "checks": [
+      {
+        "name": "One h1",
+        "pass": true
+      },
+      {
+        "name": "No horizontal overflow",
+        "pass": true
+      },
+      {
+        "name": "Formal heading font",
+        "pass": true
+      },
+      {
+        "name": "Readable body weight",
+        "pass": true
+      },
+      {
+        "name": "One current page",
+        "pass": true
+      },
+      {
+        "name": "Five navigation links",
+        "pass": true
+      },
+      {
+        "name": "All images loaded",
+        "pass": true
+      },
+      {
+        "name": "Responsive menu visibility",
+        "pass": true
+      },
+      {
+        "name": "Initial navigation visibility",
+        "pass": true
+      },
+      {
+        "name": "Desktop navigation stays visible",
+        "pass": true
+      },
+      {
+        "name": "Tab follows visible layout",
+        "pass": true
+      },
+      {
+        "name": "Shift Tab returns to brand",
+        "pass": true
+      },
+      {
+        "name": "Keyboard options initially collapsed",
+        "pass": true
+      },
+      {
+        "name": "Keyboard options accessible when open",
+        "pass": true
+      },
+      {
+        "name": "Skip link targets main",
+        "pass": true
+      },
+      {
+        "name": "Theme toggles",
+        "pass": true
+      },
+      {
+        "name": "Four Home project links",
+        "pass": true
+      },
+      {
+        "name": "No Home illustration",
+        "pass": true
+      },
+      {
+        "name": "One Home introduction",
+        "pass": true
+      },
+      {
+        "name": "Resize to mobile hides navigation",
+        "pass": false
+      },
+      {
+        "name": "Resize to mobile preserves focus",
+        "pass": false
+      },
+      {
+        "name": "Resize to desktop reveals navigation",
+        "pass": false
+      },
+      {
+        "name": "Resize to desktop preserves focus",
+        "pass": false
+      },
+      {
+        "name": "No browser errors",
+        "pass": true
+      }
+    ],
+    "errors": [],
+    "name": "index-resize-light"
+  },
+  "notes": "Initial iframe-resize fixture was not reliable under virtual time. Replaced with native browser metric changes; see editorial-native-keyboard-checks.json."
+}

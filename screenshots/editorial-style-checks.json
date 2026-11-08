@@ -1,0 +1,18 @@
+﻿[
+    {
+        "pass":  true,
+        "name":  "About button has 24px gap at 390"
+    },
+    {
+        "pass":  true,
+        "name":  "About button has 24px gap at 1366"
+    },
+    {
+        "pass":  true,
+        "name":  "Selected filter hover contrast in light"
+    },
+    {
+        "pass":  true,
+        "name":  "Selected filter hover contrast in dark"
+    }
+]
