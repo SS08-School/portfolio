@@ -1,0 +1,66 @@
+﻿[
+    {
+        "pass":  true,
+        "name":  "Normal page entry lasts 560ms"
+    },
+    {
+        "pass":  true,
+        "name":  "Focused page content appears immediately"
+    },
+    {
+        "pass":  true,
+        "name":  "Reduced motion skips page entry and reveal hiding"
+    },
+    {
+        "pass":  true,
+        "name":  "Responsive focus shrink cycle 0"
+    },
+    {
+        "pass":  true,
+        "name":  "Responsive focus expand cycle 0"
+    },
+    {
+        "pass":  true,
+        "name":  "Responsive focus shrink cycle 1"
+    },
+    {
+        "pass":  true,
+        "name":  "Responsive focus expand cycle 1"
+    },
+    {
+        "pass":  true,
+        "name":  "Responsive focus shrink cycle 2"
+    },
+    {
+        "pass":  true,
+        "name":  "Responsive focus expand cycle 2"
+    },
+    {
+        "pass":  true,
+        "name":  "Accessible control names on index"
+    },
+    {
+        "pass":  true,
+        "name":  "Accessible control names on about"
+    },
+    {
+        "pass":  true,
+        "name":  "Accessible control names on projects"
+    },
+    {
+        "pass":  true,
+        "name":  "Accessible control names on skills"
+    },
+    {
+        "pass":  true,
+        "name":  "Accessible control names on contact"
+    },
+    {
+        "pass":  true,
+        "name":  "No-JavaScript navigation and four project cards remain visible"
+    },
+    {
+        "pass":  true,
+        "name":  "No-JavaScript contact email remains available"
+    }
+]

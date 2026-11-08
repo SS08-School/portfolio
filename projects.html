@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Try all four Assignment 1 projects: Rock Paper Scissors, Fibonacci, Calculator, and Shopping Cart, directly in Sebastian Szeliga's portfolio.">
     <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="images/monogram.svg?v=5215a69064c3" type="image/svg+xml">
     <title>Projects | Sebastian Szeliga</title>
     <script src="js/theme.js?v=cae71dd46cd4"></script>
-    <link rel="stylesheet" href="css/styles.css?v=1440197c192e">
-    <script src="js/main.js?v=dca47c9b380b" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=bc8e27e84300">
+    <script src="js/main.js?v=eee0fbf8f5e7" defer></script>
   </head>
   <body id="top">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <p id="keyboard-help" class="visually-hidden">Tab cycles through this page. Arrow keys move between links and buttons. Text fields use normal editing keys. Press Escape to use standard browser Tab navigation until the next page loads.</p>
+    <a class="skip-link" href="#main" aria-describedby="keyboard-help">Skip to content</a>
 
     <header class="site-header page-width">
       <a class="brand" href="index.html#top" aria-label="Sebastian Szeliga, Home">
+        <img class="brand-monogram" src="images/monogram.svg?v=5215a69064c3" alt="" width="32" height="32">
         <span>Sebastian Szeliga</span>
       </a>
 
@@ -62,33 +65,30 @@
         </div>
       </section>
 
-      <section class="project-collection" aria-labelledby="collection-heading">
+      <section class="project-collection project-carousel" aria-labelledby="collection-heading" aria-roledescription="carousel">
         <div class="collection-heading"><h2 id="collection-heading">Assignment 1</h2><span class="small-label">04 PROJECTS</span></div>
         <p class="collection-description">Originally written in Python for Assignment 1. The interactive versions below are browser adaptations built with Codex.</p>
-        <div class="project-filters" role="group" aria-label="Filter assignment projects" hidden>
-          <button type="button" data-project-filter="all" aria-pressed="true">All projects <span>04</span></button>
-          <button type="button" data-project-filter="games" aria-pressed="false">Games <span>01</span></button>
-          <button type="button" data-project-filter="math" aria-pressed="false">Math <span>02</span></button>
-          <button type="button" data-project-filter="simulation" aria-pressed="false">Simulations <span>01</span></button>
-        </div>
-        <p id="filter-status" class="visually-hidden" role="status"></p>
-        <div class="project-grid">
-          <article class="project-card" data-project-category="games">
+        <div class="project-grid" id="project-slides">
+          <article class="project-card">
             <div class="project-thumbnail rps-thumbnail" aria-hidden="true"><img src="images/rock.svg?v=6d24a1eafac3" alt="" width="200" height="200"><img src="images/paper.svg?v=ec9f4b4f1c23" alt="" width="200" height="200"><img src="images/scissors.svg?v=fd5c474994df" alt="" width="200" height="200"></div>
             <div class="project-card-copy"><p class="project-tag">01 / GAME · INTERACTIVE</p><h3>Rock, Paper, Scissors</h3><p>A hidden-choice game with an adaptive computer opponent and same-device two-player mode.</p><a href="#rps-lab">Play Rock Paper Scissors <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="project-card" data-project-category="math">
+          <article class="project-card">
             <img class="project-thumbnail" src="images/fibonacci.svg?v=1f8a6fda425f" alt="A Fibonacci-inspired spiral over a grid of growing squares" width="480" height="240">
             <div class="project-card-copy"><p class="project-tag">02 / MATH · INTERACTIVE</p><h3>Fibonacci Sequence</h3><p>Generate up to 100 exact terms, inspect each calculation, and explore the square spiral.</p><a href="#fib-lab">Explore Fibonacci <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="project-card" data-project-category="math">
+          <article class="project-card">
             <img class="project-thumbnail" src="images/calculator.svg?v=dee3575b29df" alt="An illustrated calculator with the four arithmetic operations" width="480" height="240" loading="lazy">
             <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h3>Calculator</h3><p>Four arithmetic operations with input checks and a history of recent calculations.</p><a href="#calculator-lab">Use calculator <span aria-hidden="true">↗</span></a></div>
           </article>
-          <article class="project-card" data-project-category="simulation">
+          <article class="project-card">
             <img class="project-thumbnail" src="images/cart.svg?v=f8fdaa151dd0" alt="An illustrated shopping cart with groceries" width="480" height="240" loading="lazy">
             <div class="project-card-copy"><p class="project-tag">04 / SIMULATION · INTERACTIVE</p><h3>Shopping Cart</h3><p>Track grocery quantities, shelf inventory, and the total cost.</p><a href="#cart-lab">Use shopping cart <span aria-hidden="true">↗</span></a></div>
           </article>
+        </div>
+        <div class="carousel-controls" hidden>
+          <p id="carousel-status" class="carousel-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div class="carousel-buttons"><button id="project-previous" class="quiet-button" type="button" aria-controls="project-slides" aria-label="Previous project">←</button><button id="project-next" class="quiet-button" type="button" aria-controls="project-slides" aria-label="Next project">→</button></div>
         </div>
       </section>
 
@@ -158,13 +158,6 @@ for i in range(2, n):
     <footer class="site-footer page-width">
       <p>Sebastian Szeliga</p>
       <p>Portfolio</p>
-      <details class="keyboard-options">
-        <summary>Keyboard options</summary>
-        <div class="keyboard-controls" hidden>
-          <p id="keyboard-help" class="keyboard-help" role="status">Tab cycles through page controls. Shift+Tab goes back. Esc releases Tab to the browser.</p>
-          <button class="keyboard-toggle" type="button" aria-pressed="true" aria-describedby="keyboard-help" title="Keep Tab on this page. Esc switches to standard Tab navigation.">Keep Tab on this page</button>
-        </div>
-      </details>
     </footer>
   </body>
 </html>

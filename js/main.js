@@ -2,10 +2,7 @@ const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 const menuContainer = document.querySelector(".navigation-menu");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const keyboardControls = document.querySelector(".keyboard-controls");
-const keyboardToggle = document.querySelector(".keyboard-toggle");
-const keyboardHelp = document.querySelector(".keyboard-help");
-const keyboardStorageKey = "portfolio-keep-tab";
+// Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;
 let scrollTarget = null;
 let scrollFrame = null;
@@ -53,96 +50,70 @@ document.addEventListener("pointerdown", stopKeyboardScroll);
 document.addEventListener("focusin", stopKeyboardScroll);
 reducedMotion.addEventListener("change", stopKeyboardScroll);
 
-function savedKeyboardNavigation() {
-  try {
-    return localStorage.getItem(keyboardStorageKey) !== "false";
-  } catch {
-    // If storage is blocked, keep the current page's choice (initially on).
-    return keepTabOnPage;
-  }
-}
-
-function setKeyboardNavigation(enabled, savePreference = false) {
-  keepTabOnPage = enabled;
-  keyboardToggle?.setAttribute("aria-pressed", String(enabled));
-  if (keyboardHelp) keyboardHelp.textContent = enabled
-    ? "Tab cycles through page controls. Esc releases Tab to the browser."
-    : "Standard Tab navigation is on. Enable this button to cycle through page controls.";
-  if (savePreference) {
-    try {
-      localStorage.setItem(keyboardStorageKey, String(enabled));
-    } catch {
-      // The control still works for this page when storage is unavailable.
-    }
-  }
-}
-
-setKeyboardNavigation(savedKeyboardNavigation());
-
-if (keyboardControls && keyboardToggle) {
-  keyboardControls.hidden = false;
-  keyboardToggle.addEventListener("click", () => setKeyboardNavigation(!keepTabOnPage, true));
-}
-
-window.addEventListener("storage", (event) => {
-  if (event.key === keyboardStorageKey || event.key === null) {
-    setKeyboardNavigation(savedKeyboardNavigation());
-  }
-});
-window.addEventListener("pageshow", () => setKeyboardNavigation(savedKeyboardNavigation()));
-
-document.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
-  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
-    stopKeyboardScroll();
-    setKeyboardNavigation(false, true);
-  }
-  if (!["ArrowUp", "ArrowDown"].includes(event.key)) stopKeyboardScroll();
-  if (event.key !== "Tab" || !keepTabOnPage) return;
-
-  const controls = Array.from(document.querySelectorAll(
+function pageControls() {
+  return Array.from(document.querySelectorAll(
     'a[href], button, input, select, textarea, summary, [tabindex], [contenteditable="true"]'
   )).filter((element) => (
     element.tabIndex >= 0 && !element.matches(":disabled") &&
     !element.closest("[hidden], [inert]") && element.getClientRects().length > 0 &&
     window.getComputedStyle(element).visibility === "visible"
   ));
+}
+
+function moveControlFocus(direction) {
+  const controls = pageControls();
   if (!controls.length) return;
   const current = controls.indexOf(document.activeElement);
-  let next = (current + (event.shiftKey ? -1 : 1) + controls.length) % controls.length;
+  let next = (current + direction + controls.length) % controls.length;
   if (current === -1) {
-    // Continue from a skip-link or section destination instead of restarting at the header.
+    // After a skip link, continue from the destination rather than the header.
     const nearby = controls.filter((element) => document.activeElement.compareDocumentPosition(element) &
-      (event.shiftKey ? Node.DOCUMENT_POSITION_PRECEDING : Node.DOCUMENT_POSITION_FOLLOWING));
-    const destination = event.shiftKey ? nearby.at(-1) : nearby[0];
-    next = destination ? controls.indexOf(destination) : (event.shiftKey ? controls.length - 1 : 0);
+      (direction < 0 ? Node.DOCUMENT_POSITION_PRECEDING : Node.DOCUMENT_POSITION_FOLLOWING));
+    const destination = direction < 0 ? nearby.at(-1) : nearby[0];
+    next = destination ? controls.indexOf(destination) : (direction < 0 ? controls.length - 1 : 0);
   }
-  event.preventDefault();
   controls[next].focus({ preventScroll: true });
-  controls[next].scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "nearest", inline: "nearest" });
+  controls[next].scrollIntoView({
+    behavior: reducedMotion.matches ? "instant" : "smooth", block: "nearest", inline: "nearest"
+  });
+}
+
+window.addEventListener("pageshow", () => { keepTabOnPage = true; });
+
+document.addEventListener("keydown", (event) => {
+  if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
+  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
+    stopKeyboardScroll();
+    // Provide an accessible escape to browser controls, without disabling later visits.
+    keepTabOnPage = false;
+  }
+  if (event.key !== "Tab" || !keepTabOnPage) return;
+  event.preventDefault();
+  stopKeyboardScroll();
+  moveControlFocus(event.shiftKey ? -1 : 1);
 });
 
 document.addEventListener("keydown", (event) => {
-  if (
-    !["ArrowUp", "ArrowDown"].includes(event.key) || event.defaultPrevented ||
-    event.isComposing || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey
-  ) return;
+  if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key) ||
+    event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey ||
+    event.altKey || event.shiftKey) return;
 
-  // Leave text editing and controls that use arrow keys to the browser.
+  // Preserve caret movement, number/range adjustment, radio choices, and select menus.
   if (event.target.closest(
     'input, textarea, select, [contenteditable], [role="textbox"], [role="slider"], ' +
     '[role="spinbutton"], [role="combobox"], [role="listbox"], [role="grid"], ' +
     '[role="tree"], [role="menu"], [role="tablist"], [role="radiogroup"], audio, video'
   )) return;
 
-  // A tall dropdown or another scrolling region keeps its native arrow scrolling.
-  for (let element = event.target; element && element !== document.body; element = element.parentElement) {
-    const overflow = window.getComputedStyle(element).overflowY;
-    if (/^(auto|scroll)$/.test(overflow) && element.scrollHeight > element.clientHeight) return;
-  }
-
   event.preventDefault();
-  scrollWithKeyboard(event.key === "ArrowDown" ? 80 : -80);
+  const direction = ["ArrowUp", "ArrowLeft"].includes(event.key) ? -1 : 1;
+  if (event.target.closest('a[href], button, summary, [tabindex="0"]') ||
+    ["ArrowLeft", "ArrowRight"].includes(event.key)) {
+    stopKeyboardScroll();
+    moveControlFocus(direction);
+  } else {
+    scrollWithKeyboard(direction * 80);
+  }
 });
 
 if (menuButton && navigation && menuContainer) {
@@ -150,6 +121,7 @@ if (menuButton && navigation && menuContainer) {
 
   function setMenuOpen(isOpen) {
     menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     navigation.hidden = !desktopNavigation.matches && !isOpen;
   }
 
@@ -286,25 +258,102 @@ function fibonacciTerms(count) {
   return terms.slice(0, count);
 }
 
-const projectFilters = document.querySelector(".project-filters");
-if (projectFilters) {
-  projectFilters.hidden = false;
-  const projectCards = document.querySelectorAll("[data-project-category]");
-  projectFilters.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-project-filter]");
-    if (!button) return;
-    const category = button.dataset.projectFilter;
-    for (const filter of projectFilters.querySelectorAll("button")) {
-      filter.setAttribute("aria-pressed", String(filter === button));
-    }
-    let count = 0;
-    for (const card of projectCards) {
-      card.hidden = category !== "all" && card.dataset.projectCategory !== category;
-      if (!card.hidden) count++;
-    }
-    document.querySelector("#filter-status").textContent = `${count} projects shown. Interactive labs remain available below the collection.`;
+function initializeProjectCarousel() {
+  const carousel = document.querySelector(".project-carousel");
+  if (!carousel) return;
+  const slides = Array.from(carousel.querySelectorAll(".project-card"));
+  const controls = carousel.querySelector(".carousel-controls");
+  const status = carousel.querySelector("#carousel-status");
+  let selected = 0;
+
+  function showProject(index) {
+    const focusedSlide = slides.find((slide) => slide.contains(document.activeElement));
+    selected = (index + slides.length) % slides.length;
+    slides.forEach((slide, position) => {
+      slide.hidden = position !== selected;
+      slide.setAttribute("role", "group");
+      slide.setAttribute("aria-roledescription", "slide");
+      slide.setAttribute("aria-label", (position + 1) + " of " + slides.length);
+    });
+    status.textContent = String(selected + 1).padStart(2, "0") + " / " +
+      String(slides.length).padStart(2, "0") + " — " + slides[selected].querySelector("h3").textContent;
+    if (focusedSlide && focusedSlide !== slides[selected]) slides[selected].querySelector("a").focus();
+  }
+
+  carousel.querySelector("#project-previous").addEventListener("click", () => showProject(selected - 1));
+  carousel.querySelector("#project-next").addEventListener("click", () => showProject(selected + 1));
+  carousel.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key) ||
+      event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
+    event.preventDefault();
+    if (event.key === "Home") showProject(0);
+    else if (event.key === "End") showProject(slides.length - 1);
+    else showProject(selected + (event.key === "ArrowRight" ? 1 : -1));
   });
+
+  carousel.classList.add("is-enhanced");
+  controls.hidden = false;
+  showProject(0);
 }
+
+initializeProjectCarousel();
+
+function initializeContactForm() {
+  const form = document.querySelector("#contact-form");
+  if (!form) return;
+  const fields = ["name", "email", "message"].map((name) => form.querySelector("#contact-" + name));
+  const draftLink = form.querySelector("#contact-draft-link");
+  const status = form.querySelector("#contact-form-status");
+
+  function fieldError(field) {
+    if (!field.value.trim()) return field.name === "message" ? "Enter a message." :
+      field.name === "email" ? "Enter your email address." : "Enter your name.";
+    if (field.type === "email" && field.validity.typeMismatch) return "Enter a valid email address.";
+    if (field.value.length > field.maxLength) return "Use " + field.maxLength + " characters or fewer.";
+    return "";
+  }
+
+  function displayError(field, message) {
+    field.setAttribute("aria-invalid", String(Boolean(message)));
+    form.querySelector("#" + field.id + "-error").textContent = message;
+  }
+
+  form.addEventListener("input", (event) => {
+    if (!fields.includes(event.target)) return;
+    if (event.target.getAttribute("aria-invalid") === "true") displayError(event.target, fieldError(event.target));
+    draftLink.hidden = true;
+    draftLink.removeAttribute("href");
+    status.textContent = "";
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let firstInvalid = null;
+    fields.forEach((field) => {
+      const message = fieldError(field);
+      displayError(field, message);
+      if (message && !firstInvalid) firstInvalid = field;
+    });
+    if (firstInvalid) {
+      draftLink.hidden = true;
+      draftLink.removeAttribute("href");
+      status.textContent = "Please check the highlighted fields.";
+      firstInvalid.focus();
+      return;
+    }
+    const [name, email, message] = fields.map((field) => field.value.trim());
+    const subject = "Portfolio enquiry from " + name;
+    const body = message + "\n\n" + name + "\n" + email;
+    draftLink.href = "mailto:ss5764@njit.edu?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+    draftLink.hidden = false;
+    status.textContent = "Your draft is ready to open in your email app.";
+    draftLink.focus();
+  });
+  form.querySelector("#prepare-email").disabled = false;
+}
+
+initializeContactForm();
 
 function initializeRockPaperScissors() {
   const game = document.querySelector("#rps-game");

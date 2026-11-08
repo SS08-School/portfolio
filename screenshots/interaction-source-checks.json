@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-07",
+  "relativeReferences": 79,
+  "issues": [],
+  "h1Counts": {
+    "index": 1,
+    "about": 1,
+    "projects": 1,
+    "skills": 1,
+    "contact": 1
+  },
+  "personalIntroductions": 1,
+  "imageSizes": [
+    {
+      "file": "calculator.svg",
+      "bytes": 623,
+      "under500KB": true
+    },
+    {
+      "file": "cart.svg",
+      "bytes": 512,
+      "under500KB": true
+    },
+    {
+      "file": "fibonacci.svg",
+      "bytes": 2300,
+      "under500KB": true
+    },
+    {
+      "file": "monogram.svg",
+      "bytes": 337,
+      "under500KB": true
+    },
+    {
+      "file": "paper.svg",
+      "bytes": 435,
+      "under500KB": true
+    },
+    {
+      "file": "rock.svg",
+      "bytes": 366,
+      "under500KB": true
+    },
+    {
+      "file": "scissors.svg",
+      "bytes": 418,
+      "under500KB": true
+    }
+  ],
+  "oneExternalStylesheet": true,
+  "mediaQueries": [
+    "@media (min-width: 36rem)",
+    "@media (min-width: 60rem)",
+    "@media (min-width: 36rem)",
+    "@media (min-width: 60rem)",
+    "@media (prefers-reduced-motion: no-preference)",
+    "@media (max-width: 28rem)",
+    "@media (min-width: 48rem)",
+    "@media (prefers-reduced-motion: no-preference)",
+    "@media (min-width: 36rem)",
+    "@media (min-width: 60rem)",
+    "@media (min-width: 36rem)",
+    "@media (min-width: 60rem)"
+  ],
+  "localJavascriptSyntax": "Pass",
+  "contrast": "Existing near-black/white palette retained: primary text ≥16.09:1, secondary ≥6.69:1, essential outlines ≥4.08:1 against the conservative light gradient bound. Dark secondary text ≥8.02:1.",
+  "assetVersions": {
+    "images/monogram.svg": "5215a69064c3",
+    "js/theme.js": "cae71dd46cd4",
+    "css/styles.css": "bc8e27e84300",
+    "js/main.js": "eee0fbf8f5e7",
+    "images/rock.svg": "6d24a1eafac3",
+    "images/paper.svg": "ec9f4b4f1c23",
+    "images/scissors.svg": "fd5c474994df",
+    "images/fibonacci.svg": "1f8a6fda425f",
+    "images/calculator.svg": "dee3575b29df",
+    "images/cart.svg": "f8fdaa151dd0"
+  },
+  "versionProblems": []
+}

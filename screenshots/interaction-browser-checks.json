@@ -1,0 +1,5007 @@
+{
+  "date": "2026-11-07",
+  "method": "Original local HTML files in isolated installed Chrome. Native DevTools keyboard input for Tab, Shift+Tab, arrows, Enter, Escape, Home, and End; browser viewport emulation at 320px, 390px, and 1366px. Reduced motion enabled for stable captures. Direct DOM checks exercise valid/invalid input and project calculations. No email app was opened and no message was sent.",
+  "results": [
+    {
+      "width": 1366,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "page": "skills",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 1366,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "page": "skills",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 1366,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "skills",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "skills",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "Header stays in one row",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    }
+  ],
+  "initialPhoneResults": [
+    {
+      "width": 320,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "skills",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "skills",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 390,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "light"
+    },
+    {
+      "width": 320,
+      "page": "projects",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Manual carousel initialized",
+          "pass": true
+        },
+        {
+          "name": "One active slide",
+          "pass": true
+        },
+        {
+          "name": "All four labs initialized",
+          "pass": true
+        },
+        {
+          "name": "No autoplay controls needed",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Right selects second slide and preserves focus"
+        },
+        {
+          "pass": true,
+          "name": "Carousel End selects final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Home selects first slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Previous wraps to final slide"
+        },
+        {
+          "pass": true,
+          "name": "Carousel Next wraps to first slide"
+        },
+        {
+          "pass": true,
+          "name": "Computer game round resolves"
+        },
+        {
+          "pass": true,
+          "name": "Two player handoff conceals first choice"
+        },
+        {
+          "pass": true,
+          "name": "Two player winner correct"
+        },
+        {
+          "name": "Exact Fibonacci term 100",
+          "pass": true
+        },
+        {
+          "name": "Invalid Fibonacci input",
+          "pass": true
+        },
+        {
+          "name": "Calculator result 5",
+          "pass": true
+        },
+        {
+          "name": "Division by zero rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart invalid quantity rejected",
+          "pass": true
+        },
+        {
+          "name": "Cart total exact",
+          "pass": true
+        },
+        {
+          "name": "Cart clears",
+          "pass": true
+        },
+        {
+          "name": "All demo error-free",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    },
+    {
+      "width": 320,
+      "page": "contact",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Three labeled contact fields",
+          "pass": true
+        },
+        {
+          "name": "Contact email retained",
+          "pass": true
+        },
+        {
+          "name": "Contact prepare enabled",
+          "pass": true
+        },
+        {
+          "name": "No stale draft link",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Native Tab works despite old saved off preference"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab goes back"
+        },
+        {
+          "pass": true,
+          "name": "Native Down moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Up moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Right moves focus forward"
+        },
+        {
+          "pass": true,
+          "name": "Native Left moves focus back"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens menu"
+        },
+        {
+          "pass": true,
+          "name": "Arrow keys navigate mobile links"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes menu and restores focus"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within site"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backward"
+        },
+        {
+          "pass": true,
+          "name": "Native skip link works"
+        },
+        {
+          "pass": true,
+          "name": "Blank contact fields rejected and focused"
+        },
+        {
+          "pass": true,
+          "name": "Malformed email rejected"
+        },
+        {
+          "pass": true,
+          "name": "Whitespace-only message rejected"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow caret editing preserved"
+        },
+        {
+          "pass": true,
+          "name": "Valid form prepares draft and focuses link"
+        },
+        {
+          "pass": true,
+          "name": "Draft has intended recipient and encoded content"
+        },
+        {
+          "pass": true,
+          "name": "Editing removes stale draft"
+        },
+        {
+          "pass": true,
+          "name": "Overlength input rejected"
+        },
+        {
+          "pass": true,
+          "name": "Arrows scroll when page background is focused"
+        },
+        {
+          "pass": true,
+          "name": "Escape releases Tab to the browser"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ],
+      "theme": "dark"
+    }
+  ],
+  "notes": "A final phone-header size adjustment was retested at 320px and 390px on every page, plus narrow dark Projects/Contact. Initial phone results are retained separately. An initial contact draft assertion expected literal backslash-n text instead of real newline characters; its failed fixture result is retained separately."
+}

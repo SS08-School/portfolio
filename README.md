@@ -20,8 +20,9 @@ All five navigation links are visible on laptop screens. A labeled Menu button
 opens navigation on smaller screens. Education remains on About. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
-The header uses a text-only name link. Home includes an index linking directly
-to the four working demonstrations and a direct route to Contact. It uses the approved headline
+The header pairs an original SS monogram with the name; the same vector is the
+browser favicon. Home contains the introduction and links to Projects and Contact,
+without a project showcase. It uses the approved headline
 "Electrical & Computer Engineering Student." Decorative greetings, slogans,
 and promotional blurbs have been removed throughout the site; factual
 descriptions, project explanations, and operating instructions remain.
@@ -35,7 +36,7 @@ About me includes enrollment at NJIT and the Electrical & Computer Engineering m
 Personal background can be added later. Projects now showcases the four real
 mini projects in the owner's Assignment 1 notebook: Calculator, Shopping Cart,
 Rock Paper Scissors, and Fibonacci Sequence. All four now have browser demos,
-with All projects, Games, Math, and Simulations filters.
+with a manual image carousel. Category names remain labels, without filter buttons.
 
 Rock Paper Scissors runs on the page, with an adaptive computer opponent,
 random picks, or two-player pass-and-play on one device. Both players' choices
@@ -68,8 +69,11 @@ distinguished from the original Python classroom work.
 Open `projects.html` directly, or follow Projects from `index.html`. The existing
 five-page structure is retained; education belongs on the separate About page.
 Skills cover Codex, visual design, creative feedback, and website planning.
-Contact displays `ss5764@njit.edu` as a clickable email link that opens the
-visitor's email app; there is no form or automatic sending.
+Contact keeps the clickable `ss5764@njit.edu` email link and adds labeled name,
+email, and message fields. Required values, email format, and length are checked.
+Create email draft prepares a link with encoded content; Open email draft opens
+the visitor's email app. Editing a field removes the old draft link. No input is
+stored or submitted to a server, and nothing is automatically sent.
 
 The site includes gentle, once-only scroll reveals for education, skill cards,
 and contact content. Revealed items remain visible when revisited.
@@ -89,19 +93,22 @@ immediate.
 Skills and Contact now open directly at `skills.html` and `contact.html`;
 their previous redirect markup has been removed.
 
-With the page focused, Up/Down scrolls smoothly from ordinary links and buttons;
-holding a key continues the movement. Reduced motion uses immediate scrolling.
-Tab/Shift+Tab cycles through available controls in page order, skipping closed
-menu links and disabled controls. Enter activates links and buttons; Space
-activates buttons. Keyboard menu activation focuses its first link. Escape
-closes an open menu; with the menu closed it switches back to standard Tab
-navigation. A compact "Keep Tab on this page" button is available under Keyboard
-options in the footer, with instructions shown on focus. Cycling defaults on; choosing
-on/off with the button or turning it off with Escape saves that choice across
-pages and visits in the same browser. Clearing site storage returns it to on.
-If storage is blocked, the choice still works for the current page.
-Editable controls and tall dropdowns keep native arrow behavior. Browser
-shortcuts remain available; the site only handles keys while the page has focus.
+With the page focused, Tab/Shift+Tab cycles through available controls, skipping
+hidden menu links, inactive slides, and disabled controls. Cycling starts on
+every page and ignores old saved off preferences; there is no footer toggle.
+Arrow keys move between links and buttons; Up/Down scrolls when the background
+is focused. Inputs, textareas, selects, radio buttons, and sliders keep native
+editing keys. Enter activates controls; Escape closes the mobile menu or releases
+Tab to normal browser navigation for the current page. A new page or restored
+page enables cycling again. Browser shortcuts remain available.
+
+The project carousel has Previous/Next buttons, Left/Right arrows, and Home/End
+to reach its first/last slide. There is no autoplay. Slide changes keep focus on
+a visible control; all four interactive labs remain below the showcase.
+
+Page entry lasts 560ms (previously 420ms), with reduced motion still respected.
+All styling uses one external stylesheet and local assets. Phone and laptop
+layouts use CSS media queries.
 
 Live website: [Sebastian Szeliga's Portfolio](https://ss08-school.github.io/portfolio/).
 Home, About, Projects, the grouped navigation, and the email contact update
@@ -129,7 +136,7 @@ the existing five-page structure and all four interactive projects.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Shared navigation, keyboard controls, reveals, project filters,
   and all four interactive Assignment 1 demos.
-- `images/`: Original SVG hand illustrations and assignment thumbnails.
+- `images/`: Original SVG hand illustrations, assignment thumbnails, and the SS monogram.
 - `screenshots/`: Actual local phone and laptop browser captures for the report.
 - `js/theme.js`: Early theme restoration, sun/moon toggle, and saved preference.
 - `AGENTS.md`: Project requirements, design, and workflow.
@@ -137,8 +144,8 @@ the existing five-page structure and all four interactive projects.
 
 ## Acknowledgments
 
-Developed with Codex. The six SVG project illustrations were created for this
-site with Codex. No external
+Developed with Codex. The six SVG project illustrations and the original SS
+monogram were created for this site with Codex. No external
 fonts, image assets, libraries, or AI APIs are used. Project descriptions and
 the Fibonacci loop excerpt are based on the owner-supplied
 `Assignment_1_Sebastian_Szeliga (1).ipynb`; the notebook itself is not published.
@@ -175,8 +182,8 @@ a repeat of every earlier project edge case or the full live-site audit.
 
 ## Editorial portfolio refinement — November 7, 2026
 
-The local revision uses visible laptop navigation, a compact mobile menu,
-a Home project index, and flat ruled sections for Projects, Skills, Education,
+The earlier editorial revision introduced visible laptop navigation, a compact
+mobile menu, a Home project index, and flat ruled sections for Projects, Skills, Education,
 and Contact. The warm background is quieter and body text uses a readable
 regular weight. Existing content and all four interactive demonstrations remain.
 
@@ -193,4 +200,23 @@ records an error corrected during review. Initial failed test records are
 retained and explained in TESTING.md. These checks use local files and automated
 browser input; physical keyboard, screen-reader, Lighthouse, and the full
 published-site audit remain pending. Deployment/source verification is separate
+from the full submission audit.
+
+## Keyboard and contact follow-up — November 7, 2026
+
+This revision removes the Home project showcase and clickable
+project categories. Tab cycling starts on every page without a footer button;
+arrows move between controls, while fields retain native editing. The project
+showcase is a manual image carousel. Contact has validated name/email/message
+fields that prepare an email draft. The SS monogram appears in the header and
+favicon. Page entry is slightly slower at 560ms, with reduced motion respected.
+
+Verification passed 758 browser assertions across 22 phone/laptop/light/dark
+configurations, plus 16 supplemental checks for motion, responsive focus,
+accessible control names, and no-JavaScript fallbacks. All 79 local references
+resolve, and all seven site images are under 500 KB. Current screenshots and
+results use the `screenshots/interaction-*` prefix. Initial failures and their
+corrections are recorded in TESTING.md. Physical keyboard, screen-reader,
+Lighthouse, and full live-site auditing remain pending. Email-app handoff was
+not opened during automated checks. Deployment/source verification is separate
 from the full submission audit.

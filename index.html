@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Meet Sebastian Szeliga, an Electrical &amp; Computer Engineering student enrolled at NJIT. Welcome to my personal portfolio.">
     <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="images/monogram.svg?v=5215a69064c3" type="image/svg+xml">
     <title>Sebastian Szeliga | Electrical &amp; Computer Engineering Student</title>
     <script src="js/theme.js?v=cae71dd46cd4"></script>
-    <link rel="stylesheet" href="css/styles.css?v=1440197c192e">
-    <script src="js/main.js?v=dca47c9b380b" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=bc8e27e84300">
+    <script src="js/main.js?v=eee0fbf8f5e7" defer></script>
   </head>
   <body id="top">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <p id="keyboard-help" class="visually-hidden">Tab cycles through this page. Arrow keys move between links and buttons. Text fields use normal editing keys. Press Escape to use standard browser Tab navigation until the next page loads.</p>
+    <a class="skip-link" href="#main" aria-describedby="keyboard-help">Skip to content</a>
 
     <header class="site-header page-width">
       <a class="brand" href="#top" aria-label="Sebastian Szeliga, Home">
+        <img class="brand-monogram" src="images/monogram.svg?v=5215a69064c3" alt="" width="32" height="32">
         <span>Sebastian Szeliga</span>
       </a>
 
@@ -62,29 +65,11 @@
           <div class="hero-actions"><a class="button" href="projects.html">View projects <span aria-hidden="true">↗</span></a><a class="text-link" href="contact.html">Contact me <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
-
-      <section class="home-work page-width" aria-labelledby="home-work-heading">
-        <div class="section-heading"><h2 id="home-work-heading">Project index</h2><span class="small-label">Assignment 1 / 04 projects</span></div>
-        <p class="section-description">Classroom exercises adapted for the browser with Codex. Each demonstration runs on this site.</p>
-        <ol class="work-index">
-          <li><a href="projects.html#rps-lab"><span class="work-number">01</span><span class="work-title">Rock, Paper, Scissors</span><span class="work-type">Interactive game</span><span aria-hidden="true">↗</span></a></li>
-          <li><a href="projects.html#fib-lab"><span class="work-number">02</span><span class="work-title">Fibonacci Sequence</span><span class="work-type">Sequence explorer</span><span aria-hidden="true">↗</span></a></li>
-          <li><a href="projects.html#calculator-lab"><span class="work-number">03</span><span class="work-title">Calculator</span><span class="work-type">Arithmetic tool</span><span aria-hidden="true">↗</span></a></li>
-          <li><a href="projects.html#cart-lab"><span class="work-number">04</span><span class="work-title">Shopping Cart</span><span class="work-type">Inventory simulation</span><span aria-hidden="true">↗</span></a></li>
-        </ol>
-      </section>
     </main>
 
     <footer class="site-footer page-width">
       <p>Sebastian Szeliga</p>
       <p>Portfolio</p>
-      <details class="keyboard-options">
-        <summary>Keyboard options</summary>
-        <div class="keyboard-controls" hidden>
-          <p id="keyboard-help" class="keyboard-help" role="status">Tab cycles through page controls. Shift+Tab goes back. Esc releases Tab to the browser.</p>
-          <button class="keyboard-toggle" type="button" aria-pressed="true" aria-describedby="keyboard-help" title="Keep Tab on this page. Esc switches to standard Tab navigation.">Keep Tab on this page</button>
-        </div>
-      </details>
     </footer>
   </body>
 </html>

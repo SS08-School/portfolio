@@ -29,10 +29,13 @@ pages. The owner has confirmed Education belongs on its own page/tab.
 
 - Home (`index.html`): Show the personal introduction once. Do not repeat it
   in an Education section, and do not add a decorative hero illustration.
-  Include a compact index linking to the four real project demonstrations.
+  Do not show project cards, an index, or a project showcase on Home. A link
+  to the separate Projects page is fine.
 - About/Education (`about.html#education`): Keep the education facts here;
   do not repeat "I'm Sebastian" or the Home introduction.
 - Projects (`projects.html`): Retain the four interactive Assignment 1 projects.
+  Show project images in a manual, keyboard-accessible carousel. Categories may
+  appear as labels, but do not add clickable category filters.
 - Skills and Contact retain their existing separate page URLs and content.
 - Navigation must use valid relative page/section links. Home no longer has
   a My studies section or a duplicate Education link under its navigation group.
@@ -50,6 +53,8 @@ empty sections, or dummy links.
   content layouts and square controls. Avoid floating stickers, pill buttons,
   decorative shadows, and slogans. Show page navigation directly on laptops;
   use a button-controlled menu on smaller screens.
+- Use the original black-and-white SS monogram beside the header name and as
+  the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Reveal the skills heading/cards and contact content with a
   gentle fade-and-rise effect as they enter view. Animate each item once, keep
   keyboard-focused content visible, and skip effects for reduced motion.
@@ -90,8 +95,9 @@ empty sections, or dummy links.
 
 ## Interactivity and accessibility
 
-- Implement at least two JavaScript interactions: a responsive navigation menu
-  and project filtering with an All option.
+- Keep the responsive navigation menu, manual project carousel, validated
+  contact form, and four interactive demonstrations. Category filtering was
+  removed at the owner's request.
 - The mobile menu must open and close using a real button with an accessible
   name and accurate `aria-expanded` state. Support keyboard operation and keep
   hidden menu links out of the tab order.
@@ -101,11 +107,16 @@ empty sections, or dummy links.
   and alt attributes on every image. Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
-- The contact form is visual only, as requested by the owner. Label its fields
-  and keep the Send button disabled. Do not display demo badges, disabled-send
-  notices, or explanatory text about its inactive behavior. Do not add
-  validation, submission, storage, or email behavior unless the owner requests
-  it. Never claim a message was sent.
+- Start Tab cycling on every page without a footer toggle or a saved off state.
+  Arrow keys move focus between controls; editable fields, radios, sliders,
+  and select menus keep native arrow behavior. Arrow keys scroll when the page
+  background is focused. Escape closes the menu or releases Tab to browser
+  navigation for the current page; the next page starts cycling again.
+- Contact keeps the public email link and has labeled name, email, and message
+  fields. Validate required values, email format, and length; prepare an encoded
+  mailto draft link only after validation. Editing any field invalidates the old
+  draft. The visitor opens the draft in their own email app. Do not submit to a
+  server, store contact input, or claim a message was sent.
 - Aim for a Lighthouse Accessibility score of at least 90 on every page.
 
 ## Testing and documentation

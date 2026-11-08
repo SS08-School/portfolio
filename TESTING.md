@@ -650,3 +650,88 @@ Failures and corrections retained:
 
 Earlier screenshots/results remain historical. The latest checks do not replace
 the full live-site submission plan or establish a Lighthouse Accessibility score.
+
+## Keyboard, contact form, carousel, and monogram — 2026-11-07
+
+The owner requested removal of the Home project index and clickable category
+filters, default-on keyboard cycling without a footer toggle, arrow-key control
+navigation, a message form with validation, a project image carousel, an SS
+header/favicon mark, and a slightly slower page transition. These requests
+supersede the earlier Home index, category-filter, and visual-only-contact rules.
+The separate five-page structure and all four working demonstrations remain.
+
+Final browser verification passed **758 assertions across 22 configurations**:
+all five pages at 320px, 390px, and 1366px in light mode; all five at 1366px in
+saved dark mode; and Projects/Contact at 320px in saved dark mode. Tests open the
+original HTML files directly in installed Chrome. Native DevTools input delivers
+Tab, Shift+Tab, all four arrows, Enter, Escape, Home, and End; DOM assertions check
+layout and valid/invalid data. Old saved keyboard-off preferences are deliberately
+seeded before loading every page. Cycling still starts enabled.
+
+Evidence is in `screenshots/interaction-browser-checks.json`. The initial phone
+pass is retained there, followed by final phone retests after a compact-header
+adjustment. Supplemental checks passed **16 assertions**: 560ms normal entry,
+instant visibility for focused content, reduced-motion behavior, three repeated
+phone/laptop focus transitions, accessible control names on every page from
+Chrome's accessibility tree, and no-JavaScript navigation/contact fallbacks.
+These are automated local browser checks, not physical keyboard, screen-reader,
+Lighthouse, or live-site audit results.
+
+The contact form checks required/whitespace-only values, email syntax, and input
+lengths. A valid form creates an encoded mailto draft link addressed to the
+existing public email. Editing any field removes that link. The tests verify
+recipient, subject, and multiline body without opening an external email app.
+No contact content is stored, submitted to a server, or automatically sent.
+Actual mail-app handoff and delivery remain under the visitor's control and were
+not exercised by automation.
+
+Static verification resolves **79 relative file/fragment references**, confirms
+one external stylesheet and one h1 per page, checks version hashes, and finds no
+inline styles or event handlers. All seven site images are SVGs below 500 KB;
+the largest is 2,300 bytes and the monogram is 337 bytes. All images have alt
+attributes; decorative header/game images use empty alt text. New controls use
+the existing palette: conservative light-gradient contrast is at least 16.09:1
+for primary text, 6.69:1 for secondary text, and 4.08:1 for essential outlines.
+Dark secondary text remains at least 8.02:1. These values are contrast bounds,
+not an accessibility audit score.
+
+Actual phone/laptop captures are `screenshots/interaction-*.png`, including
+Contact's complete form and narrow/desktop dark views. Reduced motion stabilizes
+screenshots. The corrected 320px header uses a smaller monogram/name and compact
+controls to stay on one row even with a scrollbar. Its earlier wrapped capture
+is retained as `interaction-projects-320-header-before.png`.
+
+Challenges and corrections:
+
+- The first test runner stalled while serializing PowerShell provider metadata
+  attached to Get-Content strings. Reading JavaScript through .NET as plain text
+  corrected the runner. A later browser connection closed during a long run;
+  short isolated batches with incremental results completed all 22 configurations.
+  No result from an incomplete run is treated as a complete pass.
+- The initial contact draft assertion expected literal backslash-n characters
+  instead of actual newline characters. The website's encoded draft was correct;
+  correcting the expectation passes. The failed fixture result is retained in
+  `interaction-contact-initial-checks.json`.
+- The initial compact-header layout wrapped the theme button at 320px when a
+  scrollbar reduced available width. Visual review caught this real layout
+  mistake. Header sizing was corrected and all 12 phone configurations retested,
+  including a new one-row geometry assertion.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T93 | Home and filter removal | Load Home and Projects; inspect the DOM and phone/laptop captures. | Home has no project index/cards; category filter buttons are absent; all four labs remain on Projects. | Pass — all tested configurations. |
+| T94 | Default-on Tab cycling | Seed the previous saved off preference; load every page; use native Tab/Shift+Tab and wrap from the last/first control. | Cycling starts enabled every time; hidden slides/menu links and disabled controls are skipped; no footer toggle remains. | Pass — native keyboard checks in all 22 configurations. |
+| T95 | Arrow-key control navigation | Focus the brand and use Down/Up/Right/Left; use Down inside the mobile menu; focus the page background and use Down where the page can scroll. | Focus moves in both directions; menu links work; background arrows scroll long pages. | Pass — native keys and scroll/focus assertions. |
+| T96 | Native editing and Escape | Move the caret in a contact field with Right; use Escape with the mobile menu open and with it closed. | Caret keys retain native behavior; Escape closes/returns menu focus or releases Tab for the current page. | Pass — native input and event-default checks; screen-reader navigation Not run. |
+| T97 | Manual project image carousel | Use native Right, Home, End, and Enter on Previous/Next; wrap through first/last slides. | Exactly one active slide, accurate status, focused links stay visible, all four projects accessible; no autoplay. | Pass — all five Projects configurations. |
+| T98 | Invalid contact input | Submit blank values, malformed email, a whitespace-only message, and an overlength name. | Clear field errors, first invalid field focused, no draft link available. | Pass — all five Contact configurations. |
+| T99 | Valid contact draft | Enter valid name/email and a multiline message with reserved characters; prepare the draft; edit a field. | Correct recipient and encoded content; draft link receives focus; editing removes stale draft. | Pass — corrected newline expectation; external email-app handoff/delivery Not run. |
+| T100 | SS monogram and favicon | Load all pages; inspect the header image, icon link, local SVG, and light/dark screenshots. | Original SS mark beside the name and an SVG favicon on every page; decorative header image has empty alt text. | Pass — source/browser loading checks and visual review; browser chrome tab screenshot not captured. |
+| T101 | Responsive layout and consistency | View every page at 320px, 390px, and 1366px; inspect the shared stylesheet, fonts, and header geometry. | One stylesheet, responsive media queries, consistent colors/type, no horizontal scrolling, header controls on one row. | Pass — 15 light configurations plus narrow dark retests; initial header wrap corrected. |
+| T102 | Contrast, image sizes, and names | Inspect alt attributes, image sizes, contrast bounds, and Chrome's accessibility tree on every page. | Images under 500 KB, appropriate alt text, readable text/controls, no unnamed interactive controls. | Pass — all seven images, source bounds, and five accessibility-tree checks. |
+| T103 | Entry speed and reduced motion | Load Home with normal motion, focus its CTA, then load Skills with reduced motion. | 560ms page entry; focused content immediately visible; reduced motion skips animation/hiding. | Pass — supplemental browser checks. |
+| T104 | Offline behavior, errors, and project regression | Open original local files, exercise all demos, check uncaught errors, then disable JavaScript for Projects/Contact. | Working demos, no new uncaught errors, valid relative assets, visible fallback project cards/nav and email link. | Pass — browser and source checks; full historical project edge-case suite not repeated. |
+| T105 | Publication and full accessibility audit | After review and approved push, run the complete live plan, physical keyboard, screen reader, and Lighthouse on all pages. | Published behavior matches local files and Accessibility score reaches at least 90. | Full live audit Not run — physical keyboard, screen-reader, and Lighthouse checks remain pending; deployment/source verification is separate. |
+
+Earlier tests describe earlier revisions. The former filter, Home-index, and
+footer-toggle expectations are superseded by this owner-requested follow-up.
