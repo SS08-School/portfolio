@@ -39,6 +39,42 @@ Never replace an initial failure with a passing result: retain both attempts.
 | Skills | https://ss08-school.github.io/portfolio/skills.html |
 | Contact | https://ss08-school.github.io/portfolio/contact.html |
 
+### Latest revision — visible navigation and touch feedback
+
+This revision replaces the dropdown with a visible row of five links, uses SVG
+arrows, and restricts hover styling to hover-capable fine pointers. Local
+functional results are recorded below; live functional retests remain pending.
+Earlier live results refer to their recorded deployments and do not verify
+this new revision.
+Dropdown-only cases T115, T137, and T140 are retired and preserved below.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T145 | Visible row and all page destinations | Open each page at phone and laptop widths; activate all five header links from each source. | Five links remain visible left-to-right, with no dropdown; all 50 source/destination activations reach the correct page. | Pass — local touch/mouse input: all 50 destinations at 390px/1366px. Live: Not run. |
+| T146 | Matching arrow icons | Inspect arrow links, carousel buttons, Fibonacci controls, round results, and match replay on phone and laptop. | SVG arrows share one style; no arrow text becomes an emoji, including dynamic game buttons. | Pass — local SVG/text-glyph checks across 45 configurations; round/replay icon checks included. Physical Safari and live: Not run. |
+| T147 | Touch release and real selections | Tap theme/carousel controls and a calculator operation; release; use Tab to focus controls. | Temporary press/hover feedback clears after release; actual selections and keyboard focus stay visible. | Pass — emulated touch release on theme/carousel; selected radio and keyboard-outline checks passed. Physical-device and live: Not run. |
+| T148 | Keyboard with permanent navigation | On every page use Tab from the brand, Left/Right between page links, Tab across boundaries, and Escape. Type in Contact and use its caret arrows. | Focus is visible, navigation remains available, loop works until Escape, and editing keys remain native. | Pass — native Chrome keyboard input on every page across 45 configurations; Contact typing/caret checks passed. Live/physical keyboard: Not run. |
+| T149 | Navigation without JavaScript | Disable scripts; load all five pages at 320px and 1366px. | All five page links remain visible without a menu button or sideways overflow. | Pass — all 10 local no-script page/viewport checks. Live: Not run. |
+| T150 | Reflow regression | Load every page at 280, 320, 360, 390, 430, 568, 844, and 1366px; repeat at 390px in dark mode; interact with demos and form. | Navigation labels, SVGs, text, fields, and controls fit; no document overflow or left/right clipping. | Pass — 45 local viewport/theme configurations, before and after interactions. Live and physical devices: Not run. |
+
+
+Local Chrome results: **45 configurations, 1,213 assertions, 50 page-link
+activations, and 10 no-script checks passed**. Sizes: 280×653, 320×568,
+360×640, 390×844, 430×932, 568×320, 844×390, and 1366×900 for all five pages;
+390×844 also runs in dark mode. Checks use reduced motion, Chrome touch/viewport
+emulation, native keyboard input, and original file:// pages. They are not
+physical-device or Lighthouse results.
+
+- [Local browser results](reports/navigation-row-local-2026-11-08.json).
+- [Local links, asset versions, syntax, and image sizes](reports/navigation-row-source-2026-11-08.json): 79 local references pass; no image is 500 KB or larger.
+- Phone screenshots: `screenshots/navigation-row-{index,about,projects,skills,contact}-390.png`.
+- Laptop screenshots: `screenshots/navigation-row-{index,projects}-1366.png`.
+- [Initial runner output](reports/navigation-row-initial-fixture-2026-11-08.json)
+  preserves a test-fixture mistake: a duplicated glyph check had double-escaped
+  Unicode ranges and falsely failed 45 times. The independent correct glyph
+  check passed in that run. The fixture was corrected; the complete rerun
+  above passed without changing website code to satisfy the faulty check.
+
 ### Current test cases
 
 Run on the URLs above, not only Live Preview. Repeat interactive cases at
@@ -47,14 +83,13 @@ The contact form prepares a draft; sending email is not part of automated testin
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
-| T108 | Every Home navigation link | Open Home; on phone open Menu; activate Home, About me, Projects, Skills, and Contact using Enter. Return to Home before each activation; repeat on laptop. | Each destination opens and exactly one page is identified as current. | Pass — all 10 live activations; see navigation matrix. |
+| T108 | Every Home navigation link | Open Home; activate the visible Home, About, Projects, Skills, and Contact links using Enter. Return to Home before each activation; repeat on laptop. | Each destination opens and exactly one page is identified as current. | Pass — all 10 live activations; see navigation matrix. |
 | T109 | Every About navigation link | From About repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
 | T110 | Every Projects navigation link | From Projects repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
 | T111 | Every Skills navigation link | From Skills repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
 | T112 | Every Contact navigation link | From Contact repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
 | T113 | Brand, CTAs, and project anchors | Activate the name/monogram on every page, both Home action links, About's Get in touch, every carousel project's demo link, and Back to the top. | Brand reaches Home; CTAs reach the named page; demo links focus the correct lab; Back to the top reaches the top. | Pass — 26 live native-Enter activations across phone/laptop sizes. |
 | T114 | Every page on phone/laptop | Open all five pages at 390px and 1366px; inspect text, images, fields, and header; check sideways scrolling. | Content fits, images load, controls are reachable, and there is no horizontal overflow. | Pass — 10 live layouts; current captures are linked below. Human visual review remains your submission check. |
-| T115 | Mobile menu | On every page at phone width, press Enter on Menu, inspect expanded state, then Escape; reopen and select a page. | Menu opens with all five links, expanded state is accurate, Escape returns focus, and page selection works. | Pass — live native input on all five pages. |
 | T116 | Keyboard on every page | Reload each page; use Tab/Shift+Tab across boundaries, Enter on Skip to content, and arrows from the brand. | Focus is visible, Tab cycles through available controls, skip link reaches main, arrows move focus, and hidden controls are skipped. | Pass — live native browser input on all five pages at both widths; also perform T135. |
 | T117 | Theme toggle and persistence | On every page switch to dark, reload, switch to light, and reload again. Inspect both states. | Button state and palette update; the chosen theme survives reload. | Pass — live light/dark toggle and reload checks on every page at both widths. Manual dark contrast inspection remains part of T135. |
 | T118 | Image carousel | Use Previous/Next, Left/Right, Home, and End; inspect all four slides and use a slide link. | One slide is active, status updates, every project is reachable, focus stays visible, and there is no autoplay. | Pass — live carousel checks and all four slide-link activations at both widths. |
@@ -76,19 +111,17 @@ The contact form prepares a draft; sending email is not part of automated testin
 | T134 | Lighthouse on every page | Follow the procedure below for all five live URLs, first Mobile then Desktop; save each report and score. | Accessibility is at least 90 on each page/configuration; reported failures are fixed and retested. | Not run — fill the 10 Lighthouse rows below from real reports. |
 | T135 | Physical keyboard, zoom, and dark inspection | On every live page use your physical Tab/Shift+Tab, Enter, Space, arrows, and Escape; verify you can leave the loop; inspect both themes at 200% zoom. | Focus is visible and can escape to browser controls; inputs retain native keys; content stays readable and reachable with no clipped controls. | Not run — your manual submission check, separate from automated input. |
 | T136 | Screen-reader check | With a screen reader, visit every page; inspect page/heading names, navigation/current-page state, field labels/errors, carousel status, and game announcements. | Labels and dynamic results make sense and hidden content is not announced as available controls. | Not run — manual check; a Lighthouse score does not replace it. |
-| T137 | Menu visible/accessibility label match | At phone width inspect the Menu name in the accessibility tree, open it with Enter, then close with Escape on every page. | Accessible name includes the visible word Menu; expanded state and focus return work. | Initial live result: Fail on all five pages (name was Open navigation). Corrected in 123049d; 20 local and 20 live retest assertions passed on all five pages. |
 | T138 | Additional direct-file check | Separately double-click local index.html, follow its page links, and inspect styles/scripts. Use the live HTTPS URLs above for submission/Lighthouse tests. | Local files remain usable without a server; submission audits use the published site. | Not run in this live preflight; earlier local checks remain in the history below. |
-| T139 | Mobile reflow and horizontal panning | On every page test widths 280, 320, 360, 375, 390, 414, and 430px, then 568/667/844px landscape and a laptop regression. Open menus and both themes; attempt horizontal page scrolling. | Content stays within both viewport edges and the page cannot scroll sideways at normal scale. | Pass — local and live emulation: 65 page/viewport/theme configurations, 470 layout states and 505 interaction assertions per run; no final overflow failures. |
-| T140 | Narrow mobile menu and touch navigation | Open Menu on every page at narrow widths; inspect its left/right edges, tap the current-page link, then reopen using Enter and close with Escape. Repeat with short landscape heights. | Popup stays inside the screen, links remain reachable, touch selection closes it, and keyboard focus returns correctly. | Initial result: Fail — menu extended about 26px left at 320px and 11px at 375px. Fixed in 99200af; all local and live retests passed. |
+| T139 | Mobile reflow and horizontal panning | On every page test widths 280, 320, 360, 375, 390, 414, and 430px, then 568/667/844px landscape and a laptop regression. Inspect the navigation row and both themes; attempt horizontal page scrolling. | Content stays within both viewport edges and the page cannot scroll sideways at normal scale. | Pass — local and live emulation: 65 page/viewport/theme configurations, 470 layout states and 505 interaction assertions per run; no final overflow failures. |
 | T141 | Long project content | Open all logic notes; generate 100 Fibonacci terms and an input error; inspect long calculator results/history, quantity errors, a full basket, carousel slides, and pass-and-play states. | Code wraps rather than requiring a horizontal scrollbar; values, explanations, and controls stay inside their containers. | Initial result: Fail — Fibonacci code overflowed its preformatted box at 320px/375px. Fixed in 99200af; all local and live state checks passed. |
 | T142 | Contact errors, long fields, and short viewport | Submit blanks, then fill 70-character name, valid long email, and a 3,000-character unbroken message; prepare a draft. Focus Message with available viewport height reduced to 360px. | Errors and draft controls remain usable; long content does not widen the page; the focused textarea remains scrollable into view. | Pass — local and live touch-enabled emulation at all configured widths. Short-height emulation approximates available space; it does not reproduce a real on-screen keyboard. |
-| T143 | Normal-motion mobile bounds | Enable normal motion; open Menu and sample game shake, reveal, and completed-round states at 280px, 320px, 390px, and 568px. | Animations do not push visible elements outside the horizontal viewport. | Pass — 20 additional live normal-motion layout samples; no overflow. |
-| T144 | Physical phone/browser check | On an actual iPhone/Safari and Android/Chrome, open every page in portrait/landscape, use Menu and the project/form controls, open the keyboard, and try sideways dragging. | No unintended horizontal page scrolling or clipped controls; zoom and native text editing still work. | Not run — emulation does not establish results for physical devices or Safari. Record your device/browser and actual outcome here. |
+| T143 | Normal-motion mobile bounds | Enable normal motion; inspect navigation and sample game shake, reveal, and completed-round states at 280px, 320px, 390px, and 568px. | Animations do not push visible elements outside the horizontal viewport. | Pass — 20 additional live normal-motion layout samples; no overflow. |
+| T144 | Physical phone/browser check | On an actual iPhone/Safari and Android/Chrome, open every page in portrait/landscape, use the header links and project/form controls, open the keyboard, and try sideways dragging. | No unintended horizontal page scrolling or clipped controls; zoom and native text editing still work. | Not run — emulation does not establish results for physical devices or Safari. Record your device/browser and actual outcome here. |
 
 ### Navigation coverage matrix
 
 Each cell was activated with native Enter from the source page on the live site
-at **both 390px and 1366px**. The mobile menu was opened before selecting links.
+at **both 390px and 1366px**. This earlier live matrix used the dropdown. The new row is checked in T145.
 Each cell represents two passing activations (50 total).
 
 | Source page | Home | About me | Projects | Skills | Contact |
@@ -141,6 +174,17 @@ Use the optional score columns only if those categories were included.
 | LH09 | Contact / Mobile | — | — | — | — | Not run | — |
 | LH10 | Contact / Desktop | — | — | — | — | Not run | — |
 
+### Retired dropdown cases
+
+These results belong to the earlier dropdown implementation. Keep them as
+history; use T145–T150 for the new navigation row.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T115 | Mobile menu | On every page at phone width, press Enter on Menu, inspect expanded state, then Escape; reopen and select a page. | Menu opens with all five links, expanded state is accurate, Escape returns focus, and page selection works. | Pass — live native input on all five pages. |
+| T137 | Menu visible/accessibility label match | At phone width inspect the Menu name in the accessibility tree, open it with Enter, then close with Escape on every page. | Accessible name includes the visible word Menu; expanded state and focus return work. | Initial live result: Fail on all five pages (name was Open navigation). Corrected in 123049d; 20 local and 20 live retest assertions passed on all five pages. |
+| T140 | Narrow mobile menu and touch navigation | Open Menu on every page at narrow widths; inspect its left/right edges, tap the current-page link, then reopen using Enter and close with Escape. Repeat with short landscape heights. | Popup stays inside the screen, links remain reachable, touch selection closes it, and keyboard focus returns correctly. | Initial result: Fail — menu extended about 26px left at 320px and 11px at 375px. Fixed in 99200af; all local and live retests passed. |
+
 ### Evidence and retests
 
 - [Live page/feature and primary-navigation results](reports/live-preflight-2026-11-07.json).
@@ -176,7 +220,8 @@ pass/fail for each case and a Lighthouse score for every page.
 The owner requested reliable mobile layouts without sideways scrolling.
 The menu was anchored to its small button wrapper, allowing its left edge to
 leave narrow viewports even when the document's scrollWidth did not grow.
-The dropdown now anchors to the full header. Its height also fits short landscape
+That deployed fix anchored the dropdown to the full header; the latest local
+revision supersedes it with the permanent navigation row. Its height also fits short landscape
 viewports. The Fibonacci notebook excerpt now soft-wraps long lines instead of
 using its own horizontal scrollbar. No page-wide overflow hiding was added.
 
@@ -217,7 +262,7 @@ The website fix is deployed in `99200af`. Evidence:
 - [Relative links, asset versions, and image-size checks](reports/mobile-source-2026-11-08.json).
 - Before/after menu: `screenshots/mobile-overflow-menu-before.png`,
   `mobile-overflow-menu-after.png`, and `mobile-overflow-menu-live-after.png`.
-- Current live phone captures: `screenshots/mobile-fit-live-{index,about,projects,skills,contact}-390.png`
+- Earlier deployed phone captures: `screenshots/mobile-fit-live-{index,about,projects,skills,contact}-390.png`
   and `screenshots/mobile-fit-live-code-320.png`.
 
 Use the current deployed revision when running Lighthouse and retain any

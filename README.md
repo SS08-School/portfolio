@@ -28,9 +28,9 @@ pending manual results must be entered from real tests before submission.
 
 ## Mobile layout verification — November 8, 2026
 
-The open Menu now anchors to the full header so it stays inside narrow phone
-screens. Project code examples wrap long lines. No page-wide overflow hiding
-is used. The patch is deployed in 99200af.
+The earlier dropdown overflow fix was deployed in 99200af; its evidence remains
+in TESTING.md. The latest local revision replaces that dropdown with a visible
+row of page links. Project code examples continue to wrap long lines.
 
 Local and live Chrome mobile/touch regression runs each passed 65 configurations,
 470 layout-state checks, and 505 interaction assertions, including narrow phones,
@@ -39,11 +39,25 @@ normal-motion samples passed. Before/after failures, fixes, and evidence are in
 TESTING.md (T139–T144). Physical iPhone/Safari, Android hardware, and Lighthouse
 checks remain manual; emulator results are not a claim that every device was tested.
 
+## Mobile navigation and icons — November 8, 2026
+
+The requested header row replaces the phone dropdown on all five pages. Arrow
+icons use SVG paths, including changing game buttons, so phone emoji fonts
+cannot change their appearance. Hover styling applies only to fine pointers
+that support hover. Touch press feedback ends on release; selected game modes,
+calculator operations, the current page, and keyboard focus remain identifiable.
+
+Local Chrome checks passed 45 viewport/theme configurations, 1,213 assertions,
+50 page-link activations, and 10 no-script checks. See T145–T150 in TESTING.md
+for evidence and pending live interaction/device verification. Lighthouse
+scores remain unmeasured.
+
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
-All five navigation links are visible on laptop screens. A labeled Menu button
-opens navigation on smaller screens. Education remains on About. Navigation highlights
+All five navigation links are visible at every width. On phones, Home, About,
+Projects, Skills, and Contact form one row below the name and theme control.
+There is no dropdown. Education remains on About. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
 The header pairs an original SS monogram with the name; the same vector is the
@@ -123,12 +137,12 @@ Skills and Contact now open directly at `skills.html` and `contact.html`;
 their previous redirect markup has been removed.
 
 With the page focused, Tab/Shift+Tab cycles through available controls, skipping
-hidden menu links, inactive slides, and disabled controls. Cycling starts on
+inactive slides and disabled controls. Cycling starts on
 every page and ignores old saved off preferences; there is no footer toggle.
 Arrow keys move between links and buttons; Up/Down scrolls when the background
 is focused. Inputs, textareas, selects, radio buttons, and sliders keep native
-editing keys. Enter activates controls; Escape closes the mobile menu or releases
-Tab to normal browser navigation for the current page. A new page or restored
+editing keys. Enter activates controls; Escape releases Tab to normal browser navigation
+for the current page. A new page or restored
 page enables cycling again. Browser shortcuts remain available.
 
 The project carousel has Previous/Next buttons, Left/Right arrows, and Home/End
@@ -163,7 +177,7 @@ the existing five-page structure and all four interactive projects.
 - `skills.html`: Codex, visual design, creative feedback, and website planning.
 - `contact.html`: The owner's public email link.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
-- `js/main.js`: Shared navigation, keyboard controls, reveals, project filters,
+- `js/main.js`: Keyboard controls, reveals, carousel, contact validation,
   and all four interactive Assignment 1 demos.
 - `images/`: Original SVG hand illustrations, assignment thumbnails, and the SS monogram.
 - `screenshots/`: Actual local phone and laptop browser captures for the report.

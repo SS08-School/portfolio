@@ -51,10 +51,15 @@ empty sections, or dummy links.
   wash fading into white, thin rules, and minimal decoration. Use stacked
   project and skill rows rather than repeated boxed cards. Keep narrower
   content layouts and square controls. Avoid floating stickers, pill buttons,
-  decorative shadows, and slogans. Show page navigation directly on laptops;
-  use a button-controlled menu on smaller screens.
+  decorative shadows, and slogans. Show all five page links directly at every
+  width. Mobile navigation is one horizontal row below the name and theme
+  control; do not use a dropdown or horizontally scrolling navigation.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
+- Use matching inline SVG arrow icons on every device, including dynamically
+  updated buttons. Do not rely on emoji or font arrow glyphs. Restrict hover
+  effects to hover-capable fine pointers; touch press feedback ends on release.
+  Preserve real selected choices/current-page indicators and keyboard focus.
 - Reveal the skills heading/cards and contact content with a
   gentle fade-and-rise effect as they enter view. Animate each item once, keep
   keyboard-focused content visible, and skip effects for reduced motion.
@@ -95,12 +100,11 @@ empty sections, or dummy links.
 
 ## Interactivity and accessibility
 
-- Keep the responsive navigation menu, manual project carousel, validated
+- Keep the responsive row of page links, manual project carousel, validated
   contact form, and four interactive demonstrations. Category filtering was
   removed at the owner's request.
-- The mobile menu must open and close using a real button with an accessible
-  name and accurate `aria-expanded` state. Support keyboard operation and keep
-  hidden menu links out of the tab order.
+- Navigation links must be visible and keyboard-accessible at phone and laptop
+  widths, with the current page identified. Do not add a mobile menu toggle.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
 - Include a skip-to-content link, visible keyboard focus, descriptive link text,
@@ -110,8 +114,8 @@ empty sections, or dummy links.
 - Start Tab cycling on every page without a footer toggle or a saved off state.
   Arrow keys move focus between controls; editable fields, radios, sliders,
   and select menus keep native arrow behavior. Arrow keys scroll when the page
-  background is focused. Escape closes the menu or releases Tab to browser
-  navigation for the current page; the next page starts cycling again.
+  background is focused. Escape releases Tab to browser navigation for the
+  current page; the next page starts cycling again.
 - Contact keeps the public email link and has labeled name, email, and message
   fields. Validate required values, email format, and length; prepare an encoded
   mailto draft link only after validation. Editing any field invalidates the old

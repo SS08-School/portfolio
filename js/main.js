@@ -1,6 +1,3 @@
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#site-navigation");
-const menuContainer = document.querySelector(".navigation-menu");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 // Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;
@@ -82,7 +79,7 @@ window.addEventListener("pageshow", () => { keepTabOnPage = true; });
 
 document.addEventListener("keydown", (event) => {
   if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
-  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
+  if (event.key === "Escape") {
     stopKeyboardScroll();
     // Provide an accessible escape to browser controls, without disabling later visits.
     keepTabOnPage = false;
@@ -115,63 +112,6 @@ document.addEventListener("keydown", (event) => {
     scrollWithKeyboard(direction * 80);
   }
 });
-
-if (menuButton && navigation && menuContainer) {
-  const desktopNavigation = window.matchMedia("(min-width: 60rem)");
-
-  function setMenuOpen(isOpen) {
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    navigation.hidden = !desktopNavigation.matches && !isOpen;
-  }
-
-  function updateNavigationLayout() {
-    const focusWasInNavigation = navigation.contains(document.activeElement);
-    const focusWasOnMenu = document.activeElement === menuButton;
-    menuButton.hidden = desktopNavigation.matches;
-    setMenuOpen(false);
-    if (!desktopNavigation.matches && focusWasInNavigation) menuButton.focus();
-    if (desktopNavigation.matches && focusWasOnMenu) navigation.querySelector("a")?.focus();
-  }
-
-  // Desktop links stay visible; only the compact layout uses a dropdown.
-  menuContainer.classList.add("is-enhanced");
-  updateNavigationLayout();
-  desktopNavigation.addEventListener("change", updateNavigationLayout);
-
-  menuButton.addEventListener("click", (event) => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    setMenuOpen(!isOpen);
-    // Keyboard activation goes straight to the first page link.
-    if (!isOpen && event.detail === 0) navigation.querySelector("a")?.focus();
-  });
-
-  navigation.addEventListener("click", (event) => {
-    if (!desktopNavigation.matches && event.target.closest("a")) {
-      // Return focus before hiding the active navigation link.
-      menuButton.focus();
-      setMenuOpen(false);
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
-      event.preventDefault();
-      setMenuOpen(false);
-      menuButton.focus();
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!desktopNavigation.matches && !menuContainer.contains(event.target)) {
-      if (navigation.contains(document.activeElement)) menuButton.focus();
-      setMenuOpen(false);
-    }
-  });
-
-  menuContainer.addEventListener("focusout", (event) => {
-    if (!menuContainer.contains(event.relatedTarget)) setMenuOpen(false);
-  });
-}
 
 document.addEventListener("click", (event) => {
   if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
@@ -354,6 +294,21 @@ function initializeContactForm() {
 
 initializeContactForm();
 
+function createRoundActionIcon(replay) {
+  const namespace = "http://www.w3.org/2000/svg";
+  const icon = document.createElementNS(namespace, "svg");
+  icon.setAttribute("class", "ui-icon");
+  icon.setAttribute("viewBox", "0 0 24 24");
+  icon.setAttribute("width", "18");
+  icon.setAttribute("height", "18");
+  icon.setAttribute("aria-hidden", "true");
+  icon.setAttribute("focusable", "false");
+  const path = document.createElementNS(namespace, "path");
+  path.setAttribute("d", replay ? "M4 4v6h6M4 10a8 8 0 1 1 .5 5" : "M6 18 18 6M6 6h12v12");
+  icon.append(path);
+  return icon;
+}
+
 function initializeRockPaperScissors() {
   const game = document.querySelector("#rps-game");
   if (!game) return;
@@ -479,7 +434,7 @@ function initializeRockPaperScissors() {
       item.textContent = text;
       return item;
     }));
-    nextButton.textContent = matchOver ? "Play again ↺" : "Next round ↗";
+    nextButton.replaceChildren(document.createTextNode(matchOver ? "Play again" : "Next round"), createRoundActionIcon(matchOver));
     nextButton.hidden = false;
     // Keep keyboard focus on a live control after the move buttons are disabled.
     if (focusAfterReveal && (document.activeElement === document.body || moveControls.contains(document.activeElement))) {

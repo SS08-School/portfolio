@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-08",
+  "revision": "local uncommitted navigation row",
+  "localReferences": 79,
+  "hashes": {
+    "css/styles.css": "c4840954103e",
+    "js/main.js": "bab1a9d33934",
+    "js/theme.js": "cae71dd46cd4",
+    "images/monogram.svg": "5215a69064c3"
+  },
+  "sourceFindings": [],
+  "oversized": [],
+  "scriptSyntax": "Pass"
+}
