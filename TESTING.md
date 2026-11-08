@@ -1,18 +1,171 @@
 # Website test plan
 
-The current revision has five separate pages: Home (with My studies), About me
-(with Education), Projects, Skills, and Contact. Skills and Contact now contain
-their own content and no longer redirect to Home. Project details, filtering,
-and richer personal background are planned for later tasks.
-Run these cases on the live GitHub Pages site before
-submission, recording its URL, browser, viewport, and test date. For cases
-covering multiple sections, record a result for each section. Earlier check
-records below describe the previous separate-page versions; rerun the cases
-for this revision.
+## Current submission plan — November 7, 2026
 
-No browser interaction results have been recorded yet. "Not run" is a pending
-status, not a passing result. Keep failed results and add dated retest results
-after fixing issues.
+Use this section for the current site. Older results are preserved under
+[Historical test record](#historical-test-record); their retired features are
+not current requirements.
+
+- Live site: [Sebastian Szeliga's portfolio](https://ss08-school.github.io/portfolio/).
+- Functional preflight baseline: `1c690d6` (smaller Contact title and email).
+- Accessibility readiness correction: `123049d` (Menu uses its visible text as
+  its accessible name; open/closed state remains in aria-expanded). Record the
+  actually audited deployment/commit with your Lighthouse reports.
+- Automated live preflight: **Pass — 444 checks** on November 7, 2026.
+  This comprises 302 page/feature checks, 50 primary navigation activations,
+  66 additional project/input checks, and 26 brand/content-link activations.
+- Browser: Chrome 156.0.8078.81; phone viewport 390 × 1000 and laptop 1366 × 1000.
+- Method: original live HTTPS pages, native browser keyboard input and DOM
+  interactions in isolated Chrome. Reduced motion stabilized functional checks
+  and captures. This was **not** a Lighthouse run or a physical-keyboard/
+  screen-reader session.
+- **Lighthouse results: Not run.** The accessibility target is **90 or higher
+  on each page**. Record real reports in the table below; no score is assumed.
+
+An Actual result of Pass below refers only to the described automated live
+check. Pending manual/Lighthouse cases say Not run. After your own test, append
+the date, browser/version, device/viewport, exact URL, and Pass or Fail.
+Never replace an initial failure with a passing result: retain both attempts.
+
+### Live URLs
+
+| Page | URL |
+| --- | --- |
+| Home | https://ss08-school.github.io/portfolio/ |
+| About / Education | https://ss08-school.github.io/portfolio/about.html |
+| Projects | https://ss08-school.github.io/portfolio/projects.html |
+| Skills | https://ss08-school.github.io/portfolio/skills.html |
+| Contact | https://ss08-school.github.io/portfolio/contact.html |
+
+### Current test cases
+
+Run on the URLs above, not only Live Preview. Repeat interactive cases at
+phone and laptop widths. Examples use test data rather than real personal data.
+The contact form prepares a draft; sending email is not part of automated testing.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T108 | Every Home navigation link | Open Home; on phone open Menu; activate Home, About me, Projects, Skills, and Contact using Enter. Return to Home before each activation; repeat on laptop. | Each destination opens and exactly one page is identified as current. | Pass — all 10 live activations; see navigation matrix. |
+| T109 | Every About navigation link | From About repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
+| T110 | Every Projects navigation link | From Projects repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
+| T111 | Every Skills navigation link | From Skills repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
+| T112 | Every Contact navigation link | From Contact repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
+| T113 | Brand, CTAs, and project anchors | Activate the name/monogram on every page, both Home action links, About's Get in touch, every carousel project's demo link, and Back to the top. | Brand reaches Home; CTAs reach the named page; demo links focus the correct lab; Back to the top reaches the top. | Pass — 26 live native-Enter activations across phone/laptop sizes. |
+| T114 | Every page on phone/laptop | Open all five pages at 390px and 1366px; inspect text, images, fields, and header; check sideways scrolling. | Content fits, images load, controls are reachable, and there is no horizontal overflow. | Pass — 10 live layouts; current captures are linked below. Human visual review remains your submission check. |
+| T115 | Mobile menu | On every page at phone width, press Enter on Menu, inspect expanded state, then Escape; reopen and select a page. | Menu opens with all five links, expanded state is accurate, Escape returns focus, and page selection works. | Pass — live native input on all five pages. |
+| T116 | Keyboard on every page | Reload each page; use Tab/Shift+Tab across boundaries, Enter on Skip to content, and arrows from the brand. | Focus is visible, Tab cycles through available controls, skip link reaches main, arrows move focus, and hidden controls are skipped. | Pass — live native browser input on all five pages at both widths; also perform T135. |
+| T117 | Theme toggle and persistence | On every page switch to dark, reload, switch to light, and reload again. Inspect both states. | Button state and palette update; the chosen theme survives reload. | Pass — live light/dark toggle and reload checks on every page at both widths. Manual dark contrast inspection remains part of T135. |
+| T118 | Image carousel | Use Previous/Next, Left/Right, Home, and End; inspect all four slides and use a slide link. | One slide is active, status updates, every project is reachable, focus stays visible, and there is no autoplay. | Pass — live carousel checks and all four slide-link activations at both widths. |
+| T119 | Computer RPS and reset | Play an adaptive round, advance, reset, switch to Random picks, and play again. | Rounds resolve, Next round works, and Reset clears the match. | Pass — live rounds for both strategies at both widths. |
+| T120 | Two-player RPS, ties, match end | Select 2 players; choose rock, hand off, choose scissors; repeat to five wins, then Play again. Also play rock versus rock and reset. | First move stays hidden during handoff; Player 1 wins correctly; first-to-five ends the match; Play again/reset clear scores/ties. | Pass — live handoff, scores 1–5, match end, replay, tie, and reset checks at both widths. |
+| T121 | Fibonacci valid input | Generate 1, 12, and 100 terms. Inspect lengths and final values. | Results end at 0, 89, and exactly 218922995834555169026 respectively. | Pass — live exact-value checks at both widths. |
+| T122 | Fibonacci invalid input | Submit blank, 0, -1, 1.5, and 101. | Each is rejected with a clear error; invalid input receives focus. | Pass — all five invalid inputs tested live at both widths. |
+| T123 | Fibonacci controls | Move the range to 6; select a term, use Previous/Next, start Replay, wait for advancement, and Pause. | Range updates the sequence; selection/calculation update; replay advances and pause stops it. | Pass — live range, term, step, playback, and pause checks at both widths. |
+| T124 | Calculator valid operations | Use 12 and 3 with +, −, ×, ÷; add -2.5 and 1.25; reset. | Results are 15, 9, 36, 4, and -1.25; reset restores 12 + 3. | Pass — live operation, decimal, and reset checks at both widths. |
+| T125 | Calculator invalid input | Submit a missing value, divide 12 by 0, and multiply 1e308 by 1e308. | Missing input, division by zero, and overflow show errors rather than a misleading result. | Pass — all three live error paths at both widths. |
+| T126 | Cart valid quantities and controls | Add cereal, use +/−, remove it, then add all 2 cereal/3 eggs/4 bread and Empty basket. | Stock and totals agree; limits disable exhausted stock; full basket is 9 items and $39.91; empty restores stock and $0.00. | Pass — live quantity, plus/minus, remove, stock-limit, full-total, and clear checks at both widths. |
+| T127 | Cart invalid quantities | On an empty basket enter blank, 0, 1.5, and 3 for cereal, whose stock is 2. | Values are rejected, errors identify valid quantities, and total remains $0.00. | Pass — all four live invalid quantities at both widths. |
+| T128 | Contact invalid input | Submit blanks, a malformed email, and a whitespace-only message. Try pasting beyond the visible field length limits. | Invalid values prevent draft creation and focus the first invalid field; maxlength limits input. | Not run for the complete case — blank/email/whitespace subchecks passed live at both widths; length-limit paste check remains pending. |
+| T129 | Contact valid input and draft invalidation | Enter Test Visitor, visitor@example.org, and a message; Create email draft; inspect the prepared recipient, then edit the message. | A draft addressed to ss5764@njit.edu is prepared; editing removes the stale draft link; no sent-message claim appears. | Pass — live draft preparation/invalidation at both widths. External email-app handoff: Not run; no message was sent. |
+| T130 | Project logic disclosures | Focus a Game/Sequence/Calculator/Cart logic summary and press Enter to open/close it. | Summary is keyboard-operable and its explanation becomes available. | Not run for the complete case — Game logic passed live at both widths; the other three disclosure activations remain pending. |
+| T131 | Assets, names, and console | On each live page inspect Console/Network, image alt text, headings, and control labels; interact with the page. | No uncaught errors, missing visible images, unnamed controls, duplicate page h1, or unlabelled fields. | Not run for the complete manual review — automated error/image/h1/alt/control-name subchecks passed on all five live pages at both widths. |
+| T132 | Reduced motion / animation | Enable reduced motion, reload and scroll Skills/Contact; then use normal motion and keyboard-focus content during entry. | Content remains available; reduced motion skips decorative effects; focused controls appear immediately. | Not run manually on the live site. Earlier local automated checks passed; do not treat them as this live result. |
+| T133 | No-JavaScript fallback | Disable JavaScript temporarily; reload every live page and inspect navigation, content, project cards, and the direct email link. Restore JavaScript afterward. | Navigation/content remain available; all four project cards show; direct email link works; JavaScript-only draft control stays disabled. | Not run on the live site. Earlier local fallback checks are historical evidence only. |
+| T134 | Lighthouse on every page | Follow the procedure below for all five live URLs, first Mobile then Desktop; save each report and score. | Accessibility is at least 90 on each page/configuration; reported failures are fixed and retested. | Not run — fill the 10 Lighthouse rows below from real reports. |
+| T135 | Physical keyboard, zoom, and dark inspection | On every live page use your physical Tab/Shift+Tab, Enter, Space, arrows, and Escape; verify you can leave the loop; inspect both themes at 200% zoom. | Focus is visible and can escape to browser controls; inputs retain native keys; content stays readable and reachable with no clipped controls. | Not run — your manual submission check, separate from automated input. |
+| T136 | Screen-reader check | With a screen reader, visit every page; inspect page/heading names, navigation/current-page state, field labels/errors, carousel status, and game announcements. | Labels and dynamic results make sense and hidden content is not announced as available controls. | Not run — manual check; a Lighthouse score does not replace it. |
+| T137 | Menu visible/accessibility label match | At phone width inspect the Menu name in the accessibility tree, open it with Enter, then close with Escape on every page. | Accessible name includes the visible word Menu; expanded state and focus return work. | Initial live result: Fail on all five pages (name was Open navigation). Corrected in 123049d; 20 local and 20 live retest assertions passed on all five pages. |
+| T138 | Additional direct-file check | Separately double-click local index.html, follow its page links, and inspect styles/scripts. Use the live HTTPS URLs above for submission/Lighthouse tests. | Local files remain usable without a server; submission audits use the published site. | Not run in this live preflight; earlier local checks remain in the history below. |
+
+### Navigation coverage matrix
+
+Each cell was activated with native Enter from the source page on the live site
+at **both 390px and 1366px**. The mobile menu was opened before selecting links.
+Each cell represents two passing activations (50 total).
+
+| Source page | Home | About me | Projects | Skills | Contact |
+| --- | --- | --- | --- | --- | --- |
+| Home | Pass | Pass | Pass | Pass | Pass |
+| About | Pass | Pass | Pass | Pass | Pass |
+| Projects | Pass | Pass | Pass | Pass | Pass |
+| Skills | Pass | Pass | Pass | Pass | Pass |
+| Contact | Pass | Pass | Pass | Pass | Pass |
+
+Brand/CTA/demo-anchor coverage is recorded separately under T113.
+
+### Lighthouse procedure for your test session
+
+1. Use Chrome with extensions disabled (an Incognito window is convenient).
+   Open a live URL from the table above.
+2. Press F12, open **Lighthouse**, and choose **Navigation** mode.
+3. Choose **Mobile** and **Accessibility**. You may also select Performance,
+   Best Practices, and SEO. Use the same settings for comparable runs.
+4. Leave **Clear storage** enabled for the baseline first-visit audit. This
+   resets saved theme choices, so the baseline should be light mode.
+5. Run the page-load audit. Save the actual report and a score screenshot to
+   [reports/lighthouse](reports/lighthouse/README.md); record the version/date/settings.
+6. Repeat using **Desktop**, then repeat for the other four pages. Mark
+   Accessibility ≥90 as Pass, below 90 as Fail; retain failed reports and retests.
+
+For extra state checks, inspect dark mode, an open menu, carousel slides, and
+contact errors separately. Navigation audits reload the page; Snapshot can audit
+the current state. Do not change the site merely to hide findings.
+
+References: [Chrome's Lighthouse guide](https://developer.chrome.com/docs/devtools/lighthouse)
+and [accessibility scoring](https://developer.chrome.com/docs/lighthouse/accessibility/scoring).
+Automated scores exclude some manual checks and do not prove full accessibility.
+
+### Lighthouse results — complete these from saved reports
+
+A dash means no score was measured. Do not enter an expected/estimated score.
+Use the optional score columns only if those categories were included.
+
+| Audit ID | Page / device | Accessibility | Performance | Best Practices | SEO | Actual result | Report / date / Chrome and Lighthouse versions |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| LH01 | Home / Mobile | — | — | — | — | Not run | — |
+| LH02 | Home / Desktop | — | — | — | — | Not run | — |
+| LH03 | About / Mobile | — | — | — | — | Not run | — |
+| LH04 | About / Desktop | — | — | — | — | Not run | — |
+| LH05 | Projects / Mobile | — | — | — | — | Not run | — |
+| LH06 | Projects / Desktop | — | — | — | — | Not run | — |
+| LH07 | Skills / Mobile | — | — | — | — | Not run | — |
+| LH08 | Skills / Desktop | — | — | — | — | Not run | — |
+| LH09 | Contact / Mobile | — | — | — | — | Not run | — |
+| LH10 | Contact / Desktop | — | — | — | — | Not run | — |
+
+### Evidence and retests
+
+- [Live page/feature and primary-navigation results](reports/live-preflight-2026-11-07.json).
+- [Additional input, full-match, and content-link results](reports/live-feature-preflight-2026-11-07.json).
+- [Source, metadata, relative-link, and image-size preflight](reports/source-preflight-2026-11-07.json).
+- Live screenshots: `screenshots/live-preflight-{index,about,projects,skills,contact}-{390,1366}.png`.
+- Historical local screenshots/results remain in `screenshots/`; their filenames
+  identify earlier revisions and are not presented as live Lighthouse evidence.
+- [Menu label failure before correction](reports/menu-label-before-2026-11-07.json) and
+  [local correction retest](reports/menu-label-local-retest-2026-11-07.json) are
+  retained for T137. The [published retest](reports/menu-label-live-retest-2026-11-07.json)
+  passed on all five pages after deployment.
+- An initial preflight stopped because of temporary test-runner quoting.
+  [Its incomplete record](reports/live-preflight-incomplete-2026-11-07.json) is
+  retained; corrected complete runs above passed. This was a runner error,
+  not a recorded website failure.
+
+For every failure, append a row rather than replacing the first attempt:
+
+| Date / test ID / URL / viewport | Initial result and issue | Fix / commit | Retest result | Evidence filename |
+| --- | --- | --- | --- | --- |
+| 2026-11-07 / T137 / all five live pages / 390px | Fail — visible Menu had accessible name Open navigation | 123049d: use native visible label; retain aria-expanded | Pass — 20 local and 20 live retest checks on all five pages | reports/menu-label-before-2026-11-07.json; reports/menu-label-local-retest-2026-11-07.json; reports/menu-label-live-retest-2026-11-07.json |
+
+Before submission, complete all pending rows, preserve the initial and retest
+reports, and rerun affected checks after any website change. Record a final
+pass/fail for each case and a Lighthouse score for every page.
+
+## Historical test record
+
+The dated records below preserve earlier checks and mistakes. Expectations about
+Home's My studies/index, clickable filters, a disabled-only contact form, a footer
+keyboard toggle, or repeating reveals were superseded by owner requests.
+Use the current plan above when testing the current site.
 
 ## Local checks on 2026-10-19
 

@@ -1,0 +1,47 @@
+﻿[
+    {
+        "method":  "Live Chrome accessibility tree, before correction",
+        "pass":  false,
+        "accessibleName":  "Open navigation",
+        "result":  "Fail",
+        "page":  "index",
+        "url":  "https://ss08-school.github.io/portfolio/index.html",
+        "visibleLabel":  "Menu"
+    },
+    {
+        "method":  "Live Chrome accessibility tree, before correction",
+        "pass":  false,
+        "accessibleName":  "Open navigation",
+        "result":  "Fail",
+        "page":  "about",
+        "url":  "https://ss08-school.github.io/portfolio/about.html",
+        "visibleLabel":  "Menu"
+    },
+    {
+        "method":  "Live Chrome accessibility tree, before correction",
+        "pass":  false,
+        "accessibleName":  "Open navigation",
+        "result":  "Fail",
+        "page":  "projects",
+        "url":  "https://ss08-school.github.io/portfolio/projects.html",
+        "visibleLabel":  "Menu"
+    },
+    {
+        "method":  "Live Chrome accessibility tree, before correction",
+        "pass":  false,
+        "accessibleName":  "Open navigation",
+        "result":  "Fail",
+        "page":  "skills",
+        "url":  "https://ss08-school.github.io/portfolio/skills.html",
+        "visibleLabel":  "Menu"
+    },
+    {
+        "method":  "Live Chrome accessibility tree, before correction",
+        "pass":  false,
+        "accessibleName":  "Open navigation",
+        "result":  "Fail",
+        "page":  "contact",
+        "url":  "https://ss08-school.github.io/portfolio/contact.html",
+        "visibleLabel":  "Menu"
+    }
+]

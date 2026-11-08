@@ -1,0 +1,1579 @@
+﻿{
+    "commit":  "1c690d6",
+    "pages":  [
+                  {
+                      "width":  390,
+                      "page":  "index",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Home has no project showcase",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One introduction",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native mobile menu opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Escape closes and returns focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  390,
+                      "page":  "about",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native mobile menu opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Escape closes and returns focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  390,
+                      "page":  "projects",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Manual carousel initialized",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One active slide",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "All four labs initialized",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No autoplay controls needed",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native mobile menu opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Escape closes and returns focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel arrows preserve visible focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel End selects final slide"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel Home selects first slide"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel Next"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel Previous"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Adaptive computer round resolves"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Random computer round resolves"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Pass-and-play hides first move"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Pass-and-play winner"
+                                     },
+                                     {
+                                         "name":  "Exact Fibonacci term 100",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Invalid Fibonacci input",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Calculator result 5",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Division by zero rejected",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Cart invalid quantity rejected",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Cart total exact",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Cart clears",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "All demo error-free",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci range"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci term selection and next"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci playback starts"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci playback advances"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci playback pauses"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Cart plus and stock limit"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Cart minus returns stock"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Cart remove"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Logic disclosure opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  390,
+                      "page":  "skills",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native mobile menu opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Escape closes and returns focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  390,
+                      "page":  "contact",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Three labeled contact fields",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Contact email retained",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Contact prepare enabled",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No stale draft link",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native mobile menu opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Escape closes and returns focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact empty fields rejected"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact invalid email rejected"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact whitespace-only message rejected"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact valid draft created"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact editing clears stale draft"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  1366,
+                      "page":  "index",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Home has no project showcase",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One introduction",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  1366,
+                      "page":  "about",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  1366,
+                      "page":  "projects",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Manual carousel initialized",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One active slide",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "All four labs initialized",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No autoplay controls needed",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel arrows preserve visible focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel End selects final slide"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel Home selects first slide"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel Next"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Carousel Previous"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Adaptive computer round resolves"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Random computer round resolves"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Pass-and-play hides first move"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Pass-and-play winner"
+                                     },
+                                     {
+                                         "name":  "Exact Fibonacci term 100",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Invalid Fibonacci input",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Calculator result 5",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Division by zero rejected",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Cart invalid quantity rejected",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Cart total exact",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Cart clears",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "All demo error-free",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci range"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci term selection and next"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci playback starts"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci playback advances"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Fibonacci playback pauses"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Cart plus and stock limit"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Cart minus returns stock"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Cart remove"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Logic disclosure opens"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  1366,
+                      "page":  "skills",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  },
+                  {
+                      "width":  1366,
+                      "page":  "contact",
+                      "checks":  [
+                                     {
+                                         "name":  "No horizontal overflow",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One h1",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One external stylesheet",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "One current page",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Five navigation links",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Monogram in header and tab",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Images have alt attributes",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Visible images loaded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No keyboard toggle",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Hidden controls excluded",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Correct menu layout",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No filter buttons",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Three labeled contact fields",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Contact email retained",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "Contact prepare enabled",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No stale draft link",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "name":  "No uncaught browser errors",
+                                         "pass":  true
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Accessible control names"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Enter activates skip link"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Tab wraps within page"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native Shift Tab wraps backwards"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Native arrow moves focus"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Dark theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Light theme toggle and reload persistence"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact empty fields rejected"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact invalid email rejected"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact whitespace-only message rejected"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact valid draft created"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "Contact editing clears stale draft"
+                                     },
+                                     {
+                                         "pass":  true,
+                                         "name":  "No uncaught errors after interactions"
+                                     }
+                                 ]
+                  }
+              ],
+    "browser":  "Chrome/156.0.8078.81",
+    "method":  "Live HTTPS pages, isolated Chrome; native keyboard input and direct DOM interaction; reduced motion for functional QA/screenshot stability. This is not a Lighthouse audit.",
+    "date":  "2026-11-07",
+    "url":  "https://ss08-school.github.io/portfolio/",
+    "navigation":  [
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  390,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "index"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "about"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "projects"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "skills"
+                       },
+                       {
+                           "destination":  "index",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "about",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "projects",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "skills",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "contact"
+                       },
+                       {
+                           "destination":  "contact",
+                           "pass":  true,
+                           "width":  1366,
+                           "source":  "contact"
+                       }
+                   ]
+}

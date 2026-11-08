@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-07",
+  "revision": "123049d",
+  "pages": [
+    {
+      "page": "index.html",
+      "h1Count": 1,
+      "mainCount": 1,
+      "language": true,
+      "title": true,
+      "description": true,
+      "duplicateIds": []
+    },
+    {
+      "page": "about.html",
+      "h1Count": 1,
+      "mainCount": 1,
+      "language": true,
+      "title": true,
+      "description": true,
+      "duplicateIds": []
+    },
+    {
+      "page": "projects.html",
+      "h1Count": 1,
+      "mainCount": 1,
+      "language": true,
+      "title": true,
+      "description": true,
+      "duplicateIds": []
+    },
+    {
+      "page": "skills.html",
+      "h1Count": 1,
+      "mainCount": 1,
+      "language": true,
+      "title": true,
+      "description": true,
+      "duplicateIds": []
+    },
+    {
+      "page": "contact.html",
+      "h1Count": 1,
+      "mainCount": 1,
+      "language": true,
+      "title": true,
+      "description": true,
+      "duplicateIds": []
+    }
+  ],
+  "references": 79,
+  "issues": [],
+  "images": [
+    {
+      "file": "calculator.svg",
+      "bytes": 623,
+      "under500KB": true
+    },
+    {
+      "file": "cart.svg",
+      "bytes": 512,
+      "under500KB": true
+    },
+    {
+      "file": "fibonacci.svg",
+      "bytes": 2300,
+      "under500KB": true
+    },
+    {
+      "file": "monogram.svg",
+      "bytes": 337,
+      "under500KB": true
+    },
+    {
+      "file": "paper.svg",
+      "bytes": 435,
+      "under500KB": true
+    },
+    {
+      "file": "rock.svg",
+      "bytes": 366,
+      "under500KB": true
+    },
+    {
+      "file": "scissors.svg",
+      "bytes": 418,
+      "under500KB": true
+    }
+  ]
+}

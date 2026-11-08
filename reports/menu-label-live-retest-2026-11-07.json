@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-07",
+  "method": "Live HTTPS native Enter/Escape and Chrome accessibility tree at 390px; all five pages",
+  "results": [
+    {
+      "page": "index",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Accessible name matches visible Menu"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Open menu retains matching accessible name"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes and returns focus"
+        }
+      ]
+    },
+    {
+      "page": "about",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Accessible name matches visible Menu"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Open menu retains matching accessible name"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes and returns focus"
+        }
+      ]
+    },
+    {
+      "page": "projects",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Accessible name matches visible Menu"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Open menu retains matching accessible name"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes and returns focus"
+        }
+      ]
+    },
+    {
+      "page": "skills",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Accessible name matches visible Menu"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Open menu retains matching accessible name"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes and returns focus"
+        }
+      ]
+    },
+    {
+      "page": "contact",
+      "checks": [
+        {
+          "pass": true,
+          "name": "Accessible name matches visible Menu"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter opens and focuses first link"
+        },
+        {
+          "pass": true,
+          "name": "Open menu retains matching accessible name"
+        },
+        {
+          "pass": true,
+          "name": "Escape closes and returns focus"
+        }
+      ]
+    }
+  ],
+  "commit": "123049dc63b6aa03ed2428d9059efde810182eda"
+}

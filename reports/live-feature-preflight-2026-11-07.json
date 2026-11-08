@@ -1,0 +1,440 @@
+﻿{
+    "commit":  "1c690d6",
+    "features":  [
+                     {
+                         "checks":  [
+                                        {
+                                            "name":  "Fibonacci rejects \"\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"0\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"-1\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"1.5\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"101\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci valid 1",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci valid 12",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci valid 100",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation +",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation -",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation *",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation /",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator negative decimal",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator rejects missing value",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator rejects zero divisor",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator rejects overflow",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator reset and history",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"0\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"1.5\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"3\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart full inventory total",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart reset all stock",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 1",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 2",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 3",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 4",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 5",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "First to five ends match",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Play again resets score",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Tied round counted",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Match reset clears ties",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "No uncaught errors",
+                                            "pass":  true
+                                        }
+                                    ],
+                         "width":  390
+                     },
+                     {
+                         "checks":  [
+                                        {
+                                            "name":  "Fibonacci rejects \"\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"0\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"-1\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"1.5\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci rejects \"101\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci valid 1",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci valid 12",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Fibonacci valid 100",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation +",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation -",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation *",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator operation /",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator negative decimal",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator rejects missing value",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator rejects zero divisor",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator rejects overflow",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Calculator reset and history",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"0\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"1.5\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart rejects \"3\"",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart full inventory total",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Cart reset all stock",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 1",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 2",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 3",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 4",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Friend match score 5",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "First to five ends match",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Play again resets score",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Tied round counted",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "Match reset clears ties",
+                                            "pass":  true
+                                        },
+                                        {
+                                            "name":  "No uncaught errors",
+                                            "pass":  true
+                                        }
+                                    ],
+                         "width":  1366
+                     }
+                 ],
+    "method":  "Live HTTPS native Enter for content/brand links and browser DOM checks for project inputs, match completion, and resets; reduced motion",
+    "date":  "2026-11-07",
+    "links":  [
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "index"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "about"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "skills"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "contact"
+                  },
+                  {
+                      "link":  "CTA projects",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "index"
+                  },
+                  {
+                      "link":  "CTA contact",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "index"
+                  },
+                  {
+                      "link":  "Get in touch",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "about"
+                  },
+                  {
+                      "link":  "rps-lab",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "fib-lab",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "calculator-lab",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "cart-lab",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "Back to top",
+                      "pass":  true,
+                      "width":  390,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "index"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "about"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "skills"
+                  },
+                  {
+                      "link":  "Brand",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "contact"
+                  },
+                  {
+                      "link":  "CTA projects",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "index"
+                  },
+                  {
+                      "link":  "CTA contact",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "index"
+                  },
+                  {
+                      "link":  "Get in touch",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "about"
+                  },
+                  {
+                      "link":  "rps-lab",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "fib-lab",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "calculator-lab",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "cart-lab",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "projects"
+                  },
+                  {
+                      "link":  "Back to top",
+                      "pass":  true,
+                      "width":  1366,
+                      "source":  "projects"
+                  }
+              ],
+    "url":  "https://ss08-school.github.io/portfolio/"
+}

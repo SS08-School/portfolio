@@ -1,0 +1,215 @@
+{
+  "commit": "1c690d6",
+  "pages": [
+    {
+      "width": 390,
+      "page": "index",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "Home has no project showcase",
+          "pass": true
+        },
+        {
+          "name": "One introduction",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Accessible control names"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within page"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backwards"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow moves focus"
+        },
+        {
+          "pass": true,
+          "name": "Native mobile menu opens"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes and returns focus"
+        },
+        {
+          "pass": true,
+          "name": "Dark theme toggle"
+        },
+        {
+          "pass": true,
+          "name": "Light theme toggle"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "page": "about",
+      "checks": [
+        {
+          "name": "No horizontal overflow",
+          "pass": true
+        },
+        {
+          "name": "One h1",
+          "pass": true
+        },
+        {
+          "name": "One external stylesheet",
+          "pass": true
+        },
+        {
+          "name": "One current page",
+          "pass": true
+        },
+        {
+          "name": "Five navigation links",
+          "pass": true
+        },
+        {
+          "name": "Monogram in header and tab",
+          "pass": true
+        },
+        {
+          "name": "Images have alt attributes",
+          "pass": true
+        },
+        {
+          "name": "Visible images loaded",
+          "pass": true
+        },
+        {
+          "name": "No keyboard toggle",
+          "pass": true
+        },
+        {
+          "name": "Hidden controls excluded",
+          "pass": true
+        },
+        {
+          "name": "Correct menu layout",
+          "pass": true
+        },
+        {
+          "name": "No filter buttons",
+          "pass": true
+        },
+        {
+          "name": "No uncaught browser errors",
+          "pass": true
+        },
+        {
+          "pass": true,
+          "name": "Accessible control names"
+        },
+        {
+          "pass": true,
+          "name": "Native Enter activates skip link"
+        },
+        {
+          "pass": true,
+          "name": "Native Tab wraps within page"
+        },
+        {
+          "pass": true,
+          "name": "Native Shift Tab wraps backwards"
+        },
+        {
+          "pass": true,
+          "name": "Native arrow moves focus"
+        },
+        {
+          "pass": true,
+          "name": "Native mobile menu opens"
+        },
+        {
+          "pass": true,
+          "name": "Native Escape closes and returns focus"
+        },
+        {
+          "pass": true,
+          "name": "Dark theme toggle"
+        },
+        {
+          "pass": true,
+          "name": "Light theme toggle"
+        },
+        {
+          "pass": true,
+          "name": "No uncaught errors after interactions"
+        }
+      ]
+    }
+  ],
+  "browser": "Chrome/156.0.8078.81",
+  "method": "Live HTTPS pages, isolated Chrome; native keyboard input and direct DOM interaction; reduced motion for functional QA/screenshot stability. This is not a Lighthouse audit.",
+  "date": "2026-11-07",
+  "url": "https://ss08-school.github.io/portfolio/",
+  "navigation": [],
+  "status": "Incomplete: a PowerShell quoting error in the temporary runner stopped execution after two page configurations. Do not treat this file as a complete website test. The corrected complete run is live-preflight-2026-11-07.json."
+}

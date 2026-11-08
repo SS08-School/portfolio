@@ -13,6 +13,19 @@ stickers, or decorative shadows.
 Open `index.html` directly in a browser, or use VS Code Live Preview. No
 installation, build step, or server is required.
 
+## Testing before submission
+
+Start with the current plan at the top of [TESTING.md](TESTING.md). It lists
+all five live URLs, every current JavaScript feature, a complete navigation
+matrix, manual checks, ten Mobile/Desktop Lighthouse rows, and a failure/retest
+log. Save actual exports in [reports/lighthouse](reports/lighthouse/README.md).
+
+The November 7 live functional preflight passed 444 checks. A visible-label/
+accessible-name mismatch on the mobile Menu button was corrected in 123049d;
+its initial failure and retests are retained. These checks do not establish a
+Lighthouse score. Actual Lighthouse, physical-keyboard, screen-reader, and other
+pending manual results must be entered from real tests before submission.
+
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
