@@ -121,7 +121,6 @@ if (menuButton && navigation && menuContainer) {
 
   function setMenuOpen(isOpen) {
     menuButton.setAttribute("aria-expanded", String(isOpen));
-    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
     navigation.hidden = !desktopNavigation.matches && !isOpen;
   }
 
