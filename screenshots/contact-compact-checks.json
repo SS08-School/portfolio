@@ -1,0 +1,174 @@
+﻿{
+    "date":  "2026-11-07",
+    "method":  "Direct local files in Chrome, viewport emulation and native keyboard input, reduced motion for screenshots",
+    "results":  [
+                    {
+                        "width":  320,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact heading is 32 to 40px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is 16px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Compact email row"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email destination unchanged"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Monogram loads"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab reaches form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form validation focuses invalid field"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "light"
+                    },
+                    {
+                        "width":  390,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact heading is 32 to 40px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is 16px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Compact email row"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email destination unchanged"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Monogram loads"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab reaches form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form validation focuses invalid field"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "light"
+                    },
+                    {
+                        "width":  1366,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact heading is 32 to 40px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is 16px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Compact email row"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email destination unchanged"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Monogram loads"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab reaches form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form validation focuses invalid field"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "light"
+                    },
+                    {
+                        "width":  1366,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact heading is 32 to 40px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is 16px"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Compact email row"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email destination unchanged"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Monogram loads"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab reaches form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form validation focuses invalid field"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "dark"
+                    }
+                ]
+}

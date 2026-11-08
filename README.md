@@ -71,7 +71,10 @@ five-page structure is retained; education belongs on the separate About page.
 Skills cover Codex, visual design, creative feedback, and website planning.
 Contact keeps the clickable `ss5764@njit.edu` email link and adds labeled name,
 email, and message fields. Required values, email format, and length are checked.
-Create email draft prepares a link with encoded content; Open email draft opens
+The public email sits in a compact row at the normal text size so the message
+form takes visual priority. The Contact title scales from 32px to 40px.
+Create email draft prepares a link with encoded
+content; Open email draft opens
 the visitor's email app. Editing a field removes the old draft link. No input is
 stored or submitted to a server, and nothing is automatically sent.
 

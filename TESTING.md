@@ -735,3 +735,36 @@ Challenges and corrections:
 
 Earlier tests describe earlier revisions. The former filter, Home-index, and
 footer-toggle expectations are superseded by this owner-requested follow-up.
+
+## Contact email hierarchy — 2026-11-07
+
+The owner requested a smaller email link so the message form is the visual
+priority. The address now uses 16px system text and the existing secondary color,
+with a compact inline Email label and less vertical spacing. The link retains
+a 44px hit area, its original mailto destination, and visible keyboard focus.
+The stylesheet version was refreshed across all five pages; JavaScript is unchanged.
+
+All 48 focused assertions passed in local Chrome: Contact at 320px, 390px, and
+1366px in light mode, plus 1366px in saved dark mode. Native Tab, Shift+Tab,
+ArrowDown, and Enter verify focus flow and an invalid-form smoke check. Direct
+local Home loading also passed. Phone/laptop screenshots were visually reviewed.
+Evidence: `screenshots/contact-hierarchy-checks.json` and matching PNG captures.
+This is a focused local check, not a repeat of the full live-site or Lighthouse audit.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T106 | Contact email and form hierarchy | Open local Contact at 320px/390px/1366px and saved dark 1366px; compare email and form heading sizes, inspect the compact row, use Tab/Shift+Tab/Down, and activate Create email draft with blank fields. | Email is secondary 16px text, form heading is larger, no overflow, original email destination and 44px hit area remain, keyboard focus is visible, and validation still focuses Name. | Pass — 48 local native-browser/DOM assertions and visual phone/laptop review; direct local Home check also passed. Published revision, physical keyboard, screen-reader, and Lighthouse retests Not run for this change. |
+
+## Smaller Contact heading — 2026-11-07
+
+The owner also requested a smaller Contact title and publication of the compact
+email change. The page title now scales from 32px to 40px; the email remains 16px.
+All 36 focused Chrome assertions passed at 320px, 390px, and 1366px in light mode,
+plus 1366px in saved dark mode. Checks cover type sizes, compact spacing, overflow,
+image loading, the email destination, native Tab into the form, invalid-form
+focus, and uncaught errors. Phone/laptop captures were visually reviewed.
+Evidence: `screenshots/contact-compact-checks.json` and matching PNG captures.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T107 | Contact heading size | Open local Contact at phone/laptop widths and saved dark mode; inspect heading/email sizes and use Tab/Enter to reach and validate the form. | Contact title is 32–40px, email is 16px, form remains prominent and usable, and no layout or script errors occur. | Pass — 36 local Chrome assertions and visual review. Full live accessibility/Lighthouse audit remains pending; deployment/source verification is separate. |

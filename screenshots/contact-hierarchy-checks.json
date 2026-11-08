@@ -1,0 +1,223 @@
+﻿{
+    "date":  "2026-11-07",
+    "method":  "Original local files in isolated Chrome; native Tab, Shift+Tab, ArrowDown, Enter; reduced motion for stable captures",
+    "results":  [
+                    {
+                        "width":  320,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is body sized"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form heading is more prominent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email row is compact"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email retains 44px hit area and destination"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Images loaded"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab moves from email to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Shift Tab returns to email"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Keyboard focus is visible"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native arrow moves to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact validation still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "light"
+                    },
+                    {
+                        "width":  390,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is body sized"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form heading is more prominent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email row is compact"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email retains 44px hit area and destination"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Images loaded"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab moves from email to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Shift Tab returns to email"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Keyboard focus is visible"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native arrow moves to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact validation still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "light"
+                    },
+                    {
+                        "width":  1366,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is body sized"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form heading is more prominent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email row is compact"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email retains 44px hit area and destination"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Images loaded"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab moves from email to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Shift Tab returns to email"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Keyboard focus is visible"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native arrow moves to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact validation still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "light"
+                    },
+                    {
+                        "width":  1366,
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email is body sized"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Form heading is more prominent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email row is compact"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Email retains 44px hit area and destination"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Images loaded"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Tab moves from email to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native Shift Tab returns to email"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Keyboard focus is visible"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Native arrow moves to form"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact validation still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No uncaught errors"
+                                       }
+                                   ],
+                        "theme":  "dark"
+                    }
+                ],
+    "localHome":  true
+}

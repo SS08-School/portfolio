@@ -131,13 +131,13 @@ h2 { margin: 0; font-family: var(--heading-font); font-size: clamp(2rem, 4vw, 3r
 
 .contact-layout { display: grid; align-content: start; gap: 2.5rem; padding-block: 3rem 2rem; }
 .contact-intro { min-width: 0; }
-.contact-intro h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); }
+.contact-intro h1 { font-size: clamp(2rem, 3vw, 2.5rem); }
 .contact-intro h1 span, .skills-intro h1 span { color: var(--ink); }
-.contact-card { width: 100%; min-width: 0; padding: 1.7rem 0; border-top: 1px solid var(--border); background: transparent; }
-.contact-card h2 { margin: 0; font-size: 2rem; font-weight: 400; letter-spacing: -0.025em; }
+.contact-card { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.25rem; width: 100%; min-width: 0; padding: 1rem 0; border-top: 1px solid var(--border); background: transparent; }
+.contact-card h2 { margin: 0; color: var(--muted); font-family: inherit; font-size: 0.85rem; font-weight: 400; letter-spacing: normal; }
 .contact-card h2 span { color: var(--ink); }
 .contact-card .eyebrow { margin-bottom: 1rem; letter-spacing: 0.12em; }
-.contact-email { display: inline-flex; align-items: baseline; gap: 1.5rem; max-width: 100%; margin-top: 1rem; padding-block: 0.5rem; color: var(--ink); font-family: var(--heading-font); font-size: clamp(1.55rem, 4vw, 2.8rem); overflow-wrap: anywhere; text-decoration-thickness: 1px; }
+.contact-email { display: inline-flex; align-items: baseline; gap: 0.6rem; max-width: 100%; min-height: 44px; padding-block: 0.5rem; color: var(--muted); font-size: 1rem; overflow-wrap: anywhere; text-decoration-thickness: 1px; }
 .contact-email:hover { color: var(--ink-hover); }
 
 .skills-section { padding-block: 4rem 1rem; }
