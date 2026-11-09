@@ -20,7 +20,16 @@ The full shared script passed syntax checking. These mocked checks do not
 verify actual animation timing, perception, or native browser behavior. No
 browser/app control or screenshots were used. Owner checks in both themes,
 phone/laptop widths, reduced motion, direct-file loading, keyboard operation,
-console, and live navigation remain Not run. This revision is not yet deployed.
+console, and live navigation remain Not run. At the time of these checks, the
+revision had not yet been deployed.
+
+Glimmer deployment checks on 2026-11-09: GitHub Pages deployment succeeded for
+commit `1840056`. All five pages returned HTTP 200 with the expected CSS/JS
+versions. Those assets returned HTTP 200 with two-second opacity animations,
+normal start/end values, the 2000ms cleanup timer, and reduced-motion/layout/
+visibility guards. These publication/source checks passed; actual motion,
+device, keyboard, and native navigation retests remain for the owner. No
+browser/app automation or screenshots were used.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

@@ -46,7 +46,9 @@ side pattern for about two seconds on page entry, then restores its normal
 appearance. Each entry randomly swaps the two sides' fade patterns. It replays
 on cached Back navigation, never loops or restarts on scroll, and stops when
 the page is hidden, the layout becomes narrow, or reduced motion is requested.
-This brief glimmer update has not yet been deployed.
+The brief glimmer was deployed on November 9, 2026 (`1840056`); all five pages
+and the two-second animation/cleanup code were verified over HTTP. Actual
+animation appearance remains for owner review.
 
 ### Earlier dropdown checks
 
