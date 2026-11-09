@@ -16,14 +16,31 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
+The current local header restores the visible page tabs from `e0d6cbb`, before
+the dropdown was brought back. Home, About, Projects, Skills, and Contact are
+native links in a five-column phone row and an inline laptop row. The dropdown
+markup and its JavaScript have been removed. Only the current page is underlined;
+pointer clicks do not retain a focus outline, while keyboard focus stays visible.
+This restoration has not been deployed. Owner browser/device testing remains
+pending; browser/app automation is disabled.
+Wide layouts (80rem and above) also have three small triangular accents in each
+outer gutter. They are near-black in light mode and light in dark mode, stay
+outside the content, and cannot intercept clicks. Narrow layouts omit them.
+
+### Earlier dropdown checks
+
 The November 9 dropdown correction leaves clicks in empty panel space alone,
 disables text selection within the dropdown, and waits for focus to settle
-before closing it. Closing an already-closed menu does not rewrite native
-details state. This addresses the owner's reported Aw, Snap! crash path;
-isolated focus/menu checks pass, but the actual browser crash still needs an
-owner retest. No browser/app control was used for this change.
-Published on November 9, 2026: all five page references and the updated
-JavaScript/CSS were verified over HTTP after GitHub Pages deployment succeeded.
+before closing it. The owner reported that the first published correction broke
+page navigation. The local follow-up now closes after native link activation,
+and checks focus in a later task instead of a microtask. It keeps the panel and
+link available through the click's default action. All 25 page-link destinations
+and 144 isolated event-order/URL assertions pass. The follow-up is not yet
+deployed; actual browser navigation and crash retests remain for the owner.
+No browser/app control was used.
+The first correction was published on November 9, 2026; its page references and
+JavaScript/CSS were verified over HTTP. That publication check did not verify
+click behavior, which failed in the owner's subsequent test.
 
 The mobile layout (below 60rem / about 960px) now reveals the header when scrolling
 up and hides it when scrolling down. It stays visible near the page top, while
@@ -119,9 +136,8 @@ retests, and screenshots. Live interaction retests remain pending.
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
-The three-line hamburger opens Home, About me, Projects, Skills, and Contact
-links in a dropdown on both phones and laptops. Education
-remains on About. Navigation highlights
+Visible tabs link to Home, About, Projects, Skills, and Contact at every width,
+without a dropdown. Education remains on About. Navigation underlines
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
 The header pairs an original SS monogram with the name; the same vector is the
@@ -134,7 +150,8 @@ descriptions, project explanations, and operating instructions remain.
 Home retains the engineering introduction. Its decorative circuit
 illustration and duplicated Education section have been removed. About includes
 the owner's short personal paragraph and the education facts. The layout is slightly
-narrower, with Home, About/Education, and Contact content stacked vertically.
+narrower, with the approved Home bulb beside the introduction on laptops and
+below it on phones. About/Education and Contact content remain stacked vertically.
 
 About me includes the owner's creative interests, enrollment at NJIT, and the
 Electrical & Computer Engineering major. Projects now showcases the four real
@@ -175,7 +192,8 @@ distinguished from the original Python classroom work.
 
 Open `projects.html` directly, or follow Projects from `index.html`. The existing
 five-page structure is retained; education belongs on the separate About page.
-Skills cover Codex, visual design, creative feedback, and website planning.
+Skills cover Codex, visual design, creative feedback, website planning, and the
+owner-confirmed proficiencies in Adobe Illustrator, Photoshop, and Premiere Pro.
 Contact keeps the clickable `ss5764@njit.edu` email link and adds labeled name,
 email, and message fields. Required values, email format, and length are checked.
 The public email sits in a compact row at the normal text size so the message

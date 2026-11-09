@@ -17,6 +17,8 @@ Skills content should emphasize proficiency with Codex and visual design,
 plus clear prompts, feedback, and website planning. The owner does not claim
 coding proficiency; do not list programming languages or independent coding
 ability as skills unless the owner later confirms them.
+The owner has confirmed proficiency in Adobe Illustrator, Adobe Photoshop,
+and Adobe Premiere Pro; include them as proficient skills.
 
 Work on one small, requested task at a time. Do not build the entire site when
 asked to change one page or feature. Follow the assignment requirements and
@@ -58,11 +60,16 @@ empty sections, or dummy links.
   wash fading into white, thin rules, and minimal decoration. Use stacked
   project and skill rows rather than repeated boxed cards. Keep narrower
   content layouts and square controls. Avoid floating stickers, pill buttons,
-  decorative shadows, and slogans. Use the original three-line SVG hamburger
-  button and dropdown at phone and laptop widths; do not replace it with tabs
-  or a visible text-only Menu button. Keep its accessible name "Menu".
-  Retain focus/Escape/outside-click behavior,
-  and viewport-bounded panel; do not use horizontally scrolling navigation.
+  decorative shadows, and slogans. Use the visible Home, About, Projects,
+  Skills, and Contact tabs from the pre-dropdown header (`e0d6cbb`): a compact
+  five-column row on phones and an inline row on laptops. Do not add a hamburger
+  or dropdown. Keep native page links, no horizontal navigation scrolling, and
+  only the current page underlined. Pointer clicks must not leave a focus/pressed
+  appearance; retain visible keyboard focus and real theme/project choices.
+- Add restrained stacks of three triangular accents in the unused left/right
+  gutters on every page at widths of at least 80rem. Use near-black in light
+  mode and the matching light ink in dark mode. Keep them stationary, outside
+  the content, non-interactive, and absent on narrower screens.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Use matching inline SVG arrow icons on every device, including dynamically
@@ -114,20 +121,17 @@ empty sections, or dummy links.
 
 ## Interactivity and accessibility
 
-- Keep the responsive navigation menu, manual project carousel, validated
+- Keep the responsive page tabs, manual project carousel, validated
   contact form, and four interactive demonstrations. Category filtering was
   removed at the owner's request.
-- Navigation links must be keyboard-accessible at phone and laptop widths, with
-  the current page identified. The hamburger opens/closes with click or Enter;
-  Escape closes it and returns focus. Use native details/summary so the hamburger
-  stays usable without JavaScript. Position the dropdown from the header in CSS
-  without waiting for a JavaScript-added class. Reset it on page/history entry.
-  Keep dropdown text non-selectable. Empty panel clicks must preserve focus;
-  defer focus-leave dismissal until focus settles, and avoid repeated native
-  details mutations while already open/closed.
+- Page tabs must always be visible and keyboard-accessible, including without
+  JavaScript. Each tab follows its native relative href; do not intercept clicks,
+  hide links, or force focus elsewhere during activation. Use aria-current="page"
+  for exactly one current page. Keep navigation text non-selectable and retain
+  keyboard focus indicators; pointer focus must not resemble a persistent choice.
 - Only in the mobile layout (below 60rem), show the sticky header when scrolling
   upward and hide it when scrolling downward. Keep it visible near the page top,
-  while the menu is open, or when header controls have visible keyboard focus.
+  or when header controls have visible keyboard focus.
   Desktop headers scroll normally. Respect reduced motion.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.

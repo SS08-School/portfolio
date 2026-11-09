@@ -1,5 +1,61 @@
 # Website test plan
 
+## Current: visible tabs and minimal side accents — November 9, 2026
+
+The owner replaced the dropdown with the visible tab header used in `e0d6cbb`,
+before the dropdown was restored. All five pages now use native Home, About,
+Projects, Skills, and Contact links. Phones use five equal columns on the
+header's second row; laptops use inline links beside the name and theme control.
+Labels may wrap at constrained text sizes instead of creating a scrolling row.
+Only aria-current="page" receives an underline. Pointer focus has no retained
+outline; keyboard focus and real theme/project choices remain visible. The
+dropdown markup, event handlers, delayed closing, and open-state styling are
+removed. The preceding unpublished link-timing correction was superseded by
+this restoration. Its tests and the owner's published navigation failure are
+retained below as history.
+
+Every page also gains a stationary stack of three triangular accents in each
+outer gutter at widths of 80rem and above. They use the theme's ink color,
+contain no text, and have pointer-events:none. Narrow screens omit them. The
+Home bulb, About copy, project demos, and contact form remain in place.
+
+Passed 188 source/isolated assertions: all 25 tab destinations, native click
+and Enter passthrough, full-script startup without menu references, Tab/Right
+focus order, Escape release and page-entry cycling reset, mobile-header hide/
+reveal thresholds and keyboard-focus pinning, desktop cleanup, current-page
+markup, pointer-versus-keyboard focus CSS, and all 75 local references and
+asset versions. Calculated accent bounds stay inside the gutters at widths
+1280, 1366, 1440, 1920, and 2560px with the default root size. These are source,
+mocked-logic, and geometry checks, not browser rendering or native input tests.
+Browser/app automation remains disabled by owner request. The revision is local
+and not yet deployed; phone/laptop, zoom, pointer/touch, keyboard, direct-file,
+console, and Lighthouse retests remain for the owner.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| TABS-01 | Source links and startup | Inspect all five headers, resolve each tab destination, parse/run the shared script with isolated DOM inputs, and resolve local assets. | Five visible native links, one current page, no dropdown dependencies, and valid asset references. | Pass — included in 188 source/isolated assertions and 75 reference checks. |
+| TABS-02 | Owner native page navigation | At phone/laptop widths on every page, click/tap each tab, use Tab/Enter and modified clicks, then Back/Forward. Repeat from local files and without JavaScript. | Each tab opens its named page or current-page top; links remain visible; no premature dismissal or crash. | Not run — owner browser/device testing. |
+| TABS-03 | Pointer and keyboard appearance | Click a tab or theme control, release, and move the pointer away. Then use Tab/Shift+Tab and arrows. Repeat in both themes. | No retained pointer focus/pressed fill; only the current page stays underlined; keyboard focus and the chosen theme remain identifiable. | Source rules: Pass; rendered/native-input test: Not run. |
+| TABS-04 | Mobile header and tab fit | Scroll down/up, Tab into the mobile header, resize to laptop, and test 200% zoom/short landscape. | Mobile header reveals upward and stays visible with keyboard focus; desktop scrolls normally; all tabs fit or wrap without horizontal scrolling. | Isolated scroll/focus/breakpoint logic: Pass; browser layout/zoom test: Not run. |
+| ACCENT-01 | Side accent placement | Inspect the shared wide-screen CSS and calculate accent/content bounds at 1280/1366/1440/1920/2560px. | Accents remain in unused gutters, do not intercept clicks, and are absent below 80rem. | Pass — source and default-size geometry checks; rendered layout not verified. |
+| ACCENT-02 | Owner visual and interaction check | View every page at phone/laptop/large-desktop widths in both themes and at 200% zoom. Use links/forms beside the accents. | Restrained, mirrored triangles stay clear of content and controls, match each theme, and cause no clipping or overflow. | Not run — owner browser/device testing. |
+
+## Adobe skills addition — November 9, 2026
+
+The owner confirmed proficiency in Adobe Illustrator, Adobe Photoshop, and
+Adobe Premiere Pro. Added three matching skill rows, each marked Proficient,
+with short descriptions of vector design, photo editing, and video editing.
+The existing four skills retain their text and levels. The page now has seven
+numbered rows; no coding proficiency or professional credentials were added.
+Browser/app control remains disabled; visual layout and screen-reader retests
+are for the owner.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| ADOBE-01 | Approved Adobe skills | Inspect the Skills markup and metadata; check all seven numbers, levels, and headings. Open Skills at phone/laptop widths and keyboard-scroll through the rows. | Three named Adobe applications are marked Proficient, existing skill levels remain, numbering is sequential, and the existing responsive row layout and reveals apply. | Source: Pass — all seven names, numbers, and levels verified, alongside all 25 tab destinations, 75 local references, asset hashes, and shared script syntax. Browser/device: Not run, for owner testing. |
+
+## Historical checks
+
 ## Mobile scroll-up header — November 9, 2026
 
 The owner requested access to the dropdown while partway down a phone page and
@@ -1501,4 +1557,30 @@ automation or screenshots were used.
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | MENU-FOCUS-01 | Menu focus and blank-padding regression | Run isolated events for pointer opening, 50 blank-padding presses/clicks, link focus changes, focus leaving, keyboard opening, Escape, outside clicks, and history entry. | Blank clicks keep the menu open without blurring; closing happens after focus settles, preserves outside focus, and does not repeatedly rewrite details state. | Pass — 66 isolated assertions and full-script syntax check; native-browser verification remains pending. |
-| MENU-FOCUS-02 | Owner crash and selection retest | On each local page at phone/laptop widths, open the dropdown and click directly above Home repeatedly. Drag/double-click its text, scroll the panel, and activate every link with mouse/touch/Tab/Enter; close with Escape and an outside click. | No Aw, Snap! crash, selectable dropdown text, unwanted focus jumps, or broken navigation; native panel scrolling and keyboard focus remain usable. | Not run — owner testing; browser/app control remains disabled. |
+| MENU-FOCUS-02 | Owner crash and selection retest | On each local page at phone/laptop widths, open the dropdown and click directly above Home repeatedly. Drag/double-click its text, scroll the panel, and activate every link with mouse/touch/Tab/Enter; close with Escape and an outside click. | No Aw, Snap! crash, selectable dropdown text, unwanted focus jumps, or broken navigation; native panel scrolling and keyboard focus remain usable. | Fail — owner reported that the published correction prevented changing pages. Other parts of this case remain unverified; browser/app control remains disabled. |
+
+## Dropdown page-navigation regression — 2026-11-09
+
+The owner reported that the first published focus correction made the dropdown
+unable to change pages. Earlier isolated tests checked closing/focus outcomes
+but did not check that the link stayed available through default activation.
+The correction now schedules link dismissal with setTimeout rather than hiding
+the native details panel in the click handler. Focus-leave checks also run in
+a later task rather than a microtask. No link URL is replaced, and link click,
+pointer, Enter, and modifier defaults remain available.
+
+A before/after event-order model flags premature closing in the previous
+handlers and passes with the corrected handlers. Full-script syntax and 144
+isolated event-order/URL assertions passed, covering all 25 primary page-link
+combinations across the five pages, activation before dismissal, keyboard
+opening/Enter, Tab away, blank padding, Escape, and modified clicks. This is
+an isolated model, not an actual browser navigation or crash reproduction.
+Text-selection prevention remains in CSS. Browser/app control is still disabled.
+Final source checks passed for all 75 local references and asset versions.
+Phone/laptop, touch, native browser navigation, direct-file, console, and crash
+retests remain for the owner. This correction has not been deployed.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| MENU-LINK-01 | Native activation ordering and destinations | Check all five dropdown links on each of the five pages using an isolated focus/pointer/click/default-action event model; include Enter and modified clicks. | Every relative URL resolves to its named page; panel and link remain available until default activation finishes, then the menu closes. | Pass — 144 isolated assertions, including all 25 source/destination combinations and a before/after regression comparison. Native browser verification: Not run. |
+| MENU-LINK-02 | Owner page-navigation retest | On each local page, open Menu and activate Home, About me, Projects, Skills, and Contact by click, touch, and Enter. Include Ctrl/Cmd-click and the current page's link. | Each link opens its correct page or current-page top; new-tab behavior remains native; no premature dismissal, crash, or selectable panel text. | Not run — owner testing; browser/app control remains disabled. |

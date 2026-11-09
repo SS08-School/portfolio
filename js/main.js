@@ -1,6 +1,3 @@
-const menuButton = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#site-navigation");
-const menuContainer = document.querySelector(".navigation-menu");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 // Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;
@@ -108,7 +105,7 @@ window.addEventListener("pageshow", () => { keepTabOnPage = true; });
 
 document.addEventListener("keydown", (event) => {
   if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
-  if (event.key === "Escape" && !menuContainer?.open) {
+  if (event.key === "Escape") {
     stopKeyboardScroll();
     // Provide an accessible escape to browser controls, without disabling later visits.
     keepTabOnPage = false;
@@ -152,68 +149,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-if (menuButton && navigation && menuContainer) {
-  function setMenuOpen(isOpen) {
-    if (menuContainer.open === isOpen) return;
-    // Move focus before hiding a link, outside an in-progress focusout event.
-    if (!isOpen && document.hasFocus() && navigation.contains(document.activeElement)) {
-      menuButton.focus({ preventScroll: true });
-    }
-    menuContainer.open = isOpen;
-  }
-
-  // Native details/summary keeps the menu usable even before this script loads.
-  setMenuOpen(false);
-
-  menuButton.addEventListener("click", (event) => {
-    if (event.detail !== 0) return;
-    // Pointer clicks toggle natively; keyboard activation also enters the links.
-    event.preventDefault();
-    const isOpen = !menuContainer.open;
-    setMenuOpen(isOpen);
-    if (isOpen) navigation.querySelector("a")?.focus();
-  });
-
-  navigation.addEventListener("pointerdown", (event) => {
-    // Empty panel space has no action and should not blur the focused control.
-    if (event.button === 0 && !event.target.closest("a[href]")) event.preventDefault();
-  });
-
-  navigation.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
-      setMenuOpen(false);
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menuContainer.open) {
-      event.preventDefault();
-      setMenuOpen(false);
-      menuButton.focus({ preventScroll: true });
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!menuContainer.contains(event.target)) {
-      setMenuOpen(false);
-    }
-  });
-
-  menuContainer.addEventListener("focusout", () => {
-    // Native details may dispatch more focus events as it closes. Wait until
-    // focus has settled, then close only if it really left the whole menu.
-    queueMicrotask(() => {
-      if (!menuContainer.contains(document.activeElement)) setMenuOpen(false);
-    });
-  });
-
-  // Back/Forward can restore an open details element from the page cache.
-  window.addEventListener("pageshow", () => {
-    if (navigation.contains(document.activeElement)) menuButton.focus({ preventScroll: true });
-    setMenuOpen(false);
-  });
-}
-
 function initializeMobileHeader() {
   const header = document.querySelector(".site-header");
   if (!header) return;
@@ -246,7 +181,7 @@ function initializeMobileHeader() {
 
     const keyboardFocus = header.contains(document.activeElement) &&
       document.activeElement.matches(":focus-visible");
-    if (position <= header.offsetHeight || menuContainer?.open || keyboardFocus) {
+    if (position <= header.offsetHeight || keyboardFocus) {
       revealHeader();
       return;
     }
@@ -261,7 +196,6 @@ function initializeMobileHeader() {
   }, { passive: true });
 
   header.addEventListener("focusin", revealHeader);
-  menuContainer?.addEventListener("toggle", revealHeader);
   mobileLayout.addEventListener("change", resetHeader);
   window.addEventListener("pageshow", resetHeader);
   resetHeader();
