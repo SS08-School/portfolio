@@ -27,9 +27,19 @@ markup, pointer-versus-keyboard focus CSS, and all 75 local references and
 asset versions. Calculated accent bounds stay inside the gutters at widths
 1280, 1366, 1440, 1920, and 2560px with the default root size. These are source,
 mocked-logic, and geometry checks, not browser rendering or native input tests.
-Browser/app automation remains disabled by owner request. The revision is local
-and not yet deployed; phone/laptop, zoom, pointer/touch, keyboard, direct-file,
-console, and Lighthouse retests remain for the owner.
+Browser/app automation remains disabled by owner request. At the time of the
+local checks this revision had not been deployed. Phone/laptop, zoom,
+pointer/touch, keyboard, direct-file, console, and Lighthouse retests remain
+for the owner.
+
+Deployment checks on 2026-11-09: GitHub Pages deployment succeeded for commit
+`d61d7fe`. All five pages returned HTTP 200 with five visible page tabs, one
+current-page indicator, and the expected stylesheet/script versions. The live
+Skills page contains seven rows, including Adobe Illustrator, Adobe Photoshop,
+and Adobe Premiere Pro marked Proficient. Published CSS includes the wide-screen
+side accents; published JavaScript no longer contains dropdown handlers.
+Publication/source checks passed. No browser/app automation was used, and these
+checks do not verify rendered appearance or native pointer/keyboard behavior.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

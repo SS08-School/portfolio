@@ -16,13 +16,14 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
-The current local header restores the visible page tabs from `e0d6cbb`, before
+The header restores the visible page tabs from `e0d6cbb`, before
 the dropdown was brought back. Home, About, Projects, Skills, and Contact are
 native links in a five-column phone row and an inline laptop row. The dropdown
 markup and its JavaScript have been removed. Only the current page is underlined;
 pointer clicks do not retain a focus outline, while keyboard focus stays visible.
-This restoration has not been deployed. Owner browser/device testing remains
-pending; browser/app automation is disabled.
+The restored tabs, side accents, and Adobe proficiency additions were deployed
+on November 9, 2026. HTTP/source checks verified all five pages and shared assets.
+Owner browser/device testing remains pending; browser/app automation is disabled.
 Wide layouts (80rem and above) also have three small triangular accents in each
 outer gutter. They are near-black in light mode and light in dark mode, stay
 outside the content, and cannot intercept clicks. Narrow layouts omit them.
