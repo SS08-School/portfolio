@@ -1466,3 +1466,31 @@ remain for owner testing. No browser/app automation or screenshots were used.
 | --- | --- | --- | --- | --- |
 | BULB-01 | Home bulb asset and markup | Inspect the PNG, dimensions, alpha, byte size, alt text, dark-theme selector, rotated bounds, and all page asset references. | Transparent image below 500 KB, descriptive alt text, 35-degree counterclockwise rotation, original colors in dark mode, and valid versioned references. | Pass — 118 source/asset assertions, four transparent corners, and visual inspection of the asset file. |
 | BULB-02 | Home bulb owner browser check | Open local Home at 320px/390px/768px/960px/1366px, both themes, 200% zoom, and reduced motion; Tab through header and Home links and inspect the console. | Bulb is right of text on laptop and below it on narrow screens, with no checkerboard, inverted colors, clipping, horizontal overflow, blocked controls, or console errors. | Not run — owner testing; browser/app automation remains disabled. |
+
+## Dropdown padding/focus correction — 2026-11-09
+
+Owner-reported failure: opening the dropdown and clicking directly above Home
+produced Chrome's Aw, Snap! page. Browser reproduction was not attempted because
+the owner has prohibited browser/app control. Source inspection found immediate
+native details closing inside a focusout handler; the browser-crash cause is
+not confirmed by source inspection alone.
+
+The correction defers focus-leave dismissal until focus settles, checks the
+actual focused element, avoids redundant open-state writes, and returns focus
+before hiding a focused link. Primary pointer presses on empty panel space are
+prevented from blurring the active control. Dropdown text uses user-select:none
+and -webkit-user-select:none; keyboard links and visible focus remain available.
+
+Full-script syntax and 66 isolated menu assertions passed, including 50 empty
+padding clicks, moving between links, Tab leaving the menu, transient null
+relatedTarget, keyboard opening, link activation, Escape, outside clicks,
+repeated dismissal, history entry, and safe ordering around native close/focus
+events. These mocked checks do not reproduce or prove resolution of the actual
+Chrome renderer crash. Phone/laptop crash, text-selection, keyboard, touch,
+direct-file browser, and console retests remain Not run for owner testing.
+This revision has not been deployed.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| MENU-FOCUS-01 | Menu focus and blank-padding regression | Run isolated events for pointer opening, 50 blank-padding presses/clicks, link focus changes, focus leaving, keyboard opening, Escape, outside clicks, and history entry. | Blank clicks keep the menu open without blurring; closing happens after focus settles, preserves outside focus, and does not repeatedly rewrite details state. | Pass — 66 isolated assertions and full-script syntax check; native-browser verification remains pending. |
+| MENU-FOCUS-02 | Owner crash and selection retest | On each local page at phone/laptop widths, open the dropdown and click directly above Home repeatedly. Drag/double-click its text, scroll the panel, and activate every link with mouse/touch/Tab/Enter; close with Escape and an outside click. | No Aw, Snap! crash, selectable dropdown text, unwanted focus jumps, or broken navigation; native panel scrolling and keyboard focus remain usable. | Not run — owner testing; browser/app control remains disabled. |

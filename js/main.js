@@ -154,6 +154,11 @@ document.addEventListener("keydown", (event) => {
 
 if (menuButton && navigation && menuContainer) {
   function setMenuOpen(isOpen) {
+    if (menuContainer.open === isOpen) return;
+    // Move focus before hiding a link, outside an in-progress focusout event.
+    if (!isOpen && document.hasFocus() && navigation.contains(document.activeElement)) {
+      menuButton.focus({ preventScroll: true });
+    }
     menuContainer.open = isOpen;
   }
 
@@ -169,10 +174,13 @@ if (menuButton && navigation && menuContainer) {
     if (isOpen) navigation.querySelector("a")?.focus();
   });
 
+  navigation.addEventListener("pointerdown", (event) => {
+    // Empty panel space has no action and should not blur the focused control.
+    if (event.button === 0 && !event.target.closest("a[href]")) event.preventDefault();
+  });
+
   navigation.addEventListener("click", (event) => {
     if (event.target.closest("a")) {
-      // Return focus before hiding the active navigation link.
-      menuButton.focus();
       setMenuOpen(false);
     }
   });
@@ -181,19 +189,22 @@ if (menuButton && navigation && menuContainer) {
     if (event.key === "Escape" && menuContainer.open) {
       event.preventDefault();
       setMenuOpen(false);
-      menuButton.focus();
+      menuButton.focus({ preventScroll: true });
     }
   });
 
   document.addEventListener("click", (event) => {
     if (!menuContainer.contains(event.target)) {
-      if (navigation.contains(document.activeElement)) menuButton.focus();
       setMenuOpen(false);
     }
   });
 
-  menuContainer.addEventListener("focusout", (event) => {
-    if (!menuContainer.contains(event.relatedTarget)) setMenuOpen(false);
+  menuContainer.addEventListener("focusout", () => {
+    // Native details may dispatch more focus events as it closes. Wait until
+    // focus has settled, then close only if it really left the whole menu.
+    queueMicrotask(() => {
+      if (!menuContainer.contains(document.activeElement)) setMenuOpen(false);
+    });
   });
 
   // Back/Forward can restore an open details element from the page cache.

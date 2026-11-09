@@ -16,6 +16,13 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
+The November 9 dropdown correction leaves clicks in empty panel space alone,
+disables text selection within the dropdown, and waits for focus to settle
+before closing it. Closing an already-closed menu does not rewrite native
+details state. This addresses the owner's reported Aw, Snap! crash path;
+isolated focus/menu checks pass, but the actual browser crash still needs an
+owner retest. No browser/app control was used for this change.
+
 The mobile layout (below 60rem / about 960px) now reveals the header when scrolling
 up and hides it when scrolling down. It stays visible near the page top, while
 the dropdown is open, or when header controls have visible keyboard focus.

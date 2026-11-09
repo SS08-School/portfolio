@@ -122,6 +122,9 @@ empty sections, or dummy links.
   Escape closes it and returns focus. Use native details/summary so the hamburger
   stays usable without JavaScript. Position the dropdown from the header in CSS
   without waiting for a JavaScript-added class. Reset it on page/history entry.
+  Keep dropdown text non-selectable. Empty panel clicks must preserve focus;
+  defer focus-leave dismissal until focus settles, and avoid repeated native
+  details mutations while already open/closed.
 - Only in the mobile layout (below 60rem), show the sticky header when scrolling
   upward and hide it when scrolling downward. Keep it visible near the page top,
   while the menu is open, or when header controls have visible keyboard focus.
