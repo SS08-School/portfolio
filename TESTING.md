@@ -1413,3 +1413,47 @@ Evidence: `screenshots/contact-compact-checks.json` and matching PNG captures.
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T107 | Contact heading size | Open local Contact at phone/laptop widths and saved dark mode; inspect heading/email sizes and use Tab/Enter to reach and validate the form. | Contact title is 32–40px, email is 16px, form remains prominent and usable, and no layout or script errors occur. | Pass — 36 local Chrome assertions and visual review. Full live accessibility/Lighthouse audit remains pending; deployment/source verification is separate. |
+
+## Image alternative-text audit — 2026-11-09
+
+Checked all five page sources and the shared JavaScript. All 16 static `img`
+elements already have explicit `alt` attributes: three project illustrations
+have descriptive text, and 13 decorative or redundantly labelled images use
+`alt=""`. The grocery template also supplies `alt=""` for all three generated
+illustrations, whose product names appear alongside them. Game image updates
+retain empty alt text and update the adjacent choice labels.
+
+All referenced image files exist. Of 31 inline SVGs, 30 are decorative and
+explicitly hidden from assistive technology; the informative Fibonacci SVG has
+a title and description connected with `aria-labelledby`. No missing image
+alternatives were found, so no website code changes were needed. This was a
+source audit only; no browser/app automation or screenshots were used.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| ALT-01 | Image alternatives across all pages and generated content | Inspect every `img` in the five HTML pages and JavaScript templates, game image updates, and inline SVG accessibility markup; verify image paths exist. | Every `img` has an explicit alt attribute; informative images have descriptions; decorative/redundantly labelled images have empty alt; meaningful inline SVGs have accessible descriptions. | Pass — source audit: 16 static images, three generated grocery illustrations, and 31 inline SVGs checked. Rendered screen-reader verification: Not run. |
+
+## Home light bulb — 2026-11-09
+
+Added the owner's bulb beside the Home introduction, rotated 35 degrees
+counterclockwise with CSS. Below 60rem it stacks after the text. The cutout was
+prepared with built-in imagegen, then proportionally downscaled to a 594x768
+RGBA PNG (358185 bytes, below 500 KB). The final asset was visually inspected
+as an image file, not through browser/app automation. Its four corners have
+zero alpha; the checkerboard is absent. The exact prompt is recorded in
+`images/home-lightbulb.prompt.txt`.
+
+Source/asset checks passed 118 assertions, including descriptive alt text,
+intrinsic dimensions, unique IDs, one h1 per page, dark-mode inversion exclusion,
+all 75 local references, and refreshed stylesheet/image hashes. Calculations
+using the stylesheet's sizes show the full rotated image bounds fit its reserved
+square at 320, 390, 768, 960, and 1366px widths. These calculations do not verify
+actual browser layout, text wrapping, zoom, or keyboard interactions. No script
+behavior was changed. Phone/laptop, dark-mode appearance, direct-file browser,
+keyboard, console, and Lighthouse checks are left for owner testing; no browser
+automation or screenshots were used. This revision has not been deployed.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| BULB-01 | Home bulb asset and markup | Inspect the PNG, dimensions, alpha, byte size, alt text, dark-theme selector, rotated bounds, and all page asset references. | Transparent image below 500 KB, descriptive alt text, 35-degree counterclockwise rotation, original colors in dark mode, and valid versioned references. | Pass — 118 source/asset assertions, four transparent corners, and visual inspection of the asset file. |
+| BULB-02 | Home bulb owner browser check | Open local Home at 320px/390px/768px/960px/1366px, both themes, 200% zoom, and reduced motion; Tab through header and Home links and inspect the console. | Bulb is right of text on laptop and below it on narrow screens, with no checkerboard, inverted colors, clipping, horizontal overflow, blocked controls, or console errors. | Not run — owner testing; browser/app automation remains disabled. |

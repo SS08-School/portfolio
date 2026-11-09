@@ -1,0 +1,13 @@
+Home light bulb asset - 2026-11-09
+
+Input: the owner's light bulb image attached in this conversation.
+Tool: built-in imagegen, edit mode, transparent_background=true.
+
+Exact edit prompt:
+Use case: background-extraction. Asset type: a transparent image asset for the owner's portfolio homepage. Edit target: the user's attached glowing light bulb image. Remove only the gray checkerboard background and its rectangular backdrop, making that background genuinely transparent with alpha. Preserve the original single upright bulb's silhouette, white frosted globe, warm soft glow, metallic screw base, proportions, material detail, and orientation as closely as possible. Keep the complete bulb including its bottom contact tip. No new objects, text, shadow, border, or watermark. Keep the bulb upright: rotation will be applied by the website CSS. Soft glow may fade into transparency around the bulb. Frame the entire bulb with modest transparent margin on every side. Output a clean transparent PNG cutout, preferably no larger than 768 pixels on the long edge for web use.
+
+Web optimization: the generated 1103x1426 RGBA PNG was downscaled proportionally
+to 594x768 with bicubic resampling, preserving alpha. No content edits were
+applied during optimization. Final file: images/home-lightbulb.png (358185 bytes).
+The original generated output was retained outside the repository.
+Rotation is applied in CSS with rotate(-35deg), not baked into the image.

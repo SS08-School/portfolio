@@ -28,7 +28,10 @@ Keep the existing separate Home, About/Education, Projects, Skills, and Contact
 pages. The owner has confirmed Education belongs on its own page/tab.
 
 - Home (`index.html`): Show the personal introduction once. Do not repeat it
-  in an Education section, and do not add a decorative hero illustration.
+  in an Education section. The owner's supplied glowing light bulb is approved
+  beside the introduction, tilted about 35 degrees counterclockwise. Use a
+  transparent cutout, descriptive alt text, and keep its original colors in
+  dark mode. Stack it below the text on narrow screens without overflow.
   Do not show project cards, an index, or a project showcase on Home. A link
   to the separate Projects page is fine.
 - About/Education (`about.html#education`): Keep the education facts here. Above
@@ -73,6 +76,7 @@ empty sections, or dummy links.
   text (`#555555`), and neutral-gray rules and panels. Use soft peach, rose, and
   cream only in the background gradient; keep graphics black and white. Use a
   solid near-black background with no gradient in the optional dark theme.
+  The owner-approved Home bulb retains its original warm glow as an exception.
 - Use dark text on white surfaces and white text on black buttons. Verify contrast for
   the actual combinations used, including hover, focus, and selected states.
 - Fonts: use formal, light-looking Palatino serif headings and readable,

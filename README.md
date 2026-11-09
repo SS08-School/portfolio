@@ -5,7 +5,8 @@ Engineering student enrolled at NJIT. Built with plain HTML, CSS, and
 JavaScript. The design uses a very subtle peach, rose, and cream wash that
 fades into white, near-black text, formal Palatino headings, readable system
 sans-serif body text, fine gray rules, and stacked project and skill rows. Project
-illustrations stay black and white. There are no external fonts, floating
+illustrations stay black and white; the owner-supplied Home bulb keeps its warm
+glow. There are no external fonts, floating
 stickers, or decorative shadows.
 
 ## View locally
@@ -239,7 +240,7 @@ the existing five-page structure and all four interactive projects.
 
 ## Project files
 
-- `index.html`: The single personal introduction, without a hero illustration.
+- `index.html`: The personal introduction beside the owner's tilted light bulb.
 - `about.html`: About me and education at NJIT.
 - `projects.html`: Assignment 1 collection and interactive game/sequence labs.
 - `skills.html`: Codex, visual design, creative feedback, and website planning.
@@ -247,7 +248,7 @@ the existing five-page structure and all four interactive projects.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Keyboard controls, reveals, carousel, contact validation,
   and all four interactive Assignment 1 demos.
-- `images/`: Original SVG hand illustrations, assignment thumbnails, and the SS monogram.
+- `images/`: SVG project/grocery illustrations, the SS monogram, and the Home bulb.
 - `screenshots/`: Actual local phone and laptop browser captures for the report.
 - `js/theme.js`: Early theme restoration, sun/moon toggle, and saved preference.
 - `AGENTS.md`: Project requirements, design, and workflow.
@@ -257,8 +258,14 @@ the existing five-page structure and all four interactive projects.
 
 Developed with Codex. The six SVG project illustrations, three grocery outline
 illustrations, and the original SS monogram were created for this site with
-Codex. No external
-fonts, image assets, libraries, or AI APIs are used. Project descriptions and
+Codex. The Home bulb image was supplied by the owner. Its checkerboard background
+was removed with the built-in imagegen tool, then the transparent PNG was resized
+for web use. The asset is `images/home-lightbulb.png`; the exact edit prompt and
+processing note are in [home-lightbulb.prompt.txt](images/home-lightbulb.prompt.txt).
+The Home layout places it on the right at laptop widths with a 35-degree
+counterclockwise tilt, and below the text on narrow screens. This update is local
+and not yet deployed. No external fonts, libraries, or AI APIs are used by the
+running website. Project descriptions and
 the Fibonacci loop excerpt are based on the owner-supplied
 `Assignment_1_Sebastian_Szeliga (1).ipynb`; the notebook itself is not published.
 
