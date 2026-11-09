@@ -1,0 +1,767 @@
+﻿{
+    "date":  "2026-11-08",
+    "method":  "Original file:// pages in isolated Chrome with native keyboard events at phone and laptop widths; reduced motion; not live, physical keyboard, Safari or Lighthouse",
+    "records":  [
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  390,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down at last row does not move sideways to Contact"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up returns to header"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  390,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+                                                                        {
+                                                                            "src":  "images/calculator.svg?v=dee3575b29df",
+                                                                            "loading":  "lazy"
+                                                                        },
+                                                                        {
+                                                                            "src":  "images/cart.svg?v=f8fdaa151dd0",
+                                                                            "loading":  "lazy"
+                                                                        }
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  390,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Carousel retains native feature key handling"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves horizontal move choices for row below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Slider arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  390,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down scrolls text-only page instead of moving sideways"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  390,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Input caret movement remains native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Textarea Up moves caret and retains field focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Textarea Down stays in field"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  1366,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down at last row does not move sideways to Contact"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up returns to header"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  1366,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  1366,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Carousel retains native feature key handling"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves horizontal move choices for row below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Slider arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  1366,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down scrolls text-only page instead of moving sideways"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "diagnostics":  {
+                                            "errors":  [
+
+                                                       ],
+                                            "pendingHiddenImages":  [
+
+                                                                    ],
+                                            "visibleBrokenImages":  [
+
+                                                                    ]
+                                        },
+                        "width":  1366,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Jump link hidden before keyboard focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reveals a clearly named jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter bypasses header to main content"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right advances along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Left returns along the page links"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves navigation for a control below"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Up reaches a control above rather than the previous inline link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap skips jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Arrow wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab cycle still reaches the accessible jump link"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Input caret movement remains native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Textarea Up moves caret and retains field focus"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Textarea Down stays in field"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors and images load"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape still releases custom Tab loop"
+                                       }
+                                   ]
+                    }
+                ]
+}

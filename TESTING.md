@@ -39,7 +39,36 @@ Never replace an initial failure with a passing result: retain both attempts.
 | Skills | https://ss08-school.github.io/portfolio/skills.html |
 | Contact | https://ss08-school.github.io/portfolio/contact.html |
 
-### Latest revision — visible navigation and touch feedback
+### Keyboard direction follow-up — November 8, 2026
+
+The latest local revision keeps the accessibility shortcut but calls it
+"Jump to page content". It is hidden until keyboard focus and excluded from
+arrow-key cycling. Left/Right follow control order; Up/Down use the row above
+or below and scroll when there is no control in that direction. Native editing,
+radio, slider, and carousel keys remain intact. Live interaction retests,
+physical-keyboard checks, and Lighthouse results remain **Not run**.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T151 | Keyboard-only jump shortcut | Reload each page at 390px and 1366px. Inspect before focus, press Tab, then Enter. | The shortcut is initially hidden, reads Jump to page content when keyboard-focused, and moves focus to main content on Enter. | Pass — local native Chrome input on all 10 page/width combinations. Live: Not run. |
+| T152 | Distinct horizontal and vertical arrows | From About in the header, use Right/Left, then Down/Up. On Home press Down from View projects. On Skills press Down from navigation. | Left/Right traverse links; Down moves to content below instead of the adjacent tab, Up returns above; if there is no control below, Down scrolls rather than moving sideways. | Pass — local checks across all five pages at both widths, including text-only Skills and the last control row on Home. Live: Not run. |
+| T153 | Arrow wrap, Tab cycle, and Escape | Use Left from the brand and Right from the last control. Tab from the last control, then press Escape. | Arrow cycling omits the jump link; Tab still reaches it; Escape releases the custom Tab loop. | Pass — local native key input on all five pages at both widths. Live/physical keyboard: Not run. |
+| T154 | Native feature and field keys | Use carousel Right, Down from Rock, radio Right, slider Up; type into Contact and use caret Left and multiline Up/Down. | Carousel changes slides; Down leaves the horizontal move row; radio/slider values update; editing keys stay inside fields. | Pass — local Projects and Contact checks at both widths. Live: Not run. |
+
+[Local results](reports/vertical-keyboard-local-2026-11-08.json): **146 assertions
+passed across 10 page/viewport combinations** using original file:// pages,
+native Chrome keyboard events, and reduced motion. No browser errors, broken
+visible images, or document overflow were found. Screenshots:
+screenshots/keyboard-jump-390.png and screenshots/keyboard-jump-1366.png.
+
+The [initial run](reports/vertical-keyboard-initial-2026-11-08.json) retained one
+failed combined image/error assertion on Projects at 1366px. That assertion
+also counted hidden, lazy-loaded carousel images. The retest checked rendered
+images and recorded diagnostics separately: no browser errors or broken visible
+images; two hidden lazy images were pending at 390px. All 146 retest assertions
+passed with no website changes between the two runs.
+
+### Navigation row revision — visible navigation and touch feedback
 
 This revision replaces the dropdown with a visible row of five links, uses SVG
 arrows, and restricts hover styling to hover-capable fine pointers. Local
@@ -90,7 +119,7 @@ The contact form prepares a draft; sending email is not part of automated testin
 | T112 | Every Contact navigation link | From Contact repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
 | T113 | Brand, CTAs, and project anchors | Activate the name/monogram on every page, both Home action links, About's Get in touch, every carousel project's demo link, and Back to the top. | Brand reaches Home; CTAs reach the named page; demo links focus the correct lab; Back to the top reaches the top. | Pass — 26 live native-Enter activations across phone/laptop sizes. |
 | T114 | Every page on phone/laptop | Open all five pages at 390px and 1366px; inspect text, images, fields, and header; check sideways scrolling. | Content fits, images load, controls are reachable, and there is no horizontal overflow. | Pass — 10 live layouts; current captures are linked below. Human visual review remains your submission check. |
-| T116 | Keyboard on every page | Reload each page; use Tab/Shift+Tab across boundaries, Enter on Skip to content, and arrows from the brand. | Focus is visible, Tab cycles through available controls, skip link reaches main, arrows move focus, and hidden controls are skipped. | Pass — live native browser input on all five pages at both widths; also perform T135. |
+| T116 | Keyboard on every page | Reload each page; use Tab/Shift+Tab across boundaries, Enter on Jump to page content, and arrows from the brand. | Focus is visible, Tab cycles through available controls, skip link reaches main, arrows move focus, and hidden controls are skipped. | Pass — live native browser input on all five pages at both widths; also perform T135. |
 | T117 | Theme toggle and persistence | On every page switch to dark, reload, switch to light, and reload again. Inspect both states. | Button state and palette update; the chosen theme survives reload. | Pass — live light/dark toggle and reload checks on every page at both widths. Manual dark contrast inspection remains part of T135. |
 | T118 | Image carousel | Use Previous/Next, Left/Right, Home, and End; inspect all four slides and use a slide link. | One slide is active, status updates, every project is reachable, focus stays visible, and there is no autoplay. | Pass — live carousel checks and all four slide-link activations at both widths. |
 | T119 | Computer RPS and reset | Play an adaptive round, advance, reset, switch to Random picks, and play again. | Rounds resolve, Next round works, and Reset clears the match. | Pass — live rounds for both strategies at both widths. |

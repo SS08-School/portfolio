@@ -139,11 +139,18 @@ their previous redirect markup has been removed.
 With the page focused, Tab/Shift+Tab cycles through available controls, skipping
 inactive slides and disabled controls. Cycling starts on
 every page and ignores old saved off preferences; there is no footer toggle.
-Arrow keys move between links and buttons; Up/Down scrolls when the background
-is focused. Inputs, textareas, selects, radio buttons, and sliders keep native
+Left/Right move through controls in order. Up/Down move to a control on the
+visual row above/below, scrolling if there is no control in that direction.
+The keyboard-only "Jump to page content" link bypasses the header; it appears
+only when keyboard-focused and is excluded from arrow-key cycling. Inputs,
+textareas, selects, radio buttons, and sliders keep native
 editing keys. Enter activates controls; Escape releases Tab to normal browser navigation
 for the current page. A new page or restored
 page enables cycling again. Browser shortcuts remain available.
+
+The vertical-arrow follow-up passed 146 local Chrome keyboard assertions across
+all five pages at 390px and 1366px. Its evidence is in TESTING.md (T151–T154);
+live keyboard interaction retests remain pending.
 
 The project carousel has Previous/Next buttons, Left/Right arrows, and Home/End
 to reach its first/last slide. There is no autoplay. Slide changes keep focus on

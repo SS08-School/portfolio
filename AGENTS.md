@@ -107,15 +107,18 @@ empty sections, or dummy links.
   widths, with the current page identified. Do not add a mobile menu toggle.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
-- Include a skip-to-content link, visible keyboard focus, descriptive link text,
-  and alt attributes on every image. Use empty alt text for decorative images.
+- Include a keyboard-only jump link labelled "Jump to page content". Hide it
+  until keyboard focus and keep it out of arrow-key cycling. Retain visible
+  keyboard focus, descriptive link text, and alt attributes on every image.
+  Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
 - Start Tab cycling on every page without a footer toggle or a saved off state.
-  Arrow keys move focus between controls; editable fields, radios, sliders,
-  and select menus keep native arrow behavior. Arrow keys scroll when the page
-  background is focused. Escape releases Tab to browser navigation for the
-  current page; the next page starts cycling again.
+  Left/Right move through controls in order. Up/Down move to controls on the
+  visual row above/below; if none exists in that direction, scroll vertically.
+  Editable fields, radios, sliders, and select menus keep native arrow behavior.
+  Arrow keys scroll when the page background is focused. Escape releases Tab
+  to browser navigation for the current page; the next page starts cycling again.
 - Contact keeps the public email link and has labeled name, email, and message
   fields. Validate required values, email format, and length; prepare an encoded
   mailto draft link only after validation. Editing any field invalidates the old

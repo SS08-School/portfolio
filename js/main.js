@@ -57,8 +57,7 @@ function pageControls() {
   ));
 }
 
-function moveControlFocus(direction) {
-  const controls = pageControls();
+function moveControlFocus(direction, controls = pageControls()) {
   if (!controls.length) return;
   const current = controls.indexOf(document.activeElement);
   let next = (current + direction + controls.length) % controls.length;
@@ -69,10 +68,37 @@ function moveControlFocus(direction) {
     const destination = direction < 0 ? nearby.at(-1) : nearby[0];
     next = destination ? controls.indexOf(destination) : (direction < 0 ? controls.length - 1 : 0);
   }
-  controls[next].focus({ preventScroll: true });
-  controls[next].scrollIntoView({
+  focusControl(controls[next]);
+}
+
+function focusControl(control) {
+  control.focus({ preventScroll: true });
+  control.scrollIntoView({
     behavior: reducedMotion.matches ? "instant" : "smooth", block: "nearest", inline: "nearest"
   });
+}
+
+function moveVerticalFocus(direction, controls) {
+  const current = document.activeElement.getBoundingClientRect();
+  const centerX = (current.left + current.right) / 2;
+  const candidates = controls.filter((control) => control !== document.activeElement).map((control) => {
+    const bounds = control.getBoundingClientRect();
+    return {
+      control,
+      gap: direction > 0 ? bounds.top - current.bottom : current.top - bounds.bottom,
+      horizontalDistance: Math.abs((bounds.left + bounds.right) / 2 - centerX)
+    };
+  }).filter((candidate) => candidate.gap >= -4);
+
+  if (!candidates.length) {
+    scrollWithKeyboard(direction * 80);
+    return;
+  }
+  // Find the next visual row, then the control closest to the current column.
+  const nearestGap = Math.min(...candidates.map((candidate) => candidate.gap));
+  const nextRow = candidates.filter((candidate) => candidate.gap <= nearestGap + 12);
+  nextRow.sort((first, second) => first.horizontalDistance - second.horizontalDistance);
+  focusControl(nextRow[0].control);
 }
 
 window.addEventListener("pageshow", () => { keepTabOnPage = true; });
@@ -104,10 +130,13 @@ document.addEventListener("keydown", (event) => {
 
   event.preventDefault();
   const direction = ["ArrowUp", "ArrowLeft"].includes(event.key) ? -1 : 1;
-  if (event.target.closest('a[href], button, summary, [tabindex="0"]') ||
-    ["ArrowLeft", "ArrowRight"].includes(event.key)) {
+  // The jump link stays first in Tab order, outside everyday arrow navigation.
+  const controls = pageControls().filter((control) => !control.matches(".skip-link"));
+  if (["ArrowLeft", "ArrowRight"].includes(event.key)) {
     stopKeyboardScroll();
-    moveControlFocus(direction);
+    moveControlFocus(direction, controls);
+  } else if (event.target.closest('a[href], button, summary, [tabindex="0"]')) {
+    moveVerticalFocus(direction, controls);
   } else {
     scrollWithKeyboard(direction * 80);
   }
