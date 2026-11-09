@@ -19,7 +19,15 @@ and the CSS asset path. Calculations at supported wide widths, root sizes
 between the bands and the 1060px content. These are not native browser tests.
 No browser/app control or screenshots were used. Owner review of appearance,
 scrolling, zoom, themes, keyboard, direct-file loading, and console errors is
-Not run. These copy/gradient refinements are local and not yet deployed.
+Not run. At the time of these checks, the copy/gradient refinements were local.
+
+Copy/gradient deployment checks on 2026-11-09: GitHub Pages deployment succeeded
+for commit `e108fa0`. All five pages returned HTTP 200 with the new stylesheet
+version. Published Home contains the exact approved heading and introduction;
+published CSS contains the wider gutter dimensions, two-axis triangle repetition,
+and ink-to-transparent gradient. Publication/source checks passed. Native
+browser appearance, scrolling, keyboard, and device checks remain for the owner;
+no browser/app automation was used.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

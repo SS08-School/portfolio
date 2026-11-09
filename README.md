@@ -32,7 +32,9 @@ The local refinement fills more of each gutter with several columns and fades
 from stronger outer edges to transparent beside the content. The original local
 SVG tile in `images/side-triangles.svg` supplies the shapes. They are near-black
 in light mode and light in dark mode and cannot intercept clicks. Narrow layouts
-omit them. The denser gradient and new Home wording are not yet deployed.
+omit them. The denser gradient and new Home wording were deployed on November 9,
+2026 (`e108fa0`); published files were verified. Visual/device checks remain for
+owner testing.
 
 ### Earlier dropdown checks
 
