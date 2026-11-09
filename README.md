@@ -15,6 +15,17 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
+The latest owner-reported live results are at the top of [TESTING.md](TESTING.md).
+They preserve the calculator selection and cart arrow-navigation failures.
+Local fixes now separate calculator focus from selection and group cart arrow
+navigation by product. Static script/reference checks pass; browser verification
+was stopped by the Computer Use URL check. Phone/laptop and published retests
+of these fixes remain Not run. The owner confirmed phone portrait was fine;
+landscape felt cramped and zoomed in with browser controls at the top and bottom.
+That observation is recorded for follow-up; no layout change is claimed.
+The existing five-page Lighthouse reports are retained. The owner has declined
+additional Lighthouse runs; those reports describe the version originally audited.
+
 Start with the current plan at the top of [TESTING.md](TESTING.md). It lists
 all five live URLs, every current JavaScript feature, a complete navigation
 matrix, manual checks, ten Mobile/Desktop Lighthouse rows, and a failure/retest
@@ -102,7 +113,9 @@ terms to keep small squares readable.
 Calculator supports addition, subtraction, multiplication, and division,
 including negative and decimal inputs. It checks missing/invalid numbers,
 division by zero, and nonfinite results. Answers display to 12 significant
-digits. Enter selects the focused operation without submitting the form.
+digits. Left/Right move focus between operations without selecting; Enter selects
+the focused operation without submitting the form. Mouse and native Space
+activation remain available.
 Only the current result is displayed; there is no recent-calculation list.
 Reset example restores 12 + 3.
 
@@ -110,8 +123,9 @@ Shopping Cart uses the original shelf: 2 Frosted Flakes at $2.99 each, 3 eggs
 at $5.99 each, and 4 sourdough loaves at $3.99 each. Add a whole-number quantity,
 adjust quantities in the basket, remove a line, or empty the basket. Shelf
 stock and totals update together; calculations use integer cents. All nine
-items total $39.91. Right from a shelf quantity focuses its Add button; Left
-returns to the quantity. There is no checkout or persistent storage.
+items total $39.91. Left/Right follow each product's Quantity, Add, minus, plus,
+and Remove controls, skipping unavailable controls. Empty basket follows the
+products. There is no checkout or persistent storage.
 
 These browser adaptations were built with Codex and are
 distinguished from the original Python classroom work.
@@ -153,7 +167,8 @@ Left/Right move through controls in order. Up/Down move to a control on the
 visual row above/below, scrolling if there is no control in that direction.
 The jump-to-content link was removed at the owner's request. On Projects,
 Up/Down leave selection and number controls without changing their values;
-Left/Right retain native adjustments and caret movement. Contact fields keep
+Left/Right retain native adjustments and caret movement except for the calculator
+operations and cart controls described above. Contact fields keep
 normal editing keys. Enter activates controls; Escape releases Tab to normal browser navigation
 for the current page. A new page or restored
 page enables cycling again. Browser shortcuts remain available.
@@ -166,6 +181,8 @@ retests and Lighthouse checks remain pending.
 The project carousel has Previous/Next buttons, Left/Right arrows, and Home/End
 to reach its first/last slide. There is no autoplay. Slide changes keep focus on
 a visible control; all four interactive labs remain below the showcase.
+Back to the top uses a smooth scroll for mouse/touch and Enter activation,
+and an instant return when reduced motion is requested.
 
 Page entry lasts 560ms (previously 420ms), with reduced motion still respected.
 All styling uses one external stylesheet and local assets. Phone and laptop

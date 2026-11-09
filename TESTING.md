@@ -1,5 +1,82 @@
 # Website test plan
 
+## Owner live test results and keyboard follow-up — November 8, 2026
+
+The owner reported the results below after testing the live GitHub Pages site:
+https://ss08-school.github.io/portfolio/. U01–U12 correspond to T1–T12 in the
+conversation's twelve-example table, not the older T1–T12 in the historical
+record. These are owner-reported results. Exact browser version, viewport sizes,
+and the deployed commit were not supplied; no new device details are inferred.
+Earlier detailed failures and results below are retained.
+
+| ID / conversation ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| U01 / T1 | Every navigation link | From each page activate all five page links; repeat at phone/laptop widths. | Every destination and current-page indicator are correct. | Pass — owner reported T1 is OK on the live site. Exact run configurations were not supplied. |
+| U02 / T2 | Phone layouts | Inspect and scroll through all five pages in portrait and landscape, with browser controls visible. | Content and controls fit without clipping or sideways scrolling and remain usable in a short viewport. | Portrait: Pass — owner reported the vertical layout was fine. Landscape: owner reported Chrome controls at the top and bottom reduced available room and the site felt zoomed in. No clipping or overflow was specifically reported. Landscape usability needs follow-up; no spacing fix or retest is claimed. |
+| U03 / T3 | Laptop layouts | Inspect all five pages at laptop width. | Text, images, and controls remain readable without overlap or clipping. | Pass — owner reported T3 is OK. |
+| U04 / T4 | Keyboard on every page | Use Tab, Shift+Tab, Enter, arrows, and Escape; inspect calculator operations and cart controls. | Focus stays visible; Left/Right browse calculator operations without selecting; cart arrows reach item actions before Empty basket; Enter activates. | Fail — owner reported Left/Right selected calculator operations and cart arrows reached Empty basket before the desired item controls. Other keyboard behavior was reported OK. Local fixes implemented; browser and live retests: Not run. |
+| U05 / T5 | Theme and persistence | Switch themes on every page, reload, and navigate. | Theme updates and persists; dark background is solid. | Pass — owner reported T5 is OK. |
+| U06 / T6 | Manual carousel | Use Previous/Next and keyboard controls, then each demo link. | All slides and demo links work with visible focus. | Pass — owner reported T6 is OK. |
+| U07 / T7 | Calculator | Try all operations with 12 and 3, blank input, division by zero, and reset; browse operations with arrows and select with Enter. | Correct arithmetic and errors; arrows only move focus; Enter selects without calculating until submission. | Fail for keyboard selection — owner reported calculator otherwise OK. Same failure/fix as U04; local browser and live retests: Not run. |
+| U08 / T8 | Shopping cart | Add/change/remove/empty items; test invalid quantities; move Left/Right between shelf and basket actions. | Stock and totals update; invalid values are rejected; item controls are reached before Empty basket. | Fail for arrow navigation — owner reported cart otherwise OK. Same failure/fix as U04; local browser and live retests: Not run. |
+| U09 / T9 | Rock Paper Scissors | Play computer and two-player modes; inspect scoring, handoff, Next round, and reset. | Game rules, concealment, scores, and reset work. | Pass — owner reported no additional game-specific problem; shared keyboard failures are recorded in U04/U07/U08. |
+| U10 / T10 | Fibonacci explorer | Generate valid and invalid counts; select terms and use stepping/playback controls. | Valid sequences begin at 0; invalid counts are rejected; controls update correctly. | Pass — owner reported no additional Fibonacci-specific problem; shared keyboard failures are recorded separately. |
+| U11 / T11 | Contact validation and draft | Test blank/invalid/valid input; create a draft and edit a field. | Errors appear for invalid input; valid input prepares an encoded draft; editing invalidates it. | Pass — owner reported T11 is OK. No message delivery is claimed. |
+| U12 / T12 | Lighthouse and motion | Run Accessibility on each live page; scroll through Skills/Contact and inspect reduced motion separately. | Every page scores at least 90; reveals occur once and reduced motion skips effects. | Lighthouse: Pass — owner reports completion; existing five Mobile after-exports record Accessibility 100. Reveal/reduced-motion checks were not specifically confirmed in this owner session: Not run. Desktop audits remain Not run. |
+
+### Requested fixes and retest status
+
+- T2 clarification: the concern is phone landscape with browser controls visible,
+  not portrait. Source inspection confirms all five pages declare
+  `width=device-width, initial-scale=1`; no forced zoom was found in those
+  declarations. Some heading sizes scale with viewport width, so source alone
+  does not establish why the page felt zoomed in. No CSS or viewport changes
+  were made for this observation. Recheck the affected landscape page on the
+  actual phone with browser controls visible, recording device/browser and
+  whether text or controls are clipped or simply require more vertical scrolling.
+- Calculator Left/Right now prevent native radio selection and move focus in
+  control order. Enter selects the focused operation without submitting. Mouse
+  and native Space activation remain available. Up/Down navigation is preserved.
+- Cart Left/Right now follow each product's Quantity, Add, minus, plus, and Remove
+  controls, skipping disabled/unavailable actions. Empty basket follows all
+  products. Tab order is unchanged. Arrows do not add/remove items.
+- Shared script URLs were refreshed on all five pages. README and project
+  instructions describe the owner's requested keyboard behavior.
+- Static validation: Pass — main.js parses as a classic script; all 74 local
+  link/asset references and HTML fragments resolve; all five pages use the
+  current script SHA-256 prefix `44a588a2cebe`; git diff --check passes. These
+  checks do not establish browser behavior. The five saved Mobile after-report
+  JSON files were read again: each records Accessibility 100 on its live URL.
+- Browser verification was attempted using native Chrome on the direct-file
+  site. Computer Use stopped because it could not determine the current browser
+  URL with enough confidence to enforce policy. No further UI input was issued.
+  Phone/laptop keyboard, direct-file loading, rendered images, and console checks
+  for this change remain Not run. No new screenshots or Lighthouse runs are claimed.
+- The owner approved committing and pushing these changes. After deployment, repeat
+  U04/U07/U08 at phone/laptop widths. Keep the failures above alongside the new
+  results. The owner declined further Lighthouse runs: retain the completed
+  reports as evidence for their audited revision; no new audit is required by
+  this follow-up and no score for these later changes is claimed.
+
+### Back to the top transition — November 8, 2026
+
+The owner requested a smooth transition when activating Back to the top.
+Source inspection found that a click handler forced an instant jump before
+the native anchor could use the existing reduced-motion-aware CSS scrolling.
+The handler now stops any pending custom keyboard scroll and leaves scrolling,
+focus, and fragment history to the native link. The shared script URLs are
+refreshed. Existing keyboard-focus transitions remain unchanged.
+Static retest: Pass — the script parses, all 74 local references/fragments
+resolve, all page script versions match, and git diff --check passes. Browser
+retest was unavailable: the browser access host was unavailable and the native
+Chrome window was minimized. Phone/laptop, direct-file, rendered-image, console,
+and motion checks remain Not run for this correction. No Lighthouse rerun was
+performed or requested.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| U13 | Back to the top transition | At phone and laptop widths, scroll to the end of Projects. Click/tap Back to the top, then repeat using Tab and Enter, including when the URL already ends in #top. Enable reduced motion and repeat. | Normal motion scrolls smoothly to the top; reduced motion returns instantly. The fragment and keyboard navigation remain usable. | Initial: Fail by source inspection — the handler explicitly forced an instant jump, matching the owner's report. Local correction implemented. Browser/live retests: Not run. |
+
 ## Lighthouse assignment results - November 8, 2026
 
 All five supplied live Mobile before/after pairs were read from actual JSON exports.

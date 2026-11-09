@@ -114,12 +114,16 @@ empty sections, or dummy links.
   every image. Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
+- Back to the top scrolls smoothly when clicked or activated with Enter; use
+  instant scrolling when reduced motion is requested.
 - Start Tab cycling on every page without a footer toggle or a saved off state.
   Left/Right move through controls in order. Up/Down move to controls on the
   visual row above/below; if none exists in that direction, scroll vertically.
   On Projects, Up/Down navigate from selection and number controls without
   changing their values. Left/Right retain native adjustment and caret movement,
-  except Right from a cart quantity goes to its Add button and Left returns.
+  except calculator operations use Left/Right to move focus without selecting.
+  Cart Left/Right follow each product's Quantity, Add, minus, plus, and Remove
+  controls, skipping unavailable controls; Empty basket comes after the products.
   Enter on a calculator operation selects the focused symbol; calculate only
   when submitting the form. Do not display recent calculation history.
   Text fields on other pages keep native arrow behavior.

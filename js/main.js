@@ -152,8 +152,8 @@ document.addEventListener("keydown", (event) => {
 document.addEventListener("click", (event) => {
   if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   if (event.target.closest('a[href="#top"]')) {
-    // Also reset an already-open page immediately; keep native link/history behavior.
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    // Let the native anchor use CSS smooth scrolling and reduced-motion settings.
+    stopKeyboardScroll();
   }
 });
 
@@ -778,11 +778,18 @@ function initializeCalculator() {
   }
 
   form.querySelector(".operation-options").addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" || event.isComposing || event.ctrlKey || event.metaKey || event.altKey ||
+    if (event.isComposing || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey ||
       !event.target.matches('input[name="operation"]')) return;
-    // Enter selects the focused symbol instead of submitting the previous choice.
-    event.preventDefault();
-    event.target.click();
+    if (["ArrowLeft", "ArrowRight"].includes(event.key)) {
+      // Browsing operations moves focus without changing the selected calculation.
+      event.preventDefault();
+      stopKeyboardScroll();
+      moveControlFocus(event.key === "ArrowLeft" ? -1 : 1);
+    } else if (event.key === "Enter") {
+      // Select explicitly, without submitting the previous choice.
+      event.preventDefault();
+      event.target.click();
+    }
   });
 
   form.addEventListener("submit", (event) => {
@@ -851,18 +858,23 @@ function initializeShoppingCart() {
     demo.querySelector(`#quantity-${item.id}`).removeAttribute("aria-invalid");
   }
 
-  shelf.addEventListener("keydown", (event) => {
+  demo.addEventListener("keydown", (event) => {
     if (!["ArrowLeft", "ArrowRight"].includes(event.key) || event.defaultPrevented || event.isComposing ||
       event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
-    const row = event.target.closest(".shelf-controls");
-    if (!row) return;
-    const quantity = row.querySelector("input");
-    const addButton = row.querySelector("button");
-    const destination = event.key === "ArrowRight" && event.target === quantity ? addButton
-      : event.key === "ArrowLeft" && event.target === addButton ? quantity : null;
-    if (!destination || destination.disabled) return;
+    // Keep each product's shelf and basket actions together, even in two columns.
+    const availableControls = pageControls();
+    const cartControls = groceries.flatMap((item) => [
+      ...shelf.querySelectorAll(`[data-product="${item.id}"] input, [data-product="${item.id}"] button`),
+      ...lines.querySelectorAll(`[data-cart-product="${item.id}"] button`)
+    ]).concat(clearButton).filter((control) => availableControls.includes(control));
+    const current = cartControls.indexOf(event.target);
+    if (current === -1) return;
+    const direction = event.key === "ArrowLeft" ? -1 : 1;
     event.preventDefault();
-    focusControl(destination);
+    stopKeyboardScroll();
+    const destination = cartControls[current + direction];
+    if (destination) focusControl(destination);
+    else moveControlFocus(direction, availableControls);
   });
 
   shelf.addEventListener("submit", (event) => {
