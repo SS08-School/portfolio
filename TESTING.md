@@ -1488,7 +1488,15 @@ repeated dismissal, history entry, and safe ordering around native close/focus
 events. These mocked checks do not reproduce or prove resolution of the actual
 Chrome renderer crash. Phone/laptop crash, text-selection, keyboard, touch,
 direct-file browser, and console retests remain Not run for owner testing.
-This revision has not been deployed.
+At the time of these checks, this revision had not been deployed.
+
+Dropdown correction deployment checks on 2026-11-09: GitHub Pages deployment
+succeeded for commit `cac1bfb`. All five pages returned HTTP 200 with the new
+script and stylesheet versions. Those assets returned HTTP 200 and contain
+deferred focus dismissal, the native-details state guard, and dropdown-only
+text-selection prevention. Publication/source checks passed; the actual Chrome
+crash and rendered input behavior still require owner retesting. No browser/app
+automation or screenshots were used.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
