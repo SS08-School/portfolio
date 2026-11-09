@@ -74,11 +74,15 @@ empty sections, or dummy links.
   triangles alternate direction both horizontally and vertically, with generous
   gaps. Keep a gradient fading from stronger outer edges to transparent near
   the content. Use near-black in light mode and matching light ink in dark mode.
-  Keep them outside the content, non-interactive, and absent on narrower screens.
-  On page entry, allow only a very subtle two-second opacity glimmer with
-  slightly different irregular fade patterns on each side, randomly swapped.
-  Return to normal afterwards; never loop or retrigger on scroll. Respect
-  reduced motion, stop when the page is hidden, and replay on cached Back entry.
+  Keep them outside the content, unable to intercept clicks or focus, and absent
+  on narrower screens.
+  On page entry, let individual triangles briefly dim and return to normal at
+  independent random times within two seconds. Make this perceptible but gentle;
+  never loop the glimmer or replay it on scroll. With a fine mouse pointer,
+  triangles within 96px may ease away by at most 6px and return when it leaves.
+  Distant triangles remain at rest. Stop animation frames once settled, retain
+  the static CSS fallback, respect reduced motion, clean up hidden pages, and
+  replay the entry glimmer on cached Back navigation.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Use matching inline SVG arrow icons on every device, including dynamically

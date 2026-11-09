@@ -1,6 +1,43 @@
 # Website test plan
 
-## Current: two-second page-entry glimmer — November 9, 2026
+## Current: individual glimmer and nearby mouse repulsion — November 9, 2026
+
+Owner-reported failure: the previous whole-strip opacity effect was not visibly
+glimmering. The correction uses individual decorative SVG triangles with
+independent random fade delays, durations, and strengths inside a two-second
+page-entry window. Each pulse dims to about 0.54–0.72 opacity before returning
+to 1, rather than fading the entire strip by only 12%. The existing sparse
+checker positions, document anchoring, mirrored gutter gradient, and colors
+remain. Generated decoration is aria-hidden, inert, and pointer-events:none.
+
+For a fine mouse pointer, only triangles within 96px of their resting centers
+receive a repelling target, capped at 6px. They ease toward that target and back
+to rest; distant triangles stay unchanged. A frame is requested only during
+the initial glimmer, pointer/scroll updates, or settling motion, with no ongoing
+RAF loop at rest. Off-screen triangles are not animated. ResizeObserver rebuilds
+the fields when content height changes, without duplicate fields. Reduced
+motion, narrow/hidden pages, page exit, or missing observer support use the
+unchanged static CSS fallback. Cached Back entry replays the glimmer; scrolling,
+ordinary visibility restoration, and preference restoration do not.
+
+Passed 1961 isolated assertions, including a 31x31 grid of bounded-vector and
+direction properties plus lifecycle/integration checks for visible individual
+opacity changes, two-second restoration, near/far pointer behavior, resting RAF
+shutdown, right-side mirroring, fine-pointer gating, content resizing, static
+fallbacks, hidden-page cleanup, and Back replay. These are mostly numerical
+property checks and mocked DOM checks, not native browser interactions. Shared
+script syntax, all 75 page references and asset hashes, CSS fallback rules,
+and the SVG mask version also passed source checks. No browser/app automation
+or screenshots were used. Actual visibility, smoothness, layout/performance on
+devices, native mouse/keyboard use, direct-file loading, console errors, and
+Lighthouse remain for owner testing. This correction is local and not deployed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| PARTICLE-01 | Individual shimmer and force invariants | Run isolated entry/frame/lifecycle events and a proximity-coordinate grid; verify near, far, mirrored-side, fine-pointer, and idle behavior. | Independent opacity pulses finish within two seconds; forces point away within 96px and never exceed 6px; far/resting triangles remain still and RAF stops. | Pass — 1961 isolated assertions, shared script syntax, and 75 reference/version checks. |
+| PARTICLE-02 | Owner glimmer/proximity review | Visit each page at wide laptop sizes in both themes. Watch entry for two seconds, approach a triangle with the mouse, move away, scroll, use Back, expand project sections, and enable reduced motion. Repeat below 80rem and without JavaScript. | Brief individual glimmers are visible but gentle; nearby triangles shift only a little and return; distant ones remain still. No repeated glimmer on scroll, click blocking, content overlap, console errors, or sustained activity at rest; fallback stays static. | Not run — owner browser/device testing; browser/app control remains disabled. |
+
+## Previous: two-second page-entry glimmer — November 9, 2026
 
 The owner requested only a brief shimmer when changing pages. Wide layouts now
 apply two irregular, gentle opacity patterns to the existing side decorations,
@@ -34,7 +71,7 @@ browser/app automation or screenshots were used.
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | GLIMMER-01 | Short shimmer lifecycle | Run isolated page-entry, timer, Back, repeated-entry, visibility, breakpoint, and reduced-motion events; inspect CSS keyframes and asset versions. | One subtle two-second effect per eligible entry; returns to normal, clears its timer, respects preferences, and never loops or restarts on scroll. | Pass — 98 source/isolated assertions, script syntax, and 75 reference checks. |
-| GLIMMER-02 | Owner animation review | Visit all pages at wide laptop widths in both themes; watch for several seconds, scroll, navigate, and use Back. Repeat with reduced motion and below 80rem, including changing settings during the effect. | Very subtle, slightly different side fades last about two seconds, then remain still. Eligible page changes/Back replay; scrolling does not. Reduced motion and narrow layouts stay still; controls and content remain unaffected. | Not run — owner browser/device testing; browser/app control remains disabled. |
+| GLIMMER-02 | Owner animation review | Visit all pages at wide laptop widths in both themes; watch for several seconds, scroll, navigate, and use Back. Repeat with reduced motion and below 80rem, including changing settings during the effect. | Very subtle, slightly different side fades last about two seconds, then remain still. Eligible page changes/Back replay; scrolling does not. Reduced motion and narrow layouts stay still; controls and content remain unaffected. | Fail — owner reports no visible glimmer in the published version. Other parts of this case remain unverified; the individual-triangle correction above still needs owner review. |
 
 ## Previous: quieter checkerboard triangles — November 9, 2026
 

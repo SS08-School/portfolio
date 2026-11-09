@@ -1,30 +1,161 @@
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const triangleLayout = window.matchMedia("(min-width: 80rem)");
-const triangleGlimmerClasses = ["triangle-glimmer", "triangle-glimmer-reversed"];
-let triangleGlimmerTimer = null;
-
-function stopTriangleGlimmer() {
-  window.clearTimeout(triangleGlimmerTimer);
-  triangleGlimmerTimer = null;
-  document.body.classList.remove(...triangleGlimmerClasses);
+function trianglePointerOffset(x, y, pointer) {
+  if (!pointer) return { x: 0, y: 0 };
+  const dx = x - pointer.x;
+  const dy = y - pointer.y;
+  const distance = Math.hypot(dx, dy);
+  if (distance >= 96) return { x: 0, y: 0 };
+  const strength = 6 * (1 - distance / 96) ** 2;
+  if (distance < 0.001) return { x: strength, y: 0 };
+  return { x: dx / distance * strength, y: dy / distance * strength };
 }
 
-function startTriangleGlimmer() {
-  stopTriangleGlimmer();
-  if (reducedMotion.matches || !triangleLayout.matches || document.hidden) return;
-  // Swap the two quiet fade patterns randomly on each page entry.
-  void document.body.offsetWidth;
-  const variation = Math.floor(Math.random() * triangleGlimmerClasses.length);
-  document.body.classList.add(triangleGlimmerClasses[variation]);
-  triangleGlimmerTimer = window.setTimeout(stopTriangleGlimmer, 2000);
+function triangleEntryOpacity(elapsed, triangle) {
+  if (elapsed < 0 || elapsed >= 2000) return 1;
+  const progress = (elapsed - triangle.delay) / triangle.duration;
+  if (progress <= 0 || progress >= 1) return 1;
+  return 1 - triangle.depth * Math.sin(progress * Math.PI) ** 2;
 }
 
-startTriangleGlimmer();
-window.addEventListener("pageshow", (event) => { if (event.persisted) startTriangleGlimmer(); });
-window.addEventListener("pagehide", stopTriangleGlimmer);
-document.addEventListener("visibilitychange", () => { if (document.hidden) stopTriangleGlimmer(); });
-triangleLayout.addEventListener("change", stopTriangleGlimmer);
-reducedMotion.addEventListener("change", (event) => { if (event.matches) stopTriangleGlimmer(); });
+function initializeTriangleEffects() {
+  // The existing CSS pattern is the fallback without this enhancement.
+  if (!("ResizeObserver" in window)) return;
+  const wideLayout = window.matchMedia("(min-width: 80rem)");
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const namespace = "http://www.w3.org/2000/svg";
+  let fields = [];
+  let geometry = "";
+  let pointer = null;
+  let frame = null;
+  let previousTime = null;
+  let entryTime = performance.now();
+
+  function requestDraw() {
+    if (frame === null && fields.length && !document.hidden) {
+      frame = window.requestAnimationFrame(draw);
+    }
+  }
+
+  function removeFields() {
+    if (frame !== null) window.cancelAnimationFrame(frame);
+    frame = null;
+    previousTime = null;
+    pointer = null;
+    fields.forEach((field) => field.element.remove());
+    fields = [];
+    geometry = "";
+    document.body.classList.remove("has-interactive-triangles");
+  }
+
+  function buildFields() {
+    if (!wideLayout.matches || reducedMotion.matches || document.hidden) {
+      removeFields();
+      return;
+    }
+    const unit = parseFloat(window.getComputedStyle(document.documentElement).fontSize) || 16;
+    const width = (document.body.clientWidth - 1060) / 2 - 2.5 * unit;
+    const height = document.body.offsetHeight;
+    const nextGeometry = [width, height, unit].join(":");
+    if (width <= 0) { removeFields(); return; }
+    if (nextGeometry === geometry) return;
+    removeFields();
+
+    for (const side of ["left", "right"]) {
+      const element = document.createElement("div");
+      element.className = "triangle-field triangle-field-" + side;
+      element.setAttribute("aria-hidden", "true");
+      element.setAttribute("inert", "");
+      const svg = document.createElementNS(namespace, "svg");
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      svg.setAttribute("preserveAspectRatio", "none");
+      svg.setAttribute("focusable", "false");
+      const triangles = [];
+      for (let row = 0, y = 2.5 * unit; y - unit < height; row++, y += 5 * unit) {
+        for (let column = 0, x = 2 * unit; x - 0.625 * unit < width; column++, x += 4 * unit) {
+          const direction = (row + column) % 2 === 0 ? 1 : -1;
+          const halfWidth = 0.625 * unit;
+          const path = document.createElementNS(namespace, "path");
+          path.setAttribute("d", `M${x - direction * halfWidth} ${y - unit} L${x + direction * halfWidth} ${y} L${x - direction * halfWidth} ${y + unit}Z`);
+          svg.append(path);
+          triangles.push({
+            path, x, y, offsetX: 0, offsetY: 0, opacity: 1,
+            delay: Math.random() * 550,
+            duration: 800 + Math.random() * 600,
+            depth: 0.28 + Math.random() * 0.18
+          });
+        }
+      }
+      element.append(svg);
+      document.body.append(element);
+      fields.push({ element, triangles, side });
+    }
+    geometry = nextGeometry;
+    document.body.classList.add("has-interactive-triangles");
+    requestDraw();
+  }
+
+  function draw(time) {
+    frame = null;
+    const elapsed = time - entryTime;
+    const blend = 1 - Math.exp(-(previousTime === null ? 16 : Math.min(time - previousTime, 50)) / 70);
+    previousTime = time;
+    let moving = false;
+    for (const field of fields) {
+      const bounds = field.element.getBoundingClientRect();
+      const localPointer = pointer ? {
+        x: field.side === "right" ? bounds.right - pointer.x : pointer.x - bounds.left,
+        y: pointer.y - bounds.top
+      } : null;
+      for (const triangle of field.triangles) {
+        const visible = triangle.y + bounds.top >= -32 && triangle.y + bounds.top <= window.innerHeight + 32;
+        const target = visible ? trianglePointerOffset(triangle.x, triangle.y, localPointer) : { x: 0, y: 0 };
+        const x = visible ? triangle.offsetX + (target.x - triangle.offsetX) * blend : 0;
+        const y = visible ? triangle.offsetY + (target.y - triangle.offsetY) * blend : 0;
+        const nextX = Math.abs(target.x - x) < 0.02 ? target.x : x;
+        const nextY = Math.abs(target.y - y) < 0.02 ? target.y : y;
+        moving ||= nextX !== target.x || nextY !== target.y;
+        if (nextX !== triangle.offsetX || nextY !== triangle.offsetY) {
+          triangle.path.setAttribute("transform", `translate(${nextX.toFixed(3)} ${nextY.toFixed(3)})`);
+          triangle.offsetX = nextX;
+          triangle.offsetY = nextY;
+        }
+        const opacity = visible ? triangleEntryOpacity(elapsed, triangle) : 1;
+        if (opacity !== triangle.opacity) {
+          triangle.path.setAttribute("opacity", opacity.toFixed(3));
+          triangle.opacity = opacity;
+        }
+      }
+    }
+    // No animation loop remains once the entry shimmer and nearby motion settle.
+    if (elapsed < 2000 || moving) requestDraw();
+    else previousTime = null;
+  }
+
+  function clearPointer() { pointer = null; requestDraw(); }
+  function cancelEntry() { entryTime = -Infinity; clearPointer(); buildFields(); }
+  document.addEventListener("pointermove", (event) => {
+    if (event.pointerType !== "mouse" || !finePointer.matches || !fields.length) return;
+    pointer = { x: event.clientX, y: event.clientY };
+    requestDraw();
+  }, { passive: true });
+  document.addEventListener("pointerleave", clearPointer);
+  window.addEventListener("blur", clearPointer);
+  window.addEventListener("scroll", requestDraw, { passive: true });
+  window.addEventListener("resize", buildFields);
+  wideLayout.addEventListener("change", cancelEntry);
+  reducedMotion.addEventListener("change", cancelEntry);
+  finePointer.addEventListener("change", clearPointer);
+  document.addEventListener("visibilitychange", cancelEntry);
+  window.addEventListener("pagehide", () => { entryTime = -Infinity; removeFields(); });
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) { entryTime = performance.now(); buildFields(); requestDraw(); }
+  });
+  const observer = new window.ResizeObserver(buildFields);
+  observer.observe(document.body);
+  buildFields();
+}
+
+initializeTriangleEffects();
 
 // Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;

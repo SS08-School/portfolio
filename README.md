@@ -41,12 +41,16 @@ in a checkerboard arrangement. The gradient and full-page anchoring remain.
 The quieter checkerboard was deployed on November 9, 2026 (`20c146b`); all five
 page references, the new stylesheet, and the four-triangle SVG were verified
 over HTTP. Rendered browser review remains for the owner.
-The local glimmer refinement adds a quiet, irregular opacity shimmer to the
-side pattern for about two seconds on page entry, then restores its normal
-appearance. Each entry randomly swaps the two sides' fade patterns. It replays
-on cached Back navigation, never loops or restarts on scroll, and stops when
-the page is hidden, the layout becomes narrow, or reduced motion is requested.
-The brief glimmer was deployed on November 9, 2026 (`1840056`); all five pages
+The first glimmer used very small whole-strip opacity changes; the owner reported
+that they could not see it. The local correction renders individual decorative
+SVG triangles, with independent random dim-and-return pulses during the first
+two seconds of page entry. A fine mouse pointer within 96px gently pushes nearby
+triangles away by at most 6px; they ease back afterwards. Distant triangles stay
+still, and animation frames stop once motion settles. Scrolling does not replay
+the glimmer; cached Back entry does. Reduced motion, narrow layouts, missing
+ResizeObserver support, or disabled JavaScript retain the static CSS pattern.
+The correction is local and not yet deployed. The earlier whole-strip glimmer
+was deployed on November 9, 2026 (`1840056`); all five pages
 and the two-second animation/cleanup code were verified over HTTP. Actual
 animation appearance remains for owner review.
 
