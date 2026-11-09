@@ -108,7 +108,7 @@ window.addEventListener("pageshow", () => { keepTabOnPage = true; });
 
 document.addEventListener("keydown", (event) => {
   if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
-  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
+  if (event.key === "Escape" && !menuContainer?.open) {
     stopKeyboardScroll();
     // Provide an accessible escape to browser controls, without disabling later visits.
     keepTabOnPage = false;
@@ -154,20 +154,19 @@ document.addEventListener("keydown", (event) => {
 
 if (menuButton && navigation && menuContainer) {
   function setMenuOpen(isOpen) {
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-    navigation.hidden = !isOpen;
+    menuContainer.open = isOpen;
   }
 
-  // The original hamburger opens the same dropdown at phone and laptop widths.
-  menuContainer.classList.add("is-enhanced");
-  menuButton.hidden = false;
+  // Native details/summary keeps the menu usable even before this script loads.
   setMenuOpen(false);
 
   menuButton.addEventListener("click", (event) => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    setMenuOpen(!isOpen);
-    // Keyboard activation goes straight to the first page link.
-    if (!isOpen && event.detail === 0) navigation.querySelector("a")?.focus();
+    if (event.detail !== 0) return;
+    // Pointer clicks toggle natively; keyboard activation also enters the links.
+    event.preventDefault();
+    const isOpen = !menuContainer.open;
+    setMenuOpen(isOpen);
+    if (isOpen) navigation.querySelector("a")?.focus();
   });
 
   navigation.addEventListener("click", (event) => {
@@ -179,7 +178,7 @@ if (menuButton && navigation && menuContainer) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+    if (event.key === "Escape" && menuContainer.open) {
       event.preventDefault();
       setMenuOpen(false);
       menuButton.focus();
@@ -196,7 +195,68 @@ if (menuButton && navigation && menuContainer) {
   menuContainer.addEventListener("focusout", (event) => {
     if (!menuContainer.contains(event.relatedTarget)) setMenuOpen(false);
   });
+
+  // Back/Forward can restore an open details element from the page cache.
+  window.addEventListener("pageshow", () => {
+    if (navigation.contains(document.activeElement)) menuButton.focus({ preventScroll: true });
+    setMenuOpen(false);
+  });
 }
+
+function initializeMobileHeader() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const mobileLayout = window.matchMedia("(max-width: 59.99rem)");
+  let previousScroll = 0;
+  let scrollDistance = 0;
+
+  function currentScroll() {
+    const maximum = Math.max(0, document.scrollingElement.scrollHeight - window.innerHeight);
+    // Ignore overscroll bounce at the top and bottom of a phone page.
+    return Math.max(0, Math.min(window.scrollY, maximum));
+  }
+
+  function revealHeader() {
+    header.classList.remove("is-header-hidden");
+    scrollDistance = 0;
+  }
+
+  function resetHeader() {
+    header.classList.toggle("scroll-header", mobileLayout.matches);
+    previousScroll = currentScroll();
+    revealHeader();
+  }
+
+  window.addEventListener("scroll", () => {
+    const position = currentScroll();
+    const movement = position - previousScroll;
+    previousScroll = position;
+    if (!mobileLayout.matches) return;
+
+    const keyboardFocus = header.contains(document.activeElement) &&
+      document.activeElement.matches(":focus-visible");
+    if (position <= header.offsetHeight || menuContainer?.open || keyboardFocus) {
+      revealHeader();
+      return;
+    }
+
+    if (Math.sign(movement) !== Math.sign(scrollDistance)) scrollDistance = 0;
+    scrollDistance += movement;
+    // A small threshold avoids flickering from tiny finger movements.
+    if (Math.abs(scrollDistance) >= 8) {
+      header.classList.toggle("is-header-hidden", scrollDistance > 0);
+      scrollDistance = 0;
+    }
+  }, { passive: true });
+
+  header.addEventListener("focusin", revealHeader);
+  menuContainer?.addEventListener("toggle", revealHeader);
+  mobileLayout.addEventListener("change", resetHeader);
+  window.addEventListener("pageshow", resetHeader);
+  resetHeader();
+}
+
+initializeMobileHeader();
 
 document.addEventListener("click", (event) => {
   if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;

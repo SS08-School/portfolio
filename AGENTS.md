@@ -115,7 +115,13 @@ empty sections, or dummy links.
   removed at the owner's request.
 - Navigation links must be keyboard-accessible at phone and laptop widths, with
   the current page identified. The hamburger opens/closes with click or Enter;
-  Escape closes it and returns focus. Without JavaScript, show the links directly.
+  Escape closes it and returns focus. Use native details/summary so the hamburger
+  stays usable without JavaScript. Position the dropdown from the header in CSS
+  without waiting for a JavaScript-added class. Reset it on page/history entry.
+- Only in the mobile layout (below 60rem), show the sticky header when scrolling
+  upward and hide it when scrolling downward. Keep it visible near the page top,
+  while the menu is open, or when header controls have visible keyboard focus.
+  Desktop headers scroll normally. Respect reduced motion.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
 - Do not include a skip/jump-to-content link, as requested by the owner.
@@ -151,6 +157,9 @@ After each website change, check the affected behavior in VS Code Live Preview
 or an available browser, at phone and laptop widths, and with the keyboard.
 Also verify that the site still opens directly from `index.html`. Check for
 broken links, missing images, and browser console errors.
+The owner has asked to stop computer control: do not automate their browser or
+other apps, or capture screenshots, unless they explicitly authorize it again.
+Use source/isolated-logic checks and record browser/device checks for owner testing.
 
 Maintain `TESTING.md` with at least 12 test cases. Each needs an ID, what is
 being tested, steps, expected result, and actual Pass or Fail result after it

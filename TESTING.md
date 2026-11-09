@@ -1,5 +1,66 @@
 # Website test plan
 
+## Mobile scroll-up header — November 9, 2026
+
+The owner requested access to the dropdown while partway down a phone page and
+explicitly asked to stop computer control. No computer/browser automation or
+screenshots were used for this change. The previous native dropdown correction
+is included in this revision; the owner approved committing and pushing both fixes.
+
+Below 60rem (about 960px), JavaScript enables a sticky header. Scrolling upward
+by a small accumulated distance reveals it; scrolling downward beyond the
+header's height hides it. An 8px threshold avoids tiny direction-change flicker.
+The header remains visible near the top, with an open menu, or while header
+controls have visible keyboard focus. Overscroll is clamped to page bounds;
+page/history entry and breakpoint changes reset visibility. Desktop layout has
+no sticky-header rule. Reduced motion skips the transform transition. Mobile
+section anchors have extra top clearance for the revealed header. Without
+JavaScript, the native dropdown still works and the header scrolls normally.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| U25 | Mobile scroll direction and menu access | On each live page at phone portrait/landscape widths below 960px, scroll down beyond the header, then up slightly. Open the menu, keep scrolling, change pages, and use Back/Forward. | Header hides while scrolling down and reappears on upward scroll; the open menu stays accessible; page/history entry resets visibility; no header-layout jump or sideways overflow. | Isolated logic: Pass — initial/top visibility, downward hiding, upward threshold, jitter, open-menu pinning, history reset, and top/bottom overscroll cases passed. Actual browser/device/live: Not run, for owner testing. |
+| U26 | Desktop, keyboard, and reduced-motion regression | At laptop widths of 960px and above, scroll each page; resize between phone/laptop layouts. On mobile, Tab into the header, follow a section link, and repeat with reduced motion. | Desktop header scrolls normally; resizing clears mobile state; focused header controls stay visible; anchors have clearance; reduced motion skips sliding. | Isolated logic/source: Pass — desktop cleanup, return-to-mobile reset, visible-keyboard-focus pinning, focus-entry reveal, and mobile/no-preference transition scoping passed. Anchor clearance is present in CSS. Actual layout/keyboard/motion/live: Not run. |
+
+Validation: **14 isolated header/source checks passed**, using mocked scroll,
+focus, breakpoint, and lifecycle events. These do not verify native scrolling,
+rendering, or touch behavior. main.js parses; all 74 HTML references/fragments
+resolve; all five pages retain native details/summary navigation and current
+versions (JS `833b221df252`, CSS `97f351827fa5`). git diff --check passes.
+No Lighthouse rerun was performed or requested. The owner will perform any
+remaining browser/device checks unless they explicitly reauthorize automation.
+
+## Menu fallback and page-switching fix — November 9, 2026
+
+The owner's live Skills screenshot shows the page links as a tall header column
+with no hamburger to close them. The markup hid the button until main.js ran,
+and CSS positioned the panel only after JavaScript added `is-enhanced`. A missed
+or delayed initialization therefore exposed an in-flow navigation block. The
+screenshot matches that fallback; the precise reason initialization did not
+complete in the owner's session was not established from a console recording.
+HTTP checks confirmed all five live pages still used that vulnerable structure.
+
+Local correction: use native details/summary on every page, with the same SVG
+hamburger, accessible Menu name, square control, links, and selected page. CSS
+always anchors the dropdown to the header and bounds its width/height. Pointer
+activation opens/closes natively even with scripts blocked. JavaScript preserves
+keyboard entry, Escape, outside-click/link closing, and focus return; pageshow
+closes restored menus after Back/Forward. No open state is stored. The previous
+menu/fallback expectations below are historical. No Lighthouse rerun is requested.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| U21 | Menu before/without JavaScript | At phone/laptop widths, block or delay main.js and load all five pages directly and via their navigation. Open and close the hamburger. | The icon is visible immediately; the menu opens/closes natively and stays anchored at the header's right edge, without expanding the header into a tall column. | Initial live: Fail — owner screenshot and source inspection confirm the vulnerable hidden-button/in-flow fallback. Local source: Pass — all five pages use details/summary without a hidden toggle, and positioning no longer depends on is-enhanced. Browser/live retests: Not run. |
+| U22 | Page changes and history | With scripts enabled, open the menu, follow each page link, then use Back/Forward; repeat at phone/laptop widths and with reduced motion. | Each page/history entry starts closed; the three-line control remains reachable; no stuck menu or horizontal overflow. | Isolated JavaScript logic: Pass — initial and pageshow closure/focus cases passed. Native browser, responsive, history-cache, and live retests: Not run. |
+| U23 | Keyboard and pointer closing | Use Enter from the summary, Escape from links, click the summary, click outside, select a link, and move focus outside the menu. | Enter opens and focuses the first link; Escape closes and restores focus; pointer activation uses the native toggle; outside/link/focus-out close correctly. | Isolated JavaScript logic: Pass — eight total checks covered initialization, Enter, Escape, outside click, link activation, pageshow reset, focus leaving, and leaving pointer toggling to the browser. These used mocked event targets, not native browser defaults. Browser/live retests: Not run. |
+| U24 | Source and local assets | Parse main.js, resolve all page links/assets/fragments, inspect unique IDs/headings, and compare CSS/JS versions on all pages. Separately open index.html directly and inspect rendered images and console. | Script parses, assets/links resolve, headings/IDs remain valid, versions match; direct-file pages work without errors. | Static: Pass — all 74 HTML references/fragments resolve; all five pages have one h1, unique IDs, and native menus; JS 67909ae369ce and CSS ca78cd6c47e7 match their hashes; git diff --check passes. Direct-file/rendered-image/console checks: Not run. |
+
+Browser QA was attempted on the portfolio Chrome window. The helper reported
+concurrent user input, then Computer Use was stopped with the physical Escape
+key. No further computer input was issued. No visual, native-keyboard, console,
+phone/laptop, or direct-file pass is claimed for this revision. The fix is local
+and was subsequently approved for commit/push; prior failures are preserved above.
+
 ## Three-line menu correction and missing live changes — November 8, 2026
 
 The owner reported that the dropdown and grocery changes were still missing

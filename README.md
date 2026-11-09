@@ -15,6 +15,23 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
+The mobile layout (below 60rem / about 960px) now reveals the header when scrolling
+up and hides it when scrolling down. It stays visible near the page top, while
+the dropdown is open, or when header controls have visible keyboard focus.
+Desktop headers scroll normally. Reduced motion skips the slide transition.
+Fourteen isolated header checks passed; actual phone/laptop behavior still needs
+owner testing. The owner has requested no computer control, so no browser/app
+automation or screenshots are used for this follow-up. The owner approved
+publication of the mobile header and native dropdown fixes.
+
+The latest fix makes the hamburger a native HTML details/summary control.
+Its header-anchored dropdown and basic open/close behavior no longer depend on
+JavaScript initialization. JavaScript adds keyboard entry, Escape/outside-click
+closing, and a closed-state reset on page/history entry. This addresses the
+owner's screenshot of navigation becoming a left-aligned, uncloseable header
+column. Static and isolated menu-logic checks pass; browser retests were stopped
+by the user and remain unverified. Publication checks only verify served files.
+
 The latest correction restores the original three-line SVG hamburger from
 `5268c1d` and its dropdown on both phone and laptop widths. The earlier attempt
 restored a later text-only Menu and desktop links; the owner clarified that this
