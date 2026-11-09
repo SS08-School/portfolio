@@ -8,8 +8,8 @@
     <link rel="icon" href="images/monogram.svg?v=5215a69064c3" type="image/svg+xml">
     <title>About me | Sebastian Szeliga</title>
     <script src="js/theme.js?v=cae71dd46cd4"></script>
-    <link rel="stylesheet" href="css/styles.css?v=d21da1094691">
-    <script src="js/main.js?v=44a588a2cebe" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=0b44117df635">
+    <script src="js/main.js?v=3de00dd14624" defer></script>
   </head>
   <body id="top">
 
@@ -19,13 +19,29 @@
         <span>Sebastian Szeliga</span>
       </a>
 
-      <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-        <a class="nav-link nav-page-link" href="index.html#top">Home</a>
-        <a class="nav-link nav-page-link" href="#top" aria-current="page">About</a>
-        <a class="nav-link nav-page-link" href="projects.html#top">Projects</a>
-        <a class="nav-link nav-page-link" href="skills.html#top">Skills</a>
-        <a class="nav-link nav-page-link" href="contact.html#top">Contact</a>
-      </nav>
+      <div class="navigation-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" hidden>
+          <span>Menu</span>
+        </button>
+
+        <nav id="site-navigation" class="site-navigation" aria-label="Pages and sections">
+          <div class="navigation-group" role="group" aria-labelledby="home-navigation-title">
+            <p class="nav-group-title"><a id="home-navigation-title" class="nav-link nav-page-link" href="index.html#top">Home</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="about-navigation-title">
+            <p class="nav-group-title"><a id="about-navigation-title" class="nav-link nav-page-link" href="#top" aria-current="page">About me</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="projects-navigation-title">
+            <p class="nav-group-title"><a id="projects-navigation-title" class="nav-link nav-page-link" href="projects.html#top">Projects</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="skills-navigation-title">
+            <p class="nav-group-title"><a id="skills-navigation-title" class="nav-link nav-page-link" href="skills.html#top">Skills</a></p>
+          </div>
+          <div class="navigation-group" role="group" aria-labelledby="contact-navigation-title">
+            <p class="nav-group-title"><a id="contact-navigation-title" class="nav-link nav-page-link" href="contact.html#top">Contact</a></p>
+          </div>
+        </nav>
+      </div>
 
       <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
         <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
@@ -42,6 +58,7 @@
       <section class="page-intro" aria-labelledby="about-heading">
         <p class="eyebrow">Background</p>
         <h1 id="about-heading">About</h1>
+        <p>I'm Sebastian. I like working on different kinds of creative projects and solving problems. Got a question? Let me know!</p>
         <a class="button" href="contact.html#top">Get in touch <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
       </section>
       <section id="education" class="education-card" aria-labelledby="education-heading" tabindex="-1">

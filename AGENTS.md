@@ -31,8 +31,10 @@ pages. The owner has confirmed Education belongs on its own page/tab.
   in an Education section, and do not add a decorative hero illustration.
   Do not show project cards, an index, or a project showcase on Home. A link
   to the separate Projects page is fine.
-- About/Education (`about.html#education`): Keep the education facts here;
-  do not repeat "I'm Sebastian" or the Home introduction.
+- About/Education (`about.html#education`): Keep the education facts here. Above
+  Get in touch, use the owner's approved text: "I'm Sebastian. I like working on
+  different kinds of creative projects and solving problems. Got a question?
+  Let me know!" Do not repeat the full Home introduction.
 - Projects (`projects.html`): Retain the four interactive Assignment 1 projects.
   Rock Paper Scissors offers random computer picks and two-player mode only;
   do not restore the adaptive AI or a computer-strategy dropdown.
@@ -53,9 +55,10 @@ empty sections, or dummy links.
   wash fading into white, thin rules, and minimal decoration. Use stacked
   project and skill rows rather than repeated boxed cards. Keep narrower
   content layouts and square controls. Avoid floating stickers, pill buttons,
-  decorative shadows, and slogans. Show all five page links directly at every
-  width. Mobile navigation is one horizontal row below the name and theme
-  control; do not use a dropdown or horizontally scrolling navigation.
+  decorative shadows, and slogans. Restore the responsive navigation from before
+  its removal: visible desktop links and a compact Menu dropdown on phones.
+  Retain its accessible visible Menu name, focus/Escape/outside-click behavior,
+  and viewport-bounded panel; do not use horizontally scrolling navigation.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Use matching inline SVG arrow icons on every device, including dynamically
@@ -76,6 +79,10 @@ empty sections, or dummy links.
   font dependencies; the site must still work offline.
 - Keep copy factual. Remove decorative greeting blurbs, promotional taglines,
   and slogans from every page; retain substantive descriptions and instructions.
+  The owner-approved About paragraph above is an explicit exception.
+- Shopping shelf items use original monochrome outline SVG illustrations of a
+  cereal box, eggs, and bread instead of initials. Keep the product names visible
+  and the adjacent illustrations decorative; retain contrast in dark mode.
 - Use consistent headers, navigation, footers, buttons, spacing, and typography
   throughout the page. Clearly identify the current section in the navigation.
 - Start with a phone layout and expand to a laptop layout using CSS media
@@ -102,11 +109,12 @@ empty sections, or dummy links.
 
 ## Interactivity and accessibility
 
-- Keep the responsive row of page links, manual project carousel, validated
+- Keep the responsive navigation menu, manual project carousel, validated
   contact form, and four interactive demonstrations. Category filtering was
   removed at the owner's request.
-- Navigation links must be visible and keyboard-accessible at phone and laptop
-  widths, with the current page identified. Do not add a mobile menu toggle.
+- Navigation links must be keyboard-accessible at phone and laptop widths, with
+  the current page identified. The phone Menu opens/closes with click or Enter;
+  Escape closes it and returns focus. Without JavaScript, show the links directly.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
 - Do not include a skip/jump-to-content link, as requested by the owner.

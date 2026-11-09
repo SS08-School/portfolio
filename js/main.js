@@ -1,3 +1,6 @@
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#site-navigation");
+const menuContainer = document.querySelector(".navigation-menu");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 // Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;
@@ -105,7 +108,7 @@ window.addEventListener("pageshow", () => { keepTabOnPage = true; });
 
 document.addEventListener("keydown", (event) => {
   if (event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
-  if (event.key === "Escape") {
+  if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") !== "true") {
     stopKeyboardScroll();
     // Provide an accessible escape to browser controls, without disabling later visits.
     keepTabOnPage = false;
@@ -148,6 +151,63 @@ document.addEventListener("keydown", (event) => {
     scrollWithKeyboard(direction * 80);
   }
 });
+
+if (menuButton && navigation && menuContainer) {
+  const desktopNavigation = window.matchMedia("(min-width: 60rem)");
+
+  function setMenuOpen(isOpen) {
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    navigation.hidden = !desktopNavigation.matches && !isOpen;
+  }
+
+  function updateNavigationLayout() {
+    const focusWasInNavigation = navigation.contains(document.activeElement);
+    const focusWasOnMenu = document.activeElement === menuButton;
+    menuButton.hidden = desktopNavigation.matches;
+    setMenuOpen(false);
+    if (!desktopNavigation.matches && focusWasInNavigation) menuButton.focus();
+    if (desktopNavigation.matches && focusWasOnMenu) navigation.querySelector("a")?.focus();
+  }
+
+  // Desktop links stay visible; only the compact layout uses a dropdown.
+  menuContainer.classList.add("is-enhanced");
+  updateNavigationLayout();
+  desktopNavigation.addEventListener("change", updateNavigationLayout);
+
+  menuButton.addEventListener("click", (event) => {
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    setMenuOpen(!isOpen);
+    // Keyboard activation goes straight to the first page link.
+    if (!isOpen && event.detail === 0) navigation.querySelector("a")?.focus();
+  });
+
+  navigation.addEventListener("click", (event) => {
+    if (!desktopNavigation.matches && event.target.closest("a")) {
+      // Return focus before hiding the active navigation link.
+      menuButton.focus();
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+      event.preventDefault();
+      setMenuOpen(false);
+      menuButton.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!desktopNavigation.matches && !menuContainer.contains(event.target)) {
+      if (navigation.contains(document.activeElement)) menuButton.focus();
+      setMenuOpen(false);
+    }
+  });
+
+  menuContainer.addEventListener("focusout", (event) => {
+    if (!menuContainer.contains(event.relatedTarget)) setMenuOpen(false);
+  });
+}
 
 document.addEventListener("click", (event) => {
   if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
@@ -809,9 +869,9 @@ function initializeShoppingCart() {
   if (!demo) return;
   // The prices and starting quantities are the original Assignment 1 shelf.
   const groceries = [
-    { id: "cereal", name: "Frosted Flakes", mark: "FF", cents: 299, stock: 2, inCart: 0 },
-    { id: "eggs", name: "Eggs", mark: "E", cents: 599, stock: 3, inCart: 0 },
-    { id: "bread", name: "Sourdough Loaf", mark: "S", cents: 399, stock: 4, inCart: 0 }
+    { id: "cereal", name: "Frosted Flakes", cents: 299, stock: 2, inCart: 0 },
+    { id: "eggs", name: "Eggs", cents: 599, stock: 3, inCart: 0 },
+    { id: "bread", name: "Sourdough Loaf", cents: 399, stock: 4, inCart: 0 }
   ];
   const shelf = demo.querySelector("#shelf-items");
   const lines = demo.querySelector("#cart-lines");
@@ -822,7 +882,7 @@ function initializeShoppingCart() {
   // This template contains only fixed, local grocery data, never visitor input.
   shelf.innerHTML = groceries.map((item) => `
     <form class="shelf-item" data-product="${item.id}" novalidate>
-      <div class="grocery-mark grocery-${item.id}" aria-hidden="true">${item.mark}</div>
+      <div class="grocery-mark" aria-hidden="true"><img src="images/grocery-${item.id}.svg" alt="" width="48" height="58"></div>
       <div class="grocery-copy"><h4>${item.name}</h4><p>${money(item.cents)} each <span id="stock-${item.id}"></span></p></div>
       <div class="shelf-controls"><label for="quantity-${item.id}">Quantity<span class="visually-hidden"> of ${item.name}</span></label>
         <div><input id="quantity-${item.id}" type="number" min="1" step="1" value="1" required aria-describedby="stock-${item.id} error-${item.id}">

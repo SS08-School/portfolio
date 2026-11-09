@@ -1,5 +1,44 @@
 # Website test plan
 
+## Restored Menu, About copy, and grocery outlines — November 8, 2026
+
+At the owner's request, restore the navigation implementation from `f9d3a3d`,
+immediately before its removal in `1aad8ab`: desktop links plus the compact
+phone Menu, including the visible Menu accessible name, header-anchored
+viewport-width/max-height limits, Escape/focus return, outside-click closing,
+current-page state, and resize handling. Only the menu markup, behavior, and
+associated styles were restored; the newer calculator/cart keyboard behavior,
+random opponent, SVG arrows, solid dark mode, and smooth Back to the top remain.
+Hover effects remain restricted to fine pointers that support hover.
+Source comparison: Pass — the restored menu behavior block and all five
+navigation markup blocks match `f9d3a3d` exactly after line-ending normalization.
+
+About now uses the owner's exact personal paragraph immediately before Get in
+touch. The shopping shelf replaces FF/E/S with three original outline SVG files
+in images/. They are decorative beside the product names and invert in dark
+mode using the existing image rule. All three are under 500 KB (346–406 bytes).
+Earlier permanent-navigation-row expectations below are historical for this
+revision. The owner approved committing and pushing these changes. Deployment
+verification is separate from the remaining interaction tests; no Lighthouse
+rerun is claimed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| U14 | Restored Menu interaction and keyboard | On every page at phone width, click Menu, close it, open with Enter, press Escape, click outside, and follow each page link. Resize to laptop width and back with focus in navigation. | Five correct links, accurate expanded state, visible keyboard focus, Escape returns to Menu; outside click/link activation closes it; laptop links stay visible and focus survives resize. | Partial — native local Chrome on Home: click opened Menu, Enter focused its Home link, Escape closed it with visible Menu focus, and maximizing exposed all five desktop links. All-page, exact phone-width, outside-click, and full resize retests: Not run. |
+| U15 | Narrow and landscape menu regression | On all pages at 320px/390px and short landscape sizes, open Menu and scroll within it; repeat in dark mode and without JavaScript. | Panel stays inside both viewport edges, all links remain reachable, dark mode stays readable; no-script links remain visible. | Not run for this revision. Source retains the earlier tested viewport-width and maximum-height fixes; earlier results are not a new browser pass. |
+| U16 | Owner-provided About paragraph | Open About at phone/laptop widths. Read the paragraph, use Get in touch with Tab/Enter, and inspect Education. | Exact supplied paragraph appears once above the contact link; Education remains; contact link works; no overflow. | Source: Pass — supplied paragraph and contact destination verified. Browser/live: Not run. |
+| U17 | Grocery outline drawings and cart regression | Open local Projects at phone/laptop widths and in dark mode. Inspect cereal/egg/bread drawings; add items, use minus/plus/remove, and check arrow focus order and totals. | Three distinct responsive outlines replace initials, invert in dark mode, and do not change names, prices, stock, totals, or keyboard actions. | Assets/source: Pass — three valid SVG XML files, all below 500 KB, decorative empty alt text, and fixed grocery data retained. Rendered drawings and cart interaction retest: Not run. |
+| U18 | Direct-file and source validation | Double-click index.html; inspect Menu. Parse main.js, resolve HTML links/assets/fragments and grocery images, check versions and whitespace. | Home works without a server; script parses; one h1 and one current-page navigation link per page; references and versions match; no whitespace errors. | Pass for observed direct-file Home and static checks — script parses, all 74 HTML references/fragments resolve, all three grocery SVGs exist and parse, and all five pages have five menu links, one current page, one h1, and unique IDs. CSS version 0b44117df635; JS version 3de00dd14624; git diff --check passes. Full console/rendered-image audit: Not run. |
+
+Computer Use recovered enough to inspect local Home in a compact Chrome window
+and then a maximized window. Exact CSS viewport sizes were not measured. During
+the attempt to enable responsive testing, the user stopped Computer Use with
+the physical Escape key; no further browser input was issued. Native AX focus
+snapshots lagged screenshots, so the limited focus results above rely on visible
+focus outlines. No new screenshots were saved to the repository. Phone/laptop
+QA on About/Projects and the remaining navigation cases still need checking.
+The existing Lighthouse reports are retained at the owner's request.
+
 ## Owner live test results and keyboard follow-up — November 8, 2026
 
 The owner reported the results below after testing the live GitHub Pages site:

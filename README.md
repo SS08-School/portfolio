@@ -15,6 +15,14 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
+The latest revision restores the pre-removal responsive Menu from
+`f9d3a3d`: desktop links remain visible, while phones use the compact dropdown.
+It retains the visible Menu name, viewport-bounded panel, Enter/Escape handling,
+outside-click closing, focus return, and no-JavaScript links. About includes the
+owner's supplied creative-projects paragraph beside Get in touch. The shopping
+shelf uses original monochrome SVG cereal, egg, and bread drawings instead of
+initials. Current checks and any verification limits are recorded in TESTING.md.
+
 The latest owner-reported live results are at the top of [TESTING.md](TESTING.md).
 They preserve the calculator selection and cart arrow-navigation failures.
 Local fixes now separate calculator focus from selection and group cart arrow
@@ -44,8 +52,9 @@ portfolio test plan. Unrun manual/screen-reader checks remain pending.
 ## Mobile layout verification — November 8, 2026
 
 The earlier dropdown overflow fix was deployed in 99200af; its evidence remains
-in TESTING.md. The latest local revision replaces that dropdown with a visible
-row of page links. Project code examples continue to wrap long lines.
+in TESTING.md. The owner subsequently tried a visible row of page links and has
+now requested the original responsive dropdown again. Project code examples
+continue to wrap long lines.
 
 Local and live Chrome mobile/touch regression runs each passed 65 configurations,
 470 layout-state checks, and 505 interaction assertions, including narrow phones,
@@ -54,9 +63,10 @@ normal-motion samples passed. Before/after failures, fixes, and evidence are in
 TESTING.md (T139–T144). Physical iPhone/Safari, Android hardware, and Lighthouse
 checks remain manual; emulator results are not a claim that every device was tested.
 
-## Mobile navigation and icons — November 8, 2026
+## Earlier navigation row and icons — November 8, 2026
 
-The requested header row replaces the phone dropdown on all five pages. Arrow
+This earlier header-row revision replaced the phone dropdown on all five pages;
+the latest revision restores the dropdown as described above. Arrow
 icons use SVG paths, including changing game buttons, so phone emoji fonts
 cannot change their appearance. Hover styling applies only to fine pointers
 that support hover. Touch press feedback ends on release; selected game modes,
@@ -76,9 +86,9 @@ retests, and screenshots. Live interaction retests remain pending.
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
-All five navigation links are visible at every width. On phones, Home, About,
-Projects, Skills, and Contact form one row below the name and theme control.
-There is no dropdown. Education remains on About. Navigation highlights
+All five navigation links are visible on laptops. On phones, Menu opens the
+Home, About me, Projects, Skills, and Contact links in a dropdown. Education
+remains on About. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.
 The header pairs an original SS monogram with the name; the same vector is the
@@ -88,13 +98,13 @@ without a project showcase. It uses the approved headline
 and promotional blurbs have been removed throughout the site; factual
 descriptions, project explanations, and operating instructions remain.
 
-The "I'm Sebastian" introduction appears once, on Home. Its decorative circuit
-illustration and duplicated Education section have been removed. About retains
-the education facts without repeating the introduction. The layout is slightly
+Home retains the engineering introduction. Its decorative circuit
+illustration and duplicated Education section have been removed. About includes
+the owner's short personal paragraph and the education facts. The layout is slightly
 narrower, with Home, About/Education, and Contact content stacked vertically.
 
-About me includes enrollment at NJIT and the Electrical & Computer Engineering major.
-Personal background can be added later. Projects now showcases the four real
+About me includes the owner's creative interests, enrollment at NJIT, and the
+Electrical & Computer Engineering major. Projects now showcases the four real
 mini projects in the owner's Assignment 1 notebook: Calculator, Shopping Cart,
 Rock Paper Scissors, and Fibonacci Sequence. All four now have browser demos,
 with a manual image carousel. Category names remain labels, without filter buttons.
@@ -222,8 +232,9 @@ the existing five-page structure and all four interactive projects.
 
 ## Acknowledgments
 
-Developed with Codex. The six SVG project illustrations and the original SS
-monogram were created for this site with Codex. No external
+Developed with Codex. The six SVG project illustrations, three grocery outline
+illustrations, and the original SS monogram were created for this site with
+Codex. No external
 fonts, image assets, libraries, or AI APIs are used. Project descriptions and
 the Fibonacci loop excerpt are based on the owner-supplied
 `Assignment_1_Sebastian_Szeliga (1).ipynb`; the notebook itself is not published.
