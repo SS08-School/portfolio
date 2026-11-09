@@ -34,6 +34,8 @@ pages. The owner has confirmed Education belongs on its own page/tab.
 - About/Education (`about.html#education`): Keep the education facts here;
   do not repeat "I'm Sebastian" or the Home introduction.
 - Projects (`projects.html`): Retain the four interactive Assignment 1 projects.
+  Rock Paper Scissors offers random computer picks and two-player mode only;
+  do not restore the adaptive AI or a computer-strategy dropdown.
   Show project images in a manual, keyboard-accessible carousel. Categories may
   appear as labels, but do not add clickable category filters.
 - Skills and Contact retain their existing separate page URLs and content.
@@ -107,16 +109,17 @@ empty sections, or dummy links.
   widths, with the current page identified. Do not add a mobile menu toggle.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
-- Include a keyboard-only jump link labelled "Jump to page content". Hide it
-  until keyboard focus and keep it out of arrow-key cycling. Retain visible
-  keyboard focus, descriptive link text, and alt attributes on every image.
-  Use empty alt text for decorative images.
+- Do not include a skip/jump-to-content link, as requested by the owner.
+  Retain visible keyboard focus, descriptive link text, and alt attributes on
+  every image. Use empty alt text for decorative images.
 - Ensure links, buttons, and any fields work with the keyboard. Respect reduced
   motion preferences if adding animation.
 - Start Tab cycling on every page without a footer toggle or a saved off state.
   Left/Right move through controls in order. Up/Down move to controls on the
   visual row above/below; if none exists in that direction, scroll vertically.
-  Editable fields, radios, sliders, and select menus keep native arrow behavior.
+  On Projects, Up/Down navigate from selection and number controls without
+  changing their values. Left/Right retain native adjustment and caret movement.
+  Text fields on other pages keep native arrow behavior.
   Arrow keys scroll when the page background is focused. Escape releases Tab
   to browser navigation for the current page; the next page starts cycling again.
 - Contact keeps the public email link and has labeled name, email, and message

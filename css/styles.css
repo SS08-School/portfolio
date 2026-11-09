@@ -61,18 +61,6 @@ svg { display: block; max-width: 100%; }
 /* Anchor destinations receive focus for navigation, without outlining a whole section. */
 body:focus, main[tabindex="-1"]:focus, section[tabindex="-1"]:focus { outline: none; }
 .page-width { width: min(100% - 2.5rem, 1060px); margin-inline: auto; }
-.skip-link {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 10;
-  padding: 0.8rem 1rem;
-  color: var(--button-text);
-  background: var(--ink);
-  border-radius: 2px;
-  transform: translateY(-200%);
-}
-.skip-link:focus-visible { transform: translateY(0); }
 
 .site-header {
   display: grid;
@@ -181,8 +169,6 @@ summary { cursor: pointer; line-height: 1.6; }
 .projects-page .button { border: 0; cursor: pointer; }
 .projects-page button:disabled { opacity: 0.45; cursor: default; }
 .game-settings { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; padding-block: 1rem; }
-.game-settings label { font-size: 0.75rem; color: var(--muted); }
-.game-settings select { max-width: 100%; margin-left: 0.4rem; padding: 0.6rem 0.5rem; font: inherit; color: var(--text); background: var(--background); border: 1px solid var(--control-border); border-radius: 2px; }
 .game-settings p { flex: 1 1 17rem; margin: 0; font-size: 0.75rem; color: var(--muted); line-height: 1.6; }
 .scoreboard { display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; padding: 1.25rem 0.5rem; border-top: 1px solid var(--border); }
 .scoreboard > div { display: grid; justify-items: center; gap: 0.3rem; }

@@ -1,0 +1,1068 @@
+﻿{
+    "date":  "2026-11-08",
+    "method":  "Local original file:// pages in isolated Chrome with native keyboard events; deterministic random samples injected only by the test harness; reduced motion; not live or physical-device testing",
+    "records":  [
+                    {
+                        "width":  320,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Adaptive logic and strategy selector removed"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves mode row without changing opponent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-count ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-count ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-range ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-range ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#calculator-first ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#calculator-first ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "input[name=operation] ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "input[name=operation] ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#quantity-cereal ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#quantity-cereal ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Slider still adjusts with Right"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio still adjusts with Right"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Rock is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Paper is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Scissors is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random computer tie is scored"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random computer win is scored"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 1"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 2"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 3"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 4"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 5"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Replay clears match scores"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back restores random computer mode"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Carousel keyboard shortcut still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact caret arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Adaptive logic and strategy selector removed"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves mode row without changing opponent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-count ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-count ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-range ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-range ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#calculator-first ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#calculator-first ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "input[name=operation] ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "input[name=operation] ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#quantity-cereal ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#quantity-cereal ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Slider still adjusts with Right"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio still adjusts with Right"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Rock is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Paper is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Scissors is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random computer tie is scored"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random computer win is scored"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 1"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 2"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 3"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 4"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 5"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Replay clears match scores"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back restores random computer mode"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Carousel keyboard shortcut still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact caret arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Adaptive logic and strategy selector removed"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Down leaves mode row without changing opponent"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-count ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-count ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-range ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#fib-range ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#calculator-first ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#calculator-first ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "input[name=operation] ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "input[name=operation] ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#quantity-cereal ArrowUp navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "#quantity-cereal ArrowDown navigates without value change"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Slider still adjusts with Right"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio still adjusts with Right"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Rock is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Paper is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random Scissors is committed before player chooses"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Next round becomes playable"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random computer tie is scored"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Random computer win is scored"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 1"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 2"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 3"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 4"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player handoff conceals first choice"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Two-player score 5"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Replay clears match scores"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back restores random computer mode"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Carousel keyboard shortcut still works"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "No jump or skip control in the document"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "First Tab reaches the brand directly"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Second Tab reaches Home navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Right reaches About navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab wrap returns to brand"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reverse Tab wrap reaches final control"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Contact caret arrows remain native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No horizontal document overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No page errors or broken visible images"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Escape releases Tab loop"
+                                       }
+                                   ]
+                    }
+                ]
+}

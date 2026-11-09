@@ -62,7 +62,7 @@ function moveControlFocus(direction, controls = pageControls()) {
   const current = controls.indexOf(document.activeElement);
   let next = (current + direction + controls.length) % controls.length;
   if (current === -1) {
-    // After a skip link, continue from the destination rather than the header.
+    // Continue from a focused section destination rather than restarting at the header.
     const nearby = controls.filter((element) => document.activeElement.compareDocumentPosition(element) &
       (direction < 0 ? Node.DOCUMENT_POSITION_PRECEDING : Node.DOCUMENT_POSITION_FOLLOWING));
     const destination = direction < 0 ? nearby.at(-1) : nearby[0];
@@ -121,7 +121,15 @@ document.addEventListener("keydown", (event) => {
     event.defaultPrevented || event.isComposing || event.ctrlKey || event.metaKey ||
     event.altKey || event.shiftKey) return;
 
-  // Preserve caret movement, number/range adjustment, radio choices, and select menus.
+  // On project controls, vertical arrows navigate without changing their values.
+  if (["ArrowUp", "ArrowDown"].includes(event.key) && event.target.closest(".projects-page") &&
+    event.target.matches('select, input[type="radio"], input[type="range"], input[type="number"]')) {
+    event.preventDefault();
+    moveVerticalFocus(event.key === "ArrowUp" ? -1 : 1, pageControls());
+    return;
+  }
+
+  // Preserve text editing and native Left/Right adjustment of project inputs.
   if (event.target.closest(
     'input, textarea, select, [contenteditable], [role="textbox"], [role="slider"], ' +
     '[role="spinbutton"], [role="combobox"], [role="listbox"], [role="grid"], ' +
@@ -130,8 +138,7 @@ document.addEventListener("keydown", (event) => {
 
   event.preventDefault();
   const direction = ["ArrowUp", "ArrowLeft"].includes(event.key) ? -1 : 1;
-  // The jump link stays first in Tab order, outside everyday arrow navigation.
-  const controls = pageControls().filter((control) => !control.matches(".skip-link"));
+  const controls = pageControls();
   if (["ArrowLeft", "ArrowRight"].includes(event.key)) {
     stopKeyboardScroll();
     moveControlFocus(direction, controls);
@@ -347,30 +354,20 @@ function initializeRockPaperScissors() {
   const moveButtons = [...moveControls.querySelectorAll("button")];
   const nextButton = find("#next-round");
   const handoff = find("#handoff-screen");
-  const strategy = find("#computer-strategy");
   const names = { rock: "Rock", paper: "Paper", scissors: "Scissors" };
   const choices = Object.keys(names);
-  const counterMove = { rock: "paper", paper: "scissors", scissors: "rock" };
   let mode = "computer";
   let phase = "choosing";
   let firstMove = null;
   let computerMove = null;
   let scores = { one: 0, two: 0, tie: 0 };
   let round = 1;
-  let pastMoves = [];
   let history = [];
   let revealTimer = null;
   let focusAfterReveal = false;
 
   function randomMove() {
     return choices[Math.floor(Math.random() * choices.length)];
-  }
-
-  function commitComputerMove() {
-    // Commit using earlier rounds only, before the player's current choice exists.
-    if (strategy.value === "random" || !pastMoves.length || Math.random() < 0.25) return randomMove();
-    const predicted = pastMoves[Math.floor(Math.random() * pastMoves.length)];
-    return counterMove[predicted];
   }
 
   function announce(title, instruction) {
@@ -394,7 +391,8 @@ function initializeRockPaperScissors() {
     phase = "choosing";
     firstMove = null;
     focusAfterReveal = false;
-    computerMove = mode === "computer" ? commitComputerMove() : null;
+    // Choose before the player moves; every round is independent.
+    computerMove = mode === "computer" ? randomMove() : null;
     arena.hidden = false;
     handoff.hidden = true;
     moveControls.hidden = false;
@@ -420,7 +418,6 @@ function initializeRockPaperScissors() {
   function resetMatch() {
     scores = { one: 0, two: 0, tie: 0 };
     round = 1;
-    pastMoves = [];
     history = [];
     updateScores();
     find("#round-history").replaceChildren();
@@ -429,19 +426,15 @@ function initializeRockPaperScissors() {
     find("#round-history").append(empty);
     find("#player-one-label").textContent = mode === "friend" ? "PLAYER 1" : "YOU";
     find("#player-two-label").textContent = mode === "friend" ? "PLAYER 2" : "COMPUTER";
-    find("#computer-setting").hidden = mode === "friend";
     find("#game-mode-note").textContent = mode === "friend"
       ? "One device, two players. Keep your pick private, then pass the device."
-      : strategy.value === "adaptive"
-        ? "The AI looks for patterns in earlier rounds. Your current move stays secret."
-        : "The computer commits to a random move before you choose.";
+      : "The computer commits to a random move before you choose.";
     prepareRound();
   }
 
   function finishRound(left, right) {
     const winner = rockPaperScissorsWinner(left, right);
     scores[winner]++;
-    if (mode === "computer") pastMoves.push(left);
     updateScores();
     setHands(left, right);
     arena.classList.remove("is-shaking");
@@ -520,7 +513,6 @@ function initializeRockPaperScissors() {
     }
   });
   find("#reset-game").addEventListener("click", resetMatch);
-  strategy.addEventListener("change", resetMatch);
   for (const button of game.querySelectorAll("[data-game-mode]")) {
     button.addEventListener("click", () => {
       if (mode === button.dataset.gameMode) return;

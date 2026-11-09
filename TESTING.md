@@ -39,9 +39,35 @@ Never replace an initial failure with a passing result: retain both attempts.
 | Skills | https://ss08-school.github.io/portfolio/skills.html |
 | Contact | https://ss08-school.github.io/portfolio/contact.html |
 
-### Keyboard direction follow-up — November 8, 2026
+### Current follow-up — random opponent and project arrows
 
-The latest local revision keeps the accessibility shortcut but calls it
+At the owner's request, all jump/skip links and their hidden help copy are
+removed. The computer now makes independent random picks; the adaptive logic
+and strategy dropdown are removed. On Projects, Up/Down navigate away from
+selection and number controls without changing values. Left/Right retain
+native adjustment/caret behavior. Live interaction retests remain pending. Older
+results below preserve their original expectations; jump-link, adaptive-AI,
+and native project Up/Down expectations are superseded by these cases.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T155 | No jump link and direct Tab entry | Load all five pages at 320px, 390px, and 1366px. Tab from page load, Tab again, wrap forward/backward, and press Escape. | First Tab reaches the brand, then Home; no jump link exists; wrapping returns to real controls; Escape releases the loop. | Pass — local native Chrome input on all 15 page/width configurations. Live: Not run. |
+| T156 | Random computer only | Inspect the game and logic notes. Test deterministic samples selecting each computer move before the player chooses; advance/reset, test tie and computer win. | No adaptive content or strategy selector remains; computer commits independently before the current move; scores and Next round work. | Pass — local browser samples for all three random branches, player/computer wins, tie, and next round at all three widths. The test harness controls randomness; production uses Math.random. Live: Not run. |
+| T157 | Two-player regression | Use Enter to select rock, hand off, and select scissors for five rounds; use Next round and Play again, then switch back to computer. | First choice is concealed during handoff; score reaches five; replay clears scores; computer mode restores its random-opponent instruction. | Pass — local native Enter controls at all three widths. Live: Not run. |
+| T158 | Project Up/Down without changing values | Focus a game mode, Fibonacci count/range, calculator operation/number, and cereal quantity; press Up/Down. Then use Right on range and radio. | Vertical keys leave the row/control without changing mode, value, or operation; Right still adjusts range/radio choices. | Pass — local native keys at all three widths, including both directions from each tested input. Live: Not run. |
+| T159 | Keyboard and responsive regression | On each page inspect focus and horizontal bounds; use carousel Right and Contact caret Left; inspect errors and visible images. | Focus remains visible, no document overflow or page errors, visible images load, carousel changes slide, and Contact caret editing works. | Pass — local Chrome at 320px, 390px, and 1366px. Live/physical devices: Not run. |
+
+[Local report](reports/random-computer-keyboard-local-2026-11-08.json):
+**243 assertions passed across 15 configurations** on original file:// pages
+using native Chrome keys and reduced motion. All 74 local link/asset references
+and fragments resolve; CSS/JS versions match their content. Phone/laptop game
+captures: screenshots/random-computer-390.png and
+screenshots/random-computer-1366.png. Lighthouse and physical-device checks
+remain **Not run**.
+
+### Earlier keyboard direction follow-up — superseded behavior retained
+
+This earlier revision kept the accessibility shortcut but called it
 "Jump to page content". It is hidden until keyboard focus and excluded from
 arrow-key cycling. Left/Right follow control order; Up/Down use the row above
 or below and scroll when there is no control in that direction. Native editing,
@@ -119,10 +145,10 @@ The contact form prepares a draft; sending email is not part of automated testin
 | T112 | Every Contact navigation link | From Contact repeat all five page-link activations at phone/laptop sizes. | All destinations and current-page states are correct. | Pass — all 10 live activations. |
 | T113 | Brand, CTAs, and project anchors | Activate the name/monogram on every page, both Home action links, About's Get in touch, every carousel project's demo link, and Back to the top. | Brand reaches Home; CTAs reach the named page; demo links focus the correct lab; Back to the top reaches the top. | Pass — 26 live native-Enter activations across phone/laptop sizes. |
 | T114 | Every page on phone/laptop | Open all five pages at 390px and 1366px; inspect text, images, fields, and header; check sideways scrolling. | Content fits, images load, controls are reachable, and there is no horizontal overflow. | Pass — 10 live layouts; current captures are linked below. Human visual review remains your submission check. |
-| T116 | Keyboard on every page | Reload each page; use Tab/Shift+Tab across boundaries, Enter on Jump to page content, and arrows from the brand. | Focus is visible, Tab cycles through available controls, skip link reaches main, arrows move focus, and hidden controls are skipped. | Pass — live native browser input on all five pages at both widths; also perform T135. |
+| T116 | Keyboard on every page | Reload each page; use Tab/Shift+Tab across boundaries and arrows from the brand. | Focus is visible, Tab cycles through available controls, arrows move focus, and hidden controls are skipped. Current no-jump behavior is covered by T155. | Pass — live native browser input on all five pages at both widths; also perform T135. |
 | T117 | Theme toggle and persistence | On every page switch to dark, reload, switch to light, and reload again. Inspect both states. | Button state and palette update; the chosen theme survives reload. | Pass — live light/dark toggle and reload checks on every page at both widths. Manual dark contrast inspection remains part of T135. |
 | T118 | Image carousel | Use Previous/Next, Left/Right, Home, and End; inspect all four slides and use a slide link. | One slide is active, status updates, every project is reachable, focus stays visible, and there is no autoplay. | Pass — live carousel checks and all four slide-link activations at both widths. |
-| T119 | Computer RPS and reset | Play an adaptive round, advance, reset, switch to Random picks, and play again. | Rounds resolve, Next round works, and Reset clears the match. | Pass — live rounds for both strategies at both widths. |
+| T119 | Computer RPS and reset | Play against the random computer, advance, reset, and play again. | Rounds resolve, Next round works, and Reset clears the match. | Earlier live rounds passed for both strategies; adaptive AI is now retired. Current local random-only results: T156 Pass. Live retest: Not run. |
 | T120 | Two-player RPS, ties, match end | Select 2 players; choose rock, hand off, choose scissors; repeat to five wins, then Play again. Also play rock versus rock and reset. | First move stays hidden during handoff; Player 1 wins correctly; first-to-five ends the match; Play again/reset clear scores/ties. | Pass — live handoff, scores 1–5, match end, replay, tie, and reset checks at both widths. |
 | T121 | Fibonacci valid input | Generate 1, 12, and 100 terms. Inspect lengths and final values. | Results end at 0, 89, and exactly 218922995834555169026 respectively. | Pass — live exact-value checks at both widths. |
 | T122 | Fibonacci invalid input | Submit blank, 0, -1, 1.5, and 101. | Each is rejected with a clear error; invalid input receives focus. | Pass — all five invalid inputs tested live at both widths. |

@@ -78,13 +78,11 @@ mini projects in the owner's Assignment 1 notebook: Calculator, Shopping Cart,
 Rock Paper Scissors, and Fibonacci Sequence. All four now have browser demos,
 with a manual image carousel. Category names remain labels, without filter buttons.
 
-Rock Paper Scissors runs on the page, with an adaptive computer opponent,
-random picks, or two-player pass-and-play on one device. Both players' choices
-are revealed together; a handoff screen conceals Player 1's choice. The first
-player to five wins the match. Reset clears the score and computer memory.
-The adaptive opponent counters a sample of previous player choices, with a
-25% chance of choosing randomly; it commits before the current player move.
-This is a small local strategy, with no external AI service or network play.
+Rock Paper Scissors runs on the page against random computer picks or another
+player in pass-and-play on one device. Choices are revealed together; a handoff
+screen conceals Player 1's choice. First to five wins the match. The computer
+chooses independently before each round; there is no adaptive opponent or
+strategy dropdown. Reset clears the score and round history.
 
 The Fibonacci explorer generates 1–100 terms with exact BigInt values, starting
 at 0. Select any term to inspect its addition and ratio, step backward or
@@ -141,16 +139,17 @@ inactive slides and disabled controls. Cycling starts on
 every page and ignores old saved off preferences; there is no footer toggle.
 Left/Right move through controls in order. Up/Down move to a control on the
 visual row above/below, scrolling if there is no control in that direction.
-The keyboard-only "Jump to page content" link bypasses the header; it appears
-only when keyboard-focused and is excluded from arrow-key cycling. Inputs,
-textareas, selects, radio buttons, and sliders keep native
-editing keys. Enter activates controls; Escape releases Tab to normal browser navigation
+The jump-to-content link was removed at the owner's request. On Projects,
+Up/Down leave selection and number controls without changing their values;
+Left/Right retain native adjustments and caret movement. Contact fields keep
+normal editing keys. Enter activates controls; Escape releases Tab to normal browser navigation
 for the current page. A new page or restored
 page enables cycling again. Browser shortcuts remain available.
 
-The vertical-arrow follow-up passed 146 local Chrome keyboard assertions across
-all five pages at 390px and 1366px. Its evidence is in TESTING.md (T151–T154);
-live keyboard interaction retests remain pending.
+The current local follow-up passed 243 browser assertions across all five
+pages at 320px, 390px, and 1366px, including random computer/two-player rounds
+and the project arrow controls. See TESTING.md (T155–T159). Live interaction
+retests and Lighthouse checks remain pending.
 
 The project carousel has Previous/Next buttons, Left/Right arrows, and Home/End
 to reach its first/last slide. There is no autoplay. Slide changes keep focus on
