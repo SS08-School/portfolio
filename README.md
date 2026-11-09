@@ -263,8 +263,10 @@ was removed with the built-in imagegen tool, then the transparent PNG was resize
 for web use. The asset is `images/home-lightbulb.png`; the exact edit prompt and
 processing note are in [home-lightbulb.prompt.txt](images/home-lightbulb.prompt.txt).
 The Home layout places it on the right at laptop widths with a 35-degree
-counterclockwise tilt, and below the text on narrow screens. This update is local
-and not yet deployed. No external fonts, libraries, or AI APIs are used by the
+counterclockwise tilt, and below the text on narrow screens. This update was
+deployed on November 9, 2026; the published markup, stylesheet, and exact image
+hash were verified. Rendered browser checks remain for owner testing.
+No external fonts, libraries, or AI APIs are used by the
 running website. Project descriptions and
 the Fibonacci loop excerpt are based on the owner-supplied
 `Assignment_1_Sebastian_Szeliga (1).ipynb`; the notebook itself is not published.

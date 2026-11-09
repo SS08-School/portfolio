@@ -1451,7 +1451,16 @@ square at 320, 390, 768, 960, and 1366px widths. These calculations do not verif
 actual browser layout, text wrapping, zoom, or keyboard interactions. No script
 behavior was changed. Phone/laptop, dark-mode appearance, direct-file browser,
 keyboard, console, and Lighthouse checks are left for owner testing; no browser
-automation or screenshots were used. This revision has not been deployed.
+automation or screenshots were used. At the time of these checks, this revision
+had not been deployed.
+
+Home bulb deployment checks on 2026-11-09: GitHub Pages deployment succeeded
+for commit `1a6fc43`. All five pages returned HTTP 200 with the new stylesheet
+version. Published Home contains the bulb and descriptive alt text; the
+stylesheet contains the -35-degree rotation and dark-mode inversion exception.
+The PNG returned HTTP 200 and its full SHA-256 hash matches the approved local
+asset. These HTTP/source checks passed; rendered layout and keyboard checks
+remain for owner testing. No browser/app automation or screenshots were used.
 
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
