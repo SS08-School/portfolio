@@ -24,6 +24,10 @@ return, and no-JavaScript links. About includes the
 owner's supplied creative-projects paragraph beside Get in touch. The shopping
 shelf uses original monochrome SVG cereal, egg, and bread drawings instead of
 initials. Current checks and any verification limits are recorded in TESTING.md.
+The first deployment of these additions timed out; the corrected `dd8bba1`
+deployment succeeded. HTTP/source checks confirmed the hamburger on all five
+pages, the exact About paragraph, current CSS/JS, all 74 local references, and
+all three grocery SVG URLs. Rendered browser/keyboard retests remain unverified.
 
 The latest owner-reported live results are at the top of [TESTING.md](TESTING.md).
 They preserve the calculator selection and cart arrow-navigation failures.

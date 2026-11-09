@@ -20,7 +20,15 @@ text-only-button expectations in the previous restoration record below.
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | U19 | Original hamburger on all pages and sizes | At phone and laptop widths, inspect each header; open the three-line button with click/Enter, use page links and Escape, click outside, and inspect the panel in landscape. | Three SVG lines replace the tabs/text-only button at every width; all five links work, panel fits, and Escape restores focus. | Initial: Fail — source restored the wrong menu version and hid its dropdown on laptops. Corrected source: Pass — original SVG path restored to all five pages, with no desktop rule disabling the dropdown. Browser/live interaction retests: Not run. |
-| U20 | Published About and grocery assets | After Pages deployment succeeds, load all five live URLs, inspect the About paragraph and Projects shelf, and request the new CSS/JS and all three grocery SVGs. | Every page uses the new versions; About has the approved text; cereal/egg/bread outlines replace initials; all resources return 200. | Initial: Fail — live HTTP checks still showed the old navigation, script, stylesheet, and About copy; live script had no grocery image template. Previous build was successful but deployment remained in progress. Corrective publication verification pending. |
+| U20 | Published About and grocery assets | After Pages deployment succeeds, load all five live URLs, inspect the About paragraph and Projects shelf, and request the new CSS/JS and all three grocery SVGs. | Every page uses the new versions; About has the approved text; cereal/egg/bread outlines replace initials; all resources return 200. | Initial: Fail — live HTTP checks still showed the old navigation, script, stylesheet, and About copy; live script had no grocery image template. Retest: Pass for HTTP/source publication — dd8bba1 deployed successfully; all five headers contain the hamburger and current CSS/JS, the exact About paragraph is present, all three grocery SVGs return 200, and the script contains the image template. Visual/interaction retest: Not run. |
+
+Publication evidence: the previous [fda338d deployment](https://github.com/SS08-School/portfolio/actions/runs/42563313315)
+eventually failed with the annotation "Timeout reached, aborting!". The
+[dd8bba1 deployment](https://github.com/SS08-School/portfolio/actions/runs/42564255122)
+completed successfully. All 74 live HTML links/assets/fragments resolved, plus
+the three dynamically referenced grocery SVGs. Live script version is
+`eb892289ce98`; stylesheet version is `1406d9bdc175`. These HTTP/source checks
+verify published files, not native keyboard behavior or rendered appearance.
 
 Browser QA was attempted, but input geometry was unavailable. Automatic approval
 review then rejected screenshot capture because the selected Chrome window
