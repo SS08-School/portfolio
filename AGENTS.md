@@ -70,10 +70,11 @@ empty sections, or dummy links.
 - Repeat restrained triangles pointing both left and right down the full length
   of each page's unused side gutters at widths of at least 80rem. Anchor them to
   the document so they scroll with the page, never fixed to the viewport. Repeat
-  them across the gutter too, with a gradient fading from stronger outer edges
-  to transparent near the content. Use near-black in light mode and matching
-  light ink in dark mode. Keep them outside the content, non-interactive, and
-  absent on narrower screens.
+  them across the gutter too, using a sparse checkerboard arrangement: adjacent
+  triangles alternate direction both horizontally and vertically, with generous
+  gaps. Keep a gradient fading from stronger outer edges to transparent near
+  the content. Use near-black in light mode and matching light ink in dark mode.
+  Keep them outside the content, non-interactive, and absent on narrower screens.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Use matching inline SVG arrow icons on every device, including dynamically

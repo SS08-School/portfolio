@@ -52,7 +52,7 @@ body {
   background-repeat: no-repeat;
 }
 :root[data-theme="dark"] body { background-image: none; }
-/* Page-anchored triangles fill the gutters and fade toward the content. */
+/* Sparse checkerboard triangles belong to the page and fade toward the content. */
 @media (min-width: 80rem) {
   body::before, body::after {
     content: "";
@@ -61,8 +61,8 @@ body {
     bottom: 0;
     width: calc((100% - 1060px) / 2 - 2.5rem);
     background: linear-gradient(to right, var(--ink), transparent);
-    -webkit-mask: url("../images/side-triangles.svg") top left / 2rem 8rem repeat;
-    mask: url("../images/side-triangles.svg") top left / 2rem 8rem repeat;
+    -webkit-mask: url("../images/side-triangles.svg?v=865f4e142046") top left / 8rem 10rem repeat;
+    mask: url("../images/side-triangles.svg?v=865f4e142046") top left / 8rem 10rem repeat;
     pointer-events: none;
   }
   body::before { left: 1rem; }

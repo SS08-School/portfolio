@@ -1,6 +1,32 @@
 # Website test plan
 
-## Current: Home wording and wider fading triangles — November 9, 2026
+## Current: quieter checkerboard triangles — November 9, 2026
+
+The owner found the previous pattern distracting. The new 128x160 tile contains
+four smaller, spaced triangles arranged right/left on the first row and
+left/right on the second. Repetition alternates directions across both axes
+and across tile boundaries. At the default root size, the fixed 8rem by 10rem
+tile has 60% lower triangle density per unit area than the previous pattern.
+The triangles themselves are also smaller, with larger gaps. Full document
+anchoring, theme colors, inward fades, gutter clearance, and narrow-screen
+exclusion remain unchanged. Both the SVG URL and stylesheet URLs were versioned
+to avoid retaining the earlier pattern in cache.
+
+Passed 106 source/geometry assertions covering triangle size and alignment,
+checkerboard directions and tile seams, density comparison, page anchoring,
+fade retention, all 75 page references/asset hashes, and the versioned CSS mask.
+The SVG passed XML parsing with four triangle paths. These checks do not verify
+native rendering or visual distraction. No browser/app control or screenshots
+were used. Owner review of every page in both themes, scrolling, zoom, keyboard,
+direct-file loading, and console errors remains Not run. This update is local
+and not yet deployed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| CHECKER-01 | Sparse alternating pattern source | Parse the SVG geometry, tile sizes, direction matrix and seams; compare triangle density and validate asset URLs/hashes. | Smaller, spaced triangles alternate in every neighboring row and column, with 60% lower repeat density and refreshed cache versions. | Pass — 106 source/geometry assertions, 75 page references, and SVG XML validation. |
+| CHECKER-02 | Owner pattern review | At wide phone/laptop/desktop layouts where applicable, inspect each page in light/dark mode, scroll top to footer, and repeat at 200% zoom. | A quieter checker-like pattern replaces uniformly directed rows; fading and document anchoring remain; no overlap, overflow, or blocked controls. Narrow layouts still omit the pattern. | Not run — owner browser/device testing; browser/app control remains disabled. |
+
+## Previous: Home wording and wider fading triangles — November 9, 2026
 
 Home now uses the owner's exact heading, "Hi, I'm Sebastian.", with "I'm an
 Electrical & Computer Engineering student at New Jersey Institute of Technology."

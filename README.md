@@ -28,13 +28,17 @@ Wide layouts (80rem and above) have repeating triangles pointing both left and
 right down the full page in each outer gutter. They are anchored to the document
 and scroll with it. The full-height pattern was deployed on November 9, 2026
 (`926dc10`); HTTP checks verified all pages, the stylesheet, and the SVG tile.
-The local refinement fills more of each gutter with several columns and fades
+The published layout fills each gutter with several columns and fades
 from stronger outer edges to transparent beside the content. The original local
 SVG tile in `images/side-triangles.svg` supplies the shapes. They are near-black
 in light mode and light in dark mode and cannot intercept clicks. Narrow layouts
 omit them. The denser gradient and new Home wording were deployed on November 9,
 2026 (`e108fa0`); published files were verified. Visual/device checks remain for
 owner testing.
+The current local refinement reduces triangle density by 60%, uses smaller
+shapes with more whitespace, and alternates directions horizontally and vertically
+in a checkerboard arrangement. The gradient and full-page anchoring remain.
+This quieter checkerboard update has not yet been deployed.
 
 ### Earlier dropdown checks
 
