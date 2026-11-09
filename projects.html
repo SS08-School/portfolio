@@ -8,8 +8,8 @@
     <link rel="icon" href="images/monogram.svg?v=5215a69064c3" type="image/svg+xml">
     <title>Projects | Sebastian Szeliga</title>
     <script src="js/theme.js?v=cae71dd46cd4"></script>
-    <link rel="stylesheet" href="css/styles.css?v=2f5c68eb84c1">
-    <script src="js/main.js?v=39777d93f577" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=d21da1094691">
+    <script src="js/main.js?v=c10a8cdb4908" defer></script>
   </head>
   <body id="top">
 
@@ -61,7 +61,7 @@
           </article>
           <article class="project-card">
             <img class="project-thumbnail" src="images/calculator.svg?v=dee3575b29df" alt="An illustrated calculator with the four arithmetic operations" width="480" height="240" loading="lazy">
-            <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h3>Calculator</h3><p>Four arithmetic operations with input checks and a history of recent calculations.</p><a href="#calculator-lab">Use calculator <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+            <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h3>Calculator</h3><p>Four arithmetic operations with checks for invalid input and results.</p><a href="#calculator-lab">Use calculator <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
           </article>
           <article class="project-card">
             <img class="project-thumbnail" src="images/cart.svg?v=f8fdaa151dd0" alt="An illustrated shopping cart with groceries" width="480" height="240" loading="lazy">
@@ -120,9 +120,9 @@ for i in range(2, n):
             <p id="calculator-help" class="utility-help">Decimals and negative numbers welcome.</p><p id="calculator-error" class="input-error" role="alert"></p>
             <button class="button" type="submit">Calculate <span aria-hidden="true">=</span></button>
           </form>
-          <div class="calculator-results"><div class="calculator-display" role="status" aria-atomic="true"><span class="small-label">YOUR RESULT</span><p id="calculator-expression">12 + 3 =</p><strong id="calculator-result">15</strong></div><div class="calculation-history"><h3>Recent calculations</h3><ol id="calculator-history"><li>No calculations yet.</li></ol></div></div>
+          <div class="calculator-results"><div class="calculator-display" role="status" aria-atomic="true"><span class="small-label">YOUR RESULT</span><p id="calculator-expression">12 + 3 =</p><strong id="calculator-result">15</strong></div></div>
         </div>
-        <details class="logic-notes"><summary>Calculator logic</summary><p>The original calculator takes two numbers and selects addition, subtraction, multiplication, or division with conditionals. This version follows the same rule, checks for missing or invalid numbers, and stops division by zero. Submit again to keep calculating; the last five successful calculations stay visible until you reset or leave the page.</p><p>Results are displayed to 12 significant digits. Very large or very small values use scientific notation.</p></details>
+        <details class="logic-notes"><summary>Calculator logic</summary><p>The original calculator takes two numbers and selects addition, subtraction, multiplication, or division with conditionals. This version follows the same rule, checks for missing or invalid numbers, and stops division by zero.</p><p>Results are displayed to 12 significant digits. Very large or very small values use scientific notation.</p></details>
       </section>
 
       <section id="cart-lab" class="project-lab" aria-labelledby="cart-heading" tabindex="-1">

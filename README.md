@@ -52,6 +52,12 @@ Local Chrome checks passed 45 viewport/theme configurations, 1,213 assertions,
 for evidence and pending live interaction/device verification. Lighthouse
 scores remain unmeasured.
 
+The calculator/cart/theme follow-up passed 210 local Chrome assertions across
+all five pages at 320px, 390px, and 1366px. Enter selects calculator operations,
+calculation history is removed, shelf quantity/Add controls support Right/Left,
+and dark backgrounds are solid. See TESTING.md (T160–T165) for baseline failures,
+retests, and screenshots. Live interaction retests remain pending.
+
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
@@ -92,14 +98,16 @@ terms to keep small squares readable.
 Calculator supports addition, subtraction, multiplication, and division,
 including negative and decimal inputs. It checks missing/invalid numbers,
 division by zero, and nonfinite results. Answers display to 12 significant
-digits, with the last five successful calculations retained until reset or
-reload. Reset example restores 12 + 3.
+digits. Enter selects the focused operation without submitting the form.
+Only the current result is displayed; there is no recent-calculation list.
+Reset example restores 12 + 3.
 
 Shopping Cart uses the original shelf: 2 Frosted Flakes at $2.99 each, 3 eggs
 at $5.99 each, and 4 sourdough loaves at $3.99 each. Add a whole-number quantity,
 adjust quantities in the basket, remove a line, or empty the basket. Shelf
 stock and totals update together; calculations use integer cents. All nine
-items total $39.91. There is no checkout or persistent storage.
+items total $39.91. Right from a shelf quantity focuses its Add button; Left
+returns to the quantity. There is no checkout or persistent storage.
 
 These browser adaptations were built with Codex and are
 distinguished from the original Python classroom work.
@@ -124,7 +132,7 @@ JavaScript or animation support.
 A sun/moon button at the top right switches between light and dark mode.
 Light is the default; an explicit choice is stored in the browser and restored
 before styling loads on every page. Default light mode uses a subtle sunset
-background; dark mode uses a subdued warm gradient with light text. The preference persists across visits in
+background; dark mode uses a solid near-black background with light text. The preference persists across visits in
 that browser until its site storage is cleared. Storage restrictions do not
 break the current-page toggle. Gentle page-entry effects soften navigation and
 browser Back, with reduced-motion preferences respected throughout. Theme
@@ -146,7 +154,7 @@ normal editing keys. Enter activates controls; Escape releases Tab to normal bro
 for the current page. A new page or restored
 page enables cycling again. Browser shortcuts remain available.
 
-The current local follow-up passed 243 browser assertions across all five
+The random-opponent follow-up passed 243 browser assertions across all five
 pages at 320px, 390px, and 1366px, including random computer/two-player rounds
 and the project arrow controls. See TESTING.md (T155–T159). Live interaction
 retests and Lighthouse checks remain pending.

@@ -68,7 +68,7 @@ empty sections, or dummy links.
 - Colors: white (`#FFFFFF`), near-black text (`#171717`), dark-gray secondary
   text (`#555555`), and neutral-gray rules and panels. Use soft peach, rose, and
   cream only in the background gradient; keep graphics black and white. Use a
-  subdued warm gradient in the optional dark theme.
+  solid near-black background with no gradient in the optional dark theme.
 - Use dark text on white surfaces and white text on black buttons. Verify contrast for
   the actual combinations used, including hover, focus, and selected states.
 - Fonts: use formal, light-looking Palatino serif headings and readable,
@@ -118,7 +118,10 @@ empty sections, or dummy links.
   Left/Right move through controls in order. Up/Down move to controls on the
   visual row above/below; if none exists in that direction, scroll vertically.
   On Projects, Up/Down navigate from selection and number controls without
-  changing their values. Left/Right retain native adjustment and caret movement.
+  changing their values. Left/Right retain native adjustment and caret movement,
+  except Right from a cart quantity goes to its Add button and Left returns.
+  Enter on a calculator operation selects the focused symbol; calculate only
+  when submitting the form. Do not display recent calculation history.
   Text fields on other pages keep native arrow behavior.
   Arrow keys scroll when the page background is focused. Escape releases Tab
   to browser navigation for the current page; the next page starts cycling again.

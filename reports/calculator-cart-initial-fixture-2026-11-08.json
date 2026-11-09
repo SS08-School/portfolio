@@ -1,0 +1,936 @@
+﻿{
+    "date":  "2026-11-08",
+    "method":  "Local original file:// pages, native Chrome keyboard events, light/dark reload tests at phone/laptop widths, reduced motion; not live or physical-device tests",
+    "records":  [
+                    {
+                        "width":  320,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused + without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "+ produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused - without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "- produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused * without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "* produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused / without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "/ produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Space still selects a radio operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio Right remains native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter after radio arrow selection stays on correct operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Negative decimals still calculate"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Missing calculator input is rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Division by zero remains rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Nonfinite result remains rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reset restores example without a history section"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Empty basket restores stock"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Invalid quantity is rejected after arrow navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Full basket still totals nine items and 39.91"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  320,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused + without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "+ produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused - without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "- produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused * without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "* produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused / without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "/ produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Space still selects a radio operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio Right remains native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter after radio arrow selection stays on correct operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Negative decimals still calculate"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Missing calculator input is rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Division by zero remains rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Nonfinite result remains rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reset restores example without a history section"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Empty basket restores stock"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Invalid quantity is rejected after arrow navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Full basket still totals nine items and 39.91"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  390,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "index",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "about",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused + without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "+ produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused - without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "- produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused * without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "* produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter chooses focused / without submitting"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Repeated Enter keeps selected operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "/ produces correct answer"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Space still selects a radio operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Radio Right remains native"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Enter after radio arrow selection stays on correct operation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Negative decimals still calculate"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Missing calculator input is rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Division by zero remains rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Nonfinite result remains rejected"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Reset restores example without a history section"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "cereal keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "eggs keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread Right moves quantity to Add"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread Left returns Add to quantity"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "bread keyboard Add updates total"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Empty basket restores stock"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Invalid quantity is rejected after arrow navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Exhausted shelf controls are skipped and focus stays available"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Full basket still totals nine items and 39.91"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "skills",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "contact",
+                        "checks":  [
+                                       {
+                                           "pass":  true,
+                                           "name":  "Light background retains its gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Dark background is solid near-black"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Saved dark mode remains solid after reload"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Switching back to light restores gradient"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "Tab still reaches visible navigation"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No document horizontal overflow"
+                                       },
+                                       {
+                                           "pass":  true,
+                                           "name":  "No browser errors or broken visible images"
+                                       }
+                                   ]
+                    }
+                ]
+}

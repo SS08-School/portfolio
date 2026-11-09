@@ -724,7 +724,6 @@ function initializeCalculator() {
   const secondInput = demo.querySelector("#calculator-second");
   const error = demo.querySelector("#calculator-error");
   const symbols = { "+": "+", "-": "−", "*": "×", "/": "÷" };
-  let history = [];
 
   function formatNumber(value) {
     // Keep routine decimal results readable, including 0.1 + 0.2.
@@ -745,7 +744,7 @@ function initializeCalculator() {
     }
   }
 
-  function calculate(saveHistory = true) {
+  function calculate() {
     clearErrors();
     for (const input of [firstInput, secondInput]) {
       if (!input.value.trim() || !input.validity.valid || !Number.isFinite(Number(input.value))) {
@@ -777,16 +776,15 @@ function initializeCalculator() {
     const answer = formatNumber(result);
     demo.querySelector("#calculator-expression").textContent = expression;
     demo.querySelector("#calculator-result").textContent = answer;
-    if (saveHistory) {
-      history.unshift(`${expression} ${answer}`);
-      history = history.slice(0, 5);
-      demo.querySelector("#calculator-history").replaceChildren(...history.map((text) => {
-        const line = document.createElement("li");
-        line.textContent = text;
-        return line;
-      }));
-    }
   }
+
+  form.querySelector(".operation-options").addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.isComposing || event.ctrlKey || event.metaKey || event.altKey ||
+      !event.target.matches('input[name="operation"]')) return;
+    // Enter selects the focused symbol instead of submitting the previous choice.
+    event.preventDefault();
+    event.target.click();
+  });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -794,13 +792,9 @@ function initializeCalculator() {
   });
   demo.querySelector("#calculator-reset").addEventListener("click", () => {
     form.reset();
-    history = [];
-    const empty = document.createElement("li");
-    empty.textContent = "No calculations yet.";
-    demo.querySelector("#calculator-history").replaceChildren(empty);
-    calculate(false);
+    calculate();
   });
-  calculate(false);
+  calculate();
   demo.hidden = false;
 }
 
@@ -857,6 +851,20 @@ function initializeShoppingCart() {
     demo.querySelector(`#error-${item.id}`).textContent = "";
     demo.querySelector(`#quantity-${item.id}`).removeAttribute("aria-invalid");
   }
+
+  shelf.addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight"].includes(event.key) || event.defaultPrevented || event.isComposing ||
+      event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+    const row = event.target.closest(".shelf-controls");
+    if (!row) return;
+    const quantity = row.querySelector("input");
+    const addButton = row.querySelector("button");
+    const destination = event.key === "ArrowRight" && event.target === quantity ? addButton
+      : event.key === "ArrowLeft" && event.target === addButton ? quantity : null;
+    if (!destination || destination.disabled) return;
+    event.preventDefault();
+    focusControl(destination);
+  });
 
   shelf.addEventListener("submit", (event) => {
     const form = event.target.closest("[data-product]");

@@ -39,7 +39,36 @@ Never replace an initial failure with a passing result: retain both attempts.
 | Skills | https://ss08-school.github.io/portfolio/skills.html |
 | Contact | https://ss08-school.github.io/portfolio/contact.html |
 
-### Current follow-up — random opponent and project arrows
+### Calculator, cart arrows, and solid dark mode — local follow-up
+
+Enter now selects the focused calculator operation without implicitly submitting
+the previously selected operation. Recent calculation markup, history storage,
+and its descriptions/styles are removed. On each shopping shelf row, Right
+from Quantity goes to Add; Left from Add returns to Quantity. Dark mode uses
+a solid near-black background; the light-theme gradient remains. Live
+interaction retests, physical-device checks, and Lighthouse remain **Not run**.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T160 | Enter on each calculator operation | Tab to each of the four operation radios, press Enter twice, then activate Calculate. Also use Space and Right on the radios. | Enter checks the focused operation without submitting or reverting to a previous one; Calculate returns 15, 9, 36, or 4 for 12 and 3. Space and Right remain usable. | Initial baseline: Fail — Multiply stayed unselected after Enter at 390px/1366px. Fix/retest: Pass — all four operations, repeated Enter, Space, and Right at 320px/390px/1366px. Live: Not run. |
+| T161 | No recent calculations | Calculate several answers, inspect the result area and showcase copy, then Reset example. | Only the current result is shown; no recent list or history text remains; reset restores 12 + 3 = 15. | Initial baseline: Fail — history still present at both baseline widths. Local retest: Pass at all three widths. Live: Not run. |
+| T162 | Quantity/Add horizontal navigation | For cereal, eggs, and bread, press Right from Quantity, Left from Add, then Right and Enter. Try an invalid 0 quantity; fill all shelf stock and Empty basket. | Focus moves within the correct shelf row without changing quantity; Enter adds the chosen amount; errors, stock limits, focus relocation, totals, and clearing still work. | Initial baseline: Fail — Right stayed in Quantity at both baseline widths. Local retest: Pass for all three products at all three widths, including full stock/disabled controls and $39.91 total. Live: Not run. |
+| T163 | Solid dark theme and persistence | On all five pages at phone/laptop widths, toggle dark, inspect background, reload, and toggle back to light. | Dark background has no image/gradient and is #111111; it persists after reload; switching to light restores its gradient. | Initial baseline: Fail — dark gradient remained at both baseline widths. Local retest: Pass on all 15 page/width configurations. Live: Not run. |
+| T164 | Calculator validation regression | Calculate negative decimals, submit blank input, divide by zero, multiply 1e308 by itself, and reset. | Decimal result is correct; missing input, division by zero, and nonfinite results are rejected; reset clears errors and restores the example. | Pass — local native browser input at all three widths. Live: Not run. |
+| T165 | Responsive/focus regression | Open every page at 320px, 390px, and 1366px; use Tab from the brand, inspect focus, images, document width, and page errors. | Navigation remains reachable with visible focus; no document overflow, broken visible images, or browser errors. | Pass — all 15 local configurations. Physical devices/live: Not run. |
+
+Evidence:
+
+- [Baseline](reports/calculator-cart-before-2026-11-08.json): eight failed desired-behavior checks across 390px/1366px before these changes.
+- [Completed local retest](reports/calculator-cart-local-2026-11-08.json): **210 assertions passed across 15 configurations**, using original file:// pages, native Chrome keyboard input, and reduced motion.
+- [Initial retest fixture output](reports/calculator-cart-initial-fixture-2026-11-08.json): nine currency assertions falsely failed because PowerShell expanded literal dollar signs in their expected values. Correcting the fixture produced the complete passing rerun; no website changes were made between those two runs.
+- All 74 local asset/link references and fragments resolve; stylesheet/script versions match the current files.
+- Actual captures at 390px/1366px: screenshots/calculator-enter-*.png, screenshots/cart-arrow-dark-*.png, and screenshots/solid-dark-home-*.png. Each is under 500 KB.
+
+Earlier history-list and dark-gradient expectations below describe retired
+behavior; retain them as historical evidence and use T160–T165 for this revision.
+
+### Random-opponent follow-up — previous revision
 
 At the owner's request, all jump/skip links and their hidden help copy are
 removed. The computer now makes independent random picks; the adaptive logic

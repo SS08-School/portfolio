@@ -35,9 +35,6 @@
   --border: #606060;
   --control-border: #8a8a8a;
   --button-text: #111111;
-  --sunset-peach: #30231f;
-  --sunset-rose: #2e2026;
-  --sunset-cream: #1e1816;
 }
 
 * { box-sizing: border-box; }
@@ -53,6 +50,7 @@ body {
     linear-gradient(180deg, var(--sunset-cream), var(--background) 30rem);
   background-repeat: no-repeat;
 }
+:root[data-theme="dark"] body { background-image: none; }
 a { color: inherit; text-underline-offset: 0.25em; }
 button { font: inherit; }
 svg { display: block; max-width: 100%; }
@@ -270,8 +268,6 @@ summary { cursor: pointer; line-height: 1.6; }
 .calculator-display { display: flex; flex-direction: column; justify-content: center; min-height: 230px; padding: 1.5rem; border: 1px solid var(--border); border-radius: 2px; background: var(--panel); }
 .calculator-display p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; font-variant-numeric: tabular-nums; }
 .calculator-display strong { color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 400; letter-spacing: -0.025em; overflow-wrap: anywhere; }
-.calculation-history ol { display: grid; gap: 0.5rem; padding: 0; list-style: none; }
-.calculation-history li { padding: 0.7rem 0.85rem; background: var(--background); border-radius: 2px; color: var(--muted); font-size: 0.8rem; line-height: 1.7; font-variant-numeric: tabular-nums; }
 .shelf-item { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: 0.8rem; padding: 1.2rem 0; border-top: 1px solid var(--border); }
 .grocery-mark { display: grid; place-items: center; width: 48px; height: 58px; border-radius: 2px; color: var(--text); font-size: 1rem; font-weight: 400; }
 .grocery-cereal { background: var(--panel); }

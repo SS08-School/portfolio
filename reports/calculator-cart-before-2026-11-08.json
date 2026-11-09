@@ -1,0 +1,51 @@
+﻿{
+    "date":  "2026-11-08",
+    "revision":  "f56b186 before requested fixes",
+    "records":  [
+                    {
+                        "width":  390,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  false,
+                                           "name":  "Enter selects focused Multiply operation"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Recent calculations removed"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Right moves from quantity to its Add button"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Dark background has no gradient"
+                                       }
+                                   ]
+                    },
+                    {
+                        "width":  1366,
+                        "page":  "projects",
+                        "checks":  [
+                                       {
+                                           "pass":  false,
+                                           "name":  "Enter selects focused Multiply operation"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Recent calculations removed"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Right moves from quantity to its Add button"
+                                       },
+                                       {
+                                           "pass":  false,
+                                           "name":  "Dark background has no gradient"
+                                       }
+                                   ]
+                    }
+                ],
+    "method":  "Local file:// Chrome native keyboard input; reduced motion"
+}
