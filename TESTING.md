@@ -1,6 +1,33 @@
 # Website test plan
 
-## Current: quieter checkerboard triangles — November 9, 2026
+## Current: two-second page-entry glimmer — November 9, 2026
+
+The owner requested only a brief shimmer when changing pages. Wide layouts now
+apply two irregular, gentle opacity patterns to the existing side decorations,
+randomly swapping which side receives each pattern. Opacity stays between 0.88
+and 1. Both two-second CSS animations finish at normal opacity; a single cleanup
+timer removes the animation class after 2000ms. There is no looping or scroll
+trigger. Cached Back entry replays it; ordinary pageshow does not duplicate the
+initial start. Hidden pages, page exit, narrow layout changes, and reduced motion
+cancel the effect and clear its timer. Re-enabling motion or resizing wider
+does not start an idle animation. Without JavaScript the pattern stays static.
+
+Passed 98 source/isolated assertions covering the two-second deadline, final
+normal state, no ongoing timer, randomized side order, cached Back replay,
+repeated-entry cleanup, reduced-motion/visibility/layout guards, CSS duration
+and opacity bounds, all 75 page references/asset hashes, and the SVG mask version.
+The full shared script passed syntax checking. These mocked checks do not
+verify actual animation timing, perception, or native browser behavior. No
+browser/app control or screenshots were used. Owner checks in both themes,
+phone/laptop widths, reduced motion, direct-file loading, keyboard operation,
+console, and live navigation remain Not run. This revision is not yet deployed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| GLIMMER-01 | Short shimmer lifecycle | Run isolated page-entry, timer, Back, repeated-entry, visibility, breakpoint, and reduced-motion events; inspect CSS keyframes and asset versions. | One subtle two-second effect per eligible entry; returns to normal, clears its timer, respects preferences, and never loops or restarts on scroll. | Pass — 98 source/isolated assertions, script syntax, and 75 reference checks. |
+| GLIMMER-02 | Owner animation review | Visit all pages at wide laptop widths in both themes; watch for several seconds, scroll, navigate, and use Back. Repeat with reduced motion and below 80rem, including changing settings during the effect. | Very subtle, slightly different side fades last about two seconds, then remain still. Eligible page changes/Back replay; scrolling does not. Reduced motion and narrow layouts stay still; controls and content remain unaffected. | Not run — owner browser/device testing; browser/app control remains disabled. |
+
+## Previous: quieter checkerboard triangles — November 9, 2026
 
 The owner found the previous pattern distracting. The new 128x160 tile contains
 four smaller, spaced triangles arranged right/left on the first row and

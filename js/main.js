@@ -1,4 +1,31 @@
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const triangleLayout = window.matchMedia("(min-width: 80rem)");
+const triangleGlimmerClasses = ["triangle-glimmer", "triangle-glimmer-reversed"];
+let triangleGlimmerTimer = null;
+
+function stopTriangleGlimmer() {
+  window.clearTimeout(triangleGlimmerTimer);
+  triangleGlimmerTimer = null;
+  document.body.classList.remove(...triangleGlimmerClasses);
+}
+
+function startTriangleGlimmer() {
+  stopTriangleGlimmer();
+  if (reducedMotion.matches || !triangleLayout.matches || document.hidden) return;
+  // Swap the two quiet fade patterns randomly on each page entry.
+  void document.body.offsetWidth;
+  const variation = Math.floor(Math.random() * triangleGlimmerClasses.length);
+  document.body.classList.add(triangleGlimmerClasses[variation]);
+  triangleGlimmerTimer = window.setTimeout(stopTriangleGlimmer, 2000);
+}
+
+startTriangleGlimmer();
+window.addEventListener("pageshow", (event) => { if (event.persisted) startTriangleGlimmer(); });
+window.addEventListener("pagehide", stopTriangleGlimmer);
+document.addEventListener("visibilitychange", () => { if (document.hidden) stopTriangleGlimmer(); });
+triangleLayout.addEventListener("change", stopTriangleGlimmer);
+reducedMotion.addEventListener("change", (event) => { if (event.matches) stopTriangleGlimmer(); });
+
 // Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;
 let scrollTarget = null;

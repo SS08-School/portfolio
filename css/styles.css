@@ -68,6 +68,24 @@ body {
   body::before { left: 1rem; }
   body::after { right: 1rem; transform: scaleX(-1); }
 }
+@media (min-width: 80rem) and (prefers-reduced-motion: no-preference) {
+  body.triangle-glimmer::before, body.triangle-glimmer-reversed::after { animation: triangle-glimmer-left 2s ease-in-out; }
+  body.triangle-glimmer::after, body.triangle-glimmer-reversed::before { animation: triangle-glimmer-right 2s ease-in-out; }
+  @keyframes triangle-glimmer-left {
+    0%, 100% { opacity: 1; }
+    18% { opacity: 0.93; }
+    43% { opacity: 0.99; }
+    67% { opacity: 0.88; }
+    84% { opacity: 0.97; }
+  }
+  @keyframes triangle-glimmer-right {
+    0%, 100% { opacity: 1; }
+    12% { opacity: 0.98; }
+    36% { opacity: 0.89; }
+    58% { opacity: 0.99; }
+    79% { opacity: 0.93; }
+  }
+}
 a { color: inherit; text-underline-offset: 0.25em; }
 button { font: inherit; }
 svg { display: block; max-width: 100%; }

@@ -41,6 +41,12 @@ in a checkerboard arrangement. The gradient and full-page anchoring remain.
 The quieter checkerboard was deployed on November 9, 2026 (`20c146b`); all five
 page references, the new stylesheet, and the four-triangle SVG were verified
 over HTTP. Rendered browser review remains for the owner.
+The local glimmer refinement adds a quiet, irregular opacity shimmer to the
+side pattern for about two seconds on page entry, then restores its normal
+appearance. Each entry randomly swaps the two sides' fade patterns. It replays
+on cached Back navigation, never loops or restarts on scroll, and stops when
+the page is hidden, the layout becomes narrow, or reduced motion is requested.
+This brief glimmer update has not yet been deployed.
 
 ### Earlier dropdown checks
 

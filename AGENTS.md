@@ -75,6 +75,10 @@ empty sections, or dummy links.
   gaps. Keep a gradient fading from stronger outer edges to transparent near
   the content. Use near-black in light mode and matching light ink in dark mode.
   Keep them outside the content, non-interactive, and absent on narrower screens.
+  On page entry, allow only a very subtle two-second opacity glimmer with
+  slightly different irregular fade patterns on each side, randomly swapped.
+  Return to normal afterwards; never loop or retrigger on scroll. Respect
+  reduced motion, stop when the page is hidden, and replay on cached Back entry.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Use matching inline SVG arrow icons on every device, including dynamically
