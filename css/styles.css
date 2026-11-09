@@ -40,6 +40,7 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   line-height: 1.6;
@@ -51,21 +52,21 @@ body {
   background-repeat: no-repeat;
 }
 :root[data-theme="dark"] body { background-image: none; }
-/* Three small triangles occupy only the unused gutters on wide screens. */
+/* Repeating triangles belong to the document, not the viewport. */
 @media (min-width: 80rem) {
   body::before, body::after {
     content: "";
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     width: 1.1rem;
-    height: clamp(9rem, 24vh, 14rem);
     background: var(--ink);
-    clip-path: polygon(0 0, 100% 16.67%, 0 33.33%, 100% 50%, 0 66.67%, 100% 83.33%, 0 100%);
-    transform: translateY(-50%);
+    -webkit-mask: url("../images/side-triangles.svg") top center / 100% 8rem repeat-y;
+    mask: url("../images/side-triangles.svg") top center / 100% 8rem repeat-y;
     pointer-events: none;
   }
   body::before { left: calc((100vw - 1060px) / 4); }
-  body::after { right: calc((100vw - 1060px) / 4); transform: translateY(-50%) scaleX(-1); }
+  body::after { right: calc((100vw - 1060px) / 4); transform: scaleX(-1); }
 }
 a { color: inherit; text-underline-offset: 0.25em; }
 button { font: inherit; }

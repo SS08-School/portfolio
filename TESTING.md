@@ -1,6 +1,33 @@
 # Website test plan
 
-## Current: visible tabs and minimal side accents — November 9, 2026
+## Current: full-page, opposite-facing triangles — November 9, 2026
+
+The owner requested triangles down the full length of the page, anchored to the
+document rather than following the viewport, and pointing both ways. The side
+pseudo-elements now stretch from top:0 to bottom:0 inside the relatively
+positioned body. A small original SVG tile supplies alternating right- and
+left-pointing triangles, repeated vertically at a fixed tile size. The right
+side mirrors the left. The pattern keeps the existing 80rem minimum width,
+theme ink colors, gutter placement, and pointer-events:none. It adds no HTML
+images or interactive elements and requires no JavaScript.
+
+Passed 92 source/geometry assertions covering document positioning, full-height
+stretch, repeat-y masks and WebKit equivalents, both triangle directions, the
+image-size limit, wide-screen gating, all 75 page references and asset hashes,
+the CSS image path, preserved tabs, and calculated gutter clearance at widths
+1280/1366/1440/1920/2560px. The SVG also passed an XML parse with two paths.
+These are source and geometry checks, not native browser rendering. No browser
+or app was automated and no screenshots were captured. Owner checks for full
+page coverage, scrolling, zoom, both themes, direct-file loading, keyboard,
+pointer/touch, and console errors remain Not run. This revision is local and
+has not been deployed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| RAIL-01 | Full-page pattern source and assets | Inspect the body/pseudo-element positioning, repeat masks, SVG paths and XML, CSS URL, asset sizes/hashes, and page references. Calculate gutter bounds at supported desktop sizes. | Document-anchored rails cover body height; each tile has both directions; assets resolve and remain small; rails stay outside content and ignore clicks. | Pass — 92 source/geometry assertions, 75 page references, one CSS asset, and SVG XML validation. |
+| RAIL-02 | Owner scrolling and theme check | On every page at 1280px or wider, scroll from top to footer in both themes; include the long Projects page, collapsed/expanded demos, zoom, and local files. Repeat below 80rem. | Triangles repeat throughout the full page and move with its content, never staying fixed in the viewport; both directions appear on each side. No content overlap, blocked controls, clipping, or sideways scrolling; narrow screens omit the pattern. | Not run — owner browser/device testing; browser/app control remains disabled. |
+
+## Previous: visible tabs and minimal side accents — November 9, 2026
 
 The owner replaced the dropdown with the visible tab header used in `e0d6cbb`,
 before the dropdown was restored. All five pages now use native Home, About,

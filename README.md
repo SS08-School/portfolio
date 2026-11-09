@@ -24,9 +24,13 @@ pointer clicks do not retain a focus outline, while keyboard focus stays visible
 The restored tabs, side accents, and Adobe proficiency additions were deployed
 on November 9, 2026. HTTP/source checks verified all five pages and shared assets.
 Owner browser/device testing remains pending; browser/app automation is disabled.
-Wide layouts (80rem and above) also have three small triangular accents in each
-outer gutter. They are near-black in light mode and light in dark mode, stay
-outside the content, and cannot intercept clicks. Narrow layouts omit them.
+Wide layouts (80rem and above) have repeating triangles pointing both left and
+right down the full page in each outer gutter. They are anchored to the document
+and scroll with it, rather than following the viewport. The original local SVG
+tile in `images/side-triangles.svg` supplies their shapes. They are near-black in
+light mode and light in dark mode, stay outside the content, and cannot intercept
+clicks. Narrow layouts omit them. This full-height pattern update is local and
+not yet deployed.
 
 ### Earlier dropdown checks
 

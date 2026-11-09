@@ -66,9 +66,10 @@ empty sections, or dummy links.
   or dropdown. Keep native page links, no horizontal navigation scrolling, and
   only the current page underlined. Pointer clicks must not leave a focus/pressed
   appearance; retain visible keyboard focus and real theme/project choices.
-- Add restrained stacks of three triangular accents in the unused left/right
-  gutters on every page at widths of at least 80rem. Use near-black in light
-  mode and the matching light ink in dark mode. Keep them stationary, outside
+- Repeat restrained triangles pointing both left and right down the full length
+  of each page's unused side gutters at widths of at least 80rem. Anchor them to
+  the document so they scroll with the page, never fixed to the viewport. Use
+  near-black in light mode and matching light ink in dark mode. Keep them outside
   the content, non-interactive, and absent on narrower screens.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
