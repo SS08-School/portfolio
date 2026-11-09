@@ -23,8 +23,12 @@ log. Save actual exports in [reports/lighthouse](reports/lighthouse/README.md).
 The November 7 live functional preflight passed 444 checks. A visible-label/
 accessible-name mismatch on the mobile Menu button was corrected in 123049d;
 its initial failure and retests are retained. These checks do not establish a
-Lighthouse score. Actual Lighthouse, physical-keyboard, screen-reader, and other
-pending manual results must be entered from real tests before submission.
+Lighthouse score. Actual November 8 Mobile before/after Lighthouse exports are
+now recorded in TESTING.md: every after category scored 100, and the Projects
+Fibonacci accessible-name audit changed from Fail to Pass after fix 9e28d42.
+Remaining Performance findings and their limitations are documented. The
+Lighthouse assignment requires Mobile; Desktop rows belong to the broader
+portfolio test plan. Unrun manual/screen-reader checks remain pending.
 
 ## Mobile layout verification — November 8, 2026
 

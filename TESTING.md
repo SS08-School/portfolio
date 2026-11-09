@@ -1,8 +1,61 @@
 # Website test plan
 
+## Lighthouse assignment results - November 8, 2026
+
+All five supplied live Mobile before/after pairs were read from actual JSON exports.
+Every after category score is 100. All five after Accessibility results meet the
+assignment target of at least 90; no after Accessibility, Best Practices, or SEO
+audit has a failing score. The Projects visible-label/name audit changed from
+Fail (score 0) to Pass (score 1). Its zero scoring weight explains why the
+Accessibility category stayed at 100.
+
+| Page | Performance before -> after | Accessibility before -> after | Best Practices before -> after | SEO before -> after |
+| --- | --- | --- | --- | --- |
+| Home | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 |
+| About | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 |
+| Projects | 98 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 |
+| Skills | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 |
+| Contact | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 |
+
+Report settings: Navigation mode; Mobile form factor; simulated throttling;
+Lighthouse 13.5.0; host Chrome user agent 156.0.0.0 on Windows. All reports have
+screenEmulation.disabled=true, so the stored 412 by 823 preset does not establish
+the actual audit viewport. Incognito use was not independently verified from
+these JSON files. All runs were November 8, 2026 in America/New_York (EST);
+their UTC fetchTime dates are November 9. No new Lighthouse runs were performed
+while documenting these results. The Lighthouse assignment specifies Mobile;
+Desktop rows belong to the broader portfolio test plan and are not a requirement
+of this assignment. Unrun Desktop and manual checks remain Not run.
+
+### Remaining Performance findings
+
+Every after report still flags Use efficient cache lifetimes, Network dependency
+tree, Render-blocking requests, and Minify JavaScript. Projects additionally
+flags Max Potential First Input Delay (100 ms). These findings have zero category
+scoring weight in these reports. The increase in Projects Performance from 98 to
+100 does not establish that the label correction caused a performance improvement.
+
+| Finding | Disposition under the current project rules |
+| --- | --- |
+| Use efficient cache lifetimes | Could not fix in the site files: GitHub Pages controls the 10-minute server cache headers. The assignment explicitly says to leave server settings alone. |
+| Network dependency tree | Remains: the HTML requests the shared stylesheet and early theme script. They are already declared in the head. Further optimization requires a separate measured Performance task; no loading change is claimed. |
+| Render-blocking requests | Remains: the stylesheet supplies the initial design and theme.js applies the saved theme before paint. Deferring the script could introduce a theme flash. Inline CSS conflicts with the external-stylesheet rule. |
+| Minify JavaScript | Remains: estimated savings are about 2 KiB. Readable main.js is retained for the school demo; the current rules prohibit build tools. No minified deployment workflow was introduced. |
+| Max Potential First Input Delay | Remains on Projects at 100 ms. A Performance recording is needed before identifying a responsible task; no function is blamed without evidence. |
+
+Best Practices and SEO needed no fixes. Performance findings were reviewed
+without changing the design, adding dependencies, hiding content, or claiming
+that every diagnostic must pass to meet the Accessibility score target.
+
+The ten original exports were renamed with .json extensions; SHA-256 checks
+confirmed their contents were unchanged. They stay in the established
+reports/lighthouse folder, which is this repository's documented location for
+the assignment's lighthouse report folder. Initial failures are retained.
+
+
 ## Fibonacci accessible-name correction — November 8, 2026
 
-The saved live report `reports/lighthouse/projects-before` fails
+The saved live report `reports/lighthouse/projects-before.json` fails
 `label-content-name-mismatch` for the 12 generated Fibonacci term buttons.
 A later Projects report reviewed during this session had the same failure.
 Both Accessibility scores were 100 because this audit has zero weight;
@@ -19,7 +72,7 @@ No visual design, CSS, libraries, or frameworks changed.
 | FIB-A11Y-01 | Visible label matches accessible name | Open local Projects at phone and laptop widths. Inspect all 12 initial term buttons in the browser accessibility tree. | Each accessible name matches the visible index and value, including leading zeros. | Initial live result: Fail in both saved Projects reports. Local retest: Pass — Chrome accessibility tree lists all 12 matching names, from 01 0 through 12 89, at laptop and phone layouts. |
 | FIB-A11Y-02 | Keyboard selection remains usable | At phone and laptop widths, use Tab to a Fibonacci term and Enter to select it; move to another term and repeat. | Focus remains visible and selection/calculation update. | Pass — native Tab/Enter selected terms 1 and 2 in both layouts; screenshots showed focus outlines, selected states, and matching calculations. |
 | FIB-A11Y-03 | Direct-file and responsive regression | Open index.html directly, follow Projects, inspect at phone/laptop widths, use the Fibonacci controls, and check local links, images, overflow, and console errors. | Pages and controls work without a server, with no missing assets, overflow, or console errors. | Partial — direct-file Home and its Projects navigation passed; Fibonacci visuals, labels, and focus fit the inspected layouts. All 21 referenced local files exist. Full-page overflow, console errors, and every image's rendered state: Not run. |
-| FIB-A11Y-04 | Published Lighthouse retest | After owner review and approved deployment, run Lighthouse on live Projects and inspect label-content-name-mismatch explicitly. | The audit passes with no flagged Fibonacci buttons; retain a new report alongside previous failures. | Not run — requires a fresh live Lighthouse report after deployment. |
+| FIB-A11Y-04 | Published Lighthouse retest | After owner review and approved deployment, run Lighthouse on live Projects and inspect label-content-name-mismatch explicitly. | The audit passes with no flagged Fibonacci buttons; retain a new report alongside previous failures. | Pass — projects-after.json records the live audit passing with score 1; Accessibility remains 100. |
 | FIB-A11Y-05 | Source validation | Parse main.js as a classic script, resolve Projects local file references, verify its script URL against the SHA-256 prefix, and run git diff --check. | JavaScript parses; referenced files exist; script version matches; diff has no whitespace errors. | Pass — JavaScript parsed, all 21 local file references resolved, script version ec53b5549eb7 matched, and diff check passed. This is not browser validation. |
 | FIB-A11Y-06 | Names after regeneration | Generate 1 and 100 terms at phone/laptop widths; inspect the resulting buttons' accessible names. | All regenerated buttons use their visible index and value as their accessible name. | Not run. |
 
@@ -52,8 +105,9 @@ not current requirements.
   interactions in isolated Chrome. Reduced motion stabilized functional checks
   and captures. This was **not** a Lighthouse run or a physical-keyboard/
   screen-reader session.
-- **Lighthouse results: Not run.** The accessibility target is **90 or higher
-  on each page**. Record real reports in the table below; no score is assumed.
+- **Lighthouse Mobile results: Pass for the score target on all five pages.**
+  Actual before/after exports are recorded above and in LH01/LH03/LH05/LH07/LH09.
+  Desktop Lighthouse and unrun manual checks remain Not run.
 
 An Actual result of Pass below refers only to the described automated live
 check. Pending manual/Lighthouse cases say Not run. After your own test, append
@@ -223,7 +277,7 @@ The contact form prepares a draft; sending email is not part of automated testin
 | T131 | Assets, names, and console | On each live page inspect Console/Network, image alt text, headings, and control labels; interact with the page. | No uncaught errors, missing visible images, unnamed controls, duplicate page h1, or unlabelled fields. | Not run for the complete manual review — automated error/image/h1/alt/control-name subchecks passed on all five live pages at both widths. |
 | T132 | Reduced motion / animation | Enable reduced motion, reload and scroll Skills/Contact; then use normal motion and keyboard-focus content during entry. | Content remains available; reduced motion skips decorative effects; focused controls appear immediately. | Not run manually on the live site. Earlier local automated checks passed; do not treat them as this live result. |
 | T133 | No-JavaScript fallback | Disable JavaScript temporarily; reload every live page and inspect navigation, content, project cards, and the direct email link. Restore JavaScript afterward. | Navigation/content remain available; all four project cards show; direct email link works; JavaScript-only draft control stays disabled. | Not run on the live site. Earlier local fallback checks are historical evidence only. |
-| T134 | Lighthouse on every page | Follow the procedure below for all five live URLs, first Mobile then Desktop; save each report and score. | Accessibility is at least 90 on each page/configuration; reported failures are fixed and retested. | Not run — fill the 10 Lighthouse rows below from real reports. |
+| T134 | Lighthouse on every page | Follow the procedure below for all five live URLs, first Mobile then Desktop; save each report and score. | Accessibility is at least 90 on each page/configuration; reported failures are fixed and retested. | Mobile: Pass for the score target on all five pages; Projects label mismatch failed initially and passed after correction. Desktop: Not run. |
 | T135 | Physical keyboard, zoom, and dark inspection | On every live page use your physical Tab/Shift+Tab, Enter, Space, arrows, and Escape; verify you can leave the loop; inspect both themes at 200% zoom. | Focus is visible and can escape to browser controls; inputs retain native keys; content stays readable and reachable with no clipped controls. | Not run — your manual submission check, separate from automated input. |
 | T136 | Screen-reader check | With a screen reader, visit every page; inspect page/heading names, navigation/current-page state, field labels/errors, carousel status, and game announcements. | Labels and dynamic results make sense and hidden content is not announced as available controls. | Not run — manual check; a Lighthouse score does not replace it. |
 | T138 | Additional direct-file check | Separately double-click local index.html, follow its page links, and inspect styles/scripts. Use the live HTTPS URLs above for submission/Lighthouse tests. | Local files remain usable without a server; submission audits use the published site. | Not run in this live preflight; earlier local checks remain in the history below. |
@@ -273,20 +327,20 @@ Automated scores exclude some manual checks and do not prove full accessibility.
 
 ### Lighthouse results — complete these from saved reports
 
-A dash means no score was measured. Do not enter an expected/estimated score.
+Arrows show before -> after. A dash means no score was measured. Do not enter an expected/estimated score.
 Use the optional score columns only if those categories were included.
 
 | Audit ID | Page / device | Accessibility | Performance | Best Practices | SEO | Actual result | Report / date / Chrome and Lighthouse versions |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| LH01 | Home / Mobile | — | — | — | — | Not run | — |
+| LH01 | Home / Mobile | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 | Pass — Accessibility >=90 in both runs. | [Before](reports/lighthouse/home-before.json) 19:53:41; [After](reports/lighthouse/home-after.json) 20:38:22 EST, 2026-11-08; Chrome 156.0.0.0 / LH 13.5.0; settings above. |
 | LH02 | Home / Desktop | — | — | — | — | Not run | — |
-| LH03 | About / Mobile | — | — | — | — | Not run | — |
+| LH03 | About / Mobile | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 | Pass — Accessibility >=90 in both runs. | [Before](reports/lighthouse/about-before.json) 19:57:27; [After](reports/lighthouse/about-after.json) 20:39:25 EST, 2026-11-08; Chrome 156.0.0.0 / LH 13.5.0; settings above. |
 | LH04 | About / Desktop | — | — | — | — | Not run | — |
-| LH05 | Projects / Mobile | — | — | — | — | Not run | — |
+| LH05 | Projects / Mobile | 100 -> 100 | 98 -> 100 | 100 -> 100 | 100 -> 100 | Pass — Accessibility >=90 in both runs; label mismatch initially Fail, after Pass. | [Before](reports/lighthouse/projects-before.json) 19:58:21; [After](reports/lighthouse/projects-after.json) 20:41:00 EST, 2026-11-08; Chrome 156.0.0.0 / LH 13.5.0; settings above. |
 | LH06 | Projects / Desktop | — | — | — | — | Not run | — |
-| LH07 | Skills / Mobile | — | — | — | — | Not run | — |
+| LH07 | Skills / Mobile | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 | Pass — Accessibility >=90 in both runs. | [Before](reports/lighthouse/skills-before.json) 19:58:55; [After](reports/lighthouse/skills-after.json) 20:41:27 EST, 2026-11-08; Chrome 156.0.0.0 / LH 13.5.0; settings above. |
 | LH08 | Skills / Desktop | — | — | — | — | Not run | — |
-| LH09 | Contact / Mobile | — | — | — | — | Not run | — |
+| LH09 | Contact / Mobile | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 | Pass — Accessibility >=90 in both runs. | [Before](reports/lighthouse/contact-before.json) 19:59:17; [After](reports/lighthouse/contact-after.json) 20:42:38 EST, 2026-11-08; Chrome 156.0.0.0 / LH 13.5.0; settings above. |
 | LH10 | Contact / Desktop | — | — | — | — | Not run | — |
 
 ### Retired dropdown cases
