@@ -14,7 +14,34 @@ stickers, or decorative shadows.
 Open `index.html` directly in a browser, or use VS Code Live Preview. No
 installation, build step, or server is required.
 
-## Testing before submission
+## Current layout and testing
+
+The local revision combines everything in `index.html`: Home, About/Education,
+Projects, Skills, then Contact. The existing top tabs keep their appearance and
+follow native section anchors, with smooth scrolling unless reduced motion is
+enabled. The underline follows the section in view. Older page URLs redirect to
+the corresponding section; education and project bookmarks keep their targets.
+All four demonstrations, the manual carousel, seven skills, and the validated
+email-draft form remain in the combined document.
+
+The bulb now gently moves away from a nearby fine mouse pointer. Its maximum
+shift is 8% of its displayed shorter side, capped at 24px; the proximity radius
+also scales with the image. It eases back over 350ms and stays still for touch
+and reduced motion. Rotation and original colors remain unchanged.
+
+Source and isolated logic checks passed. Native phone/laptop rendering, keyboard
+and pointer use, direct-file loading, and Lighthouse still need owner testing;
+browser/app automation remains disabled. See the current cases in `TESTING.md`.
+This revision is local and has not been published.
+
+One real merge mistake was caught during checking: a string replacement treated
+the `$2` in two `$2.99` prices as a capture reference, inserting an extra closing
+tag. The prices were restored, then balanced-tag and original-content checks
+passed. This did not reach deployment.
+
+## Earlier work and deployment history
+
+The notes below describe earlier revisions, including the former separate pages.
 
 The header restores the visible page tabs from `e0d6cbb`, before
 the dropdown was brought back. Home, About, Projects, Skills, and Contact are
@@ -297,11 +324,11 @@ the existing five-page structure and all four interactive projects.
 
 ## Project files
 
-- `index.html`: The personal introduction beside the owner's tilted light bulb.
-- `about.html`: About me and education at NJIT.
-- `projects.html`: Assignment 1 collection and interactive game/sequence labs.
-- `skills.html`: Codex, visual design, creative feedback, and website planning.
-- `contact.html`: The owner's public email link.
+- `index.html`: All five sections, including the introduction, education,
+  Assignment 1 demonstrations, skills, and contact form.
+- `about.html`, `projects.html`, `skills.html`, `contact.html`: Compatibility
+  redirects for old page links.
+- `js/redirect.js`: Preserves section bookmarks when redirecting old URLs.
 - `css/styles.css`: Shared stylesheet and responsive layouts.
 - `js/main.js`: Keyboard controls, reveals, carousel, contact validation,
   and all four interactive Assignment 1 demos.

@@ -8,8 +8,8 @@
     <link rel="icon" href="images/monogram.svg?v=5215a69064c3" type="image/svg+xml">
     <title>Sebastian Szeliga | Electrical &amp; Computer Engineering Student</title>
     <script src="js/theme.js?v=cae71dd46cd4"></script>
-    <link rel="stylesheet" href="css/styles.css?v=4fb5a91ec50a">
-    <script src="js/main.js?v=b28dfe1d17dc" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=afd194e6b43c">
+    <script src="js/main.js?v=c3b9ee06ce61" defer></script>
   </head>
   <body id="top">
 
@@ -20,11 +20,11 @@
       </a>
 
       <nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
-        <a class="nav-link nav-page-link" href="#top" aria-current="page">Home</a>
-        <a class="nav-link nav-page-link" href="about.html#top">About</a>
-        <a class="nav-link nav-page-link" href="projects.html#top">Projects</a>
-        <a class="nav-link nav-page-link" href="skills.html#top">Skills</a>
-        <a class="nav-link nav-page-link" href="contact.html#top">Contact</a>
+        <a class="nav-link nav-page-link" href="#home" aria-current="location">Home</a>
+        <a class="nav-link nav-page-link" href="#about">About</a>
+        <a class="nav-link nav-page-link" href="#projects">Projects</a>
+        <a class="nav-link nav-page-link" href="#skills">Skills</a>
+        <a class="nav-link nav-page-link" href="#contact">Contact</a>
       </nav>
 
       <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
@@ -39,16 +39,200 @@
     </header>
 
     <main id="main" class="page-enter" tabindex="-1">
-      <section id="home" class="hero page-width" aria-labelledby="intro-heading" tabindex="-1">
+      <section id="home" data-nav-section class="hero page-width" aria-labelledby="intro-heading" tabindex="-1">
         <div class="hero-copy">
           <p class="eyebrow">Sebastian Szeliga / Portfolio</p>
           <h1 id="intro-heading">Hi, I'm Sebastian.</h1>
           <p class="hero-description">I'm an Electrical &amp; Computer Engineering student at New Jersey Institute of Technology.</p>
-          <div class="hero-actions"><a class="button" href="projects.html">View projects <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="text-link" href="contact.html">Contact me <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+          <div class="hero-actions"><a class="button" href="#projects">View projects <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="text-link" href="#contact">Contact me <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
         </div>
         <div class="hero-bulb">
           <img class="home-lightbulb" src="images/home-lightbulb.png?v=96ed87d745ab" alt="Glowing light bulb with a metallic screw base" width="594" height="768" decoding="async">
         </div>
+      </section>
+
+      <section id="about" data-nav-section class="portfolio-section about-layout page-width" aria-labelledby="about-heading" tabindex="-1">
+        <div class="page-intro" aria-labelledby="about-heading">
+          <p class="eyebrow">Background</p>
+          <h2 class="section-title" id="about-heading">About</h2>
+          <p>I'm Sebastian. I like working on different kinds of creative projects and solving problems. Got a question? Let me know!</p>
+          <a class="button" href="#contact">Get in touch <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+        <section id="education" class="education-card" aria-labelledby="education-heading" tabindex="-1">
+          <h3 id="education-heading">Education</h3>
+          <dl class="education-details">
+            <div><dt>School</dt><dd>New Jersey Institute of Technology (NJIT)</dd></div>
+            <div><dt>Major</dt><dd>Electrical &amp; Computer Engineering</dd></div>
+            <div><dt>Status</dt><dd>Currently enrolled</dd></div>
+          </dl>
+        </section>
+      </section>
+
+      <section id="projects" data-nav-section class="portfolio-section projects-page page-width" aria-labelledby="projects-heading" tabindex="-1">
+        <div class="page-intro projects-intro" aria-labelledby="projects-heading">
+          <div>
+            <p class="eyebrow">Coursework / Interactive demonstrations</p>
+            <h2 class="section-title" id="projects-heading">Projects</h2>
+            <p class="hero-description">Four classroom exercises with working browser demonstrations.</p>
+          </div>
+        </div>
+
+        <section class="project-collection project-carousel" aria-labelledby="collection-heading" aria-roledescription="carousel">
+          <div class="collection-heading"><h3 id="collection-heading">Assignment 1</h3><span class="small-label">04 PROJECTS</span></div>
+          <p class="collection-description">Originally written in Python for Assignment 1. The interactive versions below are browser adaptations built with Codex.</p>
+          <div class="project-grid" id="project-slides">
+            <article class="project-card">
+              <div class="project-thumbnail rps-thumbnail" aria-hidden="true"><img src="images/rock.svg?v=6d24a1eafac3" alt="" width="200" height="200"><img src="images/paper.svg?v=ec9f4b4f1c23" alt="" width="200" height="200"><img src="images/scissors.svg?v=fd5c474994df" alt="" width="200" height="200"></div>
+              <div class="project-card-copy"><p class="project-tag">01 / GAME · INTERACTIVE</p><h4 class="project-title">Rock, Paper, Scissors</h4><p>A hidden-choice game against a random computer opponent or another player.</p><a href="#rps-lab">Play Rock Paper Scissors <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+            </article>
+            <article class="project-card">
+              <img class="project-thumbnail" src="images/fibonacci.svg?v=1f8a6fda425f" alt="A Fibonacci-inspired spiral over a grid of growing squares" width="480" height="240">
+              <div class="project-card-copy"><p class="project-tag">02 / MATH · INTERACTIVE</p><h4 class="project-title">Fibonacci Sequence</h4><p>Generate up to 100 exact terms, inspect each calculation, and explore the square spiral.</p><a href="#fib-lab">Explore Fibonacci <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+            </article>
+            <article class="project-card">
+              <img class="project-thumbnail" src="images/calculator.svg?v=dee3575b29df" alt="An illustrated calculator with the four arithmetic operations" width="480" height="240" loading="lazy">
+              <div class="project-card-copy"><p class="project-tag">03 / MATH · INTERACTIVE</p><h4 class="project-title">Calculator</h4><p>Four arithmetic operations with checks for invalid input and results.</p><a href="#calculator-lab">Use calculator <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+            </article>
+            <article class="project-card">
+              <img class="project-thumbnail" src="images/cart.svg?v=f8fdaa151dd0" alt="An illustrated shopping cart with groceries" width="480" height="240" loading="lazy">
+              <div class="project-card-copy"><p class="project-tag">04 / SIMULATION · INTERACTIVE</p><h4 class="project-title">Shopping Cart</h4><p>Track grocery quantities, shelf inventory, and the total cost.</p><a href="#cart-lab">Use shopping cart <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+            </article>
+          </div>
+          <div class="carousel-controls" hidden>
+            <p id="carousel-status" class="carousel-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <div class="carousel-buttons"><button id="project-previous" class="quiet-button" type="button" aria-controls="project-slides" aria-label="Previous project"><svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button><button id="project-next" class="quiet-button" type="button" aria-controls="project-slides" aria-label="Next project"><svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div>
+          </div>
+        </section>
+
+        <section id="rps-lab" class="project-lab" aria-labelledby="rps-heading" tabindex="-1">
+          <div class="lab-heading"><div><p class="project-tag">PLAY / 01</p><h3 id="rps-heading">Rock, Paper, Scissors</h3></div></div>
+          <noscript><p class="fallback-note">Enable JavaScript to play the game. Rock beats scissors, scissors beat paper, and paper beats rock.</p></noscript>
+          <div id="rps-game" class="rps-game" hidden>
+            <div class="game-toolbar"><div class="mode-switch" role="group" aria-label="Game opponent"><button type="button" data-game-mode="computer" aria-pressed="true">Vs computer</button><button type="button" data-game-mode="friend" aria-pressed="false">2 players</button></div><button id="reset-game" class="quiet-button" type="button">Reset match <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 4v6h6M4 10a8 8 0 1 1 .5 5"/></svg></button></div>
+            <div class="game-settings"><p id="game-mode-note">The computer commits to a random move before you choose.</p></div>
+            <div class="scoreboard" aria-label="Match score"><div><span id="player-one-label">YOU</span><strong id="player-one-score">0</strong></div><div class="scoreboard-center"><span id="round-label">ROUND 01</span><span class="scoreboard-divider">FIRST TO 5</span><span>Ties <b id="tie-score">0</b></span></div><div><span id="player-two-label">COMPUTER</span><strong id="player-two-score">0</strong></div></div>
+            <div class="arena" id="game-arena">
+
+              <div class="arena-hand"><span id="left-hand-label">YOUR MOVE</span><img id="left-hand" src="images/rock.svg?v=6d24a1eafac3" alt="" width="200" height="200"><strong id="left-choice">Ready?</strong></div>
+              <span class="versus" aria-hidden="true">VS</span>
+              <div class="arena-hand"><span id="right-hand-label">THEIR MOVE</span><img id="right-hand" src="images/rock.svg?v=6d24a1eafac3" alt="" width="200" height="200"><strong id="right-choice">Ready.</strong></div>
+            </div>
+            <div id="handoff-screen" class="handoff-screen" hidden><h4>Player 2</h4><p>Player 1's move is locked in.<br>Pass the device to Player 2 without looking back.</p><button id="handoff-ready" class="button" type="button">I'm Player 2. Let's go.</button></div>
+            <div class="game-announcement" role="status" aria-live="polite" aria-atomic="true"><h4 id="game-result">Choose a move.</h4><p id="game-instruction">Choose your move to start round 1.</p></div>
+            <div id="move-controls" class="move-controls" role="group" aria-label="Choose your move"><button type="button" data-move="rock"><img src="images/rock.svg?v=6d24a1eafac3" alt="" width="200" height="200"><span>Rock</span></button><button type="button" data-move="paper"><img src="images/paper.svg?v=ec9f4b4f1c23" alt="" width="200" height="200"><span>Paper</span></button><button type="button" data-move="scissors"><img src="images/scissors.svg?v=fd5c474994df" alt="" width="200" height="200"><span>Scissors</span></button></div>
+            <div class="round-actions"><p>Rock beats scissors. Scissors beat paper. Paper beats rock.</p><button id="next-round" class="button" type="button" hidden>Next round <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></button></div>
+            <div class="round-history"><span class="small-label">RECENT ROUNDS</span><ol id="round-history"><li>No rounds played.</li></ol></div>
+          </div>
+          <details class="logic-notes"><summary>Game logic</summary><p>The original uses hidden Player 1 input, validates both choices, compares the three winning combinations, and asks to play again. This adaptation keeps that logic and adds a score, animation, and an optional computer opponent. Two-player mode is pass-and-play on one device; the handoff screen keeps the first choice off-screen.</p><p>The computer chooses rock, paper, or scissors at random before you choose. Each round is independent; previous moves do not affect its choice.</p></details>
+        </section>
+
+        <section id="fib-lab" class="project-lab" aria-labelledby="fib-heading" tabindex="-1">
+          <div class="lab-heading"><div><p class="project-tag">EXPLORE / 02</p><h3 id="fib-heading">Fibonacci Sequence</h3></div></div>
+          <noscript><p class="fallback-note">Enable JavaScript to explore the sequence. It starts 0, 1, 1, 2, 3, 5, 8, 13. Each new term is the sum of the previous two.</p></noscript>
+          <div id="fib-explorer" class="fib-explorer" hidden>
+            <div class="fib-controls"><form id="fib-form" novalidate><label for="fib-count">How many terms?</label><div class="fib-input-row"><input id="fib-count" type="number" min="1" max="100" step="1" value="12" required aria-describedby="fib-help fib-error"><button class="button" type="submit">Generate <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></button></div><p id="fib-help">Choose a whole number from 1 to 100. We count 0 as the first term.</p><p id="fib-error" class="input-error" role="alert"></p></form><label class="range-label" for="fib-range"><span class="range-caption">Or slide to explore <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h16M8 8l-4 4 4 4m8-8 4 4-4 4"/></svg></span><input id="fib-range" type="range" min="1" max="100" value="12"></label></div>
+            <div class="fib-workspace"><div class="fib-visual"><div class="visual-topline"><span class="small-label">THE FIBONACCI SPIRAL</span><span id="spiral-caption">12 terms</span></div><svg id="fib-spiral" viewBox="-10 -10 120 120" role="img" aria-labelledby="spiral-title spiral-description"><title id="spiral-title">Fibonacci square spiral</title><desc id="spiral-description">Squares sized by consecutive Fibonacci numbers, with a quarter-circle arc in each square.</desc><g id="fib-squares"></g><path id="fib-curve" d="M0 0"/></svg><p id="spiral-note">Each square grows from the two before it.</p></div><div class="fib-step-panel"><span class="small-label">TERM CALCULATION</span><p id="fib-step-label">TERM 12 OF 12</p><div id="fib-equation" class="fib-equation"></div><p id="fib-explanation">Add the two previous terms to get the next.</p><div class="step-controls"><button id="fib-back" class="quiet-button" type="button" aria-label="Previous Fibonacci term"><svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button><button id="fib-play" class="button" type="button">Replay sequence</button><button id="fib-next" class="quiet-button" type="button" aria-label="Next Fibonacci term"><svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button></div><dl class="fib-stats"><div><dt>Selected term</dt><dd id="fib-selected">89</dd></div><div><dt>Ratio to previous</dt><dd id="fib-ratio">1.618182</dd></div></dl><p class="ratio-note">As the terms grow, the ratio approaches the golden ratio: about 1.618.</p></div></div>
+            <div class="sequence-heading"><h4>Sequence</h4><span class="small-label">SELECT A TERM TO INSPECT</span></div><div id="fib-sequence" class="fib-sequence" role="group" aria-label="Fibonacci terms"></div><p id="fib-status" class="visually-hidden" role="status" aria-atomic="true"></p>
+          </div>
+          <details class="logic-notes"><summary>Sequence logic</summary><p>The notebook starts with [0, 1], then appends the sum of the last two numbers until it reaches the requested length. Its special cases return 0 for one term and [0, 1] for two. Here, whole-number input is checked before generating; BigInt keeps even the 100th term exact.</p><pre><code>seq = [0, 1]
+  for i in range(2, n):
+      seq.append(seq[i - 1] + seq[i - 2])</code></pre><p>The spiral uses quarter-circle arcs in Fibonacci-sized squares. For long sequences, the drawing shows the first 12 terms so the smaller squares remain readable; every generated value is still available below it.</p></details>
+        </section>
+        <section id="calculator-lab" class="project-lab" aria-labelledby="calculator-heading" tabindex="-1">
+          <div class="lab-heading"><div><p class="project-tag">CALCULATE / 03</p><h3 id="calculator-heading">Calculator</h3></div></div>
+          <noscript><p class="fallback-note">Enable JavaScript to use the calculator. It supports addition, subtraction, multiplication, and division.</p></noscript>
+          <div id="calculator-demo" class="utility-demo calculator-layout" hidden>
+            <form id="calculator-form" class="calculator-form" novalidate>
+              <div class="utility-toolbar"><h4>The inputs</h4><button id="calculator-reset" class="quiet-button" type="button">Reset example <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 4v6h6M4 10a8 8 0 1 1 .5 5"/></svg></button></div>
+              <label for="calculator-first">First number</label><input id="calculator-first" type="number" step="any" value="12" required aria-describedby="calculator-help calculator-error">
+              <fieldset class="operation-options"><legend>Choose an operation</legend><label><input type="radio" name="operation" value="+" checked><span><b aria-hidden="true">+</b> Add</span></label><label><input type="radio" name="operation" value="-"><span><b aria-hidden="true">−</b> Subtract</span></label><label><input type="radio" name="operation" value="*"><span><b aria-hidden="true">×</b> Multiply</span></label><label><input type="radio" name="operation" value="/"><span><b aria-hidden="true">÷</b> Divide</span></label></fieldset>
+              <label for="calculator-second">Second number</label><input id="calculator-second" type="number" step="any" value="3" required aria-describedby="calculator-help calculator-error">
+              <p id="calculator-help" class="utility-help">Decimals and negative numbers welcome.</p><p id="calculator-error" class="input-error" role="alert"></p>
+              <button class="button" type="submit">Calculate <span aria-hidden="true">=</span></button>
+            </form>
+            <div class="calculator-results"><div class="calculator-display" role="status" aria-atomic="true"><span class="small-label">YOUR RESULT</span><p id="calculator-expression">12 + 3 =</p><strong id="calculator-result">15</strong></div></div>
+          </div>
+          <details class="logic-notes"><summary>Calculator logic</summary><p>The original calculator takes two numbers and selects addition, subtraction, multiplication, or division with conditionals. This version follows the same rule, checks for missing or invalid numbers, and stops division by zero.</p><p>Results are displayed to 12 significant digits. Very large or very small values use scientific notation.</p></details>
+        </section>
+
+        <section id="cart-lab" class="project-lab" aria-labelledby="cart-heading" tabindex="-1">
+          <div class="lab-heading"><div><p class="project-tag">SIMULATE / 04</p><h3 id="cart-heading">Shopping Cart</h3></div></div>
+          <noscript><p class="fallback-note">Enable JavaScript to try the shopping cart. The assignment's shelf has Frosted Flakes ($2.99, 2 available), eggs ($5.99, 3 available), and sourdough ($3.99, 4 available).</p></noscript>
+          <div id="cart-demo" class="utility-demo cart-layout" hidden>
+            <div class="store-shelf"><div class="utility-toolbar"><h4>On the shelf</h4><span class="small-label">03 GROCERIES</span></div><div id="shelf-items"></div><p class="utility-help">Adding to your basket reduces shelf stock. Removing an item puts it back.</p></div>
+            <div class="basket-panel"><div class="utility-toolbar"><h4>Your basket <span id="cart-item-count">0 items</span></h4><button id="cart-clear" class="quiet-button" type="button" disabled>Empty basket</button></div><p id="cart-empty" class="basket-empty">Your basket is empty.</p><ul id="cart-lines" class="cart-lines" aria-label="Items in your basket"></ul><div class="basket-total"><span>Total</span><strong id="cart-total">$0.00</strong></div><p id="cart-status" class="cart-status" role="status" aria-atomic="true">Your basket is empty.</p></div>
+          </div>
+          <details class="logic-notes"><summary>Cart logic</summary><p>The original notebook stores a shelf of three groceries and a cart of item quantities. This adaptation keeps the original prices and stock: 2 boxes of Frosted Flakes at $2.99, 3 cartons of eggs at $5.99, and 4 sourdough loaves at $3.99. Add a whole-number quantity, use the basket's plus and minus controls, or remove a line. Empty basket returns everything to the shelf.</p><p>Totals use whole cents to avoid rounding drift. The basket stays in this page's memory and starts empty when you reload.</p></details>
+        </section>
+        <p class="project-endnote"><a href="#top">Back to the top <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></p>
+      </section>
+
+      <section id="skills" data-nav-section class="portfolio-section skills-section page-width" aria-labelledby="skills-heading" tabindex="-1">
+        <div class="skills-intro">
+          <p class="eyebrow">Skills &amp; proficiencies</p>
+          <h2 class="section-title" id="skills-heading">Skills</h2>
+
+        </div>
+        <ul class="skills-grid">
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">01</span><span class="skill-level">Proficient</span></div>
+            <h3>Codex &amp; AI-assisted tools</h3>
+            <p>Turning ideas into clear prompts and using Codex to help create and refine a website, one task at a time.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">02</span><span class="skill-level">Proficient</span></div>
+            <h3>Visual design</h3>
+            <p>Choosing colors, typography, spacing, and layouts to establish a clear, consistent visual hierarchy.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">03</span><span class="skill-level">Comfortable</span></div>
+            <h3>Creative feedback</h3>
+            <p>Reviewing drafts, explaining what I like, and giving specific feedback to shape the next version.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">04</span><span class="skill-level">Developing</span></div>
+            <h3>Website planning</h3>
+            <p>Organizing a portfolio into useful sections and deciding which content belongs in each one.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">05</span><span class="skill-level">Proficient</span></div>
+            <h3>Adobe Illustrator</h3>
+            <p>Vector illustration and graphic design.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">06</span><span class="skill-level">Proficient</span></div>
+            <h3>Adobe Photoshop</h3>
+            <p>Photo editing and image composition.</p>
+          </li>
+          <li class="skill-card">
+            <div class="skill-card-top"><span class="skill-number" aria-hidden="true">07</span><span class="skill-level">Proficient</span></div>
+            <h3>Adobe Premiere Pro</h3>
+            <p>Video editing and arranging footage.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" data-nav-section class="portfolio-section contact-layout page-width" aria-labelledby="contact-heading" tabindex="-1">
+        <div class="contact-intro">
+          <p class="eyebrow">Correspondence</p>
+          <h2 class="section-title" id="contact-heading">Contact</h2>
+        </div>
+
+        <div class="contact-card">
+          <h3>Email</h3>
+          <a class="contact-email" href="mailto:ss5764@njit.edu">ss5764@njit.edu <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+        </div>
+
+        <form id="contact-form" class="contact-form" aria-labelledby="contact-form-heading" novalidate>
+          <h3 id="contact-form-heading">Write a message</h3>
+          <div class="contact-fields">
+            <div class="contact-field"><label for="contact-name">Name</label><input id="contact-name" name="name" autocomplete="name" maxlength="80" required aria-describedby="contact-name-error"><p id="contact-name-error" class="input-error"></p></div>
+            <div class="contact-field"><label for="contact-email">Your email</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="contact-email-error"><p id="contact-email-error" class="input-error"></p></div>
+            <div class="contact-field contact-message-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="7" maxlength="4000" required aria-describedby="contact-message-error"></textarea><p id="contact-message-error" class="input-error"></p></div>
+          </div>
+          <div class="contact-actions"><button id="prepare-email" class="button" type="submit" disabled>Create email draft <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></button><a id="contact-draft-link" class="text-link" hidden>Open email draft <svg class="ui-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
+          <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 

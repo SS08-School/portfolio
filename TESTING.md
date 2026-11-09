@@ -1,6 +1,55 @@
 # Website test plan
 
-## Current: individual glimmer and nearby mouse repulsion — November 9, 2026
+## Current: one scrolling page and bulb interaction — November 9, 2026
+
+The owner requested one page in Home, About, Projects, Skills, Contact order,
+retaining the top tab design. All content now lives in `index.html`, with native
+fragment links and one h1. Former page URLs are redirect documents with fallback
+links; JavaScript preserves existing deep bookmarks. Headings were adjusted to
+fit their new section levels, including the carousel title lookup and generated
+grocery headings. The current-section underline updates on scroll. Existing
+keyboard behavior, theme, form, carousel, and four demos remain in place.
+
+The bulb's repulsion is proportional to its displayed dimensions: maximum
+movement is 8% of its shorter side, capped at 24px, with a proximity radius of
+half the image diagonal plus 64px. Movement uses a 350ms eased translation,
+leaving its CSS rotation intact. Updates coalesce to one requested frame; no
+custom frame loop runs at rest. Pointer leave/blur returns it to rest, and
+reduced motion, coarse pointers, visibility changes, or page exit clean it up.
+
+215 source/isolated checks passed, plus bounded-direction assertions across
+256 bulb-pointer positions. Checks cover section order, retained original text
+and IDs, native tab destinations, legacy file URL redirects, accessible ID
+references, image alt attributes, asset versions, script syntax, balanced HTML,
+current-section tracking, bulb scaling/cap/direction, animation lifecycle,
+touch/reduced-motion guards, event coalescing, and static fallbacks. A real merge
+mistake initially substituted two `$2.99` prices with a closing tag. That check
+failed; the prices were restored and balanced markup/content checks then passed.
+No browser/app automation or screenshots were used. Mocked checks cannot verify
+rendering, native anchor focus, animation perception, or real device performance.
+This revision is local and not yet deployed. Earlier results below are historical
+and do not establish that the combined page has passed browser testing.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| ONE-01 | Content and section order | Compare all five original main contents/IDs against the combined document; inspect top-level sections. | Home, About, Projects, Skills, Contact, with all substantive content retained once. | Pass — source comparison and ordering checks. |
+| ONE-02 | Every top navigation and content link | Inspect all local hrefs and fragments, including Home actions, About contact link, four project links, and Back to top. | Every target exists; tabs use the five section anchors in order. | Pass — source/reference checks; native clicks still need ONE-07/08/09. |
+| ONE-03 | Old page URLs and bookmarks | Execute redirect logic for each old file with no hash, #top, and section/project/education hashes. | Relative file URLs resolve to the combined page and correct section; no-JS refresh/fallback exists. | Pass — isolated redirects and fallback markup. |
+| ONE-04 | Markup, images, and cached assets | Check tag nesting, IDs, heading count, accessible references, image alt attributes, and versioned file hashes. | Balanced markup, no duplicate IDs, one h1, valid references and hashes. | Fail then Pass — corrected two price/capture substitutions; source retest passed. |
+| ONE-05 | Current-section tracking | Simulate top, all section positions, bottom, mobile header, hash and resize events. | Exactly one underline/current location, matching the visible section; updates coalesce. | Pass — isolated navigation fixture. |
+| ONE-06 | Bulb repulsion and cleanup | Run size/direction grid and mocked mouse, touch, leave, blur, reduced-motion, visibility and page-exit events. | Size-based force capped at 24px, smooth return, preserved rotation, no idle frame loop or touch/reduced-motion animation. | Pass — isolated logic/lifecycle checks; actual movement unverified. |
+| ONE-07 | Phone layout and all links | Open index at 320px and 390px, both themes and 200% zoom; visit each tab and every content link through Contact. | Same five-tab UI; readable sections and bulb, useful anchor offsets, no overflow, clipping, blocked controls or console errors. | Not run — owner browser/device testing. |
+| ONE-08 | Laptop layout and all links | Repeat ONE-07 at 960px, 1366px and wider; scroll full document and inspect triangles and bulb proximity. | Same header layout; document-anchored decoration, bounded movement, correct section destinations and no overlap. | Not run — owner browser/device testing. |
+| ONE-09 | Keyboard throughout all sections | Use only Tab/Shift+Tab, Enter, arrows and Escape through navigation, demos, skills links and contact fields. | Visible focus, correct anchor/row navigation, native text editing, Escape release, and no focus hidden behind the header. | Not run — owner keyboard testing. |
+| ONE-10 | Contact validation and draft | Submit blank, malformed email, excessive-length and valid values; edit a valid draft; activate the email/draft links. | Errors for invalid input; encoded mailto draft only after validation; edits invalidate it; nothing is sent or stored. | Not run — combined-page native retest. |
+| ONE-11 | Project carousel | Use Previous/Next with mouse and keyboard, wrap both ends, follow each project link; repeat without JavaScript. | Correct title/status/slide; hidden slides skipped by Tab; four project anchors work; static fallback visible. | Not run — combined-page native retest. |
+| ONE-12 | Four interactive demos | Try both RPS modes, valid/invalid Fibonacci counts, calculator operations/invalid input/division by zero, and cart stock/add/remove/empty controls. | Existing behavior and validation work together on the combined page without ID collisions or console errors. | Not run — combined-page native retest. |
+| ONE-13 | Theme and motion preferences | Toggle and reload both themes; enable reduced motion during bulb/triangle movement and reveal effects. | Saved theme restored; original bulb colors; motion stops and content remains available. | Not run — owner browser/device testing. |
+| ONE-14 | Direct-file, history, and no JavaScript | Double-click index; open old files and deep bookmarks, use Back/Forward, then disable JS and repeat tab navigation. | Site/assets work offline, native sections remain reachable, old links redirect, no duplicate content or reload loops. | Not run — owner browser testing; isolated file-URL checks passed. |
+| ONE-15 | Accessibility | Run Lighthouse Accessibility on the combined index and inspect section/heading/focus behavior. | Score at least 90; each section and interactive control understandable. | Not run — owner Lighthouse testing; earlier separate-page scores do not apply. |
+| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — revision not yet published. |
+
+## Previous: individual glimmer and nearby mouse repulsion — November 9, 2026
 
 Owner-reported failure: the previous whole-strip opacity effect was not visibly
 glimmering. The correction uses individual decorative SVG triangles with

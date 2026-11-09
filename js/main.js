@@ -157,6 +157,116 @@ function initializeTriangleEffects() {
 
 initializeTriangleEffects();
 
+function bulbPointerOffset(width, height, bounds, pointer) {
+  if (!pointer || !width || !height) return { x: 0, y: 0 };
+  const dx = bounds.left + bounds.width / 2 - pointer.x;
+  const dy = bounds.top + bounds.height / 2 - pointer.y;
+  const distance = Math.hypot(dx, dy);
+  const radius = Math.hypot(width, height) / 2 + 64;
+  if (distance >= radius) return { x: 0, y: 0 };
+  const maximum = Math.min(24, Math.min(width, height) * 0.08);
+  const strength = maximum * (1 - distance / radius);
+  return distance < 0.001 ? { x: strength, y: 0 } :
+    { x: dx / distance * strength, y: dy / distance * strength };
+}
+
+function initializeBulbInteraction() {
+  const image = document.querySelector(".home-lightbulb");
+  if (!image || typeof image.animate !== "function") return;
+  const area = image.closest(".hero-bulb");
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  let pointer = null;
+  let frame = null;
+  let motion = null;
+  let target = { x: 0, y: 0 };
+
+  function requestDraw() {
+    if (frame === null && !document.hidden && !reducedMotion.matches && finePointer.matches) {
+      frame = window.requestAnimationFrame(draw);
+    }
+  }
+
+  function draw() {
+    frame = null;
+    // Measure the resting container so the moving image never chases itself.
+    const next = bulbPointerOffset(image.offsetWidth, image.offsetHeight, area.getBoundingClientRect(), pointer);
+    if (next.x === target.x && next.y === target.y) return;
+    const current = window.getComputedStyle(image).translate;
+    if (motion) motion.cancel();
+    target = next;
+    // Individual translate leaves the original CSS rotation and warm glow intact.
+    motion = image.animate([
+      { translate: !current || current === "none" ? "0px 0px" : current },
+      { translate: `${next.x}px ${next.y}px` }
+    ], { duration: 350, easing: "ease-out", fill: "forwards" });
+    const activeMotion = motion;
+    motion.onfinish = () => {
+      if (motion === activeMotion && target.x === 0 && target.y === 0) {
+        motion.cancel();
+        motion = null;
+      }
+    };
+  }
+
+  function clearPointer() { pointer = null; requestDraw(); }
+  function reset() {
+    pointer = null;
+    if (frame !== null) window.cancelAnimationFrame(frame);
+    if (motion) motion.cancel();
+    frame = null;
+    motion = null;
+    target = { x: 0, y: 0 };
+  }
+  document.addEventListener("pointermove", (event) => {
+    if (event.pointerType !== "mouse" || !finePointer.matches || reducedMotion.matches) return;
+    pointer = { x: event.clientX, y: event.clientY };
+    requestDraw();
+  }, { passive: true });
+  document.addEventListener("pointerleave", clearPointer);
+  window.addEventListener("blur", clearPointer);
+  window.addEventListener("scroll", requestDraw, { passive: true });
+  window.addEventListener("resize", clearPointer);
+  reducedMotion.addEventListener("change", reset);
+  finePointer.addEventListener("change", reset);
+  document.addEventListener("visibilitychange", reset);
+  window.addEventListener("pagehide", reset);
+}
+
+initializeBulbInteraction();
+
+function initializeSectionNavigation() {
+  const links = Array.from(document.querySelectorAll('.site-navigation a[href^="#"]'));
+  const sections = Array.from(document.querySelectorAll("[data-nav-section]"));
+  const header = document.querySelector(".site-header");
+  if (!links.length || !sections.length || !header) return;
+  let frame = null;
+
+  function updateCurrentSection() {
+    frame = null;
+    const marker = header.classList.contains("scroll-header") ? header.offsetHeight + 24 : 24;
+    let current = sections[0];
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= marker) current = section;
+    }
+    if (window.scrollY + window.innerHeight >= document.scrollingElement.scrollHeight - 2) {
+      current = sections.at(-1);
+    }
+    for (const link of links) {
+      if (link.getAttribute("href") === "#" + current.id) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    }
+  }
+
+  function requestUpdate() {
+    if (frame === null) frame = window.requestAnimationFrame(updateCurrentSection);
+  }
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  window.addEventListener("hashchange", requestUpdate);
+  window.addEventListener("pageshow", requestUpdate);
+  updateCurrentSection();
+}
+
 // Cycling starts enabled on every page, regardless of an old saved toggle setting.
 let keepTabOnPage = true;
 let scrollTarget = null;
@@ -360,10 +470,11 @@ function initializeMobileHeader() {
 }
 
 initializeMobileHeader();
+initializeSectionNavigation();
 
 document.addEventListener("click", (event) => {
   if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-  if (event.target.closest('a[href="#top"]')) {
+  if (event.target.closest('a[href^="#"]')) {
     // Let the native anchor use CSS smooth scrolling and reduced-motion settings.
     stopKeyboardScroll();
   }
@@ -463,7 +574,7 @@ function initializeProjectCarousel() {
       slide.setAttribute("aria-label", (position + 1) + " of " + slides.length);
     });
     status.textContent = String(selected + 1).padStart(2, "0") + " / " +
-      String(slides.length).padStart(2, "0") + " — " + slides[selected].querySelector("h3").textContent;
+      String(slides.length).padStart(2, "0") + " — " + slides[selected].querySelector(".project-title").textContent;
     if (focusedSlide && focusedSlide !== slides[selected]) slides[selected].querySelector("a").focus();
   }
 
@@ -1035,7 +1146,7 @@ function initializeShoppingCart() {
   shelf.innerHTML = groceries.map((item) => `
     <form class="shelf-item" data-product="${item.id}" novalidate>
       <div class="grocery-mark" aria-hidden="true"><img src="images/grocery-${item.id}.svg" alt="" width="48" height="58"></div>
-      <div class="grocery-copy"><h4>${item.name}</h4><p>${money(item.cents)} each <span id="stock-${item.id}"></span></p></div>
+      <div class="grocery-copy"><h5>${item.name}</h5><p>${money(item.cents)} each <span id="stock-${item.id}"></span></p></div>
       <div class="shelf-controls"><label for="quantity-${item.id}">Quantity<span class="visually-hidden"> of ${item.name}</span></label>
         <div><input id="quantity-${item.id}" type="number" min="1" step="1" value="1" required aria-describedby="stock-${item.id} error-${item.id}">
         <button class="button" type="submit" aria-label="Add ${item.name} to basket">Add +</button></div>
@@ -1054,7 +1165,7 @@ function initializeShoppingCart() {
       form.querySelector("button").textContent = available === 0 ? "All in basket" : "Add +";
     }
     lines.innerHTML = groceries.filter((item) => item.inCart > 0).map((item) => `
-      <li data-cart-product="${item.id}"><div class="basket-line-heading"><div><h4>${item.name}</h4><p>${item.inCart} × ${money(item.cents)}</p></div><strong>${money(item.inCart * item.cents)}</strong></div>
+      <li data-cart-product="${item.id}"><div class="basket-line-heading"><div><h5>${item.name}</h5><p>${item.inCart} × ${money(item.cents)}</p></div><strong>${money(item.inCart * item.cents)}</strong></div>
         <div class="basket-line-controls"><div class="quantity-stepper"><button type="button" class="quiet-button" data-action="less" aria-label="Remove one ${item.name}">−</button><span aria-label="Quantity">${item.inCart}</span><button type="button" class="quiet-button" data-action="more" aria-label="Add one ${item.name}" ${item.inCart === item.stock ? "disabled" : ""}>+</button></div><button type="button" class="remove-item" data-action="remove" aria-label="Remove all ${item.name} from basket">Remove</button></div>
       </li>`).join("");
     const quantity = groceries.reduce((sum, item) => sum + item.inCart, 0);

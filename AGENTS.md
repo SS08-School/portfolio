@@ -27,27 +27,32 @@ these instructions throughout development.
 
 ## Pages and content
 
-Keep the existing separate Home, About/Education, Projects, Skills, and Contact
-pages. The owner has confirmed Education belongs on its own page/tab.
+Use one scrolling page in `index.html`, ordered Home, About/Education, Projects,
+Skills, then Contact. Keep the current top tab layout; use native links to
+`#home`, `#about`, `#projects`, `#skills`, and `#contact`. Keep older page URLs as
+redirects to their corresponding sections, including existing deep bookmarks.
 
 - Home (`index.html`): Show the personal introduction once. Do not repeat it
   in an Education section. The owner's supplied glowing light bulb is approved
   beside the introduction, tilted about 35 degrees counterclockwise. Use a
   transparent cutout, descriptive alt text, and keep its original colors in
   dark mode. Stack it below the text on narrow screens without overflow.
+  With a fine mouse pointer, gently repel it from nearby movement using a range
+  scaled to the displayed image (8% of its shorter side, capped at 24px). Ease it
+  back when the pointer leaves; keep it still for touch and reduced motion.
   Do not show project cards, an index, or a project showcase on Home. A link
-  to the separate Projects page is fine.
-- About/Education (`about.html#education`): Keep the education facts here. Above
+  to the Projects section is fine.
+- About/Education (`index.html#about`, with `#education` inside): Keep the education facts here. Above
   Get in touch, use the owner's approved text: "I'm Sebastian. I like working on
   different kinds of creative projects and solving problems. Got a question?
   Let me know!" Do not repeat the full Home introduction.
-- Projects (`projects.html`): Retain the four interactive Assignment 1 projects.
+- Projects (`index.html#projects`): Retain the four interactive Assignment 1 projects.
   Rock Paper Scissors offers random computer picks and two-player mode only;
   do not restore the adaptive AI or a computer-strategy dropdown.
   Show project images in a manual, keyboard-accessible carousel. Categories may
   appear as labels, but do not add clickable category filters.
-- Skills and Contact retain their existing separate page URLs and content.
-- Navigation must use valid relative page/section links. Home no longer has
+- Skills and Contact retain their content in `#skills` and `#contact`.
+- Navigation must use valid same-document section links. Home no longer has
   a My studies section or a duplicate Education link under its navigation group.
 
 Use real, owner-provided content. Do not invent credentials, experience,
@@ -65,7 +70,7 @@ empty sections, or dummy links.
   Skills, and Contact tabs from the pre-dropdown header (`e0d6cbb`): a compact
   five-column row on phones and an inline row on laptops. Do not add a hamburger
   or dropdown. Keep native page links, no horizontal navigation scrolling, and
-  only the current page underlined. Pointer clicks must not leave a focus/pressed
+  only the current section underlined. Pointer clicks must not leave a focus/pressed
   appearance; retain visible keyboard focus and real theme/project choices.
 - Repeat restrained triangles pointing both left and right down the full length
   of each page's unused side gutters at widths of at least 80rem. Anchor them to
@@ -138,16 +143,17 @@ empty sections, or dummy links.
   contact form, and four interactive demonstrations. Category filtering was
   removed at the owner's request.
 - Page tabs must always be visible and keyboard-accessible, including without
-  JavaScript. Each tab follows its native relative href; do not intercept clicks,
-  hide links, or force focus elsewhere during activation. Use aria-current="page"
-  for exactly one current page. Keep navigation text non-selectable and retain
+  JavaScript. Each tab follows its native fragment href; do not intercept clicks,
+  hide links, or force focus elsewhere during activation. Use aria-current="location"
+  for exactly one current section, updating it as the visitor scrolls. Keep navigation text non-selectable and retain
   keyboard focus indicators; pointer focus must not resemble a persistent choice.
 - Only in the mobile layout (below 60rem), show the sticky header when scrolling
   upward and hide it when scrolling downward. Keep it visible near the page top,
   or when header controls have visible keyboard focus.
   Desktop headers scroll normally. Respect reduced motion.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
-  Give each page exactly one `h1` and use a logical heading order.
+  Give the combined page exactly one `h1`, use `h2` for the other four main
+  sections, and use a logical heading order within them.
 - Do not include a skip/jump-to-content link, as requested by the owner.
   Retain visible keyboard focus, descriptive link text, and alt attributes on
   every image. Use empty alt text for decorative images.
