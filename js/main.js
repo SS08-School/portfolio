@@ -153,26 +153,15 @@ document.addEventListener("keydown", (event) => {
 });
 
 if (menuButton && navigation && menuContainer) {
-  const desktopNavigation = window.matchMedia("(min-width: 60rem)");
-
   function setMenuOpen(isOpen) {
     menuButton.setAttribute("aria-expanded", String(isOpen));
-    navigation.hidden = !desktopNavigation.matches && !isOpen;
+    navigation.hidden = !isOpen;
   }
 
-  function updateNavigationLayout() {
-    const focusWasInNavigation = navigation.contains(document.activeElement);
-    const focusWasOnMenu = document.activeElement === menuButton;
-    menuButton.hidden = desktopNavigation.matches;
-    setMenuOpen(false);
-    if (!desktopNavigation.matches && focusWasInNavigation) menuButton.focus();
-    if (desktopNavigation.matches && focusWasOnMenu) navigation.querySelector("a")?.focus();
-  }
-
-  // Desktop links stay visible; only the compact layout uses a dropdown.
+  // The original hamburger opens the same dropdown at phone and laptop widths.
   menuContainer.classList.add("is-enhanced");
-  updateNavigationLayout();
-  desktopNavigation.addEventListener("change", updateNavigationLayout);
+  menuButton.hidden = false;
+  setMenuOpen(false);
 
   menuButton.addEventListener("click", (event) => {
     const isOpen = menuButton.getAttribute("aria-expanded") === "true";
@@ -182,7 +171,7 @@ if (menuButton && navigation && menuContainer) {
   });
 
   navigation.addEventListener("click", (event) => {
-    if (!desktopNavigation.matches && event.target.closest("a")) {
+    if (event.target.closest("a")) {
       // Return focus before hiding the active navigation link.
       menuButton.focus();
       setMenuOpen(false);
@@ -198,7 +187,7 @@ if (menuButton && navigation && menuContainer) {
   });
 
   document.addEventListener("click", (event) => {
-    if (!desktopNavigation.matches && !menuContainer.contains(event.target)) {
+    if (!menuContainer.contains(event.target)) {
       if (navigation.contains(document.activeElement)) menuButton.focus();
       setMenuOpen(false);
     }

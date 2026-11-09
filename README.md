@@ -15,10 +15,12 @@ installation, build step, or server is required.
 
 ## Testing before submission
 
-The latest revision restores the pre-removal responsive Menu from
-`f9d3a3d`: desktop links remain visible, while phones use the compact dropdown.
-It retains the visible Menu name, viewport-bounded panel, Enter/Escape handling,
-outside-click closing, focus return, and no-JavaScript links. About includes the
+The latest correction restores the original three-line SVG hamburger from
+`5268c1d` and its dropdown on both phone and laptop widths. The earlier attempt
+restored a later text-only Menu and desktop links; the owner clarified that this
+was the wrong version. The correction retains the accessible name Menu,
+viewport-bounded panel, Enter/Escape handling, outside-click closing, focus
+return, and no-JavaScript links. About includes the
 owner's supplied creative-projects paragraph beside Get in touch. The shopping
 shelf uses original monochrome SVG cereal, egg, and bread drawings instead of
 initials. Current checks and any verification limits are recorded in TESTING.md.
@@ -86,8 +88,8 @@ retests, and screenshots. Live interaction retests remain pending.
 ## Current progress
 
 Home, About me, Projects, Skills, and Contact each have their own HTML page.
-All five navigation links are visible on laptops. On phones, Menu opens the
-Home, About me, Projects, Skills, and Contact links in a dropdown. Education
+The three-line hamburger opens Home, About me, Projects, Skills, and Contact
+links in a dropdown on both phones and laptops. Education
 remains on About. Navigation highlights
 only the current page. Section links remain unselected. Each page's primary
 link opens at the document top.

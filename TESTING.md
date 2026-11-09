@@ -1,5 +1,34 @@
 # Website test plan
 
+## Three-line menu correction and missing live changes — November 8, 2026
+
+The owner reported that the dropdown and grocery changes were still missing
+online and clarified that the original menu used three lines. Two separate
+findings were confirmed: the previous restoration used the later text-only Menu
+and desktop links (`f9d3a3d`), while the live site still served `e0d6cbb` because
+the `fda338d` Pages deployment was stuck in its deploy step. That build passed,
+but a successful push did not establish publication. The missing live content
+was confirmed from HTTP responses, not assumed to be a browser cache issue.
+
+Correction: use the original hamburger SVG path `M4 6h16M4 12h16M4 18h16` from
+`5268c1d`, with theme followed by hamburger in the header, and a dropdown at all
+widths. Keep the later header-anchored overflow/height fixes, current-page state,
+Enter/Escape focus behavior, outside-click closing, and no-script links. Preserve
+the About paragraph and grocery drawings. This supersedes the desktop-link and
+text-only-button expectations in the previous restoration record below.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| U19 | Original hamburger on all pages and sizes | At phone and laptop widths, inspect each header; open the three-line button with click/Enter, use page links and Escape, click outside, and inspect the panel in landscape. | Three SVG lines replace the tabs/text-only button at every width; all five links work, panel fits, and Escape restores focus. | Initial: Fail — source restored the wrong menu version and hid its dropdown on laptops. Corrected source: Pass — original SVG path restored to all five pages, with no desktop rule disabling the dropdown. Browser/live interaction retests: Not run. |
+| U20 | Published About and grocery assets | After Pages deployment succeeds, load all five live URLs, inspect the About paragraph and Projects shelf, and request the new CSS/JS and all three grocery SVGs. | Every page uses the new versions; About has the approved text; cereal/egg/bread outlines replace initials; all resources return 200. | Initial: Fail — live HTTP checks still showed the old navigation, script, stylesheet, and About copy; live script had no grocery image template. Previous build was successful but deployment remained in progress. Corrective publication verification pending. |
+
+Browser QA was attempted, but input geometry was unavailable. Automatic approval
+review then rejected screenshot capture because the selected Chrome window
+displayed the private signed-in course assignment rather than the portfolio.
+No further browser input was issued after rejection. Phone/laptop visuals,
+native keyboard interaction, direct-file rendering, and console checks for
+this correction remain Not run. No new Lighthouse audit is requested.
+
 ## Restored Menu, About copy, and grocery outlines — November 8, 2026
 
 At the owner's request, restore the navigation implementation from `f9d3a3d`,

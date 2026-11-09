@@ -55,9 +55,10 @@ empty sections, or dummy links.
   wash fading into white, thin rules, and minimal decoration. Use stacked
   project and skill rows rather than repeated boxed cards. Keep narrower
   content layouts and square controls. Avoid floating stickers, pill buttons,
-  decorative shadows, and slogans. Restore the responsive navigation from before
-  its removal: visible desktop links and a compact Menu dropdown on phones.
-  Retain its accessible visible Menu name, focus/Escape/outside-click behavior,
+  decorative shadows, and slogans. Use the original three-line SVG hamburger
+  button and dropdown at phone and laptop widths; do not replace it with tabs
+  or a visible text-only Menu button. Keep its accessible name "Menu".
+  Retain focus/Escape/outside-click behavior,
   and viewport-bounded panel; do not use horizontally scrolling navigation.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
@@ -113,7 +114,7 @@ empty sections, or dummy links.
   contact form, and four interactive demonstrations. Category filtering was
   removed at the owner's request.
 - Navigation links must be keyboard-accessible at phone and laptop widths, with
-  the current page identified. The phone Menu opens/closes with click or Enter;
+  the current page identified. The hamburger opens/closes with click or Enter;
   Escape closes it and returns focus. Without JavaScript, show the links directly.
 - Use semantic elements such as `header`, `nav`, `main`, `section`, and `footer`.
   Give each page exactly one `h1` and use a logical heading order.
