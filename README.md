@@ -35,10 +35,12 @@ in light mode and light in dark mode and cannot intercept clicks. Narrow layouts
 omit them. The denser gradient and new Home wording were deployed on November 9,
 2026 (`e108fa0`); published files were verified. Visual/device checks remain for
 owner testing.
-The current local refinement reduces triangle density by 60%, uses smaller
+The latest refinement reduces triangle density by 60%, uses smaller
 shapes with more whitespace, and alternates directions horizontally and vertically
 in a checkerboard arrangement. The gradient and full-page anchoring remain.
-This quieter checkerboard update has not yet been deployed.
+The quieter checkerboard was deployed on November 9, 2026 (`20c146b`); all five
+page references, the new stylesheet, and the four-triangle SVG were verified
+over HTTP. Rendered browser review remains for the owner.
 
 ### Earlier dropdown checks
 

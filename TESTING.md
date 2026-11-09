@@ -18,8 +18,16 @@ fade retention, all 75 page references/asset hashes, and the versioned CSS mask.
 The SVG passed XML parsing with four triangle paths. These checks do not verify
 native rendering or visual distraction. No browser/app control or screenshots
 were used. Owner review of every page in both themes, scrolling, zoom, keyboard,
-direct-file loading, and console errors remains Not run. This update is local
-and not yet deployed.
+direct-file loading, and console errors remains Not run. At the time of these
+checks, the update was local and not yet deployed.
+
+Checkerboard deployment checks on 2026-11-09: GitHub Pages deployment succeeded
+for commit `20c146b`. All five pages returned HTTP 200 with the updated stylesheet
+version. The stylesheet returned HTTP 200 with the larger repeat tile and new
+versioned SVG URL; the SVG returned HTTP 200 with the 128x160 viewBox and four
+expected checkerboard paths. These publication/source checks passed; rendered
+appearance, actual scrolling, native keyboard, and device retests remain for
+the owner. No browser/app automation or screenshots were used.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
