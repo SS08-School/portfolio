@@ -10,8 +10,9 @@ background, projects, and skills. This is a school assignment and a learning
 project: keep the code readable enough for the owner to explain during a demo.
 
 Owner-provided details: Sebastian Szeliga is majoring in Electrical and
-Computer Engineering. Use "Electrical & Computer Engineering Student" as the
-Home page headline.
+Computer Engineering. Use "Hi, I'm Sebastian." as the Home headline, with
+"I'm an Electrical & Computer Engineering student at New Jersey Institute of
+Technology." as the smaller introduction beneath it.
 
 Skills content should emphasize proficiency with Codex and visual design,
 plus clear prompts, feedback, and website planning. The owner does not claim
@@ -68,9 +69,11 @@ empty sections, or dummy links.
   appearance; retain visible keyboard focus and real theme/project choices.
 - Repeat restrained triangles pointing both left and right down the full length
   of each page's unused side gutters at widths of at least 80rem. Anchor them to
-  the document so they scroll with the page, never fixed to the viewport. Use
-  near-black in light mode and matching light ink in dark mode. Keep them outside
-  the content, non-interactive, and absent on narrower screens.
+  the document so they scroll with the page, never fixed to the viewport. Repeat
+  them across the gutter too, with a gradient fading from stronger outer edges
+  to transparent near the content. Use near-black in light mode and matching
+  light ink in dark mode. Keep them outside the content, non-interactive, and
+  absent on narrower screens.
 - Use the original black-and-white SS monogram beside the header name and as
   the browser favicon. Keep page-entry effects subtle and slightly slower.
 - Use matching inline SVG arrow icons on every device, including dynamically
@@ -92,7 +95,7 @@ empty sections, or dummy links.
   font dependencies; the site must still work offline.
 - Keep copy factual. Remove decorative greeting blurbs, promotional taglines,
   and slogans from every page; retain substantive descriptions and instructions.
-  The owner-approved About paragraph above is an explicit exception.
+  The owner-approved Home greeting and About paragraph are explicit exceptions.
 - Shopping shelf items use original monochrome outline SVG illustrations of a
   cereal box, eggs, and bread instead of initials. Keep the product names visible
   and the adjacent illustrations decorative; retain contrast in dark mode.

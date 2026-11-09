@@ -52,21 +52,21 @@ body {
   background-repeat: no-repeat;
 }
 :root[data-theme="dark"] body { background-image: none; }
-/* Repeating triangles belong to the document, not the viewport. */
+/* Page-anchored triangles fill the gutters and fade toward the content. */
 @media (min-width: 80rem) {
   body::before, body::after {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 1.1rem;
-    background: var(--ink);
-    -webkit-mask: url("../images/side-triangles.svg") top center / 100% 8rem repeat-y;
-    mask: url("../images/side-triangles.svg") top center / 100% 8rem repeat-y;
+    width: calc((100% - 1060px) / 2 - 2.5rem);
+    background: linear-gradient(to right, var(--ink), transparent);
+    -webkit-mask: url("../images/side-triangles.svg") top left / 2rem 8rem repeat;
+    mask: url("../images/side-triangles.svg") top left / 2rem 8rem repeat;
     pointer-events: none;
   }
-  body::before { left: calc((100vw - 1060px) / 4); }
-  body::after { right: calc((100vw - 1060px) / 4); transform: scaleX(-1); }
+  body::before { left: 1rem; }
+  body::after { right: 1rem; transform: scaleX(-1); }
 }
 a { color: inherit; text-underline-offset: 0.25em; }
 button { font: inherit; }

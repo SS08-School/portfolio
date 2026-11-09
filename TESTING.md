@@ -1,6 +1,32 @@
 # Website test plan
 
-## Current: full-page, opposite-facing triangles — November 9, 2026
+## Current: Home wording and wider fading triangles — November 9, 2026
+
+Home now uses the owner's exact heading, "Hi, I'm Sebastian.", with "I'm an
+Electrical & Computer Engineering student at New Jersey Institute of Technology."
+as its smaller introduction. The approved bulb and both Home action links remain.
+The side decorations now repeat in rows and columns across more of each gutter.
+Their ink-to-transparent gradient fades toward the content, mirrored on the right.
+Both triangle directions, full document anchoring, theme colors, non-interactive
+decoration, and the 80rem minimum width remain. This is a spatial gradient,
+without a new animation or JavaScript interaction.
+
+Passed 143 source/geometry assertions, including the exact heading/introduction,
+one h1 and five tabs per page, document anchoring, two-axis tiling, mirrored
+gradients, both SVG triangle directions, all 75 page references/asset hashes,
+and the CSS asset path. Calculations at supported wide widths, root sizes
+16/20/32px, and with/without a 17px scrollbar retain at least 1.5rem clearance
+between the bands and the 1060px content. These are not native browser tests.
+No browser/app control or screenshots were used. Owner review of appearance,
+scrolling, zoom, themes, keyboard, direct-file loading, and console errors is
+Not run. These copy/gradient refinements are local and not yet deployed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| FADE-01 | Copy and gutter-pattern source checks | Verify exact Home strings, responsive band geometry, gradient direction, two-axis masks, local assets/hashes, and retained triangle directions. | Exact owner text; wider repeating patterns remain document-anchored and clear of content, fading toward it on both sides. | Pass — 143 source/geometry assertions, 75 page references, and one CSS asset. |
+| FADE-02 | Owner copy and visual review | Open each page at phone/laptop/large-desktop sizes, both themes and 200% zoom. Scroll the full Projects page, then inspect Home text and links. | Exact Home heading/introduction; several triangle columns on wide screens with mirrored inward fades; no viewport-following decoration, content overlap, blocked controls, or overflow. | Not run — owner browser/device testing; browser/app control remains disabled. |
+
+## Previous: full-page, opposite-facing triangles — November 9, 2026
 
 The owner requested triangles down the full length of the page, anchored to the
 document rather than following the viewport, and pointing both ways. The side
@@ -19,8 +45,16 @@ the CSS image path, preserved tabs, and calculated gutter clearance at widths
 These are source and geometry checks, not native browser rendering. No browser
 or app was automated and no screenshots were captured. Owner checks for full
 page coverage, scrolling, zoom, both themes, direct-file loading, keyboard,
-pointer/touch, and console errors remain Not run. This revision is local and
-has not been deployed.
+pointer/touch, and console errors remain Not run. This revision had not been
+deployed at the time of those source checks.
+
+Deployment/source verification on 2026-11-09: GitHub Pages run `42675955592`
+completed successfully for commit `926dc10`. All five published pages referenced
+the new stylesheet, and the stylesheet and SVG returned HTTP 200 with full-page
+absolute positioning, vertical repetition, and the two opposite-facing paths.
+This confirms publication of the earlier single-column full-height pattern;
+the newer wording/gradient refinements above have not been deployed. Browser
+rendering and native interaction checks remain for the owner.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

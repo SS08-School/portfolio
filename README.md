@@ -26,11 +26,13 @@ on November 9, 2026. HTTP/source checks verified all five pages and shared asset
 Owner browser/device testing remains pending; browser/app automation is disabled.
 Wide layouts (80rem and above) have repeating triangles pointing both left and
 right down the full page in each outer gutter. They are anchored to the document
-and scroll with it, rather than following the viewport. The original local SVG
-tile in `images/side-triangles.svg` supplies their shapes. They are near-black in
-light mode and light in dark mode, stay outside the content, and cannot intercept
-clicks. Narrow layouts omit them. This full-height pattern update is local and
-not yet deployed.
+and scroll with it. The full-height pattern was deployed on November 9, 2026
+(`926dc10`); HTTP checks verified all pages, the stylesheet, and the SVG tile.
+The local refinement fills more of each gutter with several columns and fades
+from stronger outer edges to transparent beside the content. The original local
+SVG tile in `images/side-triangles.svg` supplies the shapes. They are near-black
+in light mode and light in dark mode and cannot intercept clicks. Narrow layouts
+omit them. The denser gradient and new Home wording are not yet deployed.
 
 ### Earlier dropdown checks
 
@@ -148,7 +150,8 @@ link opens at the document top.
 The header pairs an original SS monogram with the name; the same vector is the
 browser favicon. Home contains the introduction and links to Projects and Contact,
 without a project showcase. It uses the approved headline
-"Electrical & Computer Engineering Student." Decorative greetings, slogans,
+"Hi, I'm Sebastian." Its smaller introduction reads "I'm an Electrical & Computer
+Engineering student at New Jersey Institute of Technology." Other decorative greetings, slogans,
 and promotional blurbs have been removed throughout the site; factual
 descriptions, project explanations, and operating instructions remain.
 
