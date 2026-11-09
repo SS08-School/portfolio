@@ -30,7 +30,16 @@ script syntax, all 75 page references and asset hashes, CSS fallback rules,
 and the SVG mask version also passed source checks. No browser/app automation
 or screenshots were used. Actual visibility, smoothness, layout/performance on
 devices, native mouse/keyboard use, direct-file loading, console errors, and
-Lighthouse remain for owner testing. This correction is local and not deployed.
+Lighthouse remain for owner testing. At the time of these checks, this correction
+was local and not deployed.
+
+Individual-triangle deployment checks on 2026-11-09: GitHub Pages deployment
+succeeded for commit `15291c0`. All five pages returned HTTP 200 with the current
+CSS/JS versions. The published stylesheet and script returned HTTP 200 with the
+individual decorative fields, glimmer limit, 96px proximity radius, and 6px force
+cap. Publication/source checks passed; real appearance, performance, and native
+mouse/keyboard checks remain for the owner. No browser/app automation or
+screenshots were used.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |

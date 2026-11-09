@@ -49,8 +49,10 @@ triangles away by at most 6px; they ease back afterwards. Distant triangles stay
 still, and animation frames stop once motion settles. Scrolling does not replay
 the glimmer; cached Back entry does. Reduced motion, narrow layouts, missing
 ResizeObserver support, or disabled JavaScript retain the static CSS pattern.
-The correction is local and not yet deployed. The earlier whole-strip glimmer
-was deployed on November 9, 2026 (`1840056`); all five pages
+The individual-triangle correction was deployed on November 9, 2026 (`15291c0`);
+all five pages and the current CSS/JS were verified over HTTP. Actual visual
+and mouse-interaction review remains for the owner. The earlier whole-strip
+glimmer was deployed on November 9, 2026 (`1840056`); all five pages
 and the two-second animation/cleanup code were verified over HTTP. Actual
 animation appearance remains for owner review.
 
