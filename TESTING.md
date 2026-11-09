@@ -1,5 +1,36 @@
 # Website test plan
 
+## Fibonacci accessible-name correction — November 8, 2026
+
+The saved live report `reports/lighthouse/projects-before` fails
+`label-content-name-mismatch` for the 12 generated Fibonacci term buttons.
+A later Projects report reviewed during this session had the same failure.
+Both Accessibility scores were 100 because this audit has zero weight;
+the scores do not mean the reported failure passed. Preserve initial failures.
+
+Local correction: remove the generated buttons' overriding `aria-label` so
+their visible index and value provide the accessible name. The containing
+group remains named "Fibonacci terms" and `aria-pressed` still identifies the
+selected term. Refresh the Projects script URL for the changed JavaScript.
+No visual design, CSS, libraries, or frameworks changed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| FIB-A11Y-01 | Visible label matches accessible name | Open local Projects at phone and laptop widths. Inspect all 12 initial term buttons in the browser accessibility tree. | Each accessible name matches the visible index and value, including leading zeros. | Initial live result: Fail in both saved Projects reports. Local retest: Pass — Chrome accessibility tree lists all 12 matching names, from 01 0 through 12 89, at laptop and phone layouts. |
+| FIB-A11Y-02 | Keyboard selection remains usable | At phone and laptop widths, use Tab to a Fibonacci term and Enter to select it; move to another term and repeat. | Focus remains visible and selection/calculation update. | Pass — native Tab/Enter selected terms 1 and 2 in both layouts; screenshots showed focus outlines, selected states, and matching calculations. |
+| FIB-A11Y-03 | Direct-file and responsive regression | Open index.html directly, follow Projects, inspect at phone/laptop widths, use the Fibonacci controls, and check local links, images, overflow, and console errors. | Pages and controls work without a server, with no missing assets, overflow, or console errors. | Partial — direct-file Home and its Projects navigation passed; Fibonacci visuals, labels, and focus fit the inspected layouts. All 21 referenced local files exist. Full-page overflow, console errors, and every image's rendered state: Not run. |
+| FIB-A11Y-04 | Published Lighthouse retest | After owner review and approved deployment, run Lighthouse on live Projects and inspect label-content-name-mismatch explicitly. | The audit passes with no flagged Fibonacci buttons; retain a new report alongside previous failures. | Not run — requires a fresh live Lighthouse report after deployment. |
+| FIB-A11Y-05 | Source validation | Parse main.js as a classic script, resolve Projects local file references, verify its script URL against the SHA-256 prefix, and run git diff --check. | JavaScript parses; referenced files exist; script version matches; diff has no whitespace errors. | Pass — JavaScript parsed, all 21 local file references resolved, script version ec53b5549eb7 matched, and diff check passed. This is not browser validation. |
+| FIB-A11Y-06 | Names after regeneration | Generate 1 and 100 terms at phone/laptop widths; inspect the resulting buttons' accessible names. | All regenerated buttons use their visible index and value as their accessible name. | Not run. |
+
+Browser access recovered during this local correction after the earlier
+Computer Use policy stop. Checks used native Chrome UI on the original
+file:// pages in a 1536-pixel-wide laptop window and Responsive mode at
+400 by 738 pixels. Keyboard and visual checks are limited to the described
+cases; native accessibility snapshots sometimes lagged screenshots. No new
+Lighthouse or screen-reader result is claimed. Console inspection did not
+complete, so it remains Not run. The original saved reports are unchanged.
+
 ## Current submission plan — November 8, 2026
 
 Use this section for the current site. Older results are preserved under

@@ -641,7 +641,6 @@ function initializeFibonacci() {
       const button = document.createElement("button");
       button.type = "button";
       button.dataset.term = index;
-      button.setAttribute("aria-label", `Term ${index + 1}: ${term}`);
       const number = document.createElement("span");
       number.textContent = String(index + 1).padStart(2, "0");
       const value = document.createElement("span");
