@@ -1,6 +1,51 @@
 # Website test plan
 
-## Current: closer, softer bulb response — November 9, 2026
+## Current: graceful bulb speed and edge detection — November 9, 2026
+
+Owner-reported issues: movement snapped when crossing the bulb center, while
+the previous circular detection missed the bulb's edges. The target force now
+fades continuously to zero at the center. Detection follows an oval rotated
+with the image, with half-width/half-height plus 16px for its radii. Force fades
+toward that boundary. The 8%-of-shorter-side/24px displacement limit remains.
+
+Each retarget begins from the current displayed translation. Its duration is
+at least 450ms and twice the travel time at 36px/s. The standard ease-out curve
+peaks below twice its average speed, keeping actual modeled speed below the
+36px/s ceiling even on full direction reversals and returns. The existing
+touch, reduced-motion, hidden-page and idle-work guards remain. The clean-URL
+navigation change is preserved; both refinements are local, not pushed.
+
+31 source/isolated checks passed, plus force direction/bound assertions at 1323
+size/pointer positions and 35 speed samples. Modeled peak speed was about
+31.03px/s. Checks covered center continuity, rotated edge detection, outside
+margin rest, translation-only animation, current-position retargeting, capped
+duration, smooth return, frame coalescing, idle shutdown, and cleanup guards.
+Script syntax and the refreshed asset version also passed. No browser/app
+automation or screenshots were used; these checks cannot establish perceived
+smoothness or native frame timing.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| BULB-SPEED-01 | Continuous force and capped retargeting | Run the offset/duration helpers across the center, tilted edges, size grid and ease-out speed samples; run mocked animation/cleanup events. | No center-direction jump; edges respond; movement stays within the displacement/speed limits and guards clean up work. | Pass — 31 source/isolated checks, 1323 force positions and 35 speed samples. |
+| BULB-SPEED-02 | Owner graceful-motion review | At phone/laptop widths and both themes, cross the bulb center slowly and quickly, approach its edges, move away and resize. Test reduced motion, touch, keyboard links and console errors. | Graceful movement and return without snaps, useful edge response, no overflow or blocked controls, and static reduced-motion/touch behavior. | Not run — browser/app automation remains disabled. |
+
+## Section scrolling without URL changes — November 9, 2026
+
+Normal section-link clicks and Enter activations now prevent the native hash
+change, focus the destination without a second scroll, and scroll smoothly
+(instantly for reduced motion). Home and Back to top work the same way. An
+existing fragment is removed with replaceState, keeping the path, query, and
+history state without adding an entry. Modified clicks, new-tab targets,
+downloads, unrelated links, and missing destinations remain native. Real hrefs
+remain as the no-JavaScript fallback. This navigation revision is local and
+has not been pushed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| URL-01 | Clean URL and accessible destination logic | Execute all five tab activations, keyboard-generated click, Home/top, reduced motion, existing hash, modified clicks, missing targets, and restricted file-history cases; inspect targets and asset version. | Correct focus/scroll, no new fragment/history entry, preserved path/query, native exceptions, valid no-JS links and script version. | Pass — 53 source/isolated checks and script syntax. |
+| URL-02 | Owner native navigation check | At phone/laptop widths, use mouse and Tab/Enter through all tabs and project links; watch the URL, continue Tab from destinations, return Home, and test reduced motion and old bookmarks. Repeat without JavaScript. | URL stays clean on normal JS activations; focus and current-section underline remain useful; no-JS links retain native anchor behavior. | Not run — browser/app automation remains disabled. |
+
+## Closer, softer bulb response — November 9, 2026
 
 The owner reported that the bulb reacted from too far away. Its detection
 radius is now 45% of the displayed image's shorter side, replacing half the
@@ -8,8 +53,16 @@ diagonal plus 64px. For a 240x310px image, this reduces the radius from about
 260px to 108px. Squared falloff also reduces movement near the activation edge:
 halfway into that radius, movement is 4.8px rather than 9.6px. The existing
 size-based maximum, smooth return, touch/reduced-motion guards, rotation, and
-colors remain. The main script URL was refreshed. This refinement and the
-About wording below are local and not yet pushed.
+colors remain. The main script URL was refreshed. At the time of the initial
+checks, this refinement and the About wording below had not been pushed.
+
+Deployment check on November 9, 2026: Pages run `42745937562` succeeded for
+commit `8c439d0`. HTTP checks verified the updated About paragraph, expected
+script version, tighter bulb detection and squared falloff, every fragment
+destination in the published index, and all four legacy redirect documents.
+The index, main script and redirect documents returned HTTP 200. These are
+publication/source checks; actual visual, pointer and keyboard review remains
+for the owner. The newer clean-URL navigation above is still local.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
@@ -20,7 +73,7 @@ About wording below are local and not yet pushed.
 
 Removed only "I'm Sebastian." from the About paragraph at the owner's request.
 Home retains "Hi, I'm Sebastian." The remaining About copy is unchanged.
-The wording revision is local and has not been pushed.
+The wording revision was deployed in `8c439d0` and verified over HTTP.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
@@ -62,7 +115,7 @@ The published main script contains the size-based bulb interaction and 24px cap.
 An initial publication check ran while deployment was still in progress and
 found the older page; the check passed after deployment completed. These are
 publication/source checks, not native browser checks. The newer About wording
-change above remains local. Earlier results below are historical and do not
+change above was later deployed in `8c439d0`. Earlier results below are historical and do not
 establish that the combined page has passed browser testing.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
@@ -82,7 +135,7 @@ establish that the combined page has passed browser testing.
 | ONE-13 | Theme and motion preferences | Toggle and reload both themes; enable reduced motion during bulb/triangle movement and reveal effects. | Saved theme restored; original bulb colors; motion stops and content remains available. | Not run — owner browser/device testing. |
 | ONE-14 | Direct-file, history, and no JavaScript | Double-click index; open old files and deep bookmarks, use Back/Forward, then disable JS and repeat tab navigation. | Site/assets work offline, native sections remain reachable, old links redirect, no duplicate content or reload loops. | Not run — owner browser testing; isolated file-URL checks passed. |
 | ONE-15 | Accessibility | Run Lighthouse Accessibility on the combined index and inspect section/heading/focus behavior. | Score at least 90; each section and interactive control understandable. | Not run — owner Lighthouse testing; earlier separate-page scores do not apply. |
-| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — full live browser plan pending. Deployment/HTTP/source checks passed for `e7e6d10`; newer About wording is local. |
+| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — full live browser plan pending. Deployment/HTTP/source checks passed for `e7e6d10` and `8c439d0`; clean-URL navigation is local. |
 
 ## Previous: individual glimmer and nearby mouse repulsion — November 9, 2026
 

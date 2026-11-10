@@ -161,14 +161,24 @@ function bulbPointerOffset(width, height, bounds, pointer) {
   if (!pointer || !width || !height) return { x: 0, y: 0 };
   const dx = bounds.left + bounds.width / 2 - pointer.x;
   const dy = bounds.top + bounds.height / 2 - pointer.y;
-  const distance = Math.hypot(dx, dy);
-  // React only near the bulb's center, with a soft falloff toward the edge.
-  const radius = Math.min(width, height) * 0.45;
-  if (distance >= radius) return { x: 0, y: 0 };
+  // Follow the image's -35 degree tilt, with a small margin around its edges.
+  const angle = -35 * Math.PI / 180;
+  const localX = dx * Math.cos(angle) + dy * Math.sin(angle);
+  const localY = -dx * Math.sin(angle) + dy * Math.cos(angle);
+  const proximity = Math.hypot(localX / (width / 2 + 16), localY / (height / 2 + 16));
+  if (proximity >= 1) return { x: 0, y: 0 };
   const maximum = Math.min(24, Math.min(width, height) * 0.08);
-  const strength = maximum * (1 - distance / radius) ** 2;
-  return distance < 0.001 ? { x: strength, y: 0 } :
-    { x: dx / distance * strength, y: dy / distance * strength };
+  // Fade the force to zero at the center instead of flipping its direction there.
+  const softCenter = Math.min(width, height) * 0.12;
+  const strength = maximum * (1 - proximity) / Math.max(Math.hypot(dx, dy), softCenter);
+  return { x: dx * strength, y: dy * strength };
+}
+
+function bulbMotionDuration(current, next) {
+  const coordinates = current && current !== "none" ? current.split(/\s+/).map(parseFloat) : [];
+  const distance = Math.hypot(next.x - (coordinates[0] || 0), next.y - (coordinates[1] || 0));
+  // Ease-out peaks below twice its average speed: reserve that time for a 36px/s cap.
+  return Math.max(450, distance / 36 * 2000);
 }
 
 function initializeBulbInteraction() {
@@ -193,13 +203,14 @@ function initializeBulbInteraction() {
     const next = bulbPointerOffset(image.offsetWidth, image.offsetHeight, area.getBoundingClientRect(), pointer);
     if (next.x === target.x && next.y === target.y) return;
     const current = window.getComputedStyle(image).translate;
+    const duration = bulbMotionDuration(current, next);
     if (motion) motion.cancel();
     target = next;
     // Individual translate leaves the original CSS rotation and warm glow intact.
     motion = image.animate([
       { translate: !current || current === "none" ? "0px 0px" : current },
       { translate: `${next.x}px ${next.y}px` }
-    ], { duration: 350, easing: "ease-out", fill: "forwards" });
+    ], { duration, easing: "ease-out", fill: "forwards" });
     const activeMotion = motion;
     motion.onfinish = () => {
       if (motion === activeMotion && target.x === 0 && target.y === 0) {
@@ -473,13 +484,34 @@ function initializeMobileHeader() {
 initializeMobileHeader();
 initializeSectionNavigation();
 
-document.addEventListener("click", (event) => {
-  if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-  if (event.target.closest('a[href^="#"]')) {
-    // Let the native anchor use CSS smooth scrolling and reduced-motion settings.
-    stopKeyboardScroll();
+function navigateToSection(event) {
+  if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
+  const destination = document.getElementById(link.getAttribute("href").slice(1));
+  if (!destination) return;
+
+  event.preventDefault();
+  stopKeyboardScroll();
+  const behavior = reducedMotion.matches ? "instant" : "smooth";
+  // Focus the destination so the next Tab continues from the chosen section.
+  if (destination.id === "top") {
+    document.getElementById("main").focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior });
+  } else {
+    destination.focus({ preventScroll: true });
+    destination.scrollIntoView({ behavior, block: "start" });
   }
-});
+  if (window.location.hash) {
+    try {
+      window.history.replaceState(window.history.state, "", window.location.pathname + window.location.search);
+    } catch {
+      // Some direct-file browsers restrict history changes; scrolling still works.
+    }
+  }
+}
+
+document.addEventListener("click", navigateToSection);
 
 document.addEventListener("focusin", (event) => {
   if (event.target.matches("a, button, input, textarea, select, summary")) {

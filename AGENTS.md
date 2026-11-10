@@ -28,8 +28,10 @@ these instructions throughout development.
 ## Pages and content
 
 Use one scrolling page in `index.html`, ordered Home, About/Education, Projects,
-Skills, then Contact. Keep the current top tab layout; use native links to
-`#home`, `#about`, `#projects`, `#skills`, and `#contact`. Keep older page URLs as
+Skills, then Contact. Keep the current top tab layout, with section links to
+`#home`, `#about`, `#projects`, `#skills`, and `#contact` as the no-JavaScript
+fallback. Normal mouse and Enter activations scroll without changing the URL
+or adding a fragment, including Home. Keep older page URLs as
 redirects to their corresponding sections, including existing deep bookmarks.
 
 - Home (`index.html`): Show the personal introduction once. Do not repeat it
@@ -40,8 +42,10 @@ redirects to their corresponding sections, including existing deep bookmarks.
   With a fine mouse pointer, gently repel it from nearby movement using a range
   scaled to the displayed image (8% of its shorter side, capped at 24px). Ease it
   back when the pointer leaves; keep it still for touch and reduced motion.
-  Restrict detection to 45% of the displayed image's shorter side from its
-  resting center, with squared falloff so movement stays subtle near the edge.
+  Detect proximity using an oval aligned with its -35 degree rotation, extending
+  only 16px beyond its image edges. Soften the force to zero at the exact center
+  to avoid direction snaps. Cap travel speed at 36px per second, including when
+  retargeting or returning to rest; keep easing and stop work once settled.
   Do not show project cards, an index, or a project showcase on Home. A link
   to the Projects section is fine.
 - About/Education (`index.html#about`, with `#education` inside): Keep the education facts here. Above
@@ -71,7 +75,7 @@ empty sections, or dummy links.
   decorative shadows, and slogans. Use the visible Home, About, Projects,
   Skills, and Contact tabs from the pre-dropdown header (`e0d6cbb`): a compact
   five-column row on phones and an inline row on laptops. Do not add a hamburger
-  or dropdown. Keep native page links, no horizontal navigation scrolling, and
+  or dropdown. Keep real section links, no horizontal navigation scrolling, and
   only the current section underlined. Pointer clicks must not leave a focus/pressed
   appearance; retain visible keyboard focus and real theme/project choices.
 - Repeat restrained triangles pointing both left and right down the full length
@@ -145,8 +149,13 @@ empty sections, or dummy links.
   contact form, and four interactive demonstrations. Category filtering was
   removed at the owner's request.
 - Page tabs must always be visible and keyboard-accessible, including without
-  JavaScript. Each tab follows its native fragment href; do not intercept clicks,
-  hide links, or force focus elsewhere during activation. Use aria-current="location"
+  JavaScript. With JavaScript, intercept normal same-document link activations
+  to scroll without changing the URL. Keep modified/new-tab/download clicks
+  native. Move focus to the destination without an extra scroll so keyboard
+  navigation continues there, with no decorative section outline. Remove an
+  existing fragment on activation without adding a history entry; preserve the
+  path and query. Without JavaScript, retain the native fragment href fallback.
+  Use aria-current="location"
   for exactly one current section, updating it as the visitor scrolls. Keep navigation text non-selectable and retain
   keyboard focus indicators; pointer focus must not resemble a persistent choice.
 - Only in the mobile layout (below 60rem), show the sticky header when scrolling

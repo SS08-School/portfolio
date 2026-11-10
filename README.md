@@ -18,18 +18,25 @@ installation, build step, or server is required.
 
 The local revision combines everything in `index.html`: Home, About/Education,
 Projects, Skills, then Contact. The existing top tabs keep their appearance and
-follow native section anchors, with smooth scrolling unless reduced motion is
-enabled. The underline follows the section in view. Older page URLs redirect to
+scroll to their sections without adding fragments to the URL, with smooth
+scrolling unless reduced motion is enabled. Focus moves to the destination for
+continued keyboard navigation. This navigation refinement is local for review.
+Native anchor links remain available without JavaScript. The underline follows
+the section in view. Older page URLs redirect to
 the corresponding section; education and project bookmarks keep their targets.
 All four demonstrations, the manual carousel, seven skills, and the validated
 email-draft form remain in the combined document.
 
-The bulb now gently moves away from a nearby fine mouse pointer. Its maximum
-shift is 8% of its displayed shorter side, capped at 24px. The local refinement
-restricts detection to 45% of its shorter side from the resting center, with
-squared falloff for subtler movement near the edge. It eases back over 350ms
-and stays still for touch and reduced motion. Rotation and original colors
-remain unchanged. This proximity refinement has not been pushed.
+The bulb gently moves away from a nearby fine mouse pointer. Its maximum shift
+is 8% of its displayed shorter side, capped at 24px. The local refinement uses
+an oval aligned to its tilt, extending 16px beyond the image edges, so the bulb
+also reacts at its edges. The force fades to zero at the center to avoid abrupt
+direction changes. Travel time scales with distance to keep ease-out motion
+below 36px per second, with at least 450ms for each movement. It stays still
+for touch and reduced motion. Rotation and original colors remain unchanged.
+This graceful-motion refinement is local for review. The earlier, smaller
+detection radius was deployed on November 9, 2026 (`8c439d0`); its published
+script was verified over HTTP.
 
 Source and isolated logic checks passed. Native phone/laptop rendering, keyboard
 and pointer use, direct-file loading, and Lighthouse still need owner testing;
@@ -37,8 +44,8 @@ browser/app automation remains disabled. See the current cases in `TESTING.md`.
 The one-page layout and bulb interaction were deployed on November 9, 2026
 (`e7e6d10`). HTTP checks verified the combined page's section links, four legacy
 redirect documents, and the current CSS/JS assets. Native interaction testing
-remains for the owner. The latest About wording change, removing "I'm Sebastian.",
-is saved locally for review and has not been pushed.
+remains for the owner. The About wording change, removing "I'm Sebastian.",
+was also deployed in `8c439d0` and verified over HTTP.
 
 One real merge mistake was caught during checking: a string replacement treated
 the `$2` in two `$2.99` prices as a capture reference, inserting an extra closing
