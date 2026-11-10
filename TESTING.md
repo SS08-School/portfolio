@@ -1,6 +1,33 @@
 # Website test plan
 
-## Current: one scrolling page and bulb interaction — November 9, 2026
+## Current: closer, softer bulb response — November 9, 2026
+
+The owner reported that the bulb reacted from too far away. Its detection
+radius is now 45% of the displayed image's shorter side, replacing half the
+diagonal plus 64px. For a 240x310px image, this reduces the radius from about
+260px to 108px. Squared falloff also reduces movement near the activation edge:
+halfway into that radius, movement is 4.8px rather than 9.6px. The existing
+size-based maximum, smooth return, touch/reduced-motion guards, rotation, and
+colors remain. The main script URL was refreshed. This refinement and the
+About wording below are local and not yet pushed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| BULB-CLOSE-01 | Proximity and gentle falloff | Execute the offset helper at near, boundary, distant, zero-size and differently sized coordinates; check syntax and script hash. | No activation beyond the shorter radius; squared falloff, correct repelling direction and 24px maximum; pending About copy retained. | Pass — 13 source/isolated checks. |
+| BULB-CLOSE-02 | Owner movement review | At phone/laptop widths with a mouse, approach and leave the bulb in both themes; test reduced motion and keyboard navigation. | Movement only close to the bulb, subtle onset and smooth return, no overflow or interference with controls. | Not run — browser/app control remains disabled. |
+
+## Shorter About introduction — November 9, 2026
+
+Removed only "I'm Sebastian." from the About paragraph at the owner's request.
+Home retains "Hi, I'm Sebastian." The remaining About copy is unchanged.
+The wording revision is local and has not been pushed.
+
+| ID | Testing | Steps to run | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| ABOUT-COPY-01 | Updated About wording | Inspect the About paragraph, Home heading, and diff. | About starts "I like working"; Home greeting and remaining About text stay intact. | Pass — source comparison. |
+| ABOUT-COPY-02 | Owner rendering check | Open local index at phone and laptop widths, both themes, and navigate to About with the keyboard. | Paragraph reads naturally, wraps correctly, and section navigation/focus work. | Not run — browser/app automation remains disabled. |
+
+## One scrolling page and bulb interaction — November 9, 2026
 
 The owner requested one page in Home, About, Projects, Skills, Contact order,
 retaining the top tab design. All content now lives in `index.html`, with native
@@ -27,8 +54,16 @@ mistake initially substituted two `$2.99` prices with a closing tag. That check
 failed; the prices were restored and balanced markup/content checks then passed.
 No browser/app automation or screenshots were used. Mocked checks cannot verify
 rendering, native anchor focus, animation perception, or real device performance.
-This revision is local and not yet deployed. Earlier results below are historical
-and do not establish that the combined page has passed browser testing.
+These checks were performed before deployment. On November 9, 2026, Pages
+deployment `42685238482` succeeded for commit `e7e6d10`. HTTP checks verified
+the combined index, its section order and fragment destinations, all four legacy
+redirect documents, and the current CSS/main/redirect scripts (all HTTP 200).
+The published main script contains the size-based bulb interaction and 24px cap.
+An initial publication check ran while deployment was still in progress and
+found the older page; the check passed after deployment completed. These are
+publication/source checks, not native browser checks. The newer About wording
+change above remains local. Earlier results below are historical and do not
+establish that the combined page has passed browser testing.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
@@ -47,7 +82,7 @@ and do not establish that the combined page has passed browser testing.
 | ONE-13 | Theme and motion preferences | Toggle and reload both themes; enable reduced motion during bulb/triangle movement and reveal effects. | Saved theme restored; original bulb colors; motion stops and content remains available. | Not run — owner browser/device testing. |
 | ONE-14 | Direct-file, history, and no JavaScript | Double-click index; open old files and deep bookmarks, use Back/Forward, then disable JS and repeat tab navigation. | Site/assets work offline, native sections remain reachable, old links redirect, no duplicate content or reload loops. | Not run — owner browser testing; isolated file-URL checks passed. |
 | ONE-15 | Accessibility | Run Lighthouse Accessibility on the combined index and inspect section/heading/focus behavior. | Score at least 90; each section and interactive control understandable. | Not run — owner Lighthouse testing; earlier separate-page scores do not apply. |
-| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — revision not yet published. |
+| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — full live browser plan pending. Deployment/HTTP/source checks passed for `e7e6d10`; newer About wording is local. |
 
 ## Previous: individual glimmer and nearby mouse repulsion — November 9, 2026
 

@@ -162,10 +162,11 @@ function bulbPointerOffset(width, height, bounds, pointer) {
   const dx = bounds.left + bounds.width / 2 - pointer.x;
   const dy = bounds.top + bounds.height / 2 - pointer.y;
   const distance = Math.hypot(dx, dy);
-  const radius = Math.hypot(width, height) / 2 + 64;
+  // React only near the bulb's center, with a soft falloff toward the edge.
+  const radius = Math.min(width, height) * 0.45;
   if (distance >= radius) return { x: 0, y: 0 };
   const maximum = Math.min(24, Math.min(width, height) * 0.08);
-  const strength = maximum * (1 - distance / radius);
+  const strength = maximum * (1 - distance / radius) ** 2;
   return distance < 0.001 ? { x: strength, y: 0 } :
     { x: dx / distance * strength, y: dy / distance * strength };
 }

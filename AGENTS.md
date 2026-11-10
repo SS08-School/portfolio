@@ -40,10 +40,12 @@ redirects to their corresponding sections, including existing deep bookmarks.
   With a fine mouse pointer, gently repel it from nearby movement using a range
   scaled to the displayed image (8% of its shorter side, capped at 24px). Ease it
   back when the pointer leaves; keep it still for touch and reduced motion.
+  Restrict detection to 45% of the displayed image's shorter side from its
+  resting center, with squared falloff so movement stays subtle near the edge.
   Do not show project cards, an index, or a project showcase on Home. A link
   to the Projects section is fine.
 - About/Education (`index.html#about`, with `#education` inside): Keep the education facts here. Above
-  Get in touch, use the owner's approved text: "I'm Sebastian. I like working on
+  Get in touch, use the owner's approved text: "I like working on
   different kinds of creative projects and solving problems. Got a question?
   Let me know!" Do not repeat the full Home introduction.
 - Projects (`index.html#projects`): Retain the four interactive Assignment 1 projects.

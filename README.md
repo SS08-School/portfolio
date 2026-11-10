@@ -25,14 +25,20 @@ All four demonstrations, the manual carousel, seven skills, and the validated
 email-draft form remain in the combined document.
 
 The bulb now gently moves away from a nearby fine mouse pointer. Its maximum
-shift is 8% of its displayed shorter side, capped at 24px; the proximity radius
-also scales with the image. It eases back over 350ms and stays still for touch
-and reduced motion. Rotation and original colors remain unchanged.
+shift is 8% of its displayed shorter side, capped at 24px. The local refinement
+restricts detection to 45% of its shorter side from the resting center, with
+squared falloff for subtler movement near the edge. It eases back over 350ms
+and stays still for touch and reduced motion. Rotation and original colors
+remain unchanged. This proximity refinement has not been pushed.
 
 Source and isolated logic checks passed. Native phone/laptop rendering, keyboard
 and pointer use, direct-file loading, and Lighthouse still need owner testing;
 browser/app automation remains disabled. See the current cases in `TESTING.md`.
-This revision is local and has not been published.
+The one-page layout and bulb interaction were deployed on November 9, 2026
+(`e7e6d10`). HTTP checks verified the combined page's section links, four legacy
+redirect documents, and the current CSS/JS assets. Native interaction testing
+remains for the owner. The latest About wording change, removing "I'm Sebastian.",
+is saved locally for review and has not been pushed.
 
 One real merge mistake was caught during checking: a string replacement treated
 the `$2` in two `$2.99` prices as a capture reference, inserting an extra closing
