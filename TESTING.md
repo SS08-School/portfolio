@@ -13,7 +13,7 @@ at least 450ms and twice the travel time at 36px/s. The standard ease-out curve
 peaks below twice its average speed, keeping actual modeled speed below the
 36px/s ceiling even on full direction reversals and returns. The existing
 touch, reduced-motion, hidden-page and idle-work guards remain. The clean-URL
-navigation change is preserved; both refinements are local, not pushed.
+navigation change is preserved. Both refinements were deployed in `9a41718`.
 
 31 source/isolated checks passed, plus force direction/bound assertions at 1323
 size/pointer positions and 35 speed samples. Modeled peak speed was about
@@ -23,6 +23,16 @@ duration, smooth return, frame coalescing, idle shutdown, and cleanup guards.
 Script syntax and the refreshed asset version also passed. No browser/app
 automation or screenshots were used; these checks cannot establish perceived
 smoothness or native frame timing.
+
+Deployment checks on November 9, 2026: Pages run `42754931958` succeeded for
+commit `9a41718`. The published index, current main script, stylesheet, redirect
+script and all four legacy redirect documents returned HTTP 200. The index has
+the expected versioned script, section order and valid fragment destinations.
+The main script contains center softening, rotated edge detection, speed-limited
+duration and URL-preserving navigation. Publication/source checks passed; actual
+phone/laptop rendering, native URL/focus behavior, pointer smoothness, keyboard
+operation and Lighthouse remain for owner testing. No browser/app automation
+or screenshots were used.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
@@ -37,8 +47,8 @@ change, focus the destination without a second scroll, and scroll smoothly
 existing fragment is removed with replaceState, keeping the path, query, and
 history state without adding an entry. Modified clicks, new-tab targets,
 downloads, unrelated links, and missing destinations remain native. Real hrefs
-remain as the no-JavaScript fallback. This navigation revision is local and
-has not been pushed.
+remain as the no-JavaScript fallback. This navigation revision was deployed
+in `9a41718`; publication/source checks passed as recorded above.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
@@ -62,7 +72,7 @@ script version, tighter bulb detection and squared falloff, every fragment
 destination in the published index, and all four legacy redirect documents.
 The index, main script and redirect documents returned HTTP 200. These are
 publication/source checks; actual visual, pointer and keyboard review remains
-for the owner. The newer clean-URL navigation above is still local.
+for the owner. The newer clean-URL navigation above was later deployed in `9a41718`.
 
 | ID | Testing | Steps to run | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
@@ -135,7 +145,7 @@ establish that the combined page has passed browser testing.
 | ONE-13 | Theme and motion preferences | Toggle and reload both themes; enable reduced motion during bulb/triangle movement and reveal effects. | Saved theme restored; original bulb colors; motion stops and content remains available. | Not run — owner browser/device testing. |
 | ONE-14 | Direct-file, history, and no JavaScript | Double-click index; open old files and deep bookmarks, use Back/Forward, then disable JS and repeat tab navigation. | Site/assets work offline, native sections remain reachable, old links redirect, no duplicate content or reload loops. | Not run — owner browser testing; isolated file-URL checks passed. |
 | ONE-15 | Accessibility | Run Lighthouse Accessibility on the combined index and inspect section/heading/focus behavior. | Score at least 90; each section and interactive control understandable. | Not run — owner Lighthouse testing; earlier separate-page scores do not apply. |
-| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — full live browser plan pending. Deployment/HTTP/source checks passed for `e7e6d10` and `8c439d0`; clean-URL navigation is local. |
+| ONE-16 | Published version | After approved push, verify Pages deployment, index/assets and all legacy URLs; run ONE-07 through ONE-15 live. | Current revision published and full live plan passes before submission. | Not run — full live browser plan pending. Deployment/HTTP/source checks passed for `e7e6d10`, `8c439d0` and `9a41718`. |
 
 ## Previous: individual glimmer and nearby mouse repulsion — November 9, 2026
 

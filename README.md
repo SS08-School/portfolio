@@ -20,7 +20,9 @@ The local revision combines everything in `index.html`: Home, About/Education,
 Projects, Skills, then Contact. The existing top tabs keep their appearance and
 scroll to their sections without adding fragments to the URL, with smooth
 scrolling unless reduced motion is enabled. Focus moves to the destination for
-continued keyboard navigation. This navigation refinement is local for review.
+continued keyboard navigation. This navigation refinement was deployed on
+November 9, 2026 (`9a41718`); the published code and section targets were
+verified over HTTP. Native interaction review remains for the owner.
 Native anchor links remain available without JavaScript. The underline follows
 the section in view. Older page URLs redirect to
 the corresponding section; education and project bookmarks keep their targets.
@@ -34,7 +36,9 @@ also reacts at its edges. The force fades to zero at the center to avoid abrupt
 direction changes. Travel time scales with distance to keep ease-out motion
 below 36px per second, with at least 450ms for each movement. It stays still
 for touch and reduced motion. Rotation and original colors remain unchanged.
-This graceful-motion refinement is local for review. The earlier, smaller
+This graceful-motion refinement was deployed in `9a41718`; HTTP checks verified
+the current script's center softening, rotated edge detection, and speed cap.
+Actual appearance and pointer behavior still need owner review. The earlier, smaller
 detection radius was deployed on November 9, 2026 (`8c439d0`); its published
 script was verified over HTTP.
 
